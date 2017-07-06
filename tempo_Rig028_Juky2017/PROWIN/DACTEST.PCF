@@ -1,0 +1,113 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 11 08:01:41 2001
+; CLOAD dactest.pcf
+
+; tempow 10.4 Set 28.6   'T075348' connected to 'YELLOW1'
+; KPCD 10.2 Set 28
+; KSRV 10.3 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=16
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=8
+; CCHANNELS=15
+; ECHANNELS=4
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =40         5    13%       120/960        =7      =5    
+; INSTRUCTIONS    =400       31     8%       558/7200       =44     =33   
+; SYMBOLTABLE     =400       43    11%       516/4800       =51     =45   
+; HASHTABLE       =  127,400       35%      1596/3162     Use Kernel Default
+; NAMETABLE       =2000     332    17%       332/2000       =391    =349  
+; DATABASES       =40         0     0%         0/2400       =0      =0    
+; ARRAYTABLE      =1000      66     7%        66/1000       =83     =68   
+; OBJECTS         =0          0     0%         0/0          =0      =0    
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=15
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=4
+
+PLOAD dactest.pro
+
+; DATABASES=40
+
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,0,0,-1,-1,807,0,1604,52,0
+MSGWND 1,-1,-1,-1,-1,876,603,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,0,597,800,1154,0
+SHOW v 0
+
+CMDWND 1,0,1171,-1,-1,1007,56,1599,117,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+DIAPAGE 0,"DACTest"
+DIAPOS   0,0,-1,-1,-1,-1,81,152,646,591,0
+DIAONENTRY 0,"start"
+DIAOBJ   0,0,2,420,8,524,37,"OK","DSET; DPOP"
+DIAOBJ   0,1,2,420,47,524,76,"Cancel","DPOP"
+DIAOBJ   0,2,3,14,151,108,175,"","value"
+DIAOBJ   0,3,2,9,69,114,99,"Sound","noise = 1 - noise;"
+DIAOBJ   0,4,1,116,153,229,198,"","DAC Value\r\nVolts"
+DIAOBJ   0,5,2,9,107,114,137,"Stop Scan","suspend SCAN\r\nsound(0);"
+DIAOBJ   0,6,2,9,32,114,62,"Start Scan","start\r\nspawn SCAN"
+DIAOBJ   0,7,2,351,313,455,342,"Zero","value = 0\r\nspawn SETDACS"
+DIAOBJ   0,8,2,351,248,455,277,"Maximum","value = MAXVALUE\r\nspawn SETDACS"
+DIAOBJ   0,9,3,238,175,283,201,"","scanChannel"
+DIAOBJ   0,10,4,292,174,372,201,"","scanChannel"
+DIAOBJ   0,11,1,236,146,376,169,"","Channel to scan"
+DIAOBJ   0,12,2,380,139,540,169,"Set Channel",""
+DIAOBJ   0,13,2,379,176,539,206,"Advance Chan","scanChannel = (scanChannel + 1) % nDAC"
+DIAOBJ   0,14,2,351,280,455,309,"Middle","value = MAXVALUE / 2\r\nspawn SETDACS"
+DIAOBJ   0,15,3,24,4,80,25,"","nDAC"
+DIAOBJ   0,16,1,94,4,338,24,"","DACs available"
+DIAOBJ   0,17,2,420,87,524,116,"Help","dialog help"
+DIAOBJ   0,18,3,14,173,108,197,"","valueVolt"
+DIAOBJ   0,19,4,25,248,121,277,"","value"
+DIAOBJ   0,20,2,129,248,325,277,"Set DAC Value","spawn SETDACS"
+DIAOBJ   0,21,2,129,280,325,309,"Advance DAC Value","value = (value + 100) % MAXVALUE\r\nspawn SETDACS"
+DIAOBJ   0,22,2,129,313,325,342,"Reduce DAC Value","value = (value + MAXVALUE - 100) % MAXVALUE\r\nspawn SETDACS"
+DIAOBJ   0,23,1,55,211,498,238,"","----------------------  All Channels----------------------"
+DIAOBJ   0,24,3,503,249,541,272,"","MAXVALUE"
+
+DIAPAGE 1,"Help"
+DIAPOS   1,0,-1,-1,-1,-1,318,541,910,985,1
+DIAOBJ   1,0,2,480,8,560,38,"OK","DSET; DPOP"
+DIAOBJ   1,1,2,480,48,560,78,"Cancel","DPOP"
+DIAOBJ   1,2,1,25,57,420,181,"","To test each channel,\r\n1. Click Maximum\r\n2. Check for max voltage on all channels.\r\n3. Click Middle & check for mid voltages\r\n4. Click Zero and check for lowest voltages\r\n"
+DIAOBJ   1,3,1,4,5,164,35,"","Test CIO-DAC-16/12"
+DIAOBJ   1,4,1,25,193,420,264,"","Click Start Scan and set channel.\r\nThen check voltage change for each channel."
+DIAOBJ   1,5,1,25,276,556,385,"","Channel 0 is pin 1 ... channel 15 is pin 16.  Pin 20 is Ground.\r\nFactory gain is +/-5v\r\n-5v = 0 DAC value\r\n+5v = 4095 DAC value"
+
+; END OF DIALOGS
+
+
+; BEGIN KEY DEFINITIONS
+
+KEY F1 = dialog DACTest
+
+; END KEY DEFINITIONS
+

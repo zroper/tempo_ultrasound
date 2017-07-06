@@ -1,0 +1,694 @@
+// This sets all of the user defined global variables.
+// It is needed because of the loop structure which allows multiple tasks to run 
+// from the same protocol.  If multiple protocols use the same variables, we may 
+// run into problems if we don't specifically reset them at the beginning of each
+// task change.
+//
+// written by david.c.godlove@vanderbilt.edu 	July, 2011
+
+declare DEFAULT(int state, 
+				int monkey, 
+				int room);
+
+process DEFAULT(int state, 
+				int monkey, 
+				int room)
+	{
+	
+	declare hide int run_cmd_sess = 1;	// state 1 is countermanding
+	declare hide int run_fix_sess = 2;	// state 2 is fixation
+	declare hide int run_mem_sess = 3;	// state 3 is mem guided sacc
+	
+	declare hide int fechner 	= 1;
+	declare hide int xena    	= 2;
+	declare hide int yoyo    	= 3;
+	declare hide int upton		= 4;
+	declare hide int archimedes	= 5;
+	
+	declare hide int r_, g_, b_;		
+	r_ = 0; g_ = 1; b_ = 2;	
+	
+		
+	//----------------------------------------------------------------------------------------------------------------
+	// Trial type distributions (MUST SUM TO 100)
+	Go_weight				= 0.0;
+	Stop_weight				= 100.0;
+	Ignore_weight			= 0;
+	
+	Bonus_weight			= 0.0;	// percentage of time that the subject is wrong but gets rewarded anyway.
+	Dealer_wins_weight		= 0.0;	// percentage of time that the subject is right but gets punished anyway.
+	
+	BigR_weight				= 33.33;// weights for random changes of reward size
+	MedR_weight				= 33.34;// weights for random changes of reward size
+	SmlR_weight				= 33.33;// weights for random changes of reward size
+	SmlP_weight				= 33.33;// weights for random changes of punsiment size
+	MedP_weight				= 33.34;// weights for random changes of punsiment size
+	BigP_weight				= 33.33;// weights for random changes of punsiment size
+	
+	
+	
+	//----------------------------------------------------------------------------------------------------------------
+	// Stimulus properties
+	// White iso luminant value is 35,33,27;
+	// Red iso luminant value is is 63,0,0;
+	// Green iso luminant value is 0,36,0;
+	// Blue iso luminant value is 0,0,59;
+	Classic					= 0;
+	
+	Stop_sig_color[r_]		= 63;	
+	Stop_sig_color[g_]		= 0;	
+	Stop_sig_color[b_]		= 0;	
+	
+	Ignore_sig_color[r_]	= 0;	
+	Ignore_sig_color[g_]	= 36;	
+	Ignore_sig_color[b_]	= 0;	
+					
+	Fixation_color[r_]		= 35;	
+	Fixation_color[g_]		= 33;	
+	Fixation_color[b_]		= 27;	
+	
+	N_targ_pos				= 0;	// number of target positions (this is calculated below based on user input)
+									
+	Color_list[0,r_]		= 35;	// color of each target individually
+	Color_list[0,g_]		= 33;	// color of each target individually
+	Color_list[0,b_]		= 27;	// color of each target individually
+					
+	Color_list[1,r_]		= 35;
+	Color_list[1,g_]		= 33;
+	Color_list[1,b_]		= 27;
+					
+	Color_list[2,r_]		= 35;
+	Color_list[2,g_]		= 33;
+	Color_list[2,b_]		= 27;
+							
+	Color_list[3,r_]		= 35;
+	Color_list[3,g_]		= 33;
+	Color_list[3,b_]		= 27;
+					
+	Color_list[4,r_]		= 35;
+	Color_list[4,g_]		= 33;
+	Color_list[4,b_]		= 27;
+							
+	Color_list[5,r_]		= 35;
+	Color_list[5,g_]		= 33;
+	Color_list[5,b_]		= 27;
+							
+	Color_list[6,r_]		= 35;
+	Color_list[6,g_]		= 33;
+	Color_list[6,b_]		= 27;
+							
+	Color_list[7,r_]		= 35;
+	Color_list[7,g_]		= 33;
+	Color_list[7,b_]		= 27;
+	
+	Size_list[0]			= 3.0;	// size of each target individually (degrees)
+	Size_list[1]			= 3.0;
+	Size_list[2]			= 0;
+	Size_list[3]			= 0;
+	Size_list[4]			= 0;
+	Size_list[5]			= 0;
+	Size_list[6]			= 0;
+	Size_list[7]			= 0;
+	
+	Angle_list[0]			= 0;	// angle of each target individually (degrees)
+	Angle_list[1]			= 180;
+	Angle_list[2]			= 90;
+	Angle_list[3]			= 135;
+	Angle_list[4]			= 180;
+	Angle_list[5]			= -135;
+	Angle_list[6]			= -90;
+	Angle_list[7]			= -45;
+	
+	Eccentricity_list[0]	= 10.0;	// distance of each target from center of screen individually (degrees)
+	Eccentricity_list[1]	= 10.0;
+	Eccentricity_list[2]	= 10.0;
+	Eccentricity_list[3]	= 10.0;
+	Eccentricity_list[4]	= 10.0;
+	Eccentricity_list[5]	= 10.0;
+	Eccentricity_list[6]	= 10.0;
+	Eccentricity_list[7]	= 10.0;
+	
+	Fixation_size			= .5;	// size of the fixatoin point (degrees)	
+	
+	Success_Tone_bigR		= 100;	// positive secondary reinforcer in Hz (large reward)
+	Success_Tone_medR		= 200;	// positive secondary reinforcer in Hz (medium reward)
+	Success_Tone_smlR		= 400;	// positive secondary reinforcer in Hz (small reward)		
+	Failure_Tone_smlP		= 800;	// negative secondary reinforcer in Hz (short timeout)
+	Failure_Tone_medP		= 1600;	// negative secondary reinforcer in Hz (medium timeout)
+	Failure_Tone_bigP		= 3200;	// negative secondary reinforcer in Hz (long timeout)	
+	
+	Fixation_Target 		= 0;	// Target number for the fixation task (not used here);
+	
+	//----------------------------------------------------------------------------------------------------------------
+	// Eye related variables
+	Fix_win_size			= 5;	// size of fixation window (degrees)
+	Targ_win_size			= 6;	// size of target window (degrees)
+	
+	
+	
+	//----------------------------------------------------------------------------------------------------------------
+	// Task timing paramaters (all times in ms unless otherwise specified)
+	Allowed_fix_time		= 2000;	// subject has this long to acquire fixation before a new trial is initiated
+	Expo_Jitter				= 1;	// defines if exponential holdtime is used or if holdtime is sampled from rectanglular dist.
+	Min_Holdtime			= 600;  // minimum time after fixation before target presentation
+	Max_Holdtime			= 1100; // maximum time after fixation before target presentation
+	Min_SOA					= 600;	// minimum time between target onset and fixation offset (mem guided only)
+	Max_SOA					= 1100;	// maximum time between target onset and fixation offset (mem guided only)
+	Max_saccade_time		= 800;	// subject has this long to saccade to the target
+	Max_sacc_duration		= 60;	// once the eyes leave fixation they must be in the target before this time is up
+	Targ_hold_time			= 600; 	// after saccade subject must hold fixation at target for this long
+	Staircase				= 1;	// do we select the next SSD based on a staircasing algorithm?
+	
+	SSD_list[0]				= 3;	// needs to be in vertical retrace units
+	SSD_list[1]				= 6;
+	SSD_list[2]				= 9;
+	SSD_list[3]				= 12;
+	SSD_list[4]				= 0;
+	SSD_list[5]				= 0;
+	SSD_list[6]				= 0;
+	SSD_list[7]				= 0;
+	SSD_list[8]				= 0;
+	SSD_list[9]				= 0;
+	SSD_list[10]			= 0;
+	SSD_list[11]			= 0;
+	SSD_list[12]			= 0;
+	SSD_list[13]			= 0;
+	SSD_list[14]			= 0;
+	SSD_list[15]			= 0;
+	SSD_list[16]			= 0;
+	SSD_list[17]			= 0;
+	SSD_list[18]			= 0;
+	SSD_list[19]			= 0;
+	
+	Cancl_time				= Max_saccade_time * 2;	// subject must hold fixation for this long on a stop trial to be deemed canceled
+	Tone_Duration			= 30;	// how long should the error and success tones be presented?
+	Reward_Offset			= 600;	// how long after tone before juice is given (needed to seperate primary and secondary reinforcement)
+	Base_Reward_time		= 60;	// medium time for the juice solonoid to remain open (monkeys are very interested in this varaible)
+	Base_Punish_time		= 2000;	// medium time out for messing up (monkeys care less for this one)
+	Max_move_ct				= 5;	// for training to be still with a motion detector
+	Bmove_tout				= 2000;	// for training to be still with a motion detector
+	TrainingStill			= 0;	// Indicates that we are using motion detector to train the monk to be still
+	Canc_alert				= 0;	// Alert operator that the monk has canceled a trial (during training)
+	Fixed_trl_length		= 1;	// 1 for fixed trial length, 0 for fixed inter trial intervals
+	Trial_length			= 0; 	// fixed at this value (only works if Fixed_trl_length == 1) must figure out max time for this variable and include it in comments
+	Inter_trl_int			= 200;	// how long between trials (only works if Fixed_trl_length == 0)
+	
+	
+	
+	
+	
+	
+	
+	
+	//--------------------------------------------------------------------------------------------------------------------
+	// Fechner
+	if(monkey == fechner)
+		{		
+		
+		// GENERAL ACROSS ALL TASKS---------------------------------------------------------------------------------------
+		// distance from center of subjects eyeball to screen
+		if(room == 28)
+			{
+			Subj_dist	= 430.0; 				
+			}
+		else if (room == 29)
+			{
+			Subj_dist	= 535.0;
+			}
+		// else if (room == 23)
+			// {
+			// }
+
+		Set_tones = 1;
+		
+		Base_Reward_time		= 50;	
+		Base_Punish_time		= 2000;		
+		Fix_win_size			= 4;
+		Targ_win_size			= 5;	
+		
+		
+		// STOP SIGNAL TASK SPECIFIC--------------------------------------------------------------------------------------
+		if (state == run_cmd_sess)
+			{
+			Go_weight				= 33.3;
+			Stop_weight				= 33.4;
+			Ignore_weight			= 33.3;
+			
+			SSD_list[0]				= 2;	
+			SSD_list[1]				= 7;
+			SSD_list[2]				= 12;
+			SSD_list[3]				= 17;
+			SSD_list[4]				= 22;
+			SSD_list[5]				= 27;
+			SSD_list[6]				= 32;
+			SSD_list[7]				= 37;
+			SSD_list[8]				= 42;
+			SSD_list[9]				= 47;
+			SSD_list[10]			= 0;
+			SSD_list[11]			= 0;
+			SSD_list[12]			= 0;
+			SSD_list[13]			= 0;
+			SSD_list[14]			= 0;
+			SSD_list[15]			= 0;
+			SSD_list[16]			= 0;
+			SSD_list[17]			= 0;
+			SSD_list[18]			= 0;
+			SSD_list[19]			= 0;
+			
+			
+			
+}
+			
+			
+		// MEMORY GUIDED SACCADE TASK SPECIFIC----------------------------------------------------------------------------
+		// if (state == run_mem_sess)
+			// {			
+			// }
+		
+		}
+		
+		
+		
+	//--------------------------------------------------------------------------------------------------------------------
+	// Xena
+	if(monkey == xena)
+		{		
+		
+		// GENERAL ACROSS ALL TASKS---------------------------------------------------------------------------------------
+		// distance from center of subjects eyeball to screen
+		if(room == 28)
+			{
+			Subj_dist	= 475.0; 				
+			}
+		else if (room == 29)
+			{
+			Subj_dist	= 535.0;
+			}
+		// else if (room == 23)
+			// {
+			// }
+			
+		Set_tones = 1;
+		
+		Fix_win_size			= 4;
+		Targ_win_size			= 6;	
+		
+		Allowed_fix_time		= 1000;
+		Max_saccade_time		= 1200;
+		Base_Reward_time		= 40;
+		Base_Punish_time		= 1200;
+		
+		
+		// STOP SIGNAL TASK SPECIFIC--------------------------------------------------------------------------------------
+		if (state == run_cmd_sess)
+			{
+			Go_weight				= 25.0;
+			Stop_weight				= 50.0;
+			Ignore_weight			= 25.0;
+			
+			Stop_sig_color[r_]		= 0;	
+			Stop_sig_color[g_]		= 36;	
+			Stop_sig_color[b_]		= 0;					
+					
+			Ignore_sig_color[r_]	= 63;	
+			Ignore_sig_color[g_]	= 0;	
+			Ignore_sig_color[b_]	= 0;
+			
+			SSD_list[0]				= 3;	
+			SSD_list[1]				= 11;
+			SSD_list[2]				= 19;
+			SSD_list[3]				= 27;
+			SSD_list[4]				= 35;
+			SSD_list[5]				= 43;
+			SSD_list[6]				= 51;
+			SSD_list[7]				= 59;
+			SSD_list[8]				= 67;
+			SSD_list[9]				= 75;
+			SSD_list[10]			= 0;
+			SSD_list[11]			= 0;
+			SSD_list[12]			= 0;
+			SSD_list[13]			= 0;
+			SSD_list[14]			= 0;
+			SSD_list[15]			= 0;
+			SSD_list[16]			= 0;
+			SSD_list[17]			= 0;
+			SSD_list[18]			= 0;
+			SSD_list[19]			= 0;		
+			}
+			
+			
+		// MEMORY GUIDED SACCADE TASK SPECIFIC----------------------------------------------------------------------------
+		// if (state == run_mem_sess)
+			// {			
+			// }
+		
+		}
+		
+		
+		
+		
+	//--------------------------------------------------------------------------------------------------------------------
+	// Yoyo
+	if(monkey == yoyo)
+		{		
+		
+		// GENERAL ACROSS ALL TASKS---------------------------------------------------------------------------------------
+		// distance from center of subjects eyeball to screen
+		if(room == 28)
+			{
+			Subj_dist	= 455.0; 				
+			}
+		else if (room == 29)
+			{
+			Subj_dist	= 535.0;
+			}
+		// else if (room == 23)
+			// {
+			// }
+		
+		Set_tones = 0;
+		
+		Fix_win_size			= 2.5;
+		Targ_win_size			= 5;		
+		Base_Reward_time		= 70;
+		Base_Punish_time		= 1200;
+		
+		
+		// STOP SIGNAL TASK SPECIFIC--------------------------------------------------------------------------------------
+		if (state == run_cmd_sess)
+			{
+			Go_weight				= 50.0;
+			Stop_weight				= 50.0;
+			Ignore_weight			= 0.0;
+			
+			Stop_sig_color[r_]		= 0;
+			Stop_sig_color[g_]		= 36;
+			Stop_sig_color[b_]		= 0;				
+					                  
+			Ignore_sig_color[r_]	= 63;
+			Ignore_sig_color[g_]	= 0;
+			Ignore_sig_color[b_]	= 0;
+			
+			SSD_list[0]				= 3;
+			SSD_list[1]				= 9;
+			SSD_list[2]				= 15;
+			SSD_list[3]				= 21;
+			SSD_list[4]				= 27;
+			SSD_list[5]				= 33;
+			SSD_list[6]				= 39;
+			SSD_list[7]				= 45;
+			SSD_list[8]				= 51;
+			SSD_list[9]				= 57;
+			SSD_list[10]			= 0;
+			SSD_list[11]			= 0;
+			SSD_list[12]			= 0;
+			SSD_list[13]			= 0;
+			SSD_list[14]			= 0;
+			SSD_list[15]			= 0;
+			SSD_list[16]			= 0;
+			SSD_list[17]			= 0;
+			SSD_list[18]			= 0;
+			SSD_list[19]			= 0;	
+			}
+			
+			
+		// MEMORY GUIDED SACCADE TASK SPECIFIC----------------------------------------------------------------------------
+		// if (state == run_mem_sess)
+			// {			
+			// }
+		
+		}
+		
+		
+		
+		
+		
+	//--------------------------------------------------------------------------------------------------------------------
+	// Upton
+	if(monkey == upton)
+		{		
+		
+		// GENERAL ACROSS ALL TASKS---------------------------------------------------------------------------------------
+		// distance from center of subjects eyeball to screen
+		if(room == 28)
+			{
+			Subj_dist	= 490.0; 	
+			TrainingStill = 1;	// Indicates that we are using motion detector to train the monk to be still
+			}
+		else if (room == 29)
+			{
+			Subj_dist	= 489.0;
+			}
+		// else if (room == 23)
+			// {
+			// }
+			
+		Set_tones = 1;
+		
+		Fix_win_size			= 3;
+		Targ_win_size			= 5.5;	
+		
+		Allowed_fix_time		= 1000;
+		Max_saccade_time		= 800;
+		Base_Reward_time		= 40;
+		Base_Punish_time		= 800;
+		
+		
+		// STOP SIGNAL TASK SPECIFIC--------------------------------------------------------------------------------------
+		if (state == run_cmd_sess)
+			{
+			Go_weight				= 50.0;
+			Stop_weight				= 50.0;
+			Ignore_weight			= 0.0;
+			
+			Stop_sig_color[r_]		= 0;
+			Stop_sig_color[g_]		= 36;	
+			Stop_sig_color[b_]		= 0;					
+					                  
+			Ignore_sig_color[r_]	= 63;	
+			Ignore_sig_color[g_]	= 0;
+			Ignore_sig_color[b_]	= 0;
+			
+			SSD_list[0]				= 3;	
+			SSD_list[1]				= 9;
+			SSD_list[2]				= 15;
+			SSD_list[3]				= 21;
+			SSD_list[4]				= 27;
+			SSD_list[5]				= 33;
+			SSD_list[6]				= 39;
+			SSD_list[7]				= 45;
+			SSD_list[8]				= 51;
+			SSD_list[9]				= 0;
+			SSD_list[10]			= 0;
+			SSD_list[11]			= 0;
+			SSD_list[12]			= 0;
+			SSD_list[13]			= 0;
+			SSD_list[14]			= 0;
+			SSD_list[15]			= 0;
+			SSD_list[16]			= 0;
+			SSD_list[17]			= 0;
+			SSD_list[18]			= 0;
+			SSD_list[19]			= 0;	
+			}
+			
+			
+		// MEMORY GUIDED SACCADE TASK SPECIFIC----------------------------------------------------------------------------
+		// if (state == run_mem_sess)
+			// {			
+			// }
+		
+		}
+		
+		
+		
+		
+		
+	//--------------------------------------------------------------------------------------------------------------------
+	// Archimedes
+	if(monkey == archimedes)
+		{		
+		
+		// GENERAL ACROSS ALL TASKS---------------------------------------------------------------------------------------
+		// distance from center of subjects eyeball to screen
+		if(room == 28)
+			{
+			Subj_dist	= 489.0; 				
+			}
+		else if (room == 29)
+			{
+			Subj_dist	= 495.0;
+			}
+		// else if (room == 23)
+			// {
+			// }
+			
+		Set_tones = 1;
+		
+		Fix_win_size			= 2.5;
+		Targ_win_size			= 5;	
+		
+		Allowed_fix_time		= 1000;
+		Max_saccade_time		= 800;
+		Base_Reward_time		= 30;
+		Base_Punish_time		= 1000;
+		Canc_alert				= 1;
+		
+		
+		// STOP SIGNAL TASK SPECIFIC--------------------------------------------------------------------------------------
+		if (state == run_cmd_sess)
+			{
+			Go_weight				= 67;
+			Stop_weight				= 33;
+			Ignore_weight			= 0.0;
+			
+			Stop_sig_color[r_]		= 0;	
+			Stop_sig_color[g_]		= 36;	
+			Stop_sig_color[b_]		= 0;
+			                          
+			Ignore_sig_color[r_]	= 63;	
+			Ignore_sig_color[g_]	= 0;	
+			Ignore_sig_color[b_]	= 0;	
+			
+			SSD_list[0]				= 3;	
+			SSD_list[1]				= 8;
+			SSD_list[2]				= 13;
+			SSD_list[3]				= 18;
+			SSD_list[4]				= 23;
+			SSD_list[5]				= 28;
+			SSD_list[6]				= 33;
+			SSD_list[7]				= 38;
+			SSD_list[8]				= 43;
+			SSD_list[9]				= 48;
+			SSD_list[10]			= 0;
+			SSD_list[11]			= 0;
+			SSD_list[12]			= 0;
+			SSD_list[13]			= 0;
+			SSD_list[14]			= 0;
+			SSD_list[15]			= 0;
+			SSD_list[16]			= 0;
+			SSD_list[17]			= 0;
+			SSD_list[18]			= 0;
+			SSD_list[19]			= 0;	
+			}
+			
+			
+		// MEMORY GUIDED SACCADE TASK SPECIFIC----------------------------------------------------------------------------
+		if (state == run_mem_sess)
+			{	
+			Min_SOA = 300;
+			Max_SOA = 600;
+			
+			Size_list[0]			= 3.0;	// size of each target individually (degrees)
+			Size_list[1]			= 3.0;
+			Size_list[2]			= 3.0;
+			Size_list[3]			= 3.0;
+			Size_list[4]			= 3.0;
+			Size_list[5]			= 3.0;
+			Size_list[6]			= 3.0;
+			Size_list[7]			= 3.0;
+			
+			Angle_list[0]			= 0;	// angle of each target individually (degrees)
+			Angle_list[1]			= 45;
+			Angle_list[2]			= 90;
+			Angle_list[3]			= 135;
+			Angle_list[4]			= 180;
+			Angle_list[5]			= -135;
+			Angle_list[6]			= -90;
+			Angle_list[7]			= -45;
+			}
+		
+		}
+		
+		
+		
+		
+		
+	//--------------------------------------------------------------------------------------------------------------------
+	// Fixation task
+	if (state == run_fix_sess)
+		{
+		N_targ_pos				= 9;	// number of target positions (this is calculated below based on user input)
+	
+		Color_list[0,r_]		= 35;	// color of each target individually
+		Color_list[0,g_]		= 33;	// color of each target individually
+		Color_list[0,b_]		= 27;	// color of each target individually
+						          
+		Color_list[1,r_]		= 35;
+		Color_list[1,g_]		= 33;
+		Color_list[1,b_]		= 27;
+						          
+		Color_list[2,r_]		= 35;
+		Color_list[2,g_]		= 33;
+		Color_list[2,b_]		= 27;
+								  
+		Color_list[3,r_]		= 35;
+		Color_list[3,g_]		= 33;
+		Color_list[3,b_]		= 27;
+						          
+		Color_list[4,r_]		= 35;
+		Color_list[4,g_]		= 33;
+		Color_list[4,b_]		= 27;
+								  
+		Color_list[5,r_]		= 35;
+		Color_list[5,g_]		= 33;
+		Color_list[5,b_]		= 27;
+								  
+		Color_list[6,r_]		= 35;
+		Color_list[6,g_]		= 33;
+		Color_list[6,b_]		= 27;
+								  
+		Color_list[7,r_]		= 35;
+		Color_list[7,g_]		= 33;
+		Color_list[7,b_]		= 27;
+		
+		Color_list[8,r_]		= 35;
+		Color_list[8,g_]		= 33;
+		Color_list[8,b_]		= 27;
+		
+		Size_list[0]			= 0.5;	// size of each target individually (degrees)
+		Size_list[1]			= 0.5;
+		Size_list[2]			= 0.5;
+		Size_list[3]			= 0.5;
+		Size_list[4]			= 0.5;
+		Size_list[5]			= 0.5;
+		Size_list[6]			= 0.5;
+		Size_list[7]			= 0.5;
+		Size_list[8]			= 0.5;
+		
+		Angle_list[0]			= 0;	// angle of each target individually (degrees)
+		Angle_list[1]			= 90;
+		Angle_list[2]			= -90;
+		Angle_list[3]			= 180;
+		Angle_list[4]			= 0;
+		Angle_list[5]			= 135;
+		Angle_list[6]			= 45;
+		Angle_list[7]			= -135;
+		Angle_list[8]			= -45;
+		
+		Eccentricity_list[0]	= 0.0;	// distance of each target from center of screen individually (degrees)
+		Eccentricity_list[1]	= 11.0;
+		Eccentricity_list[2]	= 11.0;
+		Eccentricity_list[3]	= 11.0;
+		Eccentricity_list[4]	= 11.0;
+		Eccentricity_list[5]	= 15.6;
+		Eccentricity_list[6]	= 15.6;
+		Eccentricity_list[7]	= 15.6;
+		Eccentricity_list[8]	= 15.6;
+		
+		Fix_win_size			= 0;	// size of fixation window (degrees)
+		Targ_win_size			= 2.5;	// size of target window (degrees)
+		
+		Allowed_fix_time		= 1200;	// subject has this long to acquire fixation (or target fixation protocol) before a new trial is initiated
+		Max_saccade_time		= 800;	// subject has this long to saccade to the target
+		Targ_hold_time			= 600; 	// after saccade subject must hold fixation at target for this long
+		
+		}
+	
+	
+	
+		
+		
+		
+	
+	
+	}

@@ -1,0 +1,76 @@
+14Jan07 - Symphony Marshalling
+
+When an application (client) node calls a functions on a remote node
+(server), a sequence of activities occur.  The client node packages
+up data needed by the remote function and sends it to a server node
+for execution (using tgQueryf).  The client node then waits for a
+reply from the server node.
+
+When the server node receives the RPC message (in tgcbQuery()), it
+determines if it is a remote procedure call.  If it is, the server
+unpacks the data and locates the function in the RPC function table.
+If found, it calls the registered function (from the tgcbQuery()
+thread).  When the function returns, the server side packages up the
+function's results and returns it back to the requester (ie returns
+from tgcbQuery()).
+
+When the client receives the response to its tgQueryf(), it
+unpackages the data and provides it to the caller.
+
+In this way, the client node is able to call functions in the server
+node.
+
+(How can a client discover what RPC functions are available in a
+server node?  Perhaps the client can call a tg function to query a
+remote node's RPC?)
+
+(How to report three levels of errors: (1) on client side, packaging
+up and sending RPC request. (2) On server side, receiving and
+unpackaging request or repackaging and returning response after the
+function has been called and (3) an error that is detected by the
+function on the server.  Symphony's callback mechanism solves this
+problem by allowing tgQueryf() to return a structure with multiple
+status codes present.)
+
+
+
+SERVER SIDE:
+
+An RPC function must be first registered with Symphony before it
+can be made available to remote nodes.
+
+The RPC function on to be called is declared like this:
+
+    long
+    rpcFunc(TG_RQSTRESP *rr)
+    {
+    ...
+    }
+
+A node can register an RPC function by calling tgRpcRegisterFunction:
+
+    long tgerr = tgRpcRegisterFunction(
+                        TG      *tg,                    // TG handle
+                        char    *funcName,              // Name of function
+                        long    (*f)(TG_RQSTRESP *rr),  // Address of function
+                        char    *inputs,                // List of input parameters to RPC function
+                        char    *outputs);              // List of output parameters from RPC function
+
+CLIENT SIDE:
+
+
+The client loads the TGRPC.buffer[] block with information it wants to pass
+to the remote function.
+
+It then calls tgRpcCallFunction():
+
+    TG_QUERY = tgRpcCallFunction(
+                    TG          *tg,
+                    LCIDENT     lcid,
+                    char        *remoteNode,
+                    char        *funcName,
+                    char        *resp,
+                    long        nRespBuf,
+                    long        timeout,
+                    char        *fmtRqst);
+                    

@@ -1,0 +1,22 @@
+#pragma declare = 1;
+
+#include C:/TEMPO/ProcLib/JUICE.pro
+
+
+
+declare MAIN();
+
+process MAIN() enabled
+	{
+	declare start_while;
+	
+	while (start_while == 1)
+		{
+		spawnwait JUICE(9,100);			
+		wait 500;
+		nexttick;
+		}
+	}
+
+
+	

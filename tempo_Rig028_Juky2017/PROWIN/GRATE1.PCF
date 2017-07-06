@@ -1,0 +1,105 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 25 10:23:52 2001
+; CLOAD grate1.pcf
+
+; tempow 10.5 Set 28.6   'T102250' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=500.000000  PROSPEED=100.000000  (200/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64         6     9%       144/1536       =9      =6    
+; INSTRUCTIONS    =700       50     7%       900/12600      =71     =53   
+; SYMBOLTABLE     =700       67    10%       804/8400       =79     =71   
+; HASHTABLE       =  257,700       38%      3150/5742     Use Kernel Default
+; NAMETABLE       =8000     921    12%       921/8000       =1084   =969  
+; DATABASES       =40         3     8%       180/2400       =3      =3    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =0          0     0%         0/0          =0      =0    
+
+SPEED 500
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+A1.NAME="Fp1"
+A2.NAME="Fp2"
+A3.NAME="F7"
+A4.NAME="F3"
+A5.NAME="F4"
+A6.NAME="F8"
+A7.NAME="T3"
+A8.NAME="C3"
+A9.NAME="C4"
+A10.NAME="T4"
+A11.NAME="T5"
+A12.NAME="P3"
+A13.NAME="P4"
+A14.NAME="T6"
+A15.NAME="O1"
+A16.NAME="O2"
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD grate1.pro
+
+; DATABASES=40
+
+HOPEN  1,0,1,1,16,100,1000,0,0,0,0x0
+HTITLE 1,"Avg Grating EP"
+HFILE  1,"grate.htb"
+HOPEN  2,1,2,1,16,20,1000,0,0,0,0x0
+HTITLE 2,"Appended Grate EP no Artifact"
+HFILE  2,"grate.htb"
+HOPEN  3,1,2,1,16,20,1000,0,0,0,0x1
+HTITLE 3,"Appended Grate with Artifact"
+HFILE  3,"grate.htb"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,189,189,1389,1068,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,0,683,610,1153,0
+SHOW h 0
+
+CMDWND 1,-1,-1,-1,-1,194,240,489,301,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,709,306,1509,906,0
+DBVIEW  0,0,1,10,500,0,16,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,790,189,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,1,2,10,500,0,16,0,0,0,0x0
+DBVPOS  0,1,1,-1,-1,-1,-1,0,189,790,378,1
+DBVCOLORS 0,1,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,2,3,10,500,0,16,0,0,0,0x0
+DBVPOS  0,2,1,-1,-1,-1,-1,0,378,790,567,2
+DBVCOLORS 0,2,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+

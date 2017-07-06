@@ -1,0 +1,2 @@
+C:/TEMPO/ProcLib/ABORT.pro(43) : error Error - 'SETS_TRL' not explicitly declared.
+C:/TEMPO/ProcLib/ABORT.pro(51) : error SPAWNWAIT: 'SETS_TRL' must be explicitly declared as a process.

@@ -1,0 +1,93 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2004 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Wed Sep 08 08:20:18 2004
+; CLOAD pursue.pcf
+
+; tempow 10.24 Set 37.11   'HORIZON3123' connected to 'tYELLOW'
+; KPEDA 10.28 Set 37
+; KSRV 10.20 Set 37.11 (Server 'tYELLOW         ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=8
+; CCHANNELS=2
+; ECHANNELS=2
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =16               7    44%          168/384           =10        =7       
+; INSTRUCTIONS    =400             54    13%          956/7200          =68        =57      
+; SYMBOLTABLE     =400             95    24%         1140/4800          =112       =100     
+; HASHTABLE       =     127,400          38%         1662/3162        Use Kernel Default
+; NAMETABLE       =2000           917    46%          917/2000          =1079      =965     
+; DATABASES       =16               0     0%            0/960           =0         =0       
+; ARRAYTABLE      =512              0     0%            0/512           =0         =0       
+; ARRAYDATA       =131072           0     0%            0/131072        =0         =0       
+; OBJECTS         =32               2     6%           88/1408          =2         =2       
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=2
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD pursue.pro
+
+; DATABASES=16
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1920,1200,16
+MAINWND 1,-1,-1,-1,-1,1,0,947,63,0
+MSGWND 1,-1,-1,-1,-1,848,728,1568,1203,0
+STATUSWND 1,-1,-1,-1,-1,11,761,846,1203,0
+SHOW p 0
+
+CMDWND 1,-1,-1,-1,-1,592,59,946,121,0
+ANIMPAGE 0x1,1,-1,-1,-1,-1,6,61,864,481,0
+ANIMVIEW 0,1,-1,-1,-1,-1,0,0,424,386,0
+ANIMVIEW 1,1,-1,-1,-1,-1,424,0,848,386,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1920,1200,16
+
+DIAPAGE 0,"Main"
+DIAPOS   0,0,-1,-1,-1,-1,9,477,576,760,0
+DIAOBJ   0,0,2,423,175,556,205,"OK","DSET; DPOP"
+DIAOBJ   0,1,2,423,217,565,247,"Cancel","DPOP"
+DIAOBJ   0,2,2,423,5,556,35,"GO","spawn GO"
+DIAOBJ   0,3,2,423,46,556,76,"STOP","spawn STP"
+DIAOBJ   0,4,2,423,87,556,117,"Clear Screen","spawn CLEAR"
+DIAOBJ   0,5,2,10,217,152,247,"DebugInfo","spawn DUMP"
+DIAOBJ   0,6,1,8,5,403,194,"","PURSUE Test protocol.\r\nTests Sprites moving with XOR drawing mode.\r\n\r\nUse the server mouse to move the red sprite.\r\nThe protocol moves the white sprite.\r\n\r\nWhen they overlap, the white sprite\r\nshould appear to go under the red one.\r\n"
+DIAOBJ   0,7,2,216,217,358,247,"EXIT","exit"
+
+; END OF DIALOGS
+
+
+; BEGIN KEY DEFINITIONS
+
+KEY F2 = start \; spawn go
+KEY F1 = START
+
+; END KEY DEFINITIONS
+

@@ -1,0 +1,157 @@
+@echo off
+REM DIAGNOSE.BAT - Runs the DIAGNOSTIC program on the server computer.
+REM
+REM     1. boot the server computer with SERVER diskette
+REM     2. insert DIAGNOSTIC diskette for that server into A: and type DIAGNOSE
+REM
+REM The actual TEMPO diagnostic program (.EXE) depends on which kernel is used.
+REM This information is configured in the KSET.BAT file, which sets the
+REM DIAGNOSE environment variable to the diagnostic EXE.
+REM
+REM You can add parameters to the DIAGNOSE command line.  These are
+REM passed directly to the TEMPO diagnostic program:
+REM
+REM         DIAGNOSE param1 param2 ...
+REM
+REM
+REM 27Jan05 If the TEMPO Diagnostic Program CRASHES on a TEMPONET server:
+REM
+REM     The diagnostic program normally produces the TEMPONET.LOG file on the.
+REM     RAM drive.  When the diagnostic program completes, this BAT file writes
+REM     The TEMPONET.LOG file from the RAM drive to the A: (diskette) drive.
+REM
+REM     If the diagnostic program crashes the computer (ie due to a serious
+REM     hardware failure), the TEMPONET.LOG results on the RAM drive are lost.
+REM
+REM     In this case, you can run
+REM
+REM             DIAGNOSE -dA:
+REM
+REM     This tells the diagnostic program to write its results to the A:
+REM     drive instead of using the RAM drive.  If/when the diagnostic program
+REM     crashes the computer, the results up to that point will be preserved
+REM     in the TEMPONET.LOG file on the A: drive.
+REM
+REM     Caveat: The diagnostic program has to open/append/close the LOG
+REM     file on each time it writes to it (to avoid losing the results
+REM     if the program crashes).  When run on the RAM drive or on a hard
+REM     drive, this is fast enough.  But when saving the results with -dA: to a
+REM     diskette, this causes the diagnostic program to take a LONG TIME
+REM     TO RUN.
+REM
+REM     In general, as long as you hear the diskette drive buzzing,
+REM     the diagnostic program is probably working OK.  If it stops buzzing and
+REM     the diagnostic program is not asking you a question, it has
+REM     probably crashed (leaving the results in the TEMPONET.LOG on the A: drive).
+REM
+REM     It can take an hour (or longer) to run the diagnostic program
+REM     when using -dA: (instead of 60 seconds for the RAM/hard drive)!
+REM     If a hard drive is available on the TEMPONET server, (ie the C:
+REM     drive is the hard drive), then you can save the results to the
+REM     hard drive instead of the A: diskette with:
+REM
+REM         DIAGNOSE -dC:
+REM         
+REM     This is MUCH faster than saving to the A: drive.
+REM        
+REM
+REM EDIT HISTORY
+REM  27Jan05 sh Copy LOG file to A: drive only if it exists
+REM
+
+REM We only need to call KSET.BAT if the DIAGNOSTIC environment
+REM variable is not set.
+
+if "%DIAGNOSTIC%" == "" if exist KSET.BAT call KSET.BAT
+
+if "%DIAGNOSTIC%" == "" goto NOPROGRAM
+
+if exist %DIAGNOSTIC%.EXE goto FOUNDIT
+
+:ASK
+echo Please insert the DIAGNOSTIC diskette for this server in the A: drive.
+echo To exit, type CTRL-C.
+pause
+cls
+echo Checking diskette..
+
+if exist A:UTIL.ZIP goto COPYIT
+if exist A:UTIL1.ZIP goto COPYIT
+if exist A:UTIL2.ZIP goto COPYIT
+if exist A:UTIL3.ZIP goto COPYIT
+if exist A:UTIL4.ZIP goto COPYIT
+if exist A:UTIL5.ZIP goto COPYIT
+if exist A:UTIL6.ZIP goto COPYIT
+if exist A:UTIL7.ZIP goto COPYIT
+if exist A:UTIL8.ZIP goto COPYIT
+echo The diskette does not contain UTIL*.ZIP
+goto ASK
+
+:COPYIT
+echo Unpacking diskette..
+
+for %%f in (A:\*.zip) do pkunzip -d -o %%f
+
+if exist %DIAGNOSTIC%.EXE goto FOUNDIT
+
+echo %DIAGNOSTIC%.EXE was not found on the DIAGNOSTIC diskette.
+echo Please insert the correct DIAGNOSTIC diskette into A: and try again.
+goto ASK
+
+:FOUNDIT
+REM Determine DIAGLOG, the argument to the diagnostic program.
+REM This is also used by the diagnostic program to name the LOG file.
+REM Valid settings are:
+REM
+REM DIAGLOG=TEMPODOS    (TEMPO/Dos computer)
+REM DIAGLOG=SERVER      (TEMPO/Win server)  (default)
+REM DIAGLOG=TEMPONET    (TEMPONET server)
+REM DIAGLOG=COBALTS     (COBALT server)
+
+if "%DIAGLOGFILE%" == "" set DIAGLOGFILE=SERVER
+
+REM START THE NETWORK JUST ONCE PER BOOT.  USE THE NET ENVIRONMENT VARIABLE
+REM TO INDICATE THAT THE NETWORK HAS BEEN STARTED.
+
+if "%NET%" == "yes" goto NETLOADED
+    lh net start netbeui
+    pause
+    cls
+    echo Network drivers loaded.
+    set NET=yes
+:NETLOADED
+    
+if "%MOUSE%"=="no" goto NOMOUSE
+    lh mouse
+    set MOUSE=no
+:NOMOUSE
+    
+
+echo NOTE: If you want to run BONG or DDX, you can type CTRL-C now
+echo and run it from the DOS prompt.
+echo .
+echo If you want to run the TEMPO diagnostic program for %DIAGLOG%
+pause
+cls
+echo Running TEMPO Diagnostic program for %DIAGLOG% ... 
+
+%DIAGNOSTIC% %DIAGLOG% %1 %2 %3 %4 %5 %6 %7 %8 %9
+
+echo -------------------------------------------------------------------------
+echo copying %DIAGLOG%.LOG to A: drive ...
+if not exist %DIAGLOG%.LOG The %DIAGLOG%.LOG file was not found.
+if     exist %DIAGLOG%.LOG copy %DIAGLOG%.LOG A:
+echo .
+echo The %DIAGLOG%.LOG file contains the results of these tests.
+echo Please email A:\%DIAGLOG%.LOG to Support@ReflectiveComputing.com for analysis.
+goto EXIT
+
+:NOPROGRAM
+echo -------------------------------------------------------------------------
+echo The DIAGNOSTIC environment variable is not defined.
+echo It should be set (in KSET.BAT) to the name of the TEMPO diagnostic program.
+echo Your SERVER or DIAGNOSTIC diskette may not be prepared properly.
+echo Please contact Reflective Computing for assistance.
+goto EXIT
+
+:EXIT

@@ -1,0 +1,17 @@
+POOL    local
+    {
+    param=null
+    }
+    
+NODE Requester
+    {
+    computer=$0
+    commandline=example3 Responder
+    }
+    
+NODE Responder
+    {
+    computer=$0
+    commandline=example3
+    }
+    

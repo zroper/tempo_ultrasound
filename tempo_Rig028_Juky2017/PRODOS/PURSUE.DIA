@@ -1,0 +1,19 @@
+dialog MAIN
+    {
+    "   Demonstrate VideoSYNC's                ";
+    "   phase lock stabilization algorithm     ";
+    "   for smoothly moving multiple sprites.  ";
+    "                                          ";
+    " [GO   ]   Start protocol. Move mouse.    ";
+    " [STOP ]   Stop moving sprites            ";
+    " [TIME ]   Display sprite timings         ";
+    " [CLEAR]   Clear VideoSYNC screen         ";
+    " [EXIT ]   Exit TEMPO                     ";
+    "                                          ";
+    onentry:    "start";
+    go:         BUTTON "spawn go";
+    stop:       BUTTON "spawn stp";
+    time:       BUTTON "spawn dump";
+    clear:      BUTTON "spawn clear";
+    exit:       BUTTON "stop"; "exit";
+    }

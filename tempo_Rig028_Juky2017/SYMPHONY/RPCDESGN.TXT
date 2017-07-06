@@ -1,0 +1,181 @@
+How to implement Remote Procedure Calls (RPC) using Symphony.
+14Jan07
+
+GOAL
+
+We would like a mechanism that makes it convenient for one node to
+call a function in another node.  The mechanism should be general
+enough to allow any node to provide a number of functions that can
+be called by any other node.
+
+Each function has input and output parameters and can return a
+status code (a long).
+
+As an example, we implement a rpcAdd() function that returns the
+sum of two long values.
+
+On the client side, when a node wants to call rpcAdd() in another
+node, the calling sequence looks something like this:
+
+    long    err;
+    char    *remoteNode;
+    long    aValue, bValue, cValue;
+    
+    remoteNode = "myRemoteNode";
+    aValue = 14;
+    bValue = 16;
+    
+    err = rpcAdd(tg, remoteNode, aValue, bValue, &cValue);
+    if (err)
+        ... process error
+    else
+        printf("%d = %d + %d\n", cValue, aValue, bValue);
+
+
+The rest of this document describes how RPCs can be implemented
+in Symphony.
+
+
+SERVER SIDE
+
+1. Create an RPC function table.
+
+    typedef struct
+        {
+        char    *functionName[32],              // Function name
+        long    (*function)(TG_RQSTRESP *rr);   // Function address
+        } RPCFUNC;
+
+2. Load RPCFUNC table with all functions the server wants to make
+available for remote function calling.  You can either statically
+declare and load the RPCFUNC table or you can built it by calling
+some sort of registration function that you write.
+
+If you choose to dynamically add or remove RPC functions from the
+table, you must do so within a Critical Section (or other semaphore)
+to prevent access by the tgcbQuery() function while you are changing
+the RPCFUNC table.
+
+For example, suppose we want to declare the function "rpcAdd" that
+adds two parameters and returns their sum.
+
+    long
+    rpcAdd(TG_RQSTRESP)
+        {
+        long        err;
+        long        aValue;
+        long        bValue;
+        long        cValue;
+        
+        // GET THE INPUT PARAMETERS FROM THE REQUEST
+        
+        if (!rr->rqst || !rr->nRqstSize)
+            return(-1);                 // No input parameters
+            
+        if (!rr->resp || !rr->nRespSize)
+            return(-2);                 // No place to store response
+            
+        err = paramGetLong(rr->rqst, &aValue, "a");
+        if (err)
+            return(-3);                 // A= not set
+            
+        err = paramGetLong(rr->rqst, &bValue, "b");
+        if (err)
+            return(-4);                 // B= not set
+            
+        // PERFORM THE COMPUTATION
+
+        cValue = aValue + bValue;
+        
+        // ADD OUTPUT PARAMETER(S) IN RESPONSE
+        
+        err = paramAppend(rr->resp, rr->resp, rr->respSize, "c=%d\n", cValue);
+        if (err)
+            return(-5);                 // Error storing response
+            
+        return(0);                      // Completed computation successfully
+        }
+
+
+3. In tgcbQuery(), add the following logic:
+
+long
+tgcbQuery(TG_RQSTRESP *rr)
+    {
+    char    *rqst;
+    
+    rqst = rr->rqst;
+    
+    if (rqst && rr->nRqstSize > 5 && memicmp(rqst, "rpc ", 4) == 0))
+        {
+        RPCFUNC     *rpc;
+        char        rpcFuncName[32];
+        
+        // This is a Remote Procedure Call request
+        
+        rqst += 4;                      // Skip over "RPC "
+        rqst += GetWord(rqst, rpcFuncName, sizeof(rpcFuncName));
+        
+        rpc = rpcFind(rpcFuncName);     // Look up first word
+        if (!rpc)
+            return(-1);                 // RPC function not available
+        else
+            return(rpc->function(rr));  // Call RPC function
+        }
+    
+    // ... Do other tgcbQuery processing
+    }
+
+The rpcFind() function searches the RPCFUNC table for the function name.
+If not found, it returns NULL.  If found, it returns a pointer to the RPCFUNC
+block.
+
+
+
+CLIENT SIDE - How to call a remote function
+
+To call a remote function, the client uses the tgQueryf() function
+and make the first line of the request "RPC functionName\n...".
+
+For example, if "rpcAdd" takes two parameters A and B, adds them and
+returns C,
+
+long
+rpcAdd(TG *tg, char *remoteNode, long aValue, long bValue, long *cValue)
+    {
+    TG_QUERY        tgquery;
+    char            resp[TG_BUFSIZE];   // Response buffer
+    
+    tgquery = tgQueryf(
+                tg,                 // TG *
+                0,                  // LCIDENT
+                remoteNode,         // remote node
+                resp,               // Buffer to store response
+                sizeof(resp),       // Size of response buffer
+                1000,               // Timeout in ms
+                "RPC rpcAdd\n"      // Remote Procedure Call
+                    "a=%d\n"
+                    "b=%d\n",
+                        aValue,
+                        bValue);
+    
+    if (tgquery.tgerr)
+        {
+        return(-1);                 // An TG error occurred.
+        }
+    else
+        {
+        long        err;
+        long        cValue;
+        
+        // GET RESULT OF COMPUTATION
+        
+        err = paramGetLong(resp, cValue, "c");
+        if (err)
+            {
+            return(-2);             // Error. Expected result not in RPC response.
+            }
+        }
+    
+    return(0);                      // Successful return
+    }            

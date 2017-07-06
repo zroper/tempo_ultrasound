@@ -1,0 +1,84 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 18 10:06:45 2001
+; CLOAD dim.pcf
+
+; tempow 10.4 Set 28.6   'T100427' connected to 'KernelServer'
+; KPCD 10.3 Set 28
+; KSRV 10.3 Set 28.6 (Server 'KernelServer    ' running on computer '')
+; PCL 10.3     TEMPO 10.1
+; ANALOGRESOLUTION=16
+; WARNING=2
+; SPEED=500.000000  PROSPEED=100.000000  (200/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=15
+; ECHANNELS=4
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =40        11    28%       264/960        =16     =12   
+; INSTRUCTIONS    =400       44    11%       792/7200       =63     =46   
+; SYMBOLTABLE     =400       58    15%       696/4800       =68     =61   
+; HASHTABLE       =  127,400       37%      1638/3162     Use Kernel Default
+; NAMETABLE       =2000     537    27%       537/2000       =632    =565  
+; DATABASES       =40         2     5%       120/2400       =2      =2    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =32         0     0%         0/1408       =0      =0    
+
+SPEED 500
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=15
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=4
+
+PLOAD dim.pro
+
+; DATABASES=40
+
+HOPEN  1,0,1,1,8,100,500,0,0,0,0x0
+HTITLE 1,"SUM"
+HOPEN  2,1,1,1,8,10,500,0,0,0,0x0
+HTITLE 2,"APP"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,645,35,1547,112,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,64,834,951,1170,0
+SHOW h 0
+
+CMDWND 1,-1,-1,-1,-1,331,67,626,128,0
+ANIMPAGE 0x1,1,-1,-1,-1,-1,37,210,641,594,0
+ANIMVIEW 0,1,-1,-1,-1,-1,0,0,297,351,0
+ANIMVIEW 1,1,-1,-1,-1,-1,297,0,594,351,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,768,231,1568,831,0
+DBVIEW  0,0,1,10,250,0,8,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,790,283,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,1,2,10,250,0,8,0,0,0,0x0
+DBVPOS  0,1,1,-1,-1,-1,-1,0,283,790,566,1
+DBVCOLORS 0,1,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+

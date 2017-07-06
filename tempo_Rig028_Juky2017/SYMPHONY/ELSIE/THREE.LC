@@ -1,0 +1,38 @@
+POOL    shel
+    {
+    param=null
+    }
+    
+NODE Sender
+    {
+    computer=$761
+    commandline=tgs.exe SENDER.LOG
+    workingDirectory=c:\usr\tempo\symphony\elsie
+    }
+    
+NODE Middleman
+    {
+    computer=$any
+    commandline=tgs.exe MIDDLEMA.LOG
+    workingDirectory=c:\usr\tempo\symphony\elsie
+    }
+
+NODE Receiver
+    {
+    computer=$elsie
+    commandline=tgs.exe RECEIVER.LOG
+    workingDirectory=c:\usr\tempo\symphony\elsie
+    }
+
+CONNECTION pipe1
+    {
+    lcSendNodename=Sender
+    lcRecvNodename=Middleman
+    }
+
+CONNECTION pipe2
+    {
+    lcSendNodename=Middleman
+    lcRecvNodename=Receiver
+    }
+

@@ -1,0 +1,48 @@
+
+--- Module:   getepoch.C
+getepoch.C(181) : Error 118: Too few arguments (5) for prototype
+    'TempoGetItem(unsigned long, struct HCONV__ *, char *, unsigned int,
+    unsigned long, char *, unsigned long, unsigned long *)'
+getepoch.C(181) : Error 64: Type mismatch (assignment) (struct HDDEDATA__ * =
+    long)
+getepoch.C(193) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)
+
+During Specific Walk:
+  File getepoch.C line 127: GetLongData(?, !=0, ?, !=0, [1])
+getepoch.C(193) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)
+
+During Specific Walk:
+  File getepoch.C line 135: GetLongData(?, !=0, ?, !=0, [1])
+getepoch.C(193) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)
+
+During Specific Walk:
+  File getepoch.C line 143: GetLongData(?, !=0, ?, !=0, [1])
+getepoch.C(193) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)
+getepoch.C(217) : Error 118: Too few arguments (5) for prototype
+    'TempoGetItem(unsigned long, struct HCONV__ *, char *, unsigned int,
+    unsigned long, char *, unsigned long, unsigned long *)'
+getepoch.C(217) : Error 64: Type mismatch (assignment) (struct HDDEDATA__ * =
+    long)
+getepoch.C(251) : Error 118: Too few arguments (5) for prototype
+    'TempoGetItem(unsigned long, struct HCONV__ *, char *, unsigned int,
+    unsigned long, char *, unsigned long, unsigned long *)'
+getepoch.C(251) : Error 64: Type mismatch (assignment) (struct HDDEDATA__ * =
+    long)
+getepoch.C(308) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)
+getepoch.C(320) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)
+
+During Specific Walk:
+  File getepoch.C line 153: PrintEpoch(?, !=0, ?, 0?, 1?, ?, ?, ?)
+getepoch.C(308) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)
+
+During Specific Walk:
+  File getepoch.C line 153: PrintEpoch(?, !=0, ?, 0?, 1?, ?, ?, ?)
+getepoch.C(320) : Info 826: Suspicious pointer-to-pointer conversion (area too
+    small)

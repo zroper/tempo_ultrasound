@@ -1,0 +1,2430 @@
+PCL 12.5 Set 45 Sat Jul 13 15:17:21 2013
+
+PATH='C:\TEMPO;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\PROGRA~1\SlikSvn\bin\'
+CWD='C:\TEMPO\PROWIN'
+
+PCL Opening XMS..
+PCL: XMS Version  2.00 Revision  2.77
+PCL: XMS Largest block 919 Kb (941056 bytes),  Total 919 Kb (941056 bytes).
+PCL Processing command line arguments..
+ 0: 'C:\TEMPO\PCL.EXE'
+ 1: '-x'
+ 2: '-kpcl0001.tmp'
+ 3: 'acquire.pro'
+ 4: 'acquire.err'
+PCL Checking if PRO file 'acquire.pro' exists..
+PCL Opening KERNEL vector 96
+copyFileToLog: pcl0001.tmp BEGIN-----------
+45,12,1,100,100000,2,75,90000,2000,99328,10000,131072,40C60002,56C10002,KPED
+copyFileToLog: pcl0001.tmp END-----------
+PCL Calling makeIC with funfilename='KPED'
+copyFileToLog: C:\TEMPO\KPED.fun BEGIN-----------
+KERNEL KPED 12.1 Set 45 Functions 168
+  0 print 4 0 16
+  1 printf 4 0 16
+  2 write 4 1 16
+  3 writef 4 1 16
+  4 writefx 4 1 16
+  5 mio_dig_get 0 1 1
+  6 mio_dig_set 0 2 2
+  7 mio_ao_set 0 2 2
+  8 mio_fout 0 1 1
+  9 ipproc 0 1 1
+ 10 poisson 0 1 1
+ 11 iunif 0 1 1
+ 12 random 0 1 1
+ 13 normal 0 1 1
+ 14 seed1 0 0 1
+ 15 seed2 0 0 1
+ 16 sign 4 1 1
+ 17 abs 0 1 1
+ 18 status_set 0 0 1
+ 19 cancel_set 0 0 1
+ 20 status_clr 0 0 1
+ 21 cancel_clr 0 0 1
+ 22 htb_sweep 0 1 1
+ 23 htb_sweeps 0 1 1
+ 24 htb_period 0 1 1
+ 25 htb_extension 0 1 1
+ 26 htb_cancel 0 1 1
+ 27 htb_offset 0 1 1
+ 28 htb_tpb 0 1 1
+ 29 htb_nchannels 0 1 1
+ 30 htb_channel 0 1 1
+ 31 htb_type 0 1 1
+ 32 htb_tag 0 1 1
+ 33 htb_handle 0 1 1
+ 34 htb_speed 0 1 1
+ 35 htb_speedunits 0 1 1
+ 36 htb_dirty 0 1 1
+ 37 system 4 0 16
+ 38 systemf 4 0 16
+ 39 tick 0 0 0
+ 40 tempoCobaltTick 0 0 0
+ 41 time 0 0 0
+ 42 timeus 0 0 0
+ 43 mspertick 0 0 0
+ 44 mspercycle 0 0 0
+ 45 timeofday 0 0 0
+ 46 day 0 0 0
+ 47 dayofweek 0 0 0
+ 48 month 0 0 0
+ 49 year 0 0 0
+ 50 TSCLow 0 0 0
+ 51 TSCHigh 0 0 0
+ 52 TSCHz 0 0 0
+ 53 TSCTheoreticalHz 0 0 0
+ 54 SetCobaltTest 0 1 1
+ 55 ProcessCycleStartTSCLow 0 0 0
+ 56 ProcessCycleStartTSCHigh 0 0 0
+ 57 ProcessCycleLatencyUS 0 0 0
+ 58 atable 0 0 2
+ 59 ctable 0 0 2
+ 60 etable 0 0 2
+ 61 atable_set 0 2 3
+ 62 ctable_set 0 2 3
+ 63 etable_set 0 2 3
+ 64 event_set 0 2 3
+ 65 event_get 0 2 3
+ 66 inp 0 1 1
+ 67 inpw 0 1 1
+ 68 outp 0 2 2
+ 69 outpw 0 2 2
+ 70 sound 0 1 1
+ 71 send 4 1 16
+ 72 sendf 4 1 16
+ 73 com_autocancel 0 0 1
+ 74 com_count 0 0 0
+ 75 com_free_space 0 0 0
+ 76 com_peek 0 0 0
+ 77 com_get 0 0 0
+ 78 com_getn 0 1 1
+ 79 com_flush 0 0 1
+ 80 com_span 0 1 1
+ 81 com_GetStatus 0 0 0
+ 82 com_ResetStatus 0 0 0
+ 83 com_ResumeRX 0 0 0
+ 84 com_ResumeTX 0 0 0
+ 85 send2 4 1 16
+ 86 sendf2 4 1 16
+ 87 com_autocancel2 0 0 1
+ 88 com_count2 0 0 0
+ 89 com_free_space2 0 0 0
+ 90 com_peek2 0 0 0
+ 91 com_get2 0 0 0
+ 92 com_getn2 0 1 1
+ 93 com_flush2 0 0 1
+ 94 com_span2 0 1 1
+ 95 com_GetStatus2 0 0 0
+ 96 com_ResetStatus2 0 0 0
+ 97 com_ResumeRX2 0 0 0
+ 98 com_ResumeTX2 0 0 0
+ 99 sendb 4 1 16
+100 sendfb 4 1 16
+101 getPendingDBTriggers 0 0 1
+102 getPendingTAGTriggers 0 0 1
+103 getProcessState 0 1 1
+104 getSystemInfo 0 1 1
+105 oCreate 0 2 4
+106 oDestroy 0 1 1
+107 oMove 0 3 3
+108 oSetAttribute 0 2 4
+109 oSetGraph 0 2 16
+110 mouGetX 0 0 0
+111 mouGetY 0 0 0
+112 mouGetButtons 0 0 0
+113 mouSetMickeys 0 1 1
+114 mouSetXY 0 2 2
+115 mouGetDriverX 0 0 0
+116 mouGetDriverY 0 0 0
+117 mouSetDriverLimits 0 4 4
+118 mouResetDriver 0 0 0
+119 fabs 7 1 1
+120 sin 7 1 1
+121 cos 7 1 1
+122 sinrad 7 1 1
+123 cosrad 7 1 1
+124 deg2rad 7 1 1
+125 rad2deg 7 1 1
+126 sqrt 7 1 1
+127 round 7 1 1
+128 ceil 7 1 1
+129 floor 7 1 1
+130 floatimport 7 1 1
+131 floatexport 4 1 1
+132 floattest 4 1 1
+133 atan 7 1 1
+134 atan2 7 2 2
+135 exp 7 1 1
+136 pow 7 2 2
+137 log10 7 1 1
+138 ln 7 1 1
+139 tio_fout 0 3 3
+140 tio_dig_mask 0 0 1
+141 tio_dig_get 0 1 1
+142 tio_dig_set 0 2 2
+143 dioSetMode 0 2 2
+144 dioGetA 0 1 1
+145 dioGetB 0 1 1
+146 dioGetC 0 1 1
+147 dioSetA 0 2 2
+148 dioSetB 0 2 2
+149 dioSetC 0 2 2
+150 dSend 4 0 16
+151 dSend2 4 0 16
+152 dSendf 4 0 16
+153 dSendf2 4 0 16
+154 rdxSetTTLOUT 0 1 1
+155 rdxSetTTLOUT2 0 1 1
+156 rdxGetTTLIN 0 0 0
+157 rdxGetTTLIN 0 0 0
+158 rdxGetTTLOUT 0 0 0
+159 rdxGetTTLOUT2 0 0 0
+160 rdxFlush 0 0 1
+161 rdxFlush2 0 0 1
+162 peek8 0 1 1
+163 peek16 0 1 1
+164 peek32 0 1 1
+165 poke8 0 2 2
+166 poke16 0 2 2
+167 poke32 0 2 2
+
+copyFileToLog: C:\TEMPO\KPED.fun END-----------
+PCL - Fake KERNEL IC at 33F0:05EC
+PCL - HASHTAB nhshtab_max=1021  nhshoflo_max=2000 (nsymtab_max=2000)
+PCL - Opening instructions cache file 'PCLCACHE.TMP'
+PCL - Calling fpload('acquire.pro')
+hashAddNamtab: ADDED 'SETS' at iOffset=84002
+hashAddNamtab: ADDED 'SPEED' at iOffset=84008
+hashAddNamtab: ADDED 'SPEED_UNITS' at iOffset=84014
+hashAddNamtab: ADDED '__debug_op' at iOffset=84026
+hashAddNamtab: ADDED 'gLEFT' at iOffset=84038
+hashAddNamtab: ADDED 'gRIGHT' at iOffset=84044
+hashAddNamtab: ADDED 'tPOINT' at iOffset=84052
+hashAddNamtab: ADDED 'tBOX' at iOffset=84060
+hashAddNamtab: ADDED 'tCROSS' at iOffset=84066
+hashAddNamtab: ADDED 'tXCROSS' at iOffset=84074
+hashAddNamtab: ADDED 'tELLIPSE' at iOffset=84082
+hashAddNamtab: ADDED 'aXOR' at iOffset=84092
+hashAddNamtab: ADDED 'aREPLACE' at iOffset=84098
+hashAddNamtab: ADDED 'aVISIBLE' at iOffset=84108
+hashAddNamtab: ADDED 'aINVISIBLE' at iOffset=84118
+hashAddNamtab: ADDED 'aFILLED' at iOffset=84130
+hashAddNamtab: ADDED 'aUNFILLED' at iOffset=84138
+hashAddNamtab: ADDED 'aSIZE' at iOffset=84148
+hashAddNamtab: ADDED 'aRANGE' at iOffset=84154
+hashAddNamtab: ADDED 'aTITLE' at iOffset=84162
+hashAddNamtab: ADDED 'aCLEAR' at iOffset=84170
+hashAddNamtab: ADDED 'DEBUG' at iOffset=84178
+hashAddNamtab: ADDED 'AUTOMONKEY' at iOffset=84184
+hashAddNamtab: ADDED 'VERSION' at iOffset=84196
+hashAddNamtab: ADDED 'REVISION' at iOffset=84204
+hashAddNamtab: ADDED 'PRIMARY_DATABASES' at iOffset=84214
+hashAddNamtab: ADDED 'XMAX' at iOffset=84232
+hashAddNamtab: ADDED 'YMAX' at iOffset=84238
+hashAddNamtab: ADDED 'TrialCount' at iOffset=84244
+hashAddNamtab: ADDED 'SuccessCount' at iOffset=84256
+hashAddNamtab: ADDED 'xsize' at iOffset=84270
+hashAddNamtab: ADDED 'ysize' at iOffset=84276
+hashAddNamtab: ADDED 'acquire_time' at iOffset=84282
+hashAddNamtab: ADDED 'hold_time' at iOffset=84296
+hashAddNamtab: ADDED 'juice_time' at iOffset=84306
+hashAddNamtab: ADDED 'failed' at iOffset=84318
+hashAddNamtab: ADDED 'ERR_OK' at iOffset=84326
+hashAddNamtab: ADDED 'ERR_ACQUIRE' at iOffset=84334
+hashAddNamtab: ADDED 'ERR_HOLD' at iOffset=84346
+hashAddNamtab: ADDED 'BAR' at iOffset=84356
+hashAddNamtab: ADDED 'oB' at iOffset=84360
+hashAddNamtab: ADDED 'oE' at iOffset=84364
+hashAddNamtab: ADDED 'oB1' at iOffset=84368
+hashAddNamtab: ADDED 'oE1' at iOffset=84372
+hashAddNamtab: ADDED 'bx' at iOffset=84376
+hashAddNamtab: ADDED 'by' at iOffset=84380
+hashAddNamtab: ADDED 'ax' at iOffset=84384
+hashAddNamtab: ADDED 'ay' at iOffset=84388
+hashAddNamtab: ADDED 'x' at iOffset=84392
+hashAddNamtab: ADDED 'y' at iOffset=84394
+hashAddNamtab: ADDED 'isinside' at iOffset=84396
+hashAddNamtab: ADDED 'MAIN' at iOffset=84406
+hashAddNamtab: ADDED 'INIT' at iOffset=84412
+hashAddNamtab: ADDED 'TRIAL_LOOP' at iOffset=84418
+hashAddNamtab: ADDED 'WATCHEYE' at iOffset=84430
+hashAddNamtab: ADDED 'SETUP' at iOffset=84440
+hashAddNamtab: ADDED 'TRIAL' at iOffset=84446
+hashAddNamtab: ADDED 'JUICE' at iOffset=84452
+hashAddNamtab: ADDED 'FAILURE' at iOffset=84458
+hashAddNamtab: ADDED 'BOXON' at iOffset=84466
+hashAddNamtab: ADDED 'BOXOFF' at iOffset=84472
+hashAddNamtab: ADDED 'CheckIsInside' at iOffset=84480
+preInstructionCompilation: BEFORE 'MAIN' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'Press F1 for HELP and other TEMPO dialogs.' at iOffset=84494
+hashAddNamtab: ADDED '#S0' at iOffset=84538
+hashAddNamtab: ADDED '#L0' at iOffset=84542
+hashAddNamtab: ADDED 'dialog main' at iOffset=84546
+hashAddNamtab: ADDED '#S1' at iOffset=84558
+postInstructionCompilation: Saving 'MAIN' nops=42 nInstructions=40 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'MAIN' Wrote 40 bytes from op[2..41] to instcach[2..41]
+preInstructionCompilation: BEFORE 'INIT' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'cl' at iOffset=84562
+hashAddNamtab: ADDED '#S2' at iOffset=84566
+hashAddNamtab: ADDED 'vc 0,%d,0,%d
+' at iOffset=84570
+hashAddNamtab: ADDED '#S3' at iOffset=84584
+hashAddNamtab: ADDED '#I0' at iOffset=84588
+hashAddNamtab: ADDED '#I20' at iOffset=84592
+hashAddNamtab: ADDED 'oc 1,3
+' at iOffset=84598
+hashAddNamtab: ADDED '#S4' at iOffset=84606
+hashAddNamtab: ADDED 'ow 1,20,20
+' at iOffset=84610
+hashAddNamtab: ADDED '#S5' at iOffset=84622
+hashAddNamtab: ADDED 'oi 1,13
+' at iOffset=84626
+hashAddNamtab: ADDED '#S6' at iOffset=84636
+hashAddNamtab: ADDED 'os 1
+' at iOffset=84640
+hashAddNamtab: ADDED '#S7' at iOffset=84646
+postInstructionCompilation: Saving 'INIT' nops=216 nInstructions=214 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'INIT' Wrote 214 bytes from op[2..215] to instcach[42..255]
+preInstructionCompilation: BEFORE 'TRIAL_LOOP' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'waitAutoMonkey' at iOffset=84650
+hashAddNamtab: ADDED '#I1' at iOffset=84666
+hashAddNamtab: ADDED '#I1000' at iOffset=84670
+hashAddNamtab: ADDED '#I8000' at iOffset=84678
+hashAddNamtab: ADDED '#L1' at iOffset=84686
+hashAddNamtab: ADDED 'Automonkey will press bar in %d ms
+' at iOffset=84690
+hashAddNamtab: ADDED '#S8' at iOffset=84726
+hashAddNamtab: ADDED 'cls' at iOffset=84730
+hashAddNamtab: ADDED '#S9' at iOffset=84734
+hashAddNamtab: ADDED 'Waiting for left mouse button...' at iOffset=84738
+hashAddNamtab: ADDED '#S10' at iOffset=84772
+hashAddNamtab: ADDED '#L2' at iOffset=84778
+hashAddNamtab: ADDED 'Waiting for BAR press...' at iOffset=84782
+hashAddNamtab: ADDED '#S11' at iOffset=84808
+hashAddNamtab: ADDED 'Starting trial %d..
+' at iOffset=84814
+hashAddNamtab: ADDED '#S12' at iOffset=84836
+hashAddNamtab: ADDED 'Trial %d SUCCESSFUL
+' at iOffset=84842
+hashAddNamtab: ADDED '#S13' at iOffset=84864
+hashAddNamtab: ADDED 'Trial %d FAILED
+' at iOffset=84870
+hashAddNamtab: ADDED '#S14' at iOffset=84888
+postInstructionCompilation: Saving 'TRIAL_LOOP' nops=278 nInstructions=276 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'TRIAL_LOOP' Wrote 276 bytes from op[2..277] to instcach[256..531]
+preInstructionCompilation: BEFORE 'SETUP' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+postInstructionCompilation: Saving 'SETUP' nops=58 nInstructions=56 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'SETUP' Wrote 56 bytes from op[2..57] to instcach[532..587]
+preInstructionCompilation: BEFORE 'TRIAL' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'end' at iOffset=84894
+hashAddNamtab: ADDED 'start_time' at iOffset=84898
+hashAddNamtab: ADDED '#L3' at iOffset=84910
+hashAddNamtab: ADDED '#I2' at iOffset=84914
+hashAddNamtab: ADDED 'Latency %d ms
+' at iOffset=84918
+hashAddNamtab: ADDED '#S15' at iOffset=84934
+hashAddNamtab: ADDED '#I5000' at iOffset=84940
+postInstructionCompilation: Saving 'TRIAL' nops=456 nInstructions=454 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'TRIAL' Wrote 454 bytes from op[2..455] to instcach[588..1041]
+preInstructionCompilation: BEFORE 'WATCHEYE' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'oldx' at iOffset=84948
+hashAddNamtab: ADDED 'oldy' at iOffset=84954
+hashAddNamtab: ADDED 'bxc' at iOffset=84960
+hashAddNamtab: ADDED 'byc' at iOffset=84964
+hashAddNamtab: ADDED 'axc' at iOffset=84968
+hashAddNamtab: ADDED 'ayc' at iOffset=84972
+hashAddNamtab: ADDED '#I4096' at iOffset=84976
+hashAddNamtab: ADDED '#I2048' at iOffset=84984
+hashAddNamtab: ADDED '#I50' at iOffset=84992
+hashAddNamtab: ADDED '#I25' at iOffset=84998
+hashAddNamtab: ADDED 'om 1,%d,%d
+' at iOffset=85004
+hashAddNamtab: ADDED '#S16' at iOffset=85016
+postInstructionCompilation: Saving 'WATCHEYE' nops=566 nInstructions=564 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'WATCHEYE' Wrote 564 bytes from op[2..565] to instcach[1042..1605]
+preInstructionCompilation: BEFORE 'CheckIsInside' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED '#L4' at iOffset=85022
+hashAddNamtab: ADDED '#L5' at iOffset=85026
+hashAddNamtab: ADDED '#L6' at iOffset=85030
+hashAddNamtab: ADDED '#L7' at iOffset=85034
+hashAddNamtab: ADDED '#L8' at iOffset=85038
+postInstructionCompilation: Saving 'CheckIsInside' nops=160 nInstructions=158 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'CheckIsInside' Wrote 158 bytes from op[2..159] to instcach[1606..1763]
+preInstructionCompilation: BEFORE 'BOXON' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'oh 1' at iOffset=85042
+hashAddNamtab: ADDED '#S17' at iOffset=85048
+hashAddNamtab: ADDED 'co 15' at iOffset=85054
+hashAddNamtab: ADDED '#S18' at iOffset=85060
+hashAddNamtab: ADDED 'ru %d,%d,%d,%d
+' at iOffset=85066
+hashAddNamtab: ADDED '#S19' at iOffset=85082
+hashAddNamtab: ADDED 'os 1' at iOffset=85088
+hashAddNamtab: ADDED '#S20' at iOffset=85094
+postInstructionCompilation: Saving 'BOXON' nops=254 nInstructions=252 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'BOXON' Wrote 252 bytes from op[2..253] to instcach[1764..2015]
+preInstructionCompilation: BEFORE 'BOXOFF' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'oh 1' at iOffset=85100
+hashAddNamtab: ADDED '#S21' at iOffset=85106
+hashAddNamtab: ADDED 'co 0' at iOffset=85112
+hashAddNamtab: ADDED '#S22' at iOffset=85118
+hashAddNamtab: ADDED 'ru %d,%d,%d,%d
+' at iOffset=85124
+hashAddNamtab: ADDED '#S23' at iOffset=85140
+hashAddNamtab: ADDED 'os 1' at iOffset=85146
+hashAddNamtab: ADDED '#S24' at iOffset=85152
+postInstructionCompilation: Saving 'BOXOFF' nops=90 nInstructions=88 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'BOXOFF' Wrote 88 bytes from op[2..89] to instcach[2016..2103]
+preInstructionCompilation: BEFORE 'JUICE' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED '#I500' at iOffset=85158
+hashAddNamtab: ADDED '#I6' at iOffset=85164
+postInstructionCompilation: Saving 'JUICE' nops=194 nInstructions=192 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'JUICE' Wrote 192 bytes from op[2..193] to instcach[2104..2295]
+preInstructionCompilation: BEFORE 'FAILURE' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'Failed to acquire target within %d ms.
+' at iOffset=85168
+hashAddNamtab: ADDED '#S25' at iOffset=85208
+hashAddNamtab: ADDED 'Failed to hold target for %d ms.
+' at iOffset=85214
+hashAddNamtab: ADDED '#S26' at iOffset=85248
+hashAddNamtab: ADDED '#I100' at iOffset=85254
+hashAddNamtab: ADDED '#I3' at iOffset=85260
+postInstructionCompilation: Saving 'FAILURE' nops=104 nInstructions=102 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'FAILURE' Wrote 102 bytes from op[2..103] to instcach[2296..2397]
+hashAddNamtab: ADDED 'BUSYLOOP' at iOffset=85264
+preInstructionCompilation: BEFORE 'BUSYLOOP' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'busy' at iOffset=85274
+postInstructionCompilation: Saving 'BUSYLOOP' nops=52 nInstructions=50 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'BUSYLOOP' Wrote 50 bytes from op[2..51] to instcach[2398..2447]
+hashAddNamtab: ADDED 'saveVSscreen' at iOffset=85280
+preInstructionCompilation: BEFORE 'saveVSscreen' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'nPCX' at iOffset=85294
+hashAddNamtab: ADDED 'IS 0,0,%d,%d,%d.pcx
+' at iOffset=85300
+hashAddNamtab: ADDED '#S27' at iOffset=85322
+hashAddNamtab: ADDED 'saveVSscreen - Saved %d.PCX
+' at iOffset=85328
+hashAddNamtab: ADDED '#S28' at iOffset=85358
+postInstructionCompilation: Saving 'saveVSscreen' nops=40 nInstructions=38 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'saveVSscreen' Wrote 38 bytes from op[2..39] to instcach[2448..2485]
+load_timer:  parse_errors=0
+PCL - Calling fpload('acquire.pro') returned 0
+PCL - Sorting symbol table..
+mapop - PROCESS 'MAIN' reading 40 bytes of instructions..
+mapop - PROCESS 'MAIN' writing 40 bytes of instructions..
+ICacheSave - PROCESS 'MAIN' Wrote 40 bytes from op[2..41] to instcach[2..41]
+mapop - PROCESS 'INIT' reading 214 bytes of instructions..
+mapop - PROCESS 'INIT' writing 214 bytes of instructions..
+ICacheSave - PROCESS 'INIT' Wrote 214 bytes from op[2..215] to instcach[42..255]
+mapop - PROCESS 'TRIAL_LOOP' reading 276 bytes of instructions..
+mapop - PROCESS 'TRIAL_LOOP' writing 276 bytes of instructions..
+ICacheSave - PROCESS 'TRIAL_LOOP' Wrote 276 bytes from op[2..277] to instcach[256..531]
+mapop - PROCESS 'SETUP' reading 56 bytes of instructions..
+mapop - PROCESS 'SETUP' writing 56 bytes of instructions..
+ICacheSave - PROCESS 'SETUP' Wrote 56 bytes from op[2..57] to instcach[532..587]
+mapop - PROCESS 'TRIAL' reading 454 bytes of instructions..
+mapop - PROCESS 'TRIAL' writing 454 bytes of instructions..
+ICacheSave - PROCESS 'TRIAL' Wrote 454 bytes from op[2..455] to instcach[588..1041]
+mapop - PROCESS 'WATCHEYE' reading 564 bytes of instructions..
+mapop - PROCESS 'WATCHEYE' writing 564 bytes of instructions..
+ICacheSave - PROCESS 'WATCHEYE' Wrote 564 bytes from op[2..565] to instcach[1042..1605]
+mapop - PROCESS 'CheckIsInside' reading 158 bytes of instructions..
+mapop - PROCESS 'CheckIsInside' writing 158 bytes of instructions..
+ICacheSave - PROCESS 'CheckIsInside' Wrote 158 bytes from op[2..159] to instcach[1606..1763]
+mapop - PROCESS 'BOXON' reading 252 bytes of instructions..
+mapop - PROCESS 'BOXON' writing 252 bytes of instructions..
+ICacheSave - PROCESS 'BOXON' Wrote 252 bytes from op[2..253] to instcach[1764..2015]
+mapop - PROCESS 'BOXOFF' reading 88 bytes of instructions..
+mapop - PROCESS 'BOXOFF' writing 88 bytes of instructions..
+ICacheSave - PROCESS 'BOXOFF' Wrote 88 bytes from op[2..89] to instcach[2016..2103]
+mapop - PROCESS 'JUICE' reading 192 bytes of instructions..
+mapop - PROCESS 'JUICE' writing 192 bytes of instructions..
+ICacheSave - PROCESS 'JUICE' Wrote 192 bytes from op[2..193] to instcach[2104..2295]
+mapop - PROCESS 'FAILURE' reading 102 bytes of instructions..
+mapop - PROCESS 'FAILURE' writing 102 bytes of instructions..
+ICacheSave - PROCESS 'FAILURE' Wrote 102 bytes from op[2..103] to instcach[2296..2397]
+mapop - PROCESS 'BUSYLOOP' reading 50 bytes of instructions..
+mapop - PROCESS 'BUSYLOOP' writing 50 bytes of instructions..
+ICacheSave - PROCESS 'BUSYLOOP' Wrote 50 bytes from op[2..51] to instcach[2398..2447]
+mapop - PROCESS 'saveVSscreen' reading 38 bytes of instructions..
+mapop - PROCESS 'saveVSscreen' writing 38 bytes of instructions..
+ICacheSave - PROCESS 'saveVSscreen' Wrote 38 bytes from op[2..39] to instcach[2448..2485]
+Protocol File    : acquire.pro
+Error File       : acquire.err
+Compiled         : Sat Jul 13 15:17:21 2013
+
+Default Hz       : 1000.000
+Default Sets     :     2
+Symbol Table     :   128/2000  (  6 %)
+Name Table       : 85364/99328 ( 85 %)
+Hash Table       :    16/2000  (  0 %)
+Array Table      :     0/10000 (  0 %)
+Array Data       :     0/131072 (  0 %)
+Instructions     :  2484/90000 (  2 %)
+InstructionsXMS  :  disabled
+Processes        :    13/75    ( 17 %)
+Pragma           : declare=1
+Pragma           : optimize=15
+Pragma           : display_optimizations=0
+Pragma           : assume_local_scope=0
+Pragma           : multipleinclude=0
+Optimizations
+ UnOpt Assign    : 10
+ Math Assign     : 17 (reduced code)
+ Func Assign     : 11 (reduced code)
+0 errors detected.
+SYMBOL TABLE (128/2000)
+
+iSYM  iNAM  Proc  Scope Type                Attributes                Symbol
+----- ----- ----- ----- ---- ---------------------------------------- -------------
+   1:    44     0     0 long CONS           INIT HDDN                 #I0 =0 (0x00000000)
+   2:    86     0     0 long CONS           INIT HDDN                 #I1 =1 (0x00000001)
+   3:   128     0     0 long CONS           INIT HDDN                 #I100 =100 (0x00000064)
+   4:   170     0     0 long CONS           INIT HDDN                 #I1000 =1000 (0x000003E8)
+   5:   212     0     0 long CONS           INIT HDDN                 #I2 =2 (0x00000002)
+   6:   254     0     0 long CONS           INIT HDDN                 #I20 =20 (0x00000014)
+   7:   296     0     0 long CONS           INIT HDDN                 #I2048 =2048 (0x00000800)
+   8:   338     0     0 long CONS           INIT HDDN                 #I25 =25 (0x00000019)
+   9:   380     0     0 long CONS           INIT HDDN                 #I3 =3 (0x00000003)
+  10:   422     0     0 long CONS           INIT HDDN                 #I4096 =4096 (0x00001000)
+  11:   464     0     0 long CONS           INIT HDDN                 #I50 =50 (0x00000032)
+  12:   506     0     0 long CONS           INIT HDDN                 #I500 =500 (0x000001F4)
+  13:   548     0     0 long CONS           INIT HDDN                 #I5000 =5000 (0x00001388)
+  14:   590     0     0 long CONS           INIT HDDN                 #I6 =6 (0x00000006)
+  15:   632     0     0 long CONS           INIT HDDN                 #I8000 =8000 (0x00001F40)
+  16:   674     0     0 long           TEMP      HDDN                 #L0 =0 (0x00000000)
+  17:   716     0     0 long           TEMP      HDDN                 #L1 =0 (0x00000000)
+  18:   758     0     0 long           TEMP      HDDN                 #L2 =0 (0x00000000)
+  19:   800     0     0 long           TEMP      HDDN                 #L3 =0 (0x00000000)
+  20:   842     0     0 long           TEMP      HDDN                 #L4 =0 (0x00000000)
+  21:   884     0     0 long           TEMP      HDDN                 #L5 =0 (0x00000000)
+  22:   926     0     0 long           TEMP      HDDN                 #L6 =0 (0x00000000)
+  23:   968     0     0 long           TEMP      HDDN                 #L7 =0 (0x00000000)
+  24:  1010     0     0 long           TEMP      HDDN                 #L8 =0 (0x00000000)
+  25:  1052     0     0 text CONS           INIT HDDN                 #S0 ="Press F1 for HELP and other TEMPO dialogs." (iOffset=84494)
+  26:  1094     0     0 text CONS           INIT HDDN                 #S1 ="dialog main" (iOffset=84546)
+  27:  1136     0     0 text CONS           INIT HDDN                 #S10 ="Waiting for left mouse button..." (iOffset=84738)
+  28:  1178     0     0 text CONS           INIT HDDN                 #S11 ="Waiting for BAR press..." (iOffset=84782)
+  29:  1220     0     0 text CONS           INIT HDDN                 #S12 ="Starting trial %d..
+" (iOffset=84814)
+  30:  1262     0     0 text CONS           INIT HDDN                 #S13 ="Trial %d SUCCESSFUL
+" (iOffset=84842)
+  31:  1304     0     0 text CONS           INIT HDDN                 #S14 ="Trial %d FAILED
+" (iOffset=84870)
+  32:  1346     0     0 text CONS           INIT HDDN                 #S15 ="Latency %d ms
+" (iOffset=84918)
+  33:  1388     0     0 text CONS           INIT HDDN                 #S16 ="om 1,%d,%d
+" (iOffset=85004)
+  34:  1430     0     0 text CONS           INIT HDDN                 #S17 ="oh 1" (iOffset=85042)
+  35:  1472     0     0 text CONS           INIT HDDN                 #S18 ="co 15" (iOffset=85054)
+  36:  1514     0     0 text CONS           INIT HDDN                 #S19 ="ru %d,%d,%d,%d
+" (iOffset=85066)
+  37:  1556     0     0 text CONS           INIT HDDN                 #S2 ="cl" (iOffset=84562)
+  38:  1598     0     0 text CONS           INIT HDDN                 #S20 ="os 1" (iOffset=85088)
+  39:  1640     0     0 text CONS           INIT HDDN                 #S21 ="oh 1" (iOffset=85100)
+  40:  1682     0     0 text CONS           INIT HDDN                 #S22 ="co 0" (iOffset=85112)
+  41:  1724     0     0 text CONS           INIT HDDN                 #S23 ="ru %d,%d,%d,%d
+" (iOffset=85124)
+  42:  1766     0     0 text CONS           INIT HDDN                 #S24 ="os 1" (iOffset=85146)
+  43:  1808     0     0 text CONS           INIT HDDN                 #S25 ="Failed to acquire target within %d ms.
+" (iOffset=85168)
+  44:  1850     0     0 text CONS           INIT HDDN                 #S26 ="Failed to hold target for %d ms.
+" (iOffset=85214)
+  45:  1892     0     0 text CONS           INIT HDDN                 #S27 ="IS 0,0,%d,%d,%d.pcx
+" (iOffset=85300)
+  46:  1934     0     0 text CONS           INIT HDDN                 #S28 ="saveVSscreen - Saved %d.PCX
+" (iOffset=85328)
+  47:  1976     0     0 text CONS           INIT HDDN                 #S3 ="vc 0,%d,0,%d
+" (iOffset=84570)
+  48:  2018     0     0 text CONS           INIT HDDN                 #S4 ="oc 1,3
+" (iOffset=84598)
+  49:  2060     0     0 text CONS           INIT HDDN                 #S5 ="ow 1,20,20
+" (iOffset=84610)
+  50:  2102     0     0 text CONS           INIT HDDN                 #S6 ="oi 1,13
+" (iOffset=84626)
+  51:  2144     0     0 text CONS           INIT HDDN                 #S7 ="os 1
+" (iOffset=84640)
+  52:  2186     0     0 text CONS           INIT HDDN                 #S8 ="Automonkey will press bar in %d ms
+" (iOffset=84690)
+  53:  2228     0     0 text CONS           INIT HDDN                 #S9 ="cls" (iOffset=84730)
+  54:  2270     0     0 long                INIT HDDN           DECL  __debug_op =0 (0x00000000)
+  55:  2312     0     0 long CONS           INIT      HIDE      DECL  aCLEAR =3 (0x00000003)
+  56:  2354     0     0 long                INIT                DECL  acquire_time =1500 (0x000005DC)
+  57:  2396     0     0 long CONS           INIT      HIDE      DECL  aFILLED =5 (0x00000005)
+  58:  2438     0     0 long CONS           INIT      HIDE      DECL  aINVISIBLE =4 (0x00000004)
+  59:  2480     0     0 long CONS           INIT      HIDE      DECL  aRANGE =1 (0x00000001)
+  60:  2522     0     0 long CONS           INIT      HIDE      DECL  aREPLACE =2 (0x00000002)
+  61:  2564     0     0 long CONS           INIT      HIDE      DECL  aSIZE =7 (0x00000007)
+  62:  2606     0     0 long CONS           INIT      HIDE      DECL  aTITLE =2 (0x00000002)
+  63:  2648     0     0 long CONS           INIT      HIDE      DECL  aUNFILLED =6 (0x00000006)
+  64:  2690     0     0 long                INIT                DECL  AUTOMONKEY =0 (0x00000000)
+  65:  2732     0     0 long CONS           INIT      HIDE      DECL  aVISIBLE =3 (0x00000003)
+  66:  2774     0     0 long                          HIDE      DECL  ax =0 (0x00000000)
+  67:  2816     6     0 long                                    DECL  axc@WATCHEYE =0 (0x00000000)
+  68:  2858     0     0 long CONS           INIT      HIDE      DECL  aXOR =1 (0x00000001)
+  69:  2900     0     0 long                          HIDE      DECL  ay =0 (0x00000000)
+  70:  2942     6     0 long                                    DECL  ayc@WATCHEYE =0 (0x00000000)
+  71:  2984     0     0 long CONS           INIT      HIDE HEX  DECL  BAR =268435456 (0x10000000)
+  72:  3026     0     0 long CONS PROC      INIT HDDN           DECL  BOXOFF =9 (0x00000009)
+  73:  3068     0     0 long CONS PROC      INIT HDDN           DECL  BOXON =8 (0x00000008)
+  74:  3110    12     0 long                                    DECL  busy@BUSYLOOP =0 (0x00000000)
+  75:  3152     0     0 long CONS PROC      INIT HDDN           DECL  BUSYLOOP =12 (0x0000000C)
+  76:  3194     0     0 long                          HIDE      DECL  bx =0 (0x00000000)
+  77:  3236     6     0 long                                    DECL  bxc@WATCHEYE =0 (0x00000000)
+  78:  3278     0     0 long                          HIDE      DECL  by =0 (0x00000000)
+  79:  3320     6     0 long                                    DECL  byc@WATCHEYE =0 (0x00000000)
+  80:  3362     0     0 long CONS PROC      INIT HDDN           DECL  CheckIsInside =7 (0x00000007)
+  81:  3404     0     0 long                INIT                DECL  DEBUG =0 (0x00000000)
+  82:  3446     5     0 long                          HIDE      DECL  end@TRIAL =0 (0x00000000)
+  83:  3488     0     0 long CONS           INIT      HIDE      DECL  ERR_ACQUIRE =1 (0x00000001)
+  84:  3530     0     0 long CONS           INIT      HIDE      DECL  ERR_HOLD =2 (0x00000002)
+  85:  3572     0     0 long CONS           INIT      HIDE      DECL  ERR_OK =0 (0x00000000)
+  86:  3614     0     0 long                                    DECL  failed =0 (0x00000000)
+  87:  3656     0     0 long CONS PROC      INIT HDDN           DECL  FAILURE =11 (0x0000000B)
+  88:  3698     0     0 long CONS           INIT      HIDE      DECL  gLEFT =0 (0x00000000)
+  89:  3740     0     0 long CONS           INIT      HIDE      DECL  gRIGHT =1 (0x00000001)
+  90:  3782     0     0 long                INIT                DECL  hold_time =1000 (0x000003E8)
+  91:  3824     0     0 long CONS PROC      INIT HDDN           DECL  INIT =2 (0x00000002)
+  92:  3866     0     0 long                                    DECL  isinside =0 (0x00000000)
+  93:  3908     0     0 long CONS PROC      INIT HDDN           DECL  JUICE =10 (0x0000000A)
+  94:  3950     0     0 long                INIT      HIDE      DECL  juice_time =300 (0x0000012C)
+  95:  3992     0     0 long CONS PROC      INIT HDDN           DECL  MAIN =1 (0x00000001)
+  96:  4034    13     0 long                INIT                DECL  nPCX@saveVSscreen =0 (0x00000000)
+  97:  4076     0     0 long                          HIDE      DECL  oB =0 (0x00000000)
+  98:  4118     0     0 long                          HIDE      DECL  oB1 =0 (0x00000000)
+  99:  4160     0     0 long                          HIDE      DECL  oE =0 (0x00000000)
+ 100:  4202     0     0 long                          HIDE      DECL  oE1 =0 (0x00000000)
+ 101:  4244     6     0 long                          HIDE      DECL  oldx@WATCHEYE =0 (0x00000000)
+ 102:  4286     6     0 long                          HIDE      DECL  oldy@WATCHEYE =0 (0x00000000)
+ 103:  4328     0     0 long                INIT      HIDE      DECL  PRIMARY_DATABASES =32 (0x00000020)
+ 104:  4370     0     0 long                INIT      HIDE      DECL  REVISION =2 (0x00000002)
+ 105:  4412     0     0 long CONS PROC      INIT HDDN           DECL  saveVSscreen =13 (0x0000000D)
+ 106:  4454     0     0 long CONS           INIT HDDN           DECL  SETS =2 (0x00000002)
+ 107:  4496     0     0 long CONS PROC      INIT HDDN           DECL  SETUP =4 (0x00000004)
+ 108:  4538     0     0 long CONS           INIT HDDN           DECL  SPEED =100 (0x00000064)
+ 109:  4580     0     0 long CONS           INIT HDDN           DECL  SPEED_UNITS =100000 (0x000186A0)
+ 110:  4622     5     0 long                                    DECL  start_time@TRIAL =0 (0x00000000)
+ 111:  4664     0     0 long                INIT      HIDE      DECL  SuccessCount =0 (0x00000000)
+ 112:  4706     0     0 long CONS           INIT      HIDE      DECL  tBOX =2 (0x00000002)
+ 113:  4748     0     0 long CONS           INIT      HIDE      DECL  tCROSS =3 (0x00000003)
+ 114:  4790     0     0 long CONS           INIT      HIDE      DECL  tELLIPSE =5 (0x00000005)
+ 115:  4832     0     0 long CONS           INIT      HIDE      DECL  tPOINT =1 (0x00000001)
+ 116:  4874     0     0 long CONS PROC      INIT HDDN           DECL  TRIAL =5 (0x00000005)
+ 117:  4916     0     0 long CONS PROC      INIT HDDN           DECL  TRIAL_LOOP =3 (0x00000003)
+ 118:  4958     0     0 long                INIT      HIDE      DECL  TrialCount =0 (0x00000000)
+ 119:  5000     0     0 long CONS           INIT      HIDE      DECL  tXCROSS =4 (0x00000004)
+ 120:  5042     0     0 long                INIT      HIDE      DECL  VERSION =0 (0x00000000)
+ 121:  5084     3     0 long                                    DECL  waitAutoMonkey@TRIAL_LOOP =0 (0x00000000)
+ 122:  5126     0     0 long CONS PROC      INIT HDDN           DECL  WATCHEYE =6 (0x00000006)
+ 123:  5168     0     0 long                                    DECL  x =0 (0x00000000)
+ 124:  5210     0     0 long CONS           INIT      HIDE      DECL  XMAX =640 (0x00000280)
+ 125:  5252     0     0 long                INIT      HIDE      DECL  xsize =100 (0x00000064)
+ 126:  5294     0     0 long                                    DECL  y =0 (0x00000000)
+ 127:  5336     0     0 long CONS           INIT      HIDE      DECL  YMAX =400 (0x00000190)
+ 128:  5378     0     0 long                INIT      HIDE      DECL  ysize =100 (0x00000064)
+----- ----- ----- ----- ---- ---------------------------------------- -------------
+
+
+PROCESS   1: MAIN (Args=0 CtrlBlk=33F0:1C7A Size= 40  iOp=2-41 iCache=2-41) ENABLED 
+ 33F0:4012 37F1:0002     0: SPAWN INIT:91(with 0 args)
+ 33F0:4018 37F1:0008     6: WAITFORPROCESS INIT:91
+ 33F0:401E 37F1:000E    12: SPAWN WATCHEYE:122(with 0 args)
+ 33F0:4024 37F1:0014    18: #L0 = CALL1 print(#S0:25)
+ 33F0:402C 37F1:001C    26: SPAWN TRIAL_LOOP:117(with 0 args)
+ 33F0:4032 37F1:0022    32: #L0 = CALL1 system(#S1:26)
+
+PROCESS   2: INIT (Args=0 CtrlBlk=33F0:1CA6 Size=214  iOp=2-215 iCache=42-255) DISABLED
+ 33F0:4012 37F1:0002     0: #L0 = CALL1 dSend(#S2:37)
+ 33F0:401A 37F1:000A     8: #L0 = CALL3 dSendf(#S3:47,XMAX:124,YMAX:127)
+ 33F0:4026 37F1:0016    20: #L0 = CALL6 oSetGraph(gLEFT:88,aRANGE:59,#I0:1,XMAX:124,#I0:1,YMAX:127)
+ 33F0:4038 37F1:0028    38: oB = CALL4 oCreate(tBOX:112,gLEFT:88,xsize:125,ysize:128)
+ 33F0:4046 37F1:0036    52: #L0 = CALL2 oSetAttribute(oB:97,aINVISIBLE:58)
+ 33F0:4050 37F1:0040    62: oE = CALL4 oCreate(tXCROSS:119,gLEFT:88,#I20:6,#I20:6)
+ 33F0:405E 37F1:004E    76: #L0 = CALL2 oSetAttribute(oE:99,aVISIBLE:65)
+ 33F0:4068 37F1:0058    86: #L0 = CALL1 dSendf(#S4:48)
+ 33F0:4070 37F1:0060    94: #L0 = CALL1 dSendf(#S5:49)
+ 33F0:4078 37F1:0068   102: #L0 = CALL1 dSendf(#S6:50)
+ 33F0:4080 37F1:0070   110: #L0 = CALL1 dSendf(#S7:51)
+ 33F0:4088 37F1:0078   118: #L0 = CALL6 oSetGraph(gRIGHT:89,aRANGE:59,#I0:1,XMAX:124,#I0:1,YMAX:127)
+ 33F0:409A 37F1:008A   136: oB1 = CALL4 oCreate(tBOX:112,gRIGHT:89,xsize:125,ysize:128)
+ 33F0:40A8 37F1:0098   150: #L0 = CALL2 oSetAttribute(oB1:98,aINVISIBLE:58)
+ 33F0:40B2 37F1:00A2   160: oE1 = CALL4 oCreate(tXCROSS:119,gRIGHT:89,#I20:6,#I20:6)
+ 33F0:40C0 37F1:00B0   174: #L0 = CALL2 oSetAttribute(oE1:100,aINVISIBLE:58)
+ 33F0:40CA 37F1:00BA   184: #L0 = CALL2 oSetAttribute(oE1:100,aREPLACE:60)
+ 33F0:40D4 37F1:00C4   194: TrialCount:118 = #I0:1
+ 33F0:40DE 37F1:00CE   204: SuccessCount:111 = #I0:1
+
+PROCESS   3: TRIAL_LOOP (Args=0 CtrlBlk=33F0:1CD2 Size=276  iOp=2-277 iCache=256-531) DISABLED
+ 33F0:4012 37F1:0002     0: IFnot (#I1:2) GOTO .+276 (goto 276)
+ 33F0:401A 37F1:000A     8: IFnot (AUTOMONKEY:64) GOTO .+76 (goto 84)
+ 33F0:4022 37F1:0012    16: #L0 = CALL1 random(#I8000:15)
+ 33F0:402A 37F1:001A    24: waitAutoMonkey@3:121 = #I1000:4 + #L0:16
+ 33F0:4038 37F1:0028    38: #L0 = CALL2 printf(#S8:52,waitAutoMonkey@3:121)
+ 33F0:4042 37F1:0032    48: WAIT waitAutoMonkey:121
+ 33F0:4046 37F1:0036    52: #L0 = CALL1 system(#S9:53)
+ 33F0:404E 37F1:003E    60: #L0 = CALL0 system()
+ 33F0:4054 37F1:0044    66: IFnot (#L0:16) GOTO .+14 (goto 80)
+ 33F0:405C 37F1:004C    74: NEXTTICK1
+ 33F0:405E 37F1:004E    76: GOTO .-16 (goto 60)
+ 33F0:4062 37F1:0052    80: GOTO .+84 (goto 164)
+ 33F0:4066 37F1:0056    84: IFnot (DEBUG:81) GOTO .+68 (goto 152)
+ 33F0:406E 37F1:005E    92: #L0 = CALL1 print(#S10:27)
+ 33F0:4076 37F1:0066   100: #L0 = CALL0 mouGetButtons()
+ 33F0:407C 37F1:006C   106: #L1:17 = #L0:16 & #I1:2
+ 33F0:408A 37F1:007A   120: #L2:18 = ! #L1:17
+ 33F0:4098 37F1:0088   134: IFnot (#L2:18) GOTO .+14 (goto 148)
+ 33F0:40A0 37F1:0090   142: NEXTTICK1
+ 33F0:40A2 37F1:0092   144: GOTO .-44 (goto 100)
+ 33F0:40A6 37F1:0096   148: GOTO .+16 (goto 164)
+ 33F0:40AA 37F1:009A   152: #L0 = CALL1 print(#S11:28)
+ 33F0:40B2 37F1:00A2   160: WSON BAR:71
+ 33F0:40B6 37F1:00A6   164: TrialCount:118 = TrialCount:118 + #I1:2
+ 33F0:40C4 37F1:00B4   178: #L0 = CALL2 printf(#S12:29,TrialCount:118)
+ 33F0:40CE 37F1:00BE   188: SPAWN SETUP:107(with 0 args)
+ 33F0:40D4 37F1:00C4   194: WAITFORPROCESS SETUP:107
+ 33F0:40DA 37F1:00CA   200: SPAWN TRIAL:116(with 0 args)
+ 33F0:40E0 37F1:00D0   206: WAITFORPROCESS TRIAL:116
+ 33F0:40E6 37F1:00D6   212: #L0:16 = ! failed:86
+ 33F0:40F4 37F1:00E4   226: IFnot (#L0:16) GOTO .+28 (goto 254)
+ 33F0:40FC 37F1:00EC   234: #L1 = CALL2 printf(#S13:30,TrialCount:118)
+ 33F0:4106 37F1:00F6   244: SPAWN JUICE:93(with 0 args)
+ 33F0:410C 37F1:00FC   250: GOTO .+20 (goto 270)
+ 33F0:4110 37F1:0100   254: #L0 = CALL2 printf(#S14:31,TrialCount:118)
+ 33F0:411A 37F1:010A   264: SPAWN FAILURE:87(with 0 args)
+ 33F0:4120 37F1:0110   270: NEXTTICK1
+ 33F0:4122 37F1:0112   272: GOTO .-272 (goto 0)
+
+PROCESS   4: SETUP (Args=0 CtrlBlk=33F0:1CFE Size= 56  iOp=2-57 iCache=532-587) DISABLED
+ 33F0:4012 37F1:0002     0: #L0:16 = XMAX:124 - xsize:125
+ 33F0:4020 37F1:0010    14: bx = CALL1 random(#L0:16)
+ 33F0:4028 37F1:0018    22: #L0:16 = YMAX:127 - ysize:128
+ 33F0:4036 37F1:0026    36: by = CALL1 random(#L0:16)
+ 33F0:403E 37F1:002E    44: SPAWN CheckIsInside:80(with 0 args)
+ 33F0:4044 37F1:0034    50: WAITFORPROCESS CheckIsInside:80
+
+PROCESS   5: TRIAL (Args=0 CtrlBlk=33F0:1D2A Size=454  iOp=2-455 iCache=588-1041) DISABLED
+ 33F0:4012 37F1:0002     0: #L0 = CALL2 oSetGraph(gRIGHT:89,aCLEAR:55)
+ 33F0:401C 37F1:000C    10: #L0 = CALL2 oSetAttribute(oE1:100,aVISIBLE:65)
+ 33F0:4026 37F1:0016    20: failed:86 = ERR_OK:85
+ 33F0:4030 37F1:0020    30: start_time = CALL0 time()
+ 33F0:4036 37F1:0026    36: TRIGGER #I1:2
+ 33F0:403C 37F1:002C    42: SPAWN CheckIsInside:80(with 0 args)
+ 33F0:4042 37F1:0032    48: WAITFORPROCESS CheckIsInside:80
+ 33F0:4048 37F1:0038    54: SPAWN BOXON:73(with 0 args)
+ 33F0:404E 37F1:003E    60: #L0:16 = ! failed:86
+ 33F0:405C 37F1:004C    74: IFnot (#L0:16) GOTO .+122 (goto 196)
+ 33F0:4064 37F1:0054    82: #L1 = CALL0 time()
+ 33F0:406A 37F1:005A    88: end@5:82 = #L1:17 + acquire_time:56
+ 33F0:4078 37F1:0068   102: #L0 = CALL0 time()
+ 33F0:407E 37F1:006E   108: #L1:17 = #L0:16 < end@5:82
+ 33F0:408C 37F1:007C   122: #L2:18 = ! isinside:92
+ 33F0:409A 37F1:008A   136: #L3:19 = #L1:17 && #L2:18
+ 33F0:40A8 37F1:0098   150: IFnot (#L3:19) GOTO .+14 (goto 164)
+ 33F0:40B0 37F1:00A0   158: NEXTTICK1
+ 33F0:40B2 37F1:00A2   160: GOTO .-58 (goto 102)
+ 33F0:40B6 37F1:00A6   164: #L0:16 = ! isinside:92
+ 33F0:40C4 37F1:00B4   178: IFnot (#L0:16) GOTO .+18 (goto 196)
+ 33F0:40CC 37F1:00BC   186: failed:86 = ERR_ACQUIRE:83
+ 33F0:40D6 37F1:00C6   196: #L0:16 = ! failed:86
+ 33F0:40E4 37F1:00D4   210: IFnot (#L0:16) GOTO .+154 (goto 364)
+ 33F0:40EC 37F1:00DC   218: TRIGGER #I2:5
+ 33F0:40F2 37F1:00E2   224: #L0 = CALL2 event_set(#I1:2,#I1:2)
+ 33F0:40FC 37F1:00EC   234: #L0 = CALL0 time()
+ 33F0:4102 37F1:00F2   240: #L1:17 = #L0:16 - start_time@5:110
+ 33F0:4110 37F1:0100   254: #L2 = CALL2 printf(#S15:32,#L1:17)
+ 33F0:411A 37F1:010A   264: #L0 = CALL0 time()
+ 33F0:4120 37F1:0110   270: end@5:82 = #L0:16 + hold_time:90
+ 33F0:412E 37F1:011E   284: #L0 = CALL0 time()
+ 33F0:4134 37F1:0124   290: #L1:17 = #L0:16 < end@5:82
+ 33F0:4142 37F1:0132   304: #L2:18 = #L1:17 && isinside:92
+ 33F0:4150 37F1:0140   318: IFnot (#L2:18) GOTO .+14 (goto 332)
+ 33F0:4158 37F1:0148   326: NEXTTICK1
+ 33F0:415A 37F1:014A   328: GOTO .-44 (goto 284)
+ 33F0:415E 37F1:014E   332: #L0:16 = ! isinside:92
+ 33F0:416C 37F1:015C   346: IFnot (#L0:16) GOTO .+18 (goto 364)
+ 33F0:4174 37F1:0164   354: failed:86 = ERR_HOLD:84
+ 33F0:417E 37F1:016E   364: WAIT #I5000:13
+ 33F0:4182 37F1:0172   368: SPAWN BOXOFF:72(with 0 args)
+ 33F0:4188 37F1:0178   374: #L0 = CALL2 oSetAttribute(oE1:100,aINVISIBLE:58)
+ 33F0:4192 37F1:0182   384: #L0:16 = ! failed:86
+ 33F0:41A0 37F1:0190   398: IFnot (#L0:16) GOTO .+38 (goto 436)
+ 33F0:41A8 37F1:0198   406: HARVEST #I1:2
+ 33F0:41AE 37F1:019E   412: HARVEST #I2:5
+ 33F0:41B4 37F1:01A4   418: SuccessCount:111 = SuccessCount:111 + #I1:2
+ 33F0:41C2 37F1:01B2   432: GOTO .+22 (goto 454)
+ 33F0:41C6 37F1:01B6   436: #L0 = CALL1 cancel_set(#I1:2)
+ 33F0:41CE 37F1:01BE   444: NEXTTICK1
+ 33F0:41D0 37F1:01C0   446: #L0 = CALL1 cancel_clr(#I1:2)
+
+PROCESS   6: WATCHEYE (Args=0 CtrlBlk=33F0:1D56 Size=564  iOp=2-565 iCache=1042-1605) DISABLED
+ 33F0:4012 37F1:0002     0: IFnot (#I1:2) GOTO .+564 (goto 564)
+ 33F0:401A 37F1:000A     8: IFnot (AUTOMONKEY:64) GOTO .+308 (goto 316)
+ 33F0:4022 37F1:0012    16: #L0:16 = xsize:125 / #I2:5
+ 33F0:4030 37F1:0020    30: bxc@6:77 = bx:76 + #L0:16
+ 33F0:403E 37F1:002E    44: #L0:16 = ysize:128 / #I2:5
+ 33F0:404C 37F1:003C    58: byc@6:79 = by:78 + #L0:16
+ 33F0:405A 37F1:004A    72: #L0:16 = bxc@6:77 * #I4096:10
+ 33F0:4068 37F1:0058    86: #L1:17 = #L0:16 / XMAX:124
+ 33F0:4076 37F1:0066   100: axc@6:67 = #L1:17 - #I2048:7
+ 33F0:4084 37F1:0074   114: #L0:16 = byc@6:79 * #I4096:10
+ 33F0:4092 37F1:0082   128: #L1:17 = #L0:16 / YMAX:127
+ 33F0:40A0 37F1:0090   142: ayc@6:70 = #L1:17 - #I2048:7
+ 33F0:40AE 37F1:009E   156: #L0:16 = axc@6:67 - ax:66
+ 33F0:40BC 37F1:00AC   170: #L1:17 = #L0:16 / #I50:11
+ 33F0:40CA 37F1:00BA   184: ax:66 = ax:66 + #L1:17
+ 33F0:40D8 37F1:00C8   198: #L0:16 = ayc@6:70 - ay:69
+ 33F0:40E6 37F1:00D6   212: #L1:17 = #L0:16 / #I50:11
+ 33F0:40F4 37F1:00E4   226: ay:69 = ay:69 + #L1:17
+ 33F0:4102 37F1:00F2   240: #L0:16 = ax:66 + #I25:8
+ 33F0:4110 37F1:0100   254: #L1 = CALL1 random(#I50:11)
+ 33F0:4118 37F1:0108   262: ax:66 = #L0:16 - #L1:17
+ 33F0:4126 37F1:0116   276: #L0:16 = ay:69 + #I25:8
+ 33F0:4134 37F1:0124   290: #L1 = CALL1 random(#I50:11)
+ 33F0:413C 37F1:012C   298: ay:69 = #L0:16 - #L1:17
+ 33F0:414A 37F1:013A   312: GOTO .+44 (goto 356)
+ 33F0:414E 37F1:013E   316: IFnot (DEBUG:81) GOTO .+24 (goto 340)
+ 33F0:4156 37F1:0146   324: ax = CALL0 mouGetX()
+ 33F0:415C 37F1:014C   330: ay = CALL0 mouGetY()
+ 33F0:4162 37F1:0152   336: GOTO .+20 (goto 356)
+ 33F0:4166 37F1:0156   340: ax = CALL1 atable(#I1:2)
+ 33F0:416E 37F1:015E   348: ay = CALL1 atable(#I2:5)
+ 33F0:4176 37F1:0166   356: #L0:16 = ax:66 + #I2048:7
+ 33F0:4184 37F1:0174   370: #L1:17 = XMAX:124 * #L0:16
+ 33F0:4192 37F1:0182   384: x:123 = #L1:17 / #I4096:10
+ 33F0:41A0 37F1:0190   398: #L0:16 = ay:69 + #I2048:7
+ 33F0:41AE 37F1:019E   412: #L1:17 = YMAX:127 * #L0:16
+ 33F0:41BC 37F1:01AC   426: y:126 = #L1:17 / #I4096:10
+ 33F0:41CA 37F1:01BA   440: #L0:16 = x:123 != oldx@6:101
+ 33F0:41D8 37F1:01C8   454: #L1:17 = y:126 != oldy@6:102
+ 33F0:41E6 37F1:01D6   468: #L2:18 = #L0:16 || #L1:17
+ 33F0:41F4 37F1:01E4   482: IFnot (#L2:18) GOTO .+76 (goto 558)
+ 33F0:41FC 37F1:01EC   490: #L3 = CALL3 oMove(oE:99,x:123,y:126)
+ 33F0:4208 37F1:01F8   502: #L0 = CALL3 oMove(oE1:100,x:123,y:126)
+ 33F0:4214 37F1:0204   514: #L0 = CALL3 dSendf(#S16:33,x:123,y:126)
+ 33F0:4220 37F1:0210   526: oldx@6:101 = x:123
+ 33F0:422A 37F1:021A   536: oldy@6:102 = y:126
+ 33F0:4234 37F1:0224   546: SPAWN CheckIsInside:80(with 0 args)
+ 33F0:423A 37F1:022A   552: WAITFORPROCESS CheckIsInside:80
+ 33F0:4240 37F1:0230   558: NEXTTICK1
+ 33F0:4242 37F1:0232   560: GOTO .-560 (goto 0)
+
+PROCESS   7: CheckIsInside (Args=0 CtrlBlk=33F0:1D82 Size=158  iOp=2-159 iCache=1606-1763) DISABLED
+ 33F0:4012 37F1:0002     0: #L0:16 = x:123 >= bx:76
+ 33F0:4020 37F1:0010    14: #L1:17 = bx:76 + xsize:125
+ 33F0:402E 37F1:001E    28: #L2:18 = x:123 <= #L1:17
+ 33F0:403C 37F1:002C    42: #L3:19 = #L0:16 && #L2:18
+ 33F0:404A 37F1:003A    56: #L4:20 = y:126 >= by:78
+ 33F0:4058 37F1:0048    70: #L5:21 = #L3:19 && #L4:20
+ 33F0:4066 37F1:0056    84: #L6:22 = by:78 + ysize:128
+ 33F0:4074 37F1:0064    98: #L7:23 = y:126 <= #L6:22
+ 33F0:4082 37F1:0072   112: #L8:24 = #L5:21 && #L7:23
+ 33F0:4090 37F1:0080   126: IFnot (#L8:24) GOTO .+22 (goto 148)
+ 33F0:4098 37F1:0088   134: isinside:92 = #I1:2
+ 33F0:40A2 37F1:0092   144: GOTO .+14 (goto 158)
+ 33F0:40A6 37F1:0096   148: isinside:92 = #I0:1
+
+PROCESS   8: BOXON (Args=0 CtrlBlk=33F0:1DAE Size=252  iOp=2-253 iCache=1764-2015) DISABLED
+ 33F0:4012 37F1:0002     0: #L0 = CALL1 dSend(#S17:34)
+ 33F0:401A 37F1:000A     8: #L0 = CALL1 dSend(#S18:35)
+ 33F0:4022 37F1:0012    16: #L0:16 = bx:76 + xsize:125
+ 33F0:4030 37F1:0020    30: #L1:17 = by:78 + ysize:128
+ 33F0:403E 37F1:002E    44: #L2 = CALL5 dSendf(#S19:36,bx:76,by:78,#L0:16,#L1:17)
+ 33F0:404E 37F1:003E    60: #L0:16 = xsize:125 / #I2:5
+ 33F0:405C 37F1:004C    74: #L1:17 = bx:76 + #L0:16
+ 33F0:406A 37F1:005A    88: #L2:18 = ysize:128 / #I2:5
+ 33F0:4078 37F1:0068   102: #L3:19 = by:78 + #L2:18
+ 33F0:4086 37F1:0076   116: #L4 = CALL3 oMove(oB:97,#L1:17,#L3:19)
+ 33F0:4092 37F1:0082   128: #L0 = CALL4 oSetAttribute(oB:97,aSIZE:61,xsize:125,ysize:128)
+ 33F0:40A0 37F1:0090   142: #L0 = CALL2 oSetAttribute(oB:97,aVISIBLE:65)
+ 33F0:40AA 37F1:009A   152: #L0:16 = xsize:125 / #I2:5
+ 33F0:40B8 37F1:00A8   166: #L1:17 = bx:76 + #L0:16
+ 33F0:40C6 37F1:00B6   180: #L2:18 = ysize:128 / #I2:5
+ 33F0:40D4 37F1:00C4   194: #L3:19 = by:78 + #L2:18
+ 33F0:40E2 37F1:00D2   208: #L4 = CALL3 oMove(oB1:98,#L1:17,#L3:19)
+ 33F0:40EE 37F1:00DE   220: #L0 = CALL4 oSetAttribute(oB1:98,aSIZE:61,xsize:125,ysize:128)
+ 33F0:40FC 37F1:00EC   234: #L0 = CALL2 oSetAttribute(oB1:98,aVISIBLE:65)
+ 33F0:4106 37F1:00F6   244: #L0 = CALL1 dSend(#S20:38)
+
+PROCESS   9: BOXOFF (Args=0 CtrlBlk=33F0:1DDA Size= 88  iOp=2-89 iCache=2016-2103) DISABLED
+ 33F0:4012 37F1:0002     0: #L0 = CALL1 dSend(#S21:39)
+ 33F0:401A 37F1:000A     8: #L0 = CALL1 dSend(#S22:40)
+ 33F0:4022 37F1:0012    16: #L0:16 = bx:76 + xsize:125
+ 33F0:4030 37F1:0020    30: #L1:17 = by:78 + ysize:128
+ 33F0:403E 37F1:002E    44: #L2 = CALL5 dSendf(#S23:41,bx:76,by:78,#L0:16,#L1:17)
+ 33F0:404E 37F1:003E    60: #L0 = CALL2 oSetAttribute(oB:97,aINVISIBLE:58)
+ 33F0:4058 37F1:0048    70: #L0 = CALL2 oSetAttribute(oB1:98,aINVISIBLE:58)
+ 33F0:4062 37F1:0052    80: #L0 = CALL1 dSend(#S24:42)
+
+PROCESS  10: JUICE (Args=0 CtrlBlk=33F0:1E06 Size=192  iOp=2-193 iCache=2104-2295) DISABLED
+ 33F0:4012 37F1:0002     0: #L0 = CALL2 mio_dig_set(#I1:2,#I1:2)
+ 33F0:401C 37F1:000C    10: #L0 = CALL1 sound(#I500:12)
+ 33F0:4024 37F1:0014    18: #L0:16 = juice_time:94 / #I6:14
+ 33F0:4032 37F1:0022    32: WAIT #L0:16
+ 33F0:4036 37F1:0026    36: #L0 = CALL1 sound(#I0:1)
+ 33F0:403E 37F1:002E    44: #L0:16 = juice_time:94 / #I6:14
+ 33F0:404C 37F1:003C    58: WAIT #L0:16
+ 33F0:4050 37F1:0040    62: #L0 = CALL1 sound(#I500:12)
+ 33F0:4058 37F1:0048    70: #L0:16 = juice_time:94 / #I6:14
+ 33F0:4066 37F1:0056    84: WAIT #L0:16
+ 33F0:406A 37F1:005A    88: #L0 = CALL1 sound(#I0:1)
+ 33F0:4072 37F1:0062    96: #L0:16 = juice_time:94 / #I6:14
+ 33F0:4080 37F1:0070   110: WAIT #L0:16
+ 33F0:4084 37F1:0074   114: #L0 = CALL1 sound(#I500:12)
+ 33F0:408C 37F1:007C   122: #L0:16 = juice_time:94 / #I6:14
+ 33F0:409A 37F1:008A   136: WAIT #L0:16
+ 33F0:409E 37F1:008E   140: #L0 = CALL1 sound(#I0:1)
+ 33F0:40A6 37F1:0096   148: #L0 = CALL1 sound(#I500:12)
+ 33F0:40AE 37F1:009E   156: #L0:16 = juice_time:94 / #I6:14
+ 33F0:40BC 37F1:00AC   170: WAIT #L0:16
+ 33F0:40C0 37F1:00B0   174: #L0 = CALL1 sound(#I0:1)
+ 33F0:40C8 37F1:00B8   182: #L0 = CALL2 mio_dig_set(#I1:2,#I0:1)
+
+PROCESS  11: FAILURE (Args=0 CtrlBlk=33F0:1E32 Size=102  iOp=2-103 iCache=2296-2397) DISABLED
+ 33F0:4012 37F1:0002     0: #L0:16 = failed:86 == ERR_ACQUIRE:83
+ 33F0:4020 37F1:0010    14: IFnot (#L0:16) GOTO .+22 (goto 36)
+ 33F0:4028 37F1:0018    22: #L1 = CALL2 printf(#S25:43,acquire_time:56)
+ 33F0:4032 37F1:0022    32: GOTO .+36 (goto 68)
+ 33F0:4036 37F1:0026    36: #L0:16 = failed:86 == ERR_HOLD:84
+ 33F0:4044 37F1:0034    50: IFnot (#L0:16) GOTO .+18 (goto 68)
+ 33F0:404C 37F1:003C    58: #L1 = CALL2 printf(#S26:44,hold_time:90)
+ 33F0:4056 37F1:0046    68: #L0 = CALL1 sound(#I100:3)
+ 33F0:405E 37F1:004E    76: #L0:16 = juice_time:94 * #I3:9
+ 33F0:406C 37F1:005C    90: WAIT #L0:16
+ 33F0:4070 37F1:0060    94: #L0 = CALL1 sound(#I0:1)
+
+PROCESS  12: BUSYLOOP (Args=0 CtrlBlk=33F0:1E5E Size= 50  iOp=2-51 iCache=2398-2447) DISABLED
+ 33F0:4012 37F1:0002     0: busy@12:74 = #I0:1
+ 33F0:401C 37F1:000C    10: #L0:16 = busy@12:74 < #I500:12
+ 33F0:402A 37F1:001A    24: IFnot (#L0:16) GOTO .+26 (goto 50)
+ 33F0:4032 37F1:0022    32: busy@12:74 = busy@12:74 + #I1:2
+ 33F0:4040 37F1:0030    46: GOTO .-36 (goto 10)
+
+PROCESS  13: saveVSscreen (Args=0 CtrlBlk=33F0:1E8A Size= 38  iOp=2-39 iCache=2448-2485) DISABLED
+ 33F0:4012 37F1:0002     0: #L0 = CALL4 dSendf(#S27:45,XMAX:124,YMAX:127,nPCX@13:96)
+ 33F0:4020 37F1:0010    14: #L0 = CALL2 printf(#S28:46,nPCX@13:96)
+ 33F0:402A 37F1:001A    24: nPCX@13:96 = nPCX@13:96 + #I1:2
+
+
+HASH TABLE
+
+iHSH  iNAM  iSYM iNXT Symbol
+---- ------ ---- ---- -----------
+   0      0    0    0 ""
+   1      0    0    0 ""
+   2      0    0    0 ""
+   3      0    0    0 ""
+   4      0    0    0 ""
+   5      0    0    0 ""
+   6      0    0    0 ""
+   7      0    0    0 ""
+   8      0    0    0 ""
+   9  84178   81 1033 "DEBUG"
+  10      0    0    0 ""
+  11      0    0    0 ""
+  12      0    0    0 ""
+  13      0    0    0 ""
+  14  84542   16    0 "#L0"
+  15  84686   17    0 "#L1"
+  16  84778   18    0 "#L2"
+  17  84910   19    0 "#L3"
+  18  85022   20    0 "#L4"
+  19  85026   21    0 "#L5"
+  20  85030   22    0 "#L6"
+  21  85034   23    0 "#L7"
+  22  85038   24    0 "#L8"
+  23      0    0    0 ""
+  24      0    0    0 ""
+  25      0    0    0 ""
+  26      0    0    0 ""
+  27      0    0    0 ""
+  28      0    0    0 ""
+  29  84976   10    0 "#I4096"
+  30      0    0    0 ""
+  31      0    0    0 ""
+  32      0    0    0 ""
+  33      0    0    0 ""
+  34      0    0    0 ""
+  35      0    0    0 ""
+  36      0    0    0 ""
+  37      0    0    0 ""
+  38      0    0    0 ""
+  39      0    0    0 ""
+  40      0    0    0 ""
+  41      0    0    0 ""
+  42      0    0    0 ""
+  43      0    0    0 ""
+  44      0    0    0 ""
+  45      0    0    0 ""
+  46      0    0    0 ""
+  47      0    0    0 ""
+  48      0    0    0 ""
+  49      0    0    0 ""
+  50      0    0    0 ""
+  51      0    0    0 ""
+  52      0    0    0 ""
+  53      0    0    0 ""
+  54      0    0    0 ""
+  55      0    0    0 ""
+  56      0    0    0 ""
+  57      0    0    0 ""
+  58      0    0    0 ""
+  59      0    0    0 ""
+  60      0    0    0 ""
+  61      0    0    0 ""
+  62      0    0    0 ""
+  63      0    0    0 ""
+  64      0    0    0 ""
+  65      0    0    0 ""
+  66      0    0    0 ""
+  67      0    0    0 ""
+  68      0    0    0 ""
+  69  84472   72    0 "BOXOFF"
+  70      0    0    0 ""
+  71      0    0    0 ""
+  72      0    0    0 ""
+  73      0    0    0 ""
+  74      0    0    0 ""
+  75      0    0    0 ""
+  76      0    0    0 ""
+  77      0    0    0 ""
+  78      0    0    0 ""
+  79  84418  117 1036 "TRIAL_LOOP"
+  80      0    0    0 ""
+  81      0    0    0 ""
+  82      0    0    0 ""
+  83      0    0    0 ""
+  84      0    0    0 ""
+  85      0    0    0 ""
+  86      0    0    0 ""
+  87      0    0    0 ""
+  88  84392  123    0 "x"
+  89  84394  126    0 "y"
+  90      0    0    0 ""
+  91      0    0    0 ""
+  92      0    0    0 ""
+  93      0    0    0 ""
+  94      0    0    0 ""
+  95      0    0    0 ""
+  96      0    0    0 ""
+  97      0    0    0 ""
+  98      0    0    0 ""
+  99      0    0    0 ""
+ 100      0    0    0 ""
+ 101      0    0    0 ""
+ 102      0    0    0 ""
+ 103      0    0    0 ""
+ 104      0    0    0 ""
+ 105      0    0    0 ""
+ 106      0    0    0 ""
+ 107  84384   66    0 "ax"
+ 108  84388   69    0 "ay"
+ 109      0    0    0 ""
+ 110      0    0    0 ""
+ 111      0    0    0 ""
+ 112      0    0    0 ""
+ 113      0    0    0 ""
+ 114      0    0    0 ""
+ 115      0    0    0 ""
+ 116      0    0    0 ""
+ 117      0    0    0 ""
+ 118      0    0    0 ""
+ 119      0    0    0 ""
+ 120      0    0    0 ""
+ 121  84044   89    0 "gRIGHT"
+ 122      0    0    0 ""
+ 123  84376   76    0 "bx"
+ 124  84380   78    0 "by"
+ 125      0    0    0 ""
+ 126  84538   25    0 "#S0"
+ 127  84558   26    0 "#S1"
+ 128  84566   37    0 "#S2"
+ 129  84584   47    0 "#S3"
+ 130  84606   48    0 "#S4"
+ 131  84622   49    0 "#S5"
+ 132  84636   50    0 "#S6"
+ 133  84646   51    0 "#S7"
+ 134  84726   52    0 "#S8"
+ 135  84734   53    0 "#S9"
+ 136      0    0    0 ""
+ 137      0    0    0 ""
+ 138      0    0    0 ""
+ 139      0    0    0 ""
+ 140      0    0    0 ""
+ 141      0    0    0 ""
+ 142      0    0    0 ""
+ 143      0    0    0 ""
+ 144      0    0    0 ""
+ 145      0    0    0 ""
+ 146      0    0    0 ""
+ 147      0    0    0 ""
+ 148      0    0    0 ""
+ 149      0    0    0 ""
+ 150      0    0    0 ""
+ 151      0    0    0 ""
+ 152      0    0    0 ""
+ 153      0    0    0 ""
+ 154      0    0    0 ""
+ 155      0    0    0 ""
+ 156      0    0    0 ""
+ 157      0    0    0 ""
+ 158  84326   85    0 "ERR_OK"
+ 159      0    0    0 ""
+ 160  84130   57 1023 "aFILLED"
+ 161      0    0    0 ""
+ 162      0    0    0 ""
+ 163  84346   84    0 "ERR_HOLD"
+ 164      0    0    0 ""
+ 165      0    0    0 ""
+ 166      0    0    0 ""
+ 167      0    0    0 ""
+ 168      0    0    0 ""
+ 169      0    0    0 ""
+ 170      0    0    0 ""
+ 171      0    0    0 ""
+ 172      0    0    0 ""
+ 173  84592    6    0 "#I20"
+ 174      0    0    0 ""
+ 175  85294   96    0 "nPCX"
+ 176      0    0    0 ""
+ 177      0    0    0 ""
+ 178  84998    8    0 "#I25"
+ 179      0    0    0 ""
+ 180      0    0    0 ""
+ 181      0    0    0 ""
+ 182      0    0    0 ""
+ 183      0    0    0 ""
+ 184      0    0    0 ""
+ 185      0    0    0 ""
+ 186      0    0    0 ""
+ 187      0    0    0 ""
+ 188      0    0    0 ""
+ 189      0    0    0 ""
+ 190      0    0    0 ""
+ 191      0    0    0 ""
+ 192      0    0    0 ""
+ 193      0    0    0 ""
+ 194      0    0    0 ""
+ 195  85254    3    0 "#I100"
+ 196      0    0    0 ""
+ 197      0    0    0 ""
+ 198  85158   12    0 "#I500"
+ 199      0    0    0 ""
+ 200  84948  101    0 "oldx"
+ 201  84954  102    0 "oldy"
+ 202      0    0    0 ""
+ 203      0    0    0 ""
+ 204      0    0    0 ""
+ 205      0    0    0 ""
+ 206      0    0    0 ""
+ 207      0    0    0 ""
+ 208      0    0    0 ""
+ 209      0    0    0 ""
+ 210      0    0    0 ""
+ 211      0    0    0 ""
+ 212      0    0    0 ""
+ 213      0    0    0 ""
+ 214      0    0    0 ""
+ 215      0    0    0 ""
+ 216      0    0    0 ""
+ 217      0    0    0 ""
+ 218  84066  113 1021 "tCROSS"
+ 219      0    0    0 ""
+ 220      0    0    0 ""
+ 221  84992   11    0 "#I50"
+ 222      0    0    0 ""
+ 223  84026   54    0 "__debug_op"
+ 224      0    0    0 ""
+ 225      0    0    0 ""
+ 226      0    0    0 ""
+ 227      0    0    0 ""
+ 228      0    0    0 ""
+ 229      0    0    0 ""
+ 230      0    0    0 ""
+ 231      0    0    0 ""
+ 232      0    0    0 ""
+ 233      0    0    0 ""
+ 234      0    0    0 ""
+ 235      0    0    0 ""
+ 236      0    0    0 ""
+ 237      0    0    0 ""
+ 238      0    0    0 ""
+ 239      0    0    0 ""
+ 240      0    0    0 ""
+ 241      0    0    0 ""
+ 242      0    0    0 ""
+ 243      0    0    0 ""
+ 244      0    0    0 ""
+ 245      0    0    0 ""
+ 246      0    0    0 ""
+ 247      0    0    0 ""
+ 248      0    0    0 ""
+ 249      0    0    0 ""
+ 250      0    0    0 ""
+ 251      0    0    0 ""
+ 252      0    0    0 ""
+ 253      0    0    0 ""
+ 254      0    0    0 ""
+ 255      0    0    0 ""
+ 256      0    0    0 ""
+ 257      0    0    0 ""
+ 258      0    0    0 ""
+ 259      0    0    0 ""
+ 260      0    0    0 ""
+ 261      0    0    0 ""
+ 262      0    0    0 ""
+ 263      0    0    0 ""
+ 264      0    0    0 ""
+ 265      0    0    0 ""
+ 266      0    0    0 ""
+ 267      0    0    0 ""
+ 268      0    0    0 ""
+ 269      0    0    0 ""
+ 270      0    0    0 ""
+ 271      0    0    0 ""
+ 272      0    0    0 ""
+ 273      0    0    0 ""
+ 274      0    0    0 ""
+ 275      0    0    0 ""
+ 276      0    0    0 ""
+ 277      0    0    0 ""
+ 278      0    0    0 ""
+ 279      0    0    0 ""
+ 280      0    0    0 ""
+ 281      0    0    0 ""
+ 282      0    0    0 ""
+ 283      0    0    0 ""
+ 284      0    0    0 ""
+ 285      0    0    0 ""
+ 286      0    0    0 ""
+ 287      0    0    0 ""
+ 288      0    0    0 ""
+ 289      0    0    0 ""
+ 290      0    0    0 ""
+ 291      0    0    0 ""
+ 292      0    0    0 ""
+ 293      0    0    0 ""
+ 294      0    0    0 ""
+ 295      0    0    0 ""
+ 296      0    0    0 ""
+ 297      0    0    0 ""
+ 298      0    0    0 ""
+ 299      0    0    0 ""
+ 300      0    0    0 ""
+ 301      0    0    0 ""
+ 302      0    0    0 ""
+ 303      0    0    0 ""
+ 304      0    0    0 ""
+ 305      0    0    0 ""
+ 306      0    0    0 ""
+ 307      0    0    0 ""
+ 308      0    0    0 ""
+ 309  84360   97    0 "oB"
+ 310      0    0    0 ""
+ 311      0    0    0 ""
+ 312  84364   99    0 "oE"
+ 313      0    0    0 ""
+ 314      0    0    0 ""
+ 315      0    0    0 ""
+ 316  84318   86    0 "failed"
+ 317      0    0    0 ""
+ 318      0    0    0 ""
+ 319      0    0    0 ""
+ 320      0    0    0 ""
+ 321      0    0    0 ""
+ 322      0    0    0 ""
+ 323      0    0    0 ""
+ 324      0    0    0 ""
+ 325      0    0    0 ""
+ 326      0    0    0 ""
+ 327      0    0    0 ""
+ 328      0    0    0 ""
+ 329      0    0    0 ""
+ 330      0    0    0 ""
+ 331      0    0    0 ""
+ 332      0    0    0 ""
+ 333      0    0    0 ""
+ 334      0    0    0 ""
+ 335      0    0    0 ""
+ 336      0    0    0 ""
+ 337      0    0    0 ""
+ 338      0    0    0 ""
+ 339      0    0    0 ""
+ 340      0    0    0 ""
+ 341      0    0    0 ""
+ 342      0    0    0 ""
+ 343      0    0    0 ""
+ 344      0    0    0 ""
+ 345      0    0    0 ""
+ 346      0    0    0 ""
+ 347      0    0    0 ""
+ 348      0    0    0 ""
+ 349      0    0    0 ""
+ 350      0    0    0 ""
+ 351      0    0    0 ""
+ 352      0    0    0 ""
+ 353      0    0    0 ""
+ 354      0    0    0 ""
+ 355      0    0    0 ""
+ 356      0    0    0 ""
+ 357      0    0    0 ""
+ 358      0    0    0 ""
+ 359      0    0    0 ""
+ 360  84170   55    0 "aCLEAR"
+ 361      0    0    0 ""
+ 362      0    0    0 ""
+ 363      0    0    0 ""
+ 364      0    0    0 ""
+ 365      0    0    0 ""
+ 366      0    0    0 ""
+ 367      0    0    0 ""
+ 368      0    0    0 ""
+ 369      0    0    0 ""
+ 370      0    0    0 ""
+ 371      0    0    0 ""
+ 372      0    0    0 ""
+ 373      0    0    0 ""
+ 374      0    0    0 ""
+ 375  84466   73    0 "BOXON"
+ 376  84098   60    0 "aREPLACE"
+ 377      0    0    0 ""
+ 378      0    0    0 ""
+ 379      0    0    0 ""
+ 380      0    0    0 ""
+ 381      0    0    0 ""
+ 382      0    0    0 ""
+ 383      0    0    0 ""
+ 384      0    0    0 ""
+ 385      0    0    0 ""
+ 386      0    0    0 ""
+ 387      0    0    0 ""
+ 388      0    0    0 ""
+ 389      0    0    0 ""
+ 390      0    0    0 ""
+ 391      0    0    0 ""
+ 392      0    0    0 ""
+ 393      0    0    0 ""
+ 394      0    0    0 ""
+ 395      0    0    0 ""
+ 396      0    0    0 ""
+ 397      0    0    0 ""
+ 398      0    0    0 ""
+ 399      0    0    0 ""
+ 400      0    0    0 ""
+ 401      0    0    0 ""
+ 402      0    0    0 ""
+ 403  84092   68    0 "aXOR"
+ 404      0    0    0 ""
+ 405      0    0    0 ""
+ 406      0    0    0 ""
+ 407      0    0    0 ""
+ 408      0    0    0 ""
+ 409      0    0    0 ""
+ 410      0    0    0 ""
+ 411      0    0    0 ""
+ 412      0    0    0 ""
+ 413      0    0    0 ""
+ 414      0    0    0 ""
+ 415      0    0    0 ""
+ 416      0    0    0 ""
+ 417      0    0    0 ""
+ 418      0    0    0 ""
+ 419      0    0    0 ""
+ 420      0    0    0 ""
+ 421      0    0    0 ""
+ 422      0    0    0 ""
+ 423      0    0    0 ""
+ 424      0    0    0 ""
+ 425      0    0    0 ""
+ 426      0    0    0 ""
+ 427      0    0    0 ""
+ 428      0    0    0 ""
+ 429  84446  116    0 "TRIAL"
+ 430      0    0    0 ""
+ 431      0    0    0 ""
+ 432      0    0    0 ""
+ 433      0    0    0 ""
+ 434      0    0    0 ""
+ 435  84162   62    0 "aTITLE"
+ 436      0    0    0 ""
+ 437      0    0    0 ""
+ 438      0    0    0 ""
+ 439      0    0    0 ""
+ 440      0    0    0 ""
+ 441      0    0    0 ""
+ 442  84038   88    0 "gLEFT"
+ 443      0    0    0 ""
+ 444      0    0    0 ""
+ 445      0    0    0 ""
+ 446      0    0    0 ""
+ 447      0    0    0 ""
+ 448      0    0    0 ""
+ 449      0    0    0 ""
+ 450      0    0    0 ""
+ 451      0    0    0 ""
+ 452      0    0    0 ""
+ 453      0    0    0 ""
+ 454      0    0    0 ""
+ 455      0    0    0 ""
+ 456      0    0    0 ""
+ 457      0    0    0 ""
+ 458  84008  108    0 "SPEED"
+ 459      0    0    0 ""
+ 460      0    0    0 ""
+ 461      0    0    0 ""
+ 462      0    0    0 ""
+ 463      0    0    0 ""
+ 464      0    0    0 ""
+ 465      0    0    0 ""
+ 466      0    0    0 ""
+ 467      0    0    0 ""
+ 468      0    0    0 ""
+ 469      0    0    0 ""
+ 470      0    0    0 ""
+ 471      0    0    0 ""
+ 472      0    0    0 ""
+ 473      0    0    0 ""
+ 474      0    0    0 ""
+ 475      0    0    0 ""
+ 476      0    0    0 ""
+ 477      0    0    0 ""
+ 478      0    0    0 ""
+ 479      0    0    0 ""
+ 480      0    0    0 ""
+ 481      0    0    0 ""
+ 482  84396   92 1030 "isinside"
+ 483      0    0    0 ""
+ 484      0    0    0 ""
+ 485      0    0    0 ""
+ 486      0    0    0 ""
+ 487      0    0    0 ""
+ 488      0    0    0 ""
+ 489      0    0    0 ""
+ 490  84452   93    0 "JUICE"
+ 491      0    0    0 ""
+ 492  85280  105    0 "saveVSscreen"
+ 493  84406   95    0 "MAIN"
+ 494      0    0    0 ""
+ 495      0    0    0 ""
+ 496      0    0    0 ""
+ 497      0    0    0 ""
+ 498      0    0    0 ""
+ 499      0    0    0 ""
+ 500      0    0    0 ""
+ 501      0    0    0 ""
+ 502      0    0    0 ""
+ 503      0    0    0 ""
+ 504      0    0    0 ""
+ 505      0    0    0 ""
+ 506      0    0    0 ""
+ 507      0    0    0 ""
+ 508      0    0    0 ""
+ 509      0    0    0 ""
+ 510      0    0    0 ""
+ 511      0    0    0 ""
+ 512      0    0    0 ""
+ 513      0    0    0 ""
+ 514      0    0    0 ""
+ 515      0    0    0 ""
+ 516  84232  124    0 "XMAX"
+ 517      0    0    0 ""
+ 518      0    0    0 ""
+ 519      0    0    0 ""
+ 520      0    0    0 ""
+ 521      0    0    0 ""
+ 522      0    0    0 ""
+ 523      0    0    0 ""
+ 524      0    0    0 ""
+ 525      0    0    0 ""
+ 526      0    0    0 ""
+ 527      0    0    0 ""
+ 528  84238  127    0 "YMAX"
+ 529      0    0    0 ""
+ 530      0    0    0 ""
+ 531      0    0    0 ""
+ 532      0    0    0 ""
+ 533      0    0    0 ""
+ 534      0    0    0 ""
+ 535      0    0    0 ""
+ 536      0    0    0 ""
+ 537      0    0    0 ""
+ 538      0    0    0 ""
+ 539      0    0    0 ""
+ 540      0    0    0 ""
+ 541      0    0    0 ""
+ 542  84440  107    0 "SETUP"
+ 543      0    0    0 ""
+ 544  84082  114    0 "tELLIPSE"
+ 545      0    0    0 ""
+ 546      0    0    0 ""
+ 547      0    0    0 ""
+ 548      0    0    0 ""
+ 549      0    0    0 ""
+ 550      0    0    0 ""
+ 551      0    0    0 ""
+ 552      0    0    0 ""
+ 553      0    0    0 ""
+ 554      0    0    0 ""
+ 555      0    0    0 ""
+ 556      0    0    0 ""
+ 557      0    0    0 ""
+ 558      0    0    0 ""
+ 559      0    0    0 ""
+ 560      0    0    0 ""
+ 561      0    0    0 ""
+ 562      0    0    0 ""
+ 563      0    0    0 ""
+ 564      0    0    0 ""
+ 565      0    0    0 ""
+ 566      0    0    0 ""
+ 567      0    0    0 ""
+ 568      0    0    0 ""
+ 569      0    0    0 ""
+ 570      0    0    0 ""
+ 571      0    0    0 ""
+ 572      0    0    0 ""
+ 573      0    0    0 ""
+ 574      0    0    0 ""
+ 575      0    0    0 ""
+ 576      0    0    0 ""
+ 577      0    0    0 ""
+ 578      0    0    0 ""
+ 579      0    0    0 ""
+ 580      0    0    0 ""
+ 581      0    0    0 ""
+ 582      0    0    0 ""
+ 583      0    0    0 ""
+ 584      0    0    0 ""
+ 585      0    0    0 ""
+ 586      0    0    0 ""
+ 587      0    0    0 ""
+ 588      0    0    0 ""
+ 589      0    0    0 ""
+ 590      0    0    0 ""
+ 591      0    0    0 ""
+ 592      0    0    0 ""
+ 593      0    0    0 ""
+ 594      0    0    0 ""
+ 595      0    0    0 ""
+ 596      0    0    0 ""
+ 597      0    0    0 ""
+ 598      0    0    0 ""
+ 599      0    0    0 ""
+ 600      0    0    0 ""
+ 601      0    0    0 ""
+ 602  84894   82    0 "end"
+ 603      0    0    0 ""
+ 604      0    0    0 ""
+ 605      0    0    0 ""
+ 606      0    0    0 ""
+ 607      0    0    0 ""
+ 608      0    0    0 ""
+ 609  84052  115    0 "tPOINT"
+ 610      0    0    0 ""
+ 611      0    0    0 ""
+ 612      0    0    0 ""
+ 613      0    0    0 ""
+ 614      0    0    0 ""
+ 615      0    0    0 ""
+ 616      0    0    0 ""
+ 617      0    0    0 ""
+ 618  84244  118 1025 "TrialCount"
+ 619      0    0    0 ""
+ 620      0    0    0 ""
+ 621      0    0    0 ""
+ 622      0    0    0 ""
+ 623      0    0    0 ""
+ 624      0    0    0 ""
+ 625      0    0    0 ""
+ 626      0    0    0 ""
+ 627      0    0    0 ""
+ 628      0    0    0 ""
+ 629      0    0    0 ""
+ 630      0    0    0 ""
+ 631  84458   87    0 "FAILURE"
+ 632      0    0    0 ""
+ 633      0    0    0 ""
+ 634      0    0    0 ""
+ 635      0    0    0 ""
+ 636      0    0    0 ""
+ 637      0    0    0 ""
+ 638  84282   56 1032 "acquire_time"
+ 639      0    0    0 ""
+ 640      0    0    0 ""
+ 641      0    0    0 ""
+ 642      0    0    0 ""
+ 643      0    0    0 ""
+ 644      0    0    0 ""
+ 645      0    0    0 ""
+ 646      0    0    0 ""
+ 647      0    0    0 ""
+ 648      0    0    0 ""
+ 649      0    0    0 ""
+ 650      0    0    0 ""
+ 651      0    0    0 ""
+ 652      0    0    0 ""
+ 653      0    0    0 ""
+ 654      0    0    0 ""
+ 655      0    0    0 ""
+ 656      0    0    0 ""
+ 657      0    0    0 ""
+ 658      0    0    0 ""
+ 659      0    0    0 ""
+ 660      0    0    0 ""
+ 661  84356   71    0 "BAR"
+ 662      0    0    0 ""
+ 663      0    0    0 ""
+ 664      0    0    0 ""
+ 665      0    0    0 ""
+ 666      0    0    0 ""
+ 667  84196  120 1024 "VERSION"
+ 668      0    0    0 ""
+ 669      0    0    0 ""
+ 670      0    0    0 ""
+ 671      0    0    0 ""
+ 672      0    0    0 ""
+ 673      0    0    0 ""
+ 674      0    0    0 ""
+ 675  84772   27    0 "#S10"
+ 676  84808   28    0 "#S11"
+ 677  84836   29    0 "#S12"
+ 678  84864   30    0 "#S13"
+ 679  84888   31    0 "#S14"
+ 680  84934   32    0 "#S15"
+ 681  85016   33    0 "#S16"
+ 682  85048   34    0 "#S17"
+ 683  85060   35    0 "#S18"
+ 684  85082   36    0 "#S19"
+ 685      0    0    0 ""
+ 686      0    0    0 ""
+ 687      0    0    0 ""
+ 688      0    0    0 ""
+ 689      0    0    0 ""
+ 690      0    0    0 ""
+ 691  85094   38    0 "#S20"
+ 692  84014  109 1035 "SPEED_UNITS"
+ 693  85118   40    0 "#S22"
+ 694  85140   41    0 "#S23"
+ 695  85152   42    0 "#S24"
+ 696  85208   43    0 "#S25"
+ 697  85248   44    0 "#S26"
+ 698  85322   45    0 "#S27"
+ 699  85358   46    0 "#S28"
+ 700      0    0    0 ""
+ 701      0    0    0 ""
+ 702      0    0    0 ""
+ 703      0    0    0 ""
+ 704      0    0    0 ""
+ 705      0    0    0 ""
+ 706      0    0    0 ""
+ 707      0    0    0 ""
+ 708      0    0    0 ""
+ 709      0    0    0 ""
+ 710      0    0    0 ""
+ 711      0    0    0 ""
+ 712      0    0    0 ""
+ 713      0    0    0 ""
+ 714      0    0    0 ""
+ 715      0    0    0 ""
+ 716      0    0    0 ""
+ 717      0    0    0 ""
+ 718      0    0    0 ""
+ 719      0    0    0 ""
+ 720      0    0    0 ""
+ 721      0    0    0 ""
+ 722      0    0    0 ""
+ 723      0    0    0 ""
+ 724      0    0    0 ""
+ 725      0    0    0 ""
+ 726      0    0    0 ""
+ 727      0    0    0 ""
+ 728      0    0    0 ""
+ 729      0    0    0 ""
+ 730  84334   83    0 "ERR_ACQUIRE"
+ 731      0    0    0 ""
+ 732      0    0    0 ""
+ 733      0    0    0 ""
+ 734      0    0    0 ""
+ 735      0    0    0 ""
+ 736      0    0    0 ""
+ 737      0    0    0 ""
+ 738      0    0    0 ""
+ 739  85274   74    0 "busy"
+ 740      0    0    0 ""
+ 741      0    0    0 ""
+ 742      0    0    0 ""
+ 743      0    0    0 ""
+ 744      0    0    0 ""
+ 745      0    0    0 ""
+ 746      0    0    0 ""
+ 747      0    0    0 ""
+ 748      0    0    0 ""
+ 749  84002  106    0 "SETS"
+ 750      0    0    0 ""
+ 751      0    0    0 ""
+ 752      0    0    0 ""
+ 753      0    0    0 ""
+ 754      0    0    0 ""
+ 755      0    0    0 ""
+ 756      0    0    0 ""
+ 757      0    0    0 ""
+ 758  84968   67    0 "axc"
+ 759      0    0    0 ""
+ 760      0    0    0 ""
+ 761      0    0    0 ""
+ 762      0    0    0 ""
+ 763      0    0    0 ""
+ 764      0    0    0 ""
+ 765  84154   59    0 "aRANGE"
+ 766      0    0    0 ""
+ 767      0    0    0 ""
+ 768      0    0    0 ""
+ 769      0    0    0 ""
+ 770      0    0    0 ""
+ 771      0    0    0 ""
+ 772      0    0    0 ""
+ 773      0    0    0 ""
+ 774  84972   70    0 "ayc"
+ 775      0    0    0 ""
+ 776      0    0    0 ""
+ 777      0    0    0 ""
+ 778      0    0    0 ""
+ 779      0    0    0 ""
+ 780      0    0    0 ""
+ 781      0    0    0 ""
+ 782      0    0    0 ""
+ 783      0    0    0 ""
+ 784      0    0    0 ""
+ 785      0    0    0 ""
+ 786      0    0    0 ""
+ 787      0    0    0 ""
+ 788      0    0    0 ""
+ 789      0    0    0 ""
+ 790      0    0    0 ""
+ 791      0    0    0 ""
+ 792      0    0    0 ""
+ 793      0    0    0 ""
+ 794      0    0    0 ""
+ 795      0    0    0 ""
+ 796      0    0    0 ""
+ 797      0    0    0 ""
+ 798      0    0    0 ""
+ 799      0    0    0 ""
+ 800      0    0    0 ""
+ 801      0    0    0 ""
+ 802      0    0    0 ""
+ 803      0    0    0 ""
+ 804      0    0    0 ""
+ 805      0    0    0 ""
+ 806      0    0    0 ""
+ 807      0    0    0 ""
+ 808      0    0    0 ""
+ 809      0    0    0 ""
+ 810      0    0    0 ""
+ 811      0    0    0 ""
+ 812      0    0    0 ""
+ 813      0    0    0 ""
+ 814      0    0    0 ""
+ 815      0    0    0 ""
+ 816      0    0    0 ""
+ 817      0    0    0 ""
+ 818      0    0    0 ""
+ 819      0    0    0 ""
+ 820      0    0    0 ""
+ 821      0    0    0 ""
+ 822      0    0    0 ""
+ 823      0    0    0 ""
+ 824      0    0    0 ""
+ 825      0    0    0 ""
+ 826      0    0    0 ""
+ 827      0    0    0 ""
+ 828      0    0    0 ""
+ 829      0    0    0 ""
+ 830      0    0    0 ""
+ 831      0    0    0 ""
+ 832      0    0    0 ""
+ 833      0    0    0 ""
+ 834  84148   61 1027 "aSIZE"
+ 835      0    0    0 ""
+ 836      0    0    0 ""
+ 837      0    0    0 ""
+ 838      0    0    0 ""
+ 839      0    0    0 ""
+ 840      0    0    0 ""
+ 841      0    0    0 ""
+ 842      0    0    0 ""
+ 843      0    0    0 ""
+ 844      0    0    0 ""
+ 845      0    0    0 ""
+ 846      0    0    0 ""
+ 847      0    0    0 ""
+ 848      0    0    0 ""
+ 849      0    0    0 ""
+ 850      0    0    0 ""
+ 851      0    0    0 ""
+ 852      0    0    0 ""
+ 853      0    0    0 ""
+ 854      0    0    0 ""
+ 855      0    0    0 ""
+ 856      0    0    0 ""
+ 857      0    0    0 ""
+ 858      0    0    0 ""
+ 859      0    0    0 ""
+ 860      0    0    0 ""
+ 861      0    0    0 ""
+ 862      0    0    0 ""
+ 863      0    0    0 ""
+ 864  84670    4    0 "#I1000"
+ 865      0    0    0 ""
+ 866      0    0    0 ""
+ 867      0    0    0 ""
+ 868      0    0    0 ""
+ 869      0    0    0 ""
+ 870      0    0    0 ""
+ 871      0    0    0 ""
+ 872      0    0    0 ""
+ 873      0    0    0 ""
+ 874      0    0    0 ""
+ 875  84430  122    0 "WATCHEYE"
+ 876      0    0    0 ""
+ 877      0    0    0 ""
+ 878      0    0    0 ""
+ 879      0    0    0 ""
+ 880      0    0    0 ""
+ 881      0    0    0 ""
+ 882      0    0    0 ""
+ 883      0    0    0 ""
+ 884      0    0    0 ""
+ 885      0    0    0 ""
+ 886      0    0    0 ""
+ 887      0    0    0 ""
+ 888      0    0    0 ""
+ 889      0    0    0 ""
+ 890      0    0    0 ""
+ 891      0    0    0 ""
+ 892      0    0    0 ""
+ 893      0    0    0 ""
+ 894      0    0    0 ""
+ 895      0    0    0 ""
+ 896      0    0    0 ""
+ 897      0    0    0 ""
+ 898      0    0    0 ""
+ 899      0    0    0 ""
+ 900      0    0    0 ""
+ 901      0    0    0 ""
+ 902      0    0    0 ""
+ 903      0    0    0 ""
+ 904      0    0    0 ""
+ 905      0    0    0 ""
+ 906      0    0    0 ""
+ 907      0    0    0 ""
+ 908  84412   91    0 "INIT"
+ 909  84368   98    0 "oB1"
+ 910      0    0    0 ""
+ 911      0    0    0 ""
+ 912  84940   13    0 "#I5000"
+ 913      0    0    0 ""
+ 914      0    0    0 ""
+ 915      0    0    0 ""
+ 916      0    0    0 ""
+ 917      0    0    0 ""
+ 918      0    0    0 ""
+ 919      0    0    0 ""
+ 920      0    0    0 ""
+ 921      0    0    0 ""
+ 922      0    0    0 ""
+ 923      0    0    0 ""
+ 924      0    0    0 ""
+ 925      0    0    0 ""
+ 926      0    0    0 ""
+ 927      0    0    0 ""
+ 928      0    0    0 ""
+ 929      0    0    0 ""
+ 930      0    0    0 ""
+ 931      0    0    0 ""
+ 932  84108   65 1022 "aVISIBLE"
+ 933      0    0    0 ""
+ 934      0    0    0 ""
+ 935      0    0    0 ""
+ 936      0    0    0 ""
+ 937      0    0    0 ""
+ 938      0    0    0 ""
+ 939  84060  112    0 "tBOX"
+ 940      0    0    0 ""
+ 941      0    0    0 ""
+ 942      0    0    0 ""
+ 943      0    0    0 ""
+ 944      0    0    0 ""
+ 945      0    0    0 ""
+ 946      0    0    0 ""
+ 947      0    0    0 ""
+ 948  84678   15 1034 "#I8000"
+ 949      0    0    0 ""
+ 950      0    0    0 ""
+ 951      0    0    0 ""
+ 952      0    0    0 ""
+ 953      0    0    0 ""
+ 954      0    0    0 ""
+ 955      0    0    0 ""
+ 956      0    0    0 ""
+ 957  84372  100    0 "oE1"
+ 958      0    0    0 ""
+ 959      0    0    0 ""
+ 960      0    0    0 ""
+ 961      0    0    0 ""
+ 962      0    0    0 ""
+ 963      0    0    0 ""
+ 964      0    0    0 ""
+ 965      0    0    0 ""
+ 966      0    0    0 ""
+ 967      0    0    0 ""
+ 968      0    0    0 ""
+ 969      0    0    0 ""
+ 970  84184   64 1031 "AUTOMONKEY"
+ 971      0    0    0 ""
+ 972      0    0    0 ""
+ 973      0    0    0 ""
+ 974      0    0    0 ""
+ 975      0    0    0 ""
+ 976      0    0    0 ""
+ 977      0    0    0 ""
+ 978      0    0    0 ""
+ 979      0    0    0 ""
+ 980      0    0    0 ""
+ 981      0    0    0 ""
+ 982      0    0    0 ""
+ 983      0    0    0 ""
+ 984      0    0    0 ""
+ 985      0    0    0 ""
+ 986      0    0    0 ""
+ 987  84588    1    0 "#I0"
+ 988  84666    2    0 "#I1"
+ 989  84914    5    0 "#I2"
+ 990  85260    9    0 "#I3"
+ 991      0    0    0 ""
+ 992      0    0    0 ""
+ 993  85164   14    0 "#I6"
+ 994      0    0    0 ""
+ 995      0    0    0 ""
+ 996      0    0    0 ""
+ 997      0    0    0 ""
+ 998      0    0    0 ""
+ 999      0    0    0 ""
+1000      0    0    0 ""
+1001      0    0    0 ""
+1002      0    0    0 ""
+1003      0    0    0 ""
+1004      0    0    0 ""
+1005      0    0    0 ""
+1006  84214  103    0 "PRIMARY_DATABASES"
+1007      0    0    0 ""
+1008      0    0    0 ""
+1009      0    0    0 ""
+1010      0    0    0 ""
+1011      0    0    0 ""
+1012      0    0    0 ""
+1013      0    0    0 ""
+1014  84960   77    0 "bxc"
+1015      0    0    0 ""
+1016      0    0    0 ""
+1017      0    0    0 ""
+1018      0    0    0 ""
+1019      0    0    0 ""
+1020      0    0    0 ""
+
+HASH OVERFLOW TABLE
+
+iHSH  iNAM  iSYM iNXT Symbol
+---- ------ ---- ---- -----------
+1021  84074  119    0 "tXCROSS"
+1022  84118   58    0 "aINVISIBLE"
+1023  84138   63    0 "aUNFILLED"
+1024  84204  104    0 "REVISION"
+1025  84256  111    0 "SuccessCount"
+1026  84270  125    0 "xsize"
+1027  84276  128 1026 "ysize"
+1028  84296   90    0 "hold_time"
+1029  84306   94 1028 "juice_time"
+1030  84480   80    0 "CheckIsInside"
+1031  84650  121    0 "waitAutoMonkey"
+1032  84898  110 1029 "start_time"
+1033  84964   79    0 "byc"
+1034  84984    7    0 "#I2048"
+1035  85106   39    0 "#S21"
+1036  85264   75    0 "BUSYLOOP"
+
+----------------------------------------------------------
+NAME TABLE
+
+  iNAM iSYM  Name
+------ ----  -----------------
+    44    1 "#I0"
+    86    2 "#I1"
+   128    3 "#I100"
+   170    4 "#I1000"
+   212    5 "#I2"
+   254    6 "#I20"
+   296    7 "#I2048"
+   338    8 "#I25"
+   380    9 "#I3"
+   422   10 "#I4096"
+   464   11 "#I50"
+   506   12 "#I500"
+   548   13 "#I5000"
+   590   14 "#I6"
+   632   15 "#I8000"
+   674   16 "#L0"
+   716   17 "#L1"
+   758   18 "#L2"
+   800   19 "#L3"
+   842   20 "#L4"
+   884   21 "#L5"
+   926   22 "#L6"
+   968   23 "#L7"
+  1010   24 "#L8"
+  1052   25 "#S0"
+  1094   26 "#S1"
+  1136   27 "#S10"
+  1178   28 "#S11"
+  1220   29 "#S12"
+  1262   30 "#S13"
+  1304   31 "#S14"
+  1346   32 "#S15"
+  1388   33 "#S16"
+  1430   34 "#S17"
+  1472   35 "#S18"
+  1514   36 "#S19"
+  1556   37 "#S2"
+  1598   38 "#S20"
+  1640   39 "#S21"
+  1682   40 "#S22"
+  1724   41 "#S23"
+  1766   42 "#S24"
+  1808   43 "#S25"
+  1850   44 "#S26"
+  1892   45 "#S27"
+  1934   46 "#S28"
+  1976   47 "#S3"
+  2018   48 "#S4"
+  2060   49 "#S5"
+  2102   50 "#S6"
+  2144   51 "#S7"
+  2186   52 "#S8"
+  2228   53 "#S9"
+  2270   54 "__debug_op"
+  2312   55 "aCLEAR"
+  2354   56 "acquire_time"
+  2396   57 "aFILLED"
+  2438   58 "aINVISIBLE"
+  2480   59 "aRANGE"
+  2522   60 "aREPLACE"
+  2564   61 "aSIZE"
+  2606   62 "aTITLE"
+  2648   63 "aUNFILLED"
+  2690   64 "AUTOMONKEY"
+  2732   65 "aVISIBLE"
+  2774   66 "ax"
+  2816   67 "axc"
+  2858   68 "aXOR"
+  2900   69 "ay"
+  2942   70 "ayc"
+  2984   71 "BAR"
+  3026   72 "BOXOFF"
+  3068   73 "BOXON"
+  3110   74 "busy"
+  3152   75 "BUSYLOOP"
+  3194   76 "bx"
+  3236   77 "bxc"
+  3278   78 "by"
+  3320   79 "byc"
+  3362   80 "CheckIsInside"
+  3404   81 "DEBUG"
+  3446   82 "end"
+  3488   83 "ERR_ACQUIRE"
+  3530   84 "ERR_HOLD"
+  3572   85 "ERR_OK"
+  3614   86 "failed"
+  3656   87 "FAILURE"
+  3698   88 "gLEFT"
+  3740   89 "gRIGHT"
+  3782   90 "hold_time"
+  3824   91 "INIT"
+  3866   92 "isinside"
+  3908   93 "JUICE"
+  3950   94 "juice_time"
+  3992   95 "MAIN"
+  4034   96 "nPCX"
+  4076   97 "oB"
+  4118   98 "oB1"
+  4160   99 "oE"
+  4202  100 "oE1"
+  4244  101 "oldx"
+  4286  102 "oldy"
+  4328  103 "PRIMARY_DATABASES"
+  4370  104 "REVISION"
+  4412  105 "saveVSscreen"
+  4454  106 "SETS"
+  4496  107 "SETUP"
+  4538  108 "SPEED"
+  4580  109 "SPEED_UNITS"
+  4622  110 "start_time"
+  4664  111 "SuccessCount"
+  4706  112 "tBOX"
+  4748  113 "tCROSS"
+  4790  114 "tELLIPSE"
+  4832  115 "tPOINT"
+  4874  116 "TRIAL"
+  4916  117 "TRIAL_LOOP"
+  4958  118 "TrialCount"
+  5000  119 "tXCROSS"
+  5042  120 "VERSION"
+  5084  121 "waitAutoMonkey"
+  5126  122 "WATCHEYE"
+  5168  123 "x"
+  5210  124 "XMAX"
+  5252  125 "xsize"
+  5294  126 "y"
+  5336  127 "YMAX"
+  5378  128 "ysize"
+
+  iNAM Name
+------ -----------------
+ 84002 "SETS"
+ 84008 "SPEED"
+ 84014 "SPEED_UNITS"
+ 84026 "__debug_op"
+ 84038 "gLEFT"
+ 84044 "gRIGHT"
+ 84052 "tPOINT"
+ 84060 "tBOX"
+ 84066 "tCROSS"
+ 84074 "tXCROSS"
+ 84082 "tELLIPSE"
+ 84092 "aXOR"
+ 84098 "aREPLACE"
+ 84108 "aVISIBLE"
+ 84118 "aINVISIBLE"
+ 84130 "aFILLED"
+ 84138 "aUNFILLED"
+ 84148 "aSIZE"
+ 84154 "aRANGE"
+ 84162 "aTITLE"
+ 84170 "aCLEAR"
+ 84178 "DEBUG"
+ 84184 "AUTOMONKEY"
+ 84196 "VERSION"
+ 84204 "REVISION"
+ 84214 "PRIMARY_DATABASES"
+ 84232 "XMAX"
+ 84238 "YMAX"
+ 84244 "TrialCount"
+ 84256 "SuccessCount"
+ 84270 "xsize"
+ 84276 "ysize"
+ 84282 "acquire_time"
+ 84296 "hold_time"
+ 84306 "juice_time"
+ 84318 "failed"
+ 84326 "ERR_OK"
+ 84334 "ERR_ACQUIRE"
+ 84346 "ERR_HOLD"
+ 84356 "BAR"
+ 84360 "oB"
+ 84364 "oE"
+ 84368 "oB1"
+ 84372 "oE1"
+ 84376 "bx"
+ 84380 "by"
+ 84384 "ax"
+ 84388 "ay"
+ 84392 "x"
+ 84394 "y"
+ 84396 "isinside"
+ 84406 "MAIN"
+ 84412 "INIT"
+ 84418 "TRIAL_LOOP"
+ 84430 "WATCHEYE"
+ 84440 "SETUP"
+ 84446 "TRIAL"
+ 84452 "JUICE"
+ 84458 "FAILURE"
+ 84466 "BOXON"
+ 84472 "BOXOFF"
+ 84480 "CheckIsInside"
+ 84494 "Press F1 for HELP and other TEMPO dialogs."
+ 84538 "#S0"
+ 84542 "#L0"
+ 84546 "dialog main"
+ 84558 "#S1"
+ 84562 "cl"
+ 84566 "#S2"
+ 84570 "vc 0,%d,0,%d
+"
+ 84584 "#S3"
+ 84588 "#I0"
+ 84592 "#I20"
+ 84598 "oc 1,3
+"
+ 84606 "#S4"
+ 84610 "ow 1,20,20
+"
+ 84622 "#S5"
+ 84626 "oi 1,13
+"
+ 84636 "#S6"
+ 84640 "os 1
+"
+ 84646 "#S7"
+ 84650 "waitAutoMonkey"
+ 84666 "#I1"
+ 84670 "#I1000"
+ 84678 "#I8000"
+ 84686 "#L1"
+ 84690 "Automonkey will press bar in %d ms
+"
+ 84726 "#S8"
+ 84730 "cls"
+ 84734 "#S9"
+ 84738 "Waiting for left mouse button..."
+ 84772 "#S10"
+ 84778 "#L2"
+ 84782 "Waiting for BAR press..."
+ 84808 "#S11"
+ 84814 "Starting trial %d..
+"
+ 84836 "#S12"
+ 84842 "Trial %d SUCCESSFUL
+"
+ 84864 "#S13"
+ 84870 "Trial %d FAILED
+"
+ 84888 "#S14"
+ 84894 "end"
+ 84898 "start_time"
+ 84910 "#L3"
+ 84914 "#I2"
+ 84918 "Latency %d ms
+"
+ 84934 "#S15"
+ 84940 "#I5000"
+ 84948 "oldx"
+ 84954 "oldy"
+ 84960 "bxc"
+ 84964 "byc"
+ 84968 "axc"
+ 84972 "ayc"
+ 84976 "#I4096"
+ 84984 "#I2048"
+ 84992 "#I50"
+ 84998 "#I25"
+ 85004 "om 1,%d,%d
+"
+ 85016 "#S16"
+ 85022 "#L4"
+ 85026 "#L5"
+ 85030 "#L6"
+ 85034 "#L7"
+ 85038 "#L8"
+ 85042 "oh 1"
+ 85048 "#S17"
+ 85054 "co 15"
+ 85060 "#S18"
+ 85066 "ru %d,%d,%d,%d
+"
+ 85082 "#S19"
+ 85088 "os 1"
+ 85094 "#S20"
+ 85100 "oh 1"
+ 85106 "#S21"
+ 85112 "co 0"
+ 85118 "#S22"
+ 85124 "ru %d,%d,%d,%d
+"
+ 85140 "#S23"
+ 85146 "os 1"
+ 85152 "#S24"
+ 85158 "#I500"
+ 85164 "#I6"
+ 85168 "Failed to acquire target within %d ms.
+"
+ 85208 "#S25"
+ 85214 "Failed to hold target for %d ms.
+"
+ 85248 "#S26"
+ 85254 "#I100"
+ 85260 "#I3"
+ 85264 "BUSYLOOP"
+ 85274 "busy"
+ 85280 "saveVSscreen"
+ 85294 "nPCX"
+ 85300 "IS 0,0,%d,%d,%d.pcx
+"
+ 85322 "#S27"
+ 85328 "saveVSscreen - Saved %d.PCX
+"
+ 85358 "#S28"
+----------------------------------------------------------
+
+ANALYSIS OF 253 INSTRUCTIONS (2484/90000 bytes) IN 13/75 PROCESSES.
+
+   0 HALT           0 x  2 =     0 bytes (  0%) Stop clock
+   1 RESUME         0 x  6 =     0 bytes (  0%) Resume process
+   2 SET           10 x 10 =   100 bytes (  4%) Assignment
+   3 NEXTTICK       0 x  4 =     0 bytes (  0%) Wait ticks
+   4 WAIT           9 x  4 =    36 bytes (  4%) Wait milliseconds
+   5 WSOF           0 x  4 =     0 bytes (  0%) Wait for status off
+   6 WSON           1 x  4 =     4 bytes (  0%) Wait for status on
+   7 WCOF           0 x  4 =     0 bytes (  0%) Wait for cancel off
+   8 WCON           0 x  4 =     0 bytes (  0%) Wait for cancel on
+   9 SPAWN         12 x  6 =    72 bytes (  5%) Spawn process
+  10 ADD           25 x 14 =   350 bytes ( 10%) val3 = var1 + var2
+  11 SUB            9 x 14 =   126 bytes (  4%) val3 = var1 - var2
+  12 MUL            5 x 14 =    70 bytes (  2%) val3 = var1 * var2
+  13 DIV           18 x 14 =   252 bytes (  7%) val3 = var1 / var2
+  14 MOD            0 x 14 =     0 bytes (  0%) val3 = var1 % var2
+  15 NEG            0 x 14 =     0 bytes (  0%) val2 = - var1
+  16 BAND           1 x 14 =    14 bytes (  0%) val3 = val1 & val2
+  17 BOR            0 x 14 =     0 bytes (  0%) val3 = val1 | val2
+  18 BXOR           0 x 14 =     0 bytes (  0%) val3 = val1 ^ val2
+  19 LAND           5 x 14 =    70 bytes (  2%) val3 = val1 && val2
+  20 LOR            1 x 14 =    14 bytes (  0%) val3 = val1 || val2
+  21 EQ             2 x 14 =    28 bytes (  1%) val3 = val1 == val2
+  22 NE             2 x 14 =    28 bytes (  1%) val3 = val1 != val2
+  23 GT             0 x 14 =     0 bytes (  0%) val3 = val1 > val2
+  24 LT             3 x 14 =    42 bytes (  1%) val3 = val1 < val2
+  25 LE             2 x 14 =    28 bytes (  1%) val3 = val1 <= val2
+  26 GE             2 x 14 =    28 bytes (  1%) val3 = val1 >= val2
+  27 NOT            8 x 14 =   112 bytes (  3%) val2 = ! val1
+  28 LCOMP          0 x 14 =     0 bytes (  0%) val2 = ~ val1
+  29 IF            21 x  8 =   168 bytes (  8%) IF (expr) stmt
+  30 GOTO          15 x  4 =    60 bytes (  6%) GOTO #
+  31 NEXTTICK1      7 x  2 =    14 bytes (  3%) NEXTTICK1
+  32 TRIGGER        2 x  6 =    12 bytes (  1%) Trigger databases
+  33 SUSPEND        0 x  6 =     0 bytes (  0%) Suspend process
+  34 HARVEST        2 x  6 =    12 bytes (  1%) Harvest databases
+  35 CALL0         10 x  6 =    60 bytes (  4%) Builtin function
+  36 CALL1         35 x  8 =   280 bytes ( 14%) Builtin function
+  37 CALL2         23 x 10 =   230 bytes (  9%) Builtin function
+  38 CALL3          6 x 12 =    72 bytes (  2%) Builtin function
+  39 CALL4          7 x 14 =    98 bytes (  3%) Builtin function
+  40 CALL5          2 x 16 =    32 bytes (  1%) Builtin function
+  41 CALL6          2 x 18 =    36 bytes (  1%) Builtin function
+  42 CALL7          0 x 20 =     0 bytes (  0%) Builtin function
+  43 CALL8          0 x 22 =     0 bytes (  0%) Builtin function
+  44 CALL9          0 x 24 =     0 bytes (  0%) Builtin function
+  45 CALL10         0 x 26 =     0 bytes (  0%) Builtin function
+  46 CALL11         0 x 28 =     0 bytes (  0%) Builtin function
+  47 CALL12         0 x 30 =     0 bytes (  0%) Builtin function
+  48 CALL13         0 x 32 =     0 bytes (  0%) Builtin function
+  49 CALL14         0 x 34 =     0 bytes (  0%) Builtin function
+  50 CALL15         0 x 36 =     0 bytes (  0%) Builtin function
+  51 CALL16         0 x 38 =     0 bytes (  0%) Builtin function
+  52 AFETCH1        0 x  8 =     0 bytes (  0%) Fetch array value
+  53 AFETCH2        0 x 10 =     0 bytes (  0%) Fetch array value
+  54 AFETCH3        0 x 12 =     0 bytes (  0%) Fetch array value
+  55 AFETCH4        0 x 14 =     0 bytes (  0%) Fetch array value
+  56 AFETCH5        0 x 16 =     0 bytes (  0%) Fetch array value
+  57 AFETCH6        0 x 18 =     0 bytes (  0%) Fetch array value
+  58 ASTORE1        0 x  8 =     0 bytes (  0%) Store array value
+  59 ASTORE2        0 x 10 =     0 bytes (  0%) Store array value
+  60 ASTORE3        0 x 12 =     0 bytes (  0%) Store array value
+  61 ASTORE4        0 x 14 =     0 bytes (  0%) Store array value
+  62 ASTORE5        0 x 16 =     0 bytes (  0%) Store array value
+  63 ASTORE6        0 x 18 =     0 bytes (  0%) Store array value
+  64 WAITFORPROCESS      6 x  6 =    36 bytes (  2%) Wait for process
+  65 LSHIFT         0 x 14 =     0 bytes (  0%) val3 = val1 << val2
+  66 RSHIFT         0 x 14 =     0 bytes (  0%) val3 = val1 >> val2
+  67 FBINARY        0 x 14 =     0 bytes (  0%) val3 = val1 Fop val2
+  68 FUNARY         0 x 10 =     0 bytes (  0%) val3 = Fop val1
+  69 FIF            0 x  8 =     0 bytes (  0%) fIF (expr) stmt
+PCL Calling write_pxe_file..
+PXESave - PXEfile='acquire.pxe', profile='acquire.pro', kernel_op=40C6:0002 kernel_symtab=56C1:0002
+PXEsave - sizeof(PXE) is 202
+PXESave - Opening PXE file 'acquire.pxe'..
+PXESave - 'KPED' 12.1 Set 45  PCL 12.5
+PXESave - pro_file='acquire.pro'
+PXESave - speed=100/100000 sets=2
+PXESave - Scanning 75 PROCESS control blocks..
+PXESave - Found 13 PROCESS control blocks.
+PXESave - PROCESS 'MAIN' reading 40 bytes of instructions..
+          PROCESS 'MAIN' mapping instructions..
+MapOp - Mapping 40 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'MAIN' writting 40 bytes of instructions to fileOffset=204
+PXESave - PROCESS 'INIT' reading 214 bytes of instructions..
+          PROCESS 'INIT' mapping instructions..
+MapOp - Mapping 214 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'INIT' writting 214 bytes of instructions to fileOffset=244
+PXESave - PROCESS 'TRIAL_LOOP' reading 276 bytes of instructions..
+          PROCESS 'TRIAL_LOOP' mapping instructions..
+MapOp - Mapping 276 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'TRIAL_LOOP' writting 276 bytes of instructions to fileOffset=458
+PXESave - PROCESS 'SETUP' reading 56 bytes of instructions..
+          PROCESS 'SETUP' mapping instructions..
+MapOp - Mapping 56 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'SETUP' writting 56 bytes of instructions to fileOffset=734
+PXESave - PROCESS 'TRIAL' reading 454 bytes of instructions..
+          PROCESS 'TRIAL' mapping instructions..
+MapOp - Mapping 454 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'TRIAL' writting 454 bytes of instructions to fileOffset=790
+PXESave - PROCESS 'WATCHEYE' reading 564 bytes of instructions..
+          PROCESS 'WATCHEYE' mapping instructions..
+MapOp - Mapping 564 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'WATCHEYE' writting 564 bytes of instructions to fileOffset=1244
+PXESave - PROCESS 'CheckIsInside' reading 158 bytes of instructions..
+          PROCESS 'CheckIsInside' mapping instructions..
+MapOp - Mapping 158 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'CheckIsInside' writting 158 bytes of instructions to fileOffset=1808
+PXESave - PROCESS 'BOXON' reading 252 bytes of instructions..
+          PROCESS 'BOXON' mapping instructions..
+MapOp - Mapping 252 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'BOXON' writting 252 bytes of instructions to fileOffset=1966
+PXESave - PROCESS 'BOXOFF' reading 88 bytes of instructions..
+          PROCESS 'BOXOFF' mapping instructions..
+MapOp - Mapping 88 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'BOXOFF' writting 88 bytes of instructions to fileOffset=2218
+PXESave - PROCESS 'JUICE' reading 192 bytes of instructions..
+          PROCESS 'JUICE' mapping instructions..
+MapOp - Mapping 192 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'JUICE' writting 192 bytes of instructions to fileOffset=2306
+PXESave - PROCESS 'FAILURE' reading 102 bytes of instructions..
+          PROCESS 'FAILURE' mapping instructions..
+MapOp - Mapping 102 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'FAILURE' writting 102 bytes of instructions to fileOffset=2498
+PXESave - PROCESS 'BUSYLOOP' reading 50 bytes of instructions..
+          PROCESS 'BUSYLOOP' mapping instructions..
+MapOp - Mapping 50 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'BUSYLOOP' writting 50 bytes of instructions to fileOffset=2600
+PXESave - PROCESS 'saveVSscreen' reading 38 bytes of instructions..
+          PROCESS 'saveVSscreen' mapping instructions..
+MapOp - Mapping 38 instruction bytes; firstOp=37F1:0002 pcl_symtab=4DEB:0016 kernel_symtab=56C1:0002..
+          PROCESS 'saveVSscreen' writting 38 bytes of instructions to fileOffset=2650
+pxesave - INSTRUCTIONS=138/5000 (2486/90000 bytes) pxe.op=202 pxe.nBytesOp=2486
+ PROCESS   1: state=2  nOp=40    iOp=     2-41     iCache=     2-41      'MAIN'
+ PROCESS   2: state=1  nOp=214   iOp=    42-255    iCache=    42-255     'INIT'
+ PROCESS   3: state=1  nOp=276   iOp=   256-531    iCache=   256-531     'TRIAL_LOOP'
+ PROCESS   4: state=1  nOp=56    iOp=   532-587    iCache=   532-587     'SETUP'
+ PROCESS   5: state=1  nOp=454   iOp=   588-1041   iCache=   588-1041    'TRIAL'
+ PROCESS   6: state=1  nOp=564   iOp=  1042-1605   iCache=  1042-1605    'WATCHEYE'
+ PROCESS   7: state=1  nOp=158   iOp=  1606-1763   iCache=  1606-1763    'CheckIsInside'
+ PROCESS   8: state=1  nOp=252   iOp=  1764-2015   iCache=  1764-2015    'BOXON'
+ PROCESS   9: state=1  nOp=88    iOp=  2016-2103   iCache=  2016-2103    'BOXOFF'
+ PROCESS  10: state=1  nOp=192   iOp=  2104-2295   iCache=  2104-2295    'JUICE'
+ PROCESS  11: state=1  nOp=102   iOp=  2296-2397   iCache=  2296-2397    'FAILURE'
+ PROCESS  12: state=1  nOp=50    iOp=  2398-2447   iCache=  2398-2447    'BUSYLOOP'
+ PROCESS  13: state=1  nOp=38    iOp=  2448-2485   iCache=  2448-2485    'saveVSscreen'
+pxesave - 13 processes fileOffset=2688 len=572
+pxesave - 128 Symbol table fileOffset=3260 len=1032
+pxesave - (1021,oflo=1037) hash table fileOffset=4292 len=16472
+pxesave - 85364 name table fileOffset=20764 len=85364
+pxesave - 0 arraytable fileOffset=0 len=0
+pxesave - 0 arraydata fileOffset=0 len=0
+pxesave - Next fileOffset=106250
+pxesave - Successful. EndOfFile=106250
+PCL write_pxe_file returned 0
+PCL Closing ICache file
+PCL - Freeing SYMTABEX array
+PCL - SYMTABEX array freed
+PCL Closing IC..
+PCL Closing XMS..
+PCL Closing error file..
+PCL Deleteing error file 'acquire.err'
+PCL - Exiting with status 0

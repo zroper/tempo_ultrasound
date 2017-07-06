@@ -1,0 +1,92 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2010 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Tue May 25 15:15:56 2010
+; CLOAD INCREMENT.pcf
+
+; tempow 13.1 Set 45.14   'SCHALLgC1280' connected to 'tempo3'
+; KPED 12.1 Set 45
+; KSRV 13.1 Set 45.14 (Server 'tempo3          ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=16
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=500.000000  (100/100000 Sec/SampleSet)
+; ASETS=2(2)  CSETS=2(2)  ESETS=2(2)
+; ACHANNELS=3
+; CCHANNELS=1
+; ECHANNELS=2
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =75               0     0%            0/3300          =0         =0       
+; INSTRUCTIONS    =5000             0     0%            0/90000         =1         =1       
+; InstructionsXMS =0 (XMS Instruction Caching is DISABLED)
+; SYMBOLTABLE     =2000             0     0%            0/16000         =0         =0       
+; NametableXMS    =99328            0     0%            0/99328                         
+; NAMETABLE       =15326       -84002  28023511%       -84002/15326         =5052803875  =4520929783
+; DATABASES       =40               0     0%            0/2400          =0         =0       
+; ARRAYTABLE      =10000            0     0%            0/10000         =0         =0       
+; ARRAYDATA       =131072           0     0%            0/131072        =0         =0       
+; OBJECTS         =0                0     0%            0/0             =0         =0       
+;
+; PROTOCOL PROCESS CONTROL BLOCKS (XMS Instructions Caching DISABLED)
+; INSTRUCTIONS=5000,0
+; Memory (bytes):  0/90000 Conventional, 0/0 XMS
+; Server CPU Mhz  Empirical 1680.8    Theoretical 1666.0
+;
+;    STATE PROCESS  Longest  0.000ms   PC INST  MAX LONG     MS  MaxMS LongMS Bytes  Conventional        XMS      Loaded  uSec 
+
+; PLOAD C:/TEMPO/PROWIN/Sandbox/Incriment.pcf
+
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=3
+
+
+ACHANINFO 0
+
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=1
+
+
+CCHANINFO 0
+
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+
+ECHANINFO 0
+
+
+; DATABASES=40
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1280,1024,32,1,0,0
+MAINWND 1,0,0,-1,-1,557,4,1279,53,0
+MSGWND 1,0,0,-1,-1,445,726,1123,845,0
+STATUSWND 1,0,0,-1,-1,58,588,587,978,0
+SHOW s 0
+
+CMDWND 1,0,0,-1,-1,604,335,840,385,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1280,1024,32,1,0,0
+
+; END OF DIALOGS
+

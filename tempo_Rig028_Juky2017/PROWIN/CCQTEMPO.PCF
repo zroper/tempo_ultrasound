@@ -1,0 +1,106 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2005 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Mon Oct 03 20:42:59 2005
+; CLOAD ccqtempo.pcf
+
+; tempow 10.35 Set 37.12   'STRIPE1977' connected to 'tYELLOWudp'
+; KPED 10.29 Set 37
+; KSRV 11.2 Set 37.12 (Server 'tYELLOWudp      ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=1000.000000  (100/100000 Sec/SampleSet)
+; ASETS=1(1)  CSETS=1(1)  ESETS=1(1)
+; ACHANNELS=16
+; CCHANNELS=5
+; ECHANNELS=5
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =20               4    20%           96/480           =6         =4       
+; INSTRUCTIONS    =256             21     8%          362/4608          =26        =22      
+; SYMBOLTABLE     =256             43    17%          516/3072          =51        =45      
+; HASHTABLE       =     127,256          53%         1572/2298        Use Kernel Default
+; NAMETABLE       =2000           356    18%          356/2000          =419       =375     
+; DATABASES       =40               1     3%           60/2400          =1         =1       
+; ARRAYTABLE      =100             28    28%           28/100           =35        =29      
+; ARRAYDATA       =131072       16352    12%        16352/131072        =20440     =16858   
+; OBJECTS         =0                0     0%            0/0             =0         =0       
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=5
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=5
+
+PLOAD ccqtempo.pro
+
+; DATABASES=40
+
+HOPEN  1,7,1,1,3,100,1000,0,0,0,0x0
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1024,768,16
+MAINWND 1,1004,748,-1,-1,1,0,451,44,0
+MSGWND 1,0,0,-1,-1,1,41,639,410,0
+STATUSWND 1,0,0,-1,-1,0,410,621,769,0
+ARRAY cobaltDBnEpochs
+
+CMDWND 1,0,748,-1,-1,125,44,460,94,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,503,383,1015,767,0
+DBVIEW  0,0,1,10,1000,0,3,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,504,357,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1024,768,16
+
+DIAPAGE 0,"MAIN"
+DIAPOS   0,0,-1,-1,-1,-1,447,-1,856,335,0
+DIAOBJ   0,0,2,333,4,397,26,"OK","DSET; DPOP"
+DIAOBJ   0,1,2,331,27,395,49,"Cancel","DPOP"
+DIAOBJ   0,2,2,3,6,132,75,"START","remote start\r\nstart\r\nxeq main"
+DIAOBJ   0,3,2,4,86,133,155,"STOP","remote stop\r\nstop"
+DIAOBJ   0,4,2,145,86,274,155,"ZERO","remote hzero *\r\nhzero *"
+DIAOBJ   0,5,2,153,8,248,58,"CLS","remote cls\r\ncls"
+DIAOBJ   0,6,2,315,56,396,94,"Exit","exit"
+DIAOBJ   0,7,2,3,170,131,192,"cobaltDBnPending","array cobaltDBnPending"
+DIAOBJ   0,8,2,5,195,133,217,"cobaltTick","array cobaltTick"
+DIAOBJ   0,9,2,5,220,133,242,"cobaltDBnEpochs","array cobaltDBnEpochs"
+DIAOBJ   0,10,3,143,197,207,212,"","cobaltTick[COBALT1]"
+DIAOBJ   0,11,3,143,221,207,236,"","cobaltDBnEpochs[0,0]"
+DIAOBJ   0,12,3,143,173,207,188,"","cobaltDBnPending[0,0]"
+DIAOBJ   0,13,2,6,245,134,267,"show v","show v"
+DIAOBJ   0,14,3,141,249,210,264,"","count@3"
+DIAOBJ   0,15,3,223,198,300,213,"","tempoTick"
+DIAOBJ   0,16,2,6,273,134,295,"show p","show p"
+DIAOBJ   0,17,3,317,201,387,216,"","tempoTick - cobaltTick[0]"
+
+; END OF DIALOGS
+
+
+; BEGIN KEY DEFINITIONS
+
+KEY F1 = dialog MAIN
+
+; END KEY DEFINITIONS
+

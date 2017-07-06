@@ -1,0 +1,162 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Apr 25 07:27:35 2001
+; CLOAD acquire.pcf
+
+; tempow 9.14 Set 27.6   'T072517' connected to 'SNOOPY1'
+; KERNELD 9.11 Set 27
+; KSRV 9.5 Set 27.6 (Server 'SNOOPY1         ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; PROCESSES=11/128
+; INSTRUCTIONS=112/1600  (2008/28800 bytes)
+; SYMBOLTABLE=107/1100
+; HASHTABLE=257 OFLO 282/1100
+; NAMETABLE=952/20000
+; DATABASES=8/130
+; ACHANNELS=16
+; CCHANNELS=4
+; ECHANNELS=4
+; OBJECTS=0/32
+; ARRAYTABLE=0/2100
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=4
+
+PLOAD acquire.pro
+
+; DATABASES=130
+
+HOPEN  1,4,1,1,1,20,40,0,20,49,0x0
+HTITLE 1,"Latency Histogram"
+HFILE  1,"db1.htb"
+HOPEN  2,7,2,1,2,20,2000,500,0,0,0x0
+HTITLE 2,"Analog Append"
+HFILE  2,"acquire.htb"
+HOPEN  3,3,2,1,2,20,2000,500,0,0,0x0
+HTITLE 3,"Spike Append"
+HFILE  3,"acquire.htb"
+HOPEN  4,2,2,1,2,20,2000,500,0,0,0x0
+HTITLE 4,"Spike Average"
+HFILE  4,"acquire.htb"
+HOPEN  5,6,2,1,2,20,2000,500,0,0,0x0
+HTITLE 5,"Analog Average"
+HFILE  5,"acquire.htb"
+HOPEN  6,3,2,1,1,10,1000,0,0,0,0x0
+HFILE  6,"acquire.htb"
+HOPEN  7,6,2,1,16,20,2000,0,0,0,0x0
+HTITLE 7,"Analog Average"
+HFILE  7,"acquire.htb"
+HOPEN  8,6,2,4,13,20,500,0,0,0,0x0
+HTITLE 8,"Matlab test database"
+HFILE  8,"acquire.htb"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,0,0,-1,-1,809,0,1604,55,0
+MSGWND 1,728,900,-1,-1,9,550,759,844,0
+STATUSWND 1,485,900,-1,-1,10,857,758,1154,0
+SHOW s 0
+
+CMDWND 1,0,1171,-1,-1,285,-3,809,58,0
+ANIMPAGE 0x1,1,0,0,-1,-1,1085,700,1598,969,0
+ANIMVIEW 0,1,0,0,-1,-1,0,0,251,236,0
+ANIMVIEW 1,1,0,0,-1,-1,251,0,502,236,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,0,0,-1,-1,1082,175,1601,693,0
+DBVIEW  0,0,8,6,500,0,13,0,0,0,0x0
+DBVPOS  0,0,1,0,0,-1,-1,0,0,509,485,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+DIAPAGE 0,"Main"
+DIAPOS   0,0,0,0,-1,-1,415,284,1143,698,0
+DIAOBJ   0,0,2,537,7,668,53,"OK","DSET; DPOP"
+DIAOBJ   0,1,2,537,62,668,107,"Cancel","DPOP"
+DIAOBJ   0,2,2,170,112,315,156,"Start Clock","start"
+DIAOBJ   0,3,2,170,164,315,207,"Stop Clock","stop"
+DIAOBJ   0,4,2,170,270,315,314,"Zero data","hzero *\r\nTrialCount = 0\r\nSuccessCount = 0"
+DIAOBJ   0,5,2,334,114,479,157,"Save Data","hsave * acquire"
+DIAOBJ   0,6,1,209,4,467,35,"","Acquire Protocol\r\n"
+DIAOBJ   0,7,2,537,118,668,164,"Help","dialog help"
+DIAOBJ   0,8,2,12,112,157,156,"Set Times","dialog SetTimes"
+DIAOBJ   0,9,2,332,165,478,209,"Exit","csave\r\nexit"
+DIAOBJ   0,10,2,12,165,157,209,"Set Target","dialog SetTarget"
+DIAOBJ   0,11,2,170,215,315,259,"Juice","spawn juice"
+DIAOBJ   0,12,1,7,68,482,100,"","Parameters  During Run     After Run"
+DIAOBJ   0,13,3,496,210,557,242,"","TrialCount"
+DIAOBJ   0,14,1,571,210,654,242,"","Trials"
+DIAOBJ   0,15,3,496,254,557,285,"","SuccessCount"
+DIAOBJ   0,16,1,571,253,678,284,"","Success"
+
+DIAPAGE 1,"Help"
+DIAPOS   1,0,0,0,-1,-1,75,557,737,867,1
+DIAOBJ   1,0,2,517,29,642,76,"OK","DPOP"
+DIAOBJ   1,2,1,31,18,478,401,"","The subject presses the left button.\r\nA target appears.\r\nThe subject moves mouse to target.\r\nThe subject must hold target  for a\r\nperiod of time.\r\n \r\nLatency is measured.\r\nAlso, data is collect at onset\r\nof stimulus and at arrival in target.\r\n"
+
+DIAPAGE 2,"SetTimes"
+DIAPOS   2,0,0,0,-1,-1,460,287,1142,629,2
+DIAOBJ   2,0,2,517,29,642,76,"OK","DSET; DPOP"
+DIAOBJ   2,1,2,517,92,642,139,"Cancel","DPOP"
+DIAOBJ   2,2,3,18,81,114,121,"","acquire_time"
+DIAOBJ   2,3,3,18,140,114,181,"","hold_time"
+DIAOBJ   2,4,5,125,65,228,110,"","acquire_time"
+DIAOBJ   2,5,5,125,126,228,171,"","hold_time"
+DIAOBJ   2,6,3,18,201,114,242,"","juice_time"
+DIAOBJ   2,7,5,125,189,228,234,"","juice_time"
+DIAOBJ   2,8,1,17,29,232,60,"","Current        New"
+DIAOBJ   2,9,1,234,79,412,246,"","Acquire Time\r\n\r\nHold Time\r\n\r\nJuice Time"
+
+DIAPAGE 3,"SetTarget"
+DIAPOS   3,0,0,0,-1,-1,267,304,795,562,3
+DIAOBJ   3,0,2,375,26,500,75,"OK","DSET; DPOP"
+DIAOBJ   3,1,2,375,89,500,135,"Cancel","DPOP"
+DIAOBJ   3,2,5,162,87,262,125,"","xsize"
+DIAOBJ   3,3,5,162,145,262,181,"","ysize"
+DIAOBJ   3,4,3,84,90,142,121,"","xsize"
+DIAOBJ   3,5,3,84,146,142,178,"","ysize"
+DIAOBJ   3,6,1,271,90,303,189,"","X\r\n\r\nY"
+DIAOBJ   3,7,1,46,10,281,67,"","        Target Size\r\nCurrent          New"
+
+DIAPAGE 4,"Dialog0"
+DIAPOS   4,0,-1,-1,-1,-1,142,0,582,240,4
+DIAOBJ   4,0,2,330,20,410,50,"OK","DSET; DPOP"
+DIAOBJ   4,1,2,330,60,410,90,"Cancel","DPOP"
+DIAOBJ   4,2,3,27,9,187,39,"","y"
+DIAOBJ   4,3,3,27,87,187,117,"","x"
+DIAOBJ   4,4,3,27,48,187,78,"","ay"
+DIAOBJ   4,5,3,27,126,187,156,"","ax"
+
+; END OF DIALOGS
+
+
+; BEGIN KEY DEFINITIONS
+
+KEY F1 = dialog main
+KEY CTRLS = csave
+KEY CTRLC = cls
+
+; END KEY DEFINITIONS
+

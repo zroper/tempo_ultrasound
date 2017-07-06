@@ -1,0 +1,169 @@
+KERNEL KPED 12.1 Set 45 Functions 168
+  0 print 4 0 16
+  1 printf 4 0 16
+  2 write 4 1 16
+  3 writef 4 1 16
+  4 writefx 4 1 16
+  5 mio_dig_get 0 1 1
+  6 mio_dig_set 0 2 2
+  7 mio_ao_set 0 2 2
+  8 mio_fout 0 1 1
+  9 ipproc 0 1 1
+ 10 poisson 0 1 1
+ 11 iunif 0 1 1
+ 12 random 0 1 1
+ 13 normal 0 1 1
+ 14 seed1 0 0 1
+ 15 seed2 0 0 1
+ 16 sign 4 1 1
+ 17 abs 0 1 1
+ 18 status_set 0 0 1
+ 19 cancel_set 0 0 1
+ 20 status_clr 0 0 1
+ 21 cancel_clr 0 0 1
+ 22 htb_sweep 0 1 1
+ 23 htb_sweeps 0 1 1
+ 24 htb_period 0 1 1
+ 25 htb_extension 0 1 1
+ 26 htb_cancel 0 1 1
+ 27 htb_offset 0 1 1
+ 28 htb_tpb 0 1 1
+ 29 htb_nchannels 0 1 1
+ 30 htb_channel 0 1 1
+ 31 htb_type 0 1 1
+ 32 htb_tag 0 1 1
+ 33 htb_handle 0 1 1
+ 34 htb_speed 0 1 1
+ 35 htb_speedunits 0 1 1
+ 36 htb_dirty 0 1 1
+ 37 system 4 0 16
+ 38 systemf 4 0 16
+ 39 tick 0 0 0
+ 40 tempoCobaltTick 0 0 0
+ 41 time 0 0 0
+ 42 timeus 0 0 0
+ 43 mspertick 0 0 0
+ 44 mspercycle 0 0 0
+ 45 timeofday 0 0 0
+ 46 day 0 0 0
+ 47 dayofweek 0 0 0
+ 48 month 0 0 0
+ 49 year 0 0 0
+ 50 TSCLow 0 0 0
+ 51 TSCHigh 0 0 0
+ 52 TSCHz 0 0 0
+ 53 TSCTheoreticalHz 0 0 0
+ 54 SetCobaltTest 0 1 1
+ 55 ProcessCycleStartTSCLow 0 0 0
+ 56 ProcessCycleStartTSCHigh 0 0 0
+ 57 ProcessCycleLatencyUS 0 0 0
+ 58 atable 0 0 2
+ 59 ctable 0 0 2
+ 60 etable 0 0 2
+ 61 atable_set 0 2 3
+ 62 ctable_set 0 2 3
+ 63 etable_set 0 2 3
+ 64 event_set 0 2 3
+ 65 event_get 0 2 3
+ 66 inp 0 1 1
+ 67 inpw 0 1 1
+ 68 outp 0 2 2
+ 69 outpw 0 2 2
+ 70 sound 0 1 1
+ 71 send 4 1 16
+ 72 sendf 4 1 16
+ 73 com_autocancel 0 0 1
+ 74 com_count 0 0 0
+ 75 com_free_space 0 0 0
+ 76 com_peek 0 0 0
+ 77 com_get 0 0 0
+ 78 com_getn 0 1 1
+ 79 com_flush 0 0 1
+ 80 com_span 0 1 1
+ 81 com_GetStatus 0 0 0
+ 82 com_ResetStatus 0 0 0
+ 83 com_ResumeRX 0 0 0
+ 84 com_ResumeTX 0 0 0
+ 85 send2 4 1 16
+ 86 sendf2 4 1 16
+ 87 com_autocancel2 0 0 1
+ 88 com_count2 0 0 0
+ 89 com_free_space2 0 0 0
+ 90 com_peek2 0 0 0
+ 91 com_get2 0 0 0
+ 92 com_getn2 0 1 1
+ 93 com_flush2 0 0 1
+ 94 com_span2 0 1 1
+ 95 com_GetStatus2 0 0 0
+ 96 com_ResetStatus2 0 0 0
+ 97 com_ResumeRX2 0 0 0
+ 98 com_ResumeTX2 0 0 0
+ 99 sendb 4 1 16
+100 sendfb 4 1 16
+101 getPendingDBTriggers 0 0 1
+102 getPendingTAGTriggers 0 0 1
+103 getProcessState 0 1 1
+104 getSystemInfo 0 1 1
+105 oCreate 0 2 4
+106 oDestroy 0 1 1
+107 oMove 0 3 3
+108 oSetAttribute 0 2 4
+109 oSetGraph 0 2 16
+110 mouGetX 0 0 0
+111 mouGetY 0 0 0
+112 mouGetButtons 0 0 0
+113 mouSetMickeys 0 1 1
+114 mouSetXY 0 2 2
+115 mouGetDriverX 0 0 0
+116 mouGetDriverY 0 0 0
+117 mouSetDriverLimits 0 4 4
+118 mouResetDriver 0 0 0
+119 fabs 7 1 1
+120 sin 7 1 1
+121 cos 7 1 1
+122 sinrad 7 1 1
+123 cosrad 7 1 1
+124 deg2rad 7 1 1
+125 rad2deg 7 1 1
+126 sqrt 7 1 1
+127 round 7 1 1
+128 ceil 7 1 1
+129 floor 7 1 1
+130 floatimport 7 1 1
+131 floatexport 4 1 1
+132 floattest 4 1 1
+133 atan 7 1 1
+134 atan2 7 2 2
+135 exp 7 1 1
+136 pow 7 2 2
+137 log10 7 1 1
+138 ln 7 1 1
+139 tio_fout 0 3 3
+140 tio_dig_mask 0 0 1
+141 tio_dig_get 0 1 1
+142 tio_dig_set 0 2 2
+143 dioSetMode 0 2 2
+144 dioGetA 0 1 1
+145 dioGetB 0 1 1
+146 dioGetC 0 1 1
+147 dioSetA 0 2 2
+148 dioSetB 0 2 2
+149 dioSetC 0 2 2
+150 dSend 4 0 16
+151 dSend2 4 0 16
+152 dSendf 4 0 16
+153 dSendf2 4 0 16
+154 rdxSetTTLOUT 0 1 1
+155 rdxSetTTLOUT2 0 1 1
+156 rdxGetTTLIN 0 0 0
+157 rdxGetTTLIN 0 0 0
+158 rdxGetTTLOUT 0 0 0
+159 rdxGetTTLOUT2 0 0 0
+160 rdxFlush 0 0 1
+161 rdxFlush2 0 0 1
+162 peek8 0 1 1
+163 peek16 0 1 1
+164 peek32 0 1 1
+165 poke8 0 2 2
+166 poke16 0 2 2
+167 poke32 0 2 2

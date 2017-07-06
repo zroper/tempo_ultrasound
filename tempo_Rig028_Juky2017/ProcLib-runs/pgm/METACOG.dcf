@@ -1,0 +1,108 @@
+; TEMPO DIALOG CONFIGURATION FILE
+; Copyright 1997-2014 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Fri Mar 07 00:26:31 2014
+; DLOAD metacog.dcf
+
+; DIALOGS
+
+SCREENRES 1280,1024,32
+
+DIAPAGE 0,"Info_and_StartClock"
+DIAPOS   0,0,-1,-1,-1,-1,411,354,791,557,0
+DIAOBJ   0,0,2,269,120,349,150,"OK","start;\r\ndpop Info_and_StartClock;"
+DIAOBJ   0,3,1,17,14,243,157,"","ALL_PROS.pro     (F1)\r\n\r\nprotocol control structure\r\nand associated protocols\r\n\r\nwritten by\r\ndavid.c.godlove@vanderbilt.edu\r\nJanuary, 2011"
+
+DIAPAGE 1,"Choose_Task"
+DIAPOS   1,0,0,972,-1,-1,809,266,1180,877,1
+DIAOBJ   1,0,2,58,156,186,178,"Fixation","quiet State = 1;\r\ndpop Choose_Task"
+DIAOBJ   1,1,1,20,12,166,62,"","Which task do you\r\nwant to run? (F2)"
+DIAOBJ   1,2,2,270,538,350,562,"Exit","Exit"
+DIAOBJ   1,3,2,175,538,255,562,"Stop Clock","stop"
+DIAOBJ   1,12,2,184,317,319,341,"Metacog","quiet State = 9;\r\ndshow mask_betting;\r\ndpop Choose_Task"
+
+DIAPAGE 2,"mask_betting"
+DIAPOS   2,0,-1,-1,-1,-1,817,72,1203,862,2
+DIAOBJ   2,0,2,296,728,360,750,"Start","beginTaskFlag = 1; "
+DIAOBJ   2,1,2,211,728,275,750,"Quit","dshow quit_check;\r\nDPOP"
+DIAOBJ   2,2,2,118,730,191,749,"Update","DSET;"
+DIAOBJ   2,3,2,21,729,96,750,"Pause","quiet Pause = 1;\r\ndialog Resume"
+DIAOBJ   2,4,1,8,45,105,66,"","Mask Trial %"
+DIAOBJ   2,5,1,8,79,105,100,"","Bet Trial %"
+DIAOBJ   2,6,1,8,113,105,134,"","Retro Trial %"
+DIAOBJ   2,7,1,8,148,105,168,"","ProTrial %"
+DIAOBJ   2,8,1,116,16,244,38,"","Trial Distribution"
+DIAOBJ   2,9,3,205,45,266,63,"","maskPct"
+DIAOBJ   2,10,3,205,78,266,94,"","betPct"
+DIAOBJ   2,11,3,205,109,266,131,"","retroPct"
+DIAOBJ   2,12,3,205,146,266,168,"","proPct"
+DIAOBJ   2,13,1,10,201,105,221,"","Target Amp"
+DIAOBJ   2,14,5,119,199,182,220,"","ampDefault"
+DIAOBJ   2,15,3,218,198,294,217,"","ampDefault"
+DIAOBJ   2,16,1,8,229,109,249,"","Target 1 Angle"
+DIAOBJ   2,17,5,120,113,170,134,"","retroPct"
+DIAOBJ   2,18,5,119,259,182,277,"","maskAngleArray[1]"
+DIAOBJ   2,19,5,120,149,170,168,"","proPct"
+DIAOBJ   2,20,5,120,45,170,64,"","maskPct"
+DIAOBJ   2,21,5,120,78,170,99,"","betPct"
+DIAOBJ   2,22,5,119,229,182,250,"","maskAngleArray[0]"
+DIAOBJ   2,23,3,218,229,294,247,"","maskAngleArray[0]"
+DIAOBJ   2,24,5,119,287,182,308,"","maskAngleArray[2]"
+DIAOBJ   2,25,5,119,320,182,337,"","maskAngleArray[3]"
+DIAOBJ   2,26,3,218,318,294,340,"","maskAngleArray[3]"
+DIAOBJ   2,27,3,218,288,294,310,"","maskAngleArray[2]"
+DIAOBJ   2,28,3,218,259,294,276,"","maskAngleArray[1]"
+DIAOBJ   2,29,1,7,257,107,274,"","Target 2 Angle"
+DIAOBJ   2,30,1,8,287,112,305,"","Target 3 Angle"
+DIAOBJ   2,31,1,11,321,111,340,"","Target 4 Angle"
+DIAOBJ   2,32,1,13,395,108,414,"","Mask Window"
+DIAOBJ   2,33,5,142,393,205,411,"","targWinSize"
+DIAOBJ   2,34,3,263,393,308,409,"","targWinSize"
+DIAOBJ   2,35,1,12,424,105,444,"","Bet Window"
+DIAOBJ   2,36,5,142,425,205,444,"","betWinSize"
+DIAOBJ   2,37,3,263,423,305,442,"","betWinSize"
+DIAOBJ   2,38,1,11,480,123,501,"","Fake Correct Rate"
+DIAOBJ   2,39,5,142,479,205,499,"","fakeCorrectRate"
+DIAOBJ   2,40,3,263,481,310,500,"","fakeCorrectRate"
+DIAOBJ   2,41,1,11,508,126,530,"","Target Right Rate"
+DIAOBJ   2,42,5,142,505,205,527,"","targetRightRate"
+DIAOBJ   2,43,3,263,508,306,526,"","targetRightRate"
+DIAOBJ   2,44,1,11,536,139,558,"","High Bet Right Rate"
+DIAOBJ   2,45,3,263,535,308,556,"","highBetRightRate"
+DIAOBJ   2,46,5,142,534,205,554,"","highBetRightRate"
+DIAOBJ   2,47,3,251,597,316,614,"","baseRewardDuration"
+DIAOBJ   2,48,5,144,591,211,609,"","baseRewardDuration"
+DIAOBJ   2,49,1,20,589,120,608,"","Reward time"
+DIAOBJ   2,50,1,16,621,121,641,"","Timeout"
+DIAOBJ   2,51,3,244,628,326,643,"","basePunishDuration"
+DIAOBJ   2,52,5,145,625,215,641,"","basePunishDuration"
+DIAOBJ   2,53,5,132,660,200,679,"","nTarg"
+DIAOBJ   2,54,3,245,664,315,679,"","nTarg"
+DIAOBJ   2,55,1,28,662,111,681,"","nTarg"
+DIAOBJ   2,56,2,142,698,252,720,"Slow it down","intertrialDuration = 2500;"
+DIAOBJ   2,57,5,142,365,202,384,"","fixWinSize"
+DIAOBJ   2,58,3,240,370,303,385,"","fixWinSize"
+DIAOBJ   2,59,1,13,368,99,387,"","Fix Window"
+
+DIAPAGE 13,"Quit_Check"
+DIAPOS   13,0,-1,-1,-1,-1,431,452,791,632,13
+DIAOBJ   13,0,2,233,119,345,141,"Quit Task","quiet state = 0;\r\nDPOP;\r\n"
+DIAOBJ   13,1,2,110,119,222,141,"Don't Quit","DPOP"
+DIAOBJ   13,2,1,8,15,218,79,"","QUIT TASK\r\n\r\nAre you sure you want to quit?"
+
+DIAPAGE 15,"Resume"
+DIAPOS   15,0,-1,-1,-1,-1,512,377,694,513,15
+DIAOBJ   15,0,1,35,22,148,50,"","Task is paused."
+DIAOBJ   15,1,2,53,63,117,85,"Resume","quiet Pause = 0;\r\nDPOP"
+
+DIAPAGE 16,"Select_Monkey"
+DIAPOS   16,0,-1,-1,-1,-1,884,264,1248,875,16
+DIAOBJ   16,0,2,181,391,245,413,"OK","DPOP"
+DIAOBJ   16,1,2,70,299,195,335,"Default","quiet setMonkey = 1;\r\ndpop"
+DIAOBJ   16,2,2,63,175,191,209,"Cajal","quiet Monkey = 2;\r\nquiet setMonkey = 1;\r\ndpop"
+DIAOBJ   16,4,2,61,79,186,115,"Xena","quiet Monkey = 3;\r\nquiet setMonkey = 1;\r\ndpop"
+DIAOBJ   16,5,2,61,125,186,161,"Broca","quiet Monkey = 2;\r\nquiet setMonkey = 1;\r\ndpop"
+
+; END OF DIALOGS
+

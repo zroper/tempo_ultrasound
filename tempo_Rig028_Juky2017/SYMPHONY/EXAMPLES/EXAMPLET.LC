@@ -1,0 +1,35 @@
+POOL    local
+    {
+    param=null
+    }
+    
+NODE tempow
+    {
+    computer=$0
+    commandline=tempow
+    runProgram=no
+    exitProgram=no
+    }
+    
+NODE exampleT
+    {
+    computer=$0
+    commandline=exampleT "start"
+    }
+    
+NODE receiver
+    {
+    computer=$0
+    commandline=tgs.exe -e RECEIVER.LOG
+    }
+    
+CONNECTION pipe1
+    {
+    lcSendNodeName=TEMPOW
+    lcRecvNodeName=receiver
+
+    db=10    
+    mdbObjectSize=100000
+    autoDownload=yes
+    }
+    

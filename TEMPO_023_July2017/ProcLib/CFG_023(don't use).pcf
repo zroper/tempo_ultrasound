@@ -1,0 +1,86 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2011 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Mon May 16 15:27:54 2011
+; CLOAD CFG_023.pcf
+
+; tempow 10.37 Set 37.12   'D873R6712431' connected to 'TEMPO5S'
+; KPED 10.29 Set 37
+; KSRV 11.2 Set 37.12 (Server 'TEMPO5S         ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=500  (100000/100000 Sec/SampleSet)
+; ASETS=2(2)  CSETS=2(2)  ESETS=2(2)
+; ACHANNELS=8
+; CCHANNELS=2
+; ECHANNELS=2
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =64              36    56%          864/1536          =51        =38      
+; INSTRUCTIONS    =5000          1504    30%        27062/90000         =1880      =1584    
+; SYMBOLTABLE     =2000           812    41%         9744/24000         =955       =855     
+; HASHTABLE       =     257,2000         35%         5688/13542       Use Kernel Default
+; NAMETABLE       =20000         6932    35%         6932/20000         =8155      =7297    
+; DATABASES       =16               0     0%            0/960           =0         =0       
+; ARRAYTABLE      =20000           90     0%           90/20000         =113       =93      
+; ARRAYDATA       =20000768      4492     0%         4492/20000768      =5615      =4631    
+; OBJECTS         =32               5    16%          220/1408          =6         =5       
+
+
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=2
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD All_Pros.pro
+
+; DATABASES=16
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1280,1024,32
+MAINWND 1,-1,-1,-1,-1,3,0,573,70,0
+MSGWND 1,160,972,-1,-1,3,77,406,907,0
+STATUSWND 1,-1,-1,-1,-1,407,497,1255,970,0
+SHOW p 0
+
+CMDWND 1,-1,-1,-1,-1,4,919,386,976,0
+ANIMPAGE 0x1,1,0,972,-1,-1,405,77,1258,494,0
+ANIMVIEW 0,1,-1,-1,-1,-1,0,0,422,383,0
+ANIMVIEW 1,1,-1,-1,-1,-1,422,0,844,383,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+
+DLOAD C:\\TEMPO\\ProcLib\\ALL_PROS.dcf
+
+; BEGIN KEY DEFINITIONS
+
+KEY F1 = dialog Info_and_StartClock
+KEY ESC = dpop
+KEY PLUS = spawn key_rewd
+KEY INSERT = spawn key_rewd
+KEY ALTE = Eye_on_VDOSync = 1
+KEY ALTX = Eye_on_VDOSync = 0
+KEY CURDN = OK = 1
+KEY ALTC = CenterEyeNow = 1
+KEY F3 = dialog Fixation_Main
+KEY F4 = dialog Cmanding_In_Task
+KEY F2 = dialog choose_task
+
+; END KEY DEFINITIONS
+

@@ -1,0 +1,763 @@
+-------------------------------------------
+flip - flip.log created on 'SCHALL-C61484C6' by flip 5.3 on Fri Apr 09 04:19:03 2010
+flip - Command='flip *.fz'
+flip - 5.3 Copyright (C) 2010 Reflective Computing.  All Rights Reserved.
+flip - Current directory 'C:\TEMPO'
+flip - PATH is 'C:\Program Files\CollabNet\Subversion Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem'
+flip - GetTEMPODirectory returned -1..
+Error -1: Unable to determine TEMPO directory.
+ PCL.EXE not found in any directory in PATH
+flip - TEMPO Directory: 'C:\TEMPO'
+av[0]='flip'
+Flags: fUnzip=1 fPrompt=1 fDelete=1 fQuiet=0 fExec=1
+flip - Calling flip('C:\TEMPO\KPED.fz', '')..
+flip - Flipping 'C:\TEMPO\KPED.fz' to 'KPED.zip' ..
+283236 bytes flipped from 'C:\TEMPO\KPED.fz' to 'KPED.zip'.
+flip - ASK 'flip - Unzip output file 'KPED.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'yes
+'
+Unzipping files in 'KPED.zip'..
+zlog:  extracting: KPED.EXE 
+zlog:  extracting: VPED.EXE 
+zlog:  extracting: KPED_.CFG 
+Closing ZIP file 'KPED.zip'..
+flip - unzipping KPED.zip (status 0).
+flip - ASK 'flip - Delete output file 'KPED.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'no
+'
+flip - Calling flip('C:\TEMPO\TCORE.fz', '')..
+flip - Flipping 'C:\TEMPO\TCORE.fz' to 'TCORE.zip' ..
+2540194 bytes flipped from 'C:\TEMPO\TCORE.fz' to 'TCORE.zip'.
+flip - ASK 'flip - Unzip output file 'TCORE.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'yes
+'
+Unzipping files in 'TCORE.zip'..
+zlog:  extracting: ASK.EXE 
+zlog:  extracting: BONG.EXE 
+zlog:  extracting: BONGW.EXE 
+zlog:  extracting: BUGER.EXE 
+zlog:  extracting: CIO.PRO 
+zlog:  extracting: COBALT.PRO 
+zlog:  extracting: D6.EXE 
+zlog:  extracting: DAC.PRO 
+zlog: unzExtractCurrentfile: creating directory: DDE/.
+zlog:  extracting: DDX.EXE 
+zlog:  extracting: DIO.PRO 
+zlog:  extracting: ELSIE.EXE 
+zlog:  extracting: FLIP.NEW 
+zlog:  extracting: HTB.EXE 
+zlog:  extracting: KINFO.EXE 
+zlog:  extracting: KSTART.BAT 
+zlog: unzExtractCurrentfile: creating directory: MATLAB/.
+zlog:  extracting: MEMX.EXE 
+zlog:  extracting: MM.EXE 
+zlog:  extracting: MODEM.EXE 
+zlog:  extracting: MOUSE.EXE 
+zlog:  extracting: NCM.EXE 
+zlog:  extracting: OBJECT.PRO 
+zlog:  extracting: PCITEST.EXE 
+zlog:  extracting: PCIWAT.EXE 
+zlog:  extracting: PCL.EXE 
+zlog:  extracting: PKUNZIP.EXE 
+zlog:  extracting: PKZIP.EXE 
+zlog:  extracting: POOL.EXE 
+zlog: unzExtractCurrentfile: creating directory: PRODOS/.
+zlog: unzExtractCurrentfile: creating directory: PROWIN/.
+zlog: unzExtractCurrentfile: creating directory: SYMPHONY/.
+zlog:  extracting: SYMPHONY.DLL 
+zlog:  extracting: T8255.EXE 
+zlog:  extracting: TEMPO.PRO 
+zlog:  extracting: TEMPOW.EXE 
+zlog:  extracting: TGS.EXE 
+zlog:  extracting: TSC.EXE 
+zlog:  extracting: VUE.EXE 
+zlog:  extracting: DDE/ACQUIRE.PCF 
+zlog:  extracting: DDE/ACQUIRE.PRO 
+zlog:  extracting: DDE/ACQUIRE1.PRO 
+zlog:  extracting: DDE/ANALYZE.M 
+zlog:  extracting: DDE/CLS.M 
+zlog:  extracting: DDE/DDE.MAK 
+zlog:  extracting: DDE/DDE.PDF 
+zlog:  extracting: DDE/DDECLI.C 
+zlog:  extracting: DDE/DDECLI.EXE 
+zlog:  extracting: DDE/DDECLI.LNK 
+zlog:  extracting: DDE/DDECLI.OBJ 
+zlog:  extracting: DDE/DDEERR.C 
+zlog:  extracting: DDE/DDEERR.H 
+zlog:  extracting: DDE/DDEERR.OBJ 
+zlog:  extracting: DDE/GETDATA.M 
+zlog:  extracting: DDE/GETEPOCH.C 
+zlog:  extracting: DDE/GETEPOCH.ERR 
+zlog:  extracting: DDE/GETEPOCH.EXE 
+zlog:  extracting: DDE/GETEPOCH.LNK 
+zlog:  extracting: DDE/GETEPOCH.M 
+zlog:  extracting: DDE/GETEPOCH.OBJ 
+zlog:  extracting: DDE/GETINFO.M 
+zlog:  extracting: DDE/GETITEM.M 
+zlog:  extracting: DDE/HOTDB.M 
+zlog:  extracting: DDE/HOTDB.WK4 
+zlog:  extracting: DDE/HOTDB.XLS 
+zlog:  extracting: DDE/HOTEXPR.M 
+zlog:  extracting: DDE/HOTHTB.ZIP 
+zlog:  extracting: DDE/HOTINFO.M 
+zlog:  extracting: DDE/HOTITEM.M 
+zlog:  extracting: DDE/README.TXT 
+zlog:  extracting: DDE/TEMPO.GCF 
+zlog:  extracting: DDE/TEMPO.M 
+zlog:  extracting: DDE/TEMPOCMD.C 
+zlog:  extracting: DDE/TEMPOCMD.EXE 
+zlog:  extracting: DDE/TEMPOCMD.LNK 
+zlog:  extracting: DDE/TEMPOCMD.OBJ 
+zlog:  extracting: DDE/TEMPODDE.C 
+zlog:  extracting: DDE/TEMPODDE.H 
+zlog:  extracting: DDE/TEMPODDE.OBJ 
+zlog:  extracting: DDE/TEMPOEXP.C 
+zlog:  extracting: DDE/TEMPOEXP.EXE 
+zlog:  extracting: DDE/TEMPOEXP.LNK 
+zlog:  extracting: DDE/TEMPOEXP.OBJ 
+zlog:  extracting: DDE/TEST.WK4 
+zlog:  extracting: DDE/TGET.M 
+zlog:  extracting: DDE/TWATCH.M 
+zlog:  extracting: MATLAB/HTBCLOSE.M 
+zlog:  extracting: MATLAB/HTBCOUNT.M 
+zlog:  extracting: MATLAB/HTBGETDA.M 
+zlog:  extracting: MATLAB/HTBGETEP.M 
+zlog:  extracting: MATLAB/HTBGETHD.M 
+zlog:  extracting: MATLAB/HTBINIT.M 
+zlog:  extracting: MATLAB/HTBOPEN.M 
+zlog:  extracting: MATLAB/HTBOPENW.M 
+zlog:  extracting: MATLAB/HTBSHOW.M 
+zlog:  extracting: MATLAB/HTBTEST.M 
+zlog:  extracting: MATLAB/HTBWRITE.M 
+zlog:  extracting: MATLAB/README.TXT 
+zlog:  extracting: MATLAB/TEST.HTB 
+zlog:  extracting: MATLAB/TEST1.HTB 
+zlog:  extracting: PRODOS/ACQUIRE.CFG 
+zlog:  extracting: PRODOS/ACQUIRE.DIA 
+zlog:  extracting: PRODOS/ACQUIRE.PCF 
+zlog:  extracting: PRODOS/ACQUIRE.PRO 
+zlog:  extracting: PRODOS/PURSUE.CFG 
+zlog:  extracting: PRODOS/PURSUE.DIA 
+zlog:  extracting: PRODOS/PURSUE.PCF 
+zlog:  extracting: PRODOS/PURSUE.PRO 
+zlog:  extracting: PRODOS/README.TXT 
+zlog:  extracting: PRODOS/VIO.CFG 
+zlog:  extracting: PRODOS/VIO.PRO 
+zlog:  extracting: PROWIN/ACQUIRE.PCF 
+zlog:  extracting: PROWIN/ACQUIRE.PRO 
+zlog:  extracting: PROWIN/BIGGER.PCF 
+zlog:  extracting: PROWIN/BIGGER.PRO 
+zlog:  extracting: PROWIN/BOTHCOM.PCF 
+zlog:  extracting: PROWIN/BOTHCOM.PRO 
+zlog:  extracting: PROWIN/BOUNCE.PCF 
+zlog:  extracting: PROWIN/BOUNCE.PRO 
+zlog:  extracting: PROWIN/BOUNCE1.PCF 
+zlog:  extracting: PROWIN/BOUNCE1.PRO 
+zlog:  extracting: PROWIN/CATMOUSE.PCF 
+zlog:  extracting: PROWIN/CATMOUSE.PRO 
+zlog:  extracting: PROWIN/CCQ.LOG 
+zlog:  extracting: PROWIN/CCQ16.CCF 
+zlog:  extracting: PROWIN/CCQCOBAL.CCF 
+zlog:  extracting: PROWIN/CCQTEMPO.PCF 
+zlog:  extracting: PROWIN/CCQTEMPO.PRO 
+zlog:  extracting: PROWIN/CHECKER.CFG 
+zlog:  extracting: PROWIN/CHECKER.PCF 
+zlog:  extracting: PROWIN/CHECKER.PRO 
+zlog:  extracting: PROWIN/CIOTEST.CFG 
+zlog:  extracting: PROWIN/CIOTEST.ERR 
+zlog:  extracting: PROWIN/CIOTEST.PCF 
+zlog:  extracting: PROWIN/CIOTEST.PRO 
+zlog:  extracting: PROWIN/COSINE.CFG 
+zlog:  extracting: PROWIN/COSINE.PCF 
+zlog:  extracting: PROWIN/COSINE.PRO 
+zlog:  extracting: PROWIN/CTRTEST.PCF 
+zlog:  extracting: PROWIN/CTRTEST.PRO 
+zlog:  extracting: PROWIN/D1600.CFG 
+zlog:  extracting: PROWIN/D1600.PCF 
+zlog:  extracting: PROWIN/D1600.PRO 
+zlog:  extracting: PROWIN/D6400.PCF 
+zlog:  extracting: PROWIN/D6400.PRO 
+zlog:  extracting: PROWIN/DACTEST.PCF 
+zlog:  extracting: PROWIN/DACTEST.PRO 
+zlog:  extracting: PROWIN/DELAY.PCF 
+zlog:  extracting: PROWIN/DELAY.PRO 
+zlog:  extracting: PROWIN/DEMO.CFG 
+zlog:  extracting: PROWIN/DEMO.PCF 
+zlog:  extracting: PROWIN/DEMO.PRO 
+zlog:  extracting: PROWIN/DIM.PCF 
+zlog:  extracting: PROWIN/DIM.PRO 
+zlog:  extracting: PROWIN/DIM5.CFG 
+zlog:  extracting: PROWIN/DIM5.PCF 
+zlog:  extracting: PROWIN/DIM5.PRO 
+zlog:  extracting: PROWIN/DIMCAL.CFG 
+zlog:  extracting: PROWIN/DIMCAL.PCF 
+zlog:  extracting: PROWIN/DIMCAL.PRO 
+zlog:  extracting: PROWIN/DIOTEST.CFG 
+zlog:  extracting: PROWIN/DIOTEST.PCF 
+zlog:  extracting: PROWIN/DIOTEST.PRO 
+zlog:  extracting: PROWIN/EIGHT.PCF 
+zlog:  extracting: PROWIN/EIGHT.PRO 
+zlog:  extracting: PROWIN/EVENT.PCF 
+zlog:  extracting: PROWIN/EVENT.PRO 
+zlog:  extracting: PROWIN/EXAMPLE.CFG 
+zlog:  extracting: PROWIN/EXAMPLE.PCF 
+zlog:  extracting: PROWIN/EXAMPLE.PRO 
+zlog:  extracting: PROWIN/EYECAL.CFG 
+zlog:  extracting: PROWIN/EYECAL.PCF 
+zlog:  extracting: PROWIN/EYECAL.PRO 
+zlog:  extracting: PROWIN/EYECALM.PRO 
+zlog:  extracting: PROWIN/FIELDMAP.CFG 
+zlog:  extracting: PROWIN/FIELDMAP.PCF 
+zlog:  extracting: PROWIN/FIELDMAP.PRO 
+zlog:  extracting: PROWIN/GRATE.CFG 
+zlog:  extracting: PROWIN/GRATE.PCF 
+zlog:  extracting: PROWIN/GRATE.PRO 
+zlog:  extracting: PROWIN/GRATE1.CFG 
+zlog:  extracting: PROWIN/GRATE1.PCF 
+zlog:  extracting: PROWIN/GRATE1.PRO 
+zlog:  extracting: PROWIN/GRATEUP.CFG 
+zlog:  extracting: PROWIN/GRATEUP.PCF 
+zlog:  extracting: PROWIN/GRATEUP.PRO 
+zlog:  extracting: PROWIN/GROW.CFG 
+zlog:  extracting: PROWIN/GROW.PCF 
+zlog:  extracting: PROWIN/GROW.PRO 
+zlog:  extracting: PROWIN/HI 
+zlog:  extracting: PROWIN/HOPEN.CFG 
+zlog:  extracting: PROWIN/HOPEN.PCF 
+zlog:  extracting: PROWIN/HOPEN.PRO 
+zlog:  extracting: PROWIN/JOURNAL.CFG 
+zlog:  extracting: PROWIN/JOURNAL.PCF 
+zlog:  extracting: PROWIN/JOURNAL.PRO 
+zlog:  extracting: PROWIN/KPEDTEST.PCF 
+zlog:  extracting: PROWIN/KPEDTEST.PRO 
+zlog:  extracting: PROWIN/LEARN.CFG 
+zlog:  extracting: PROWIN/LEARN.PCF 
+zlog:  extracting: PROWIN/LEARN.PRO 
+zlog:  extracting: PROWIN/MATCH.CFG 
+zlog:  extracting: PROWIN/MATCH.PCF 
+zlog:  extracting: PROWIN/MATCH.PRO 
+zlog:  extracting: PROWIN/MATCH1.PRO 
+zlog:  extracting: PROWIN/MIOTEST.PCF 
+zlog:  extracting: PROWIN/MIOTEST.PRO 
+zlog:  extracting: PROWIN/MONKEY.PCF 
+zlog:  extracting: PROWIN/MONKEY.PRO 
+zlog:  extracting: PROWIN/MOUSE.CFG 
+zlog:  extracting: PROWIN/MOUSE.PCF 
+zlog:  extracting: PROWIN/MOUSE.PRO 
+zlog:  extracting: PROWIN/MOUSEPOS.PCF 
+zlog:  extracting: PROWIN/MOUSEPOS.PRO 
+zlog:  extracting: PROWIN/OVERLOAD.PCF 
+zlog:  extracting: PROWIN/OVERLOAD.PRO 
+zlog:  extracting: PROWIN/P16.PCF 
+zlog:  extracting: PROWIN/P16.PRO 
+zlog:  extracting: PROWIN/PAN.PCF 
+zlog:  extracting: PROWIN/PAN.PRO 
+zlog:  extracting: PROWIN/PCICTR.PCF 
+zlog:  extracting: PROWIN/PCICTR.PRO 
+zlog:  extracting: PROWIN/PCL.LOG 
+zlog:  extracting: PROWIN/PCX.CFG 
+zlog:  extracting: PROWIN/PCX.PCF 
+zlog:  extracting: PROWIN/PCX.PRO 
+zlog:  extracting: PROWIN/PCXFLIP.PCF 
+zlog:  extracting: PROWIN/PCXFLIP.PRO 
+zlog:  extracting: PROWIN/PEEK.PCF 
+zlog:  extracting: PROWIN/PEEK.PRO 
+zlog:  extracting: PROWIN/PORTIO.CFG 
+zlog:  extracting: PROWIN/PORTIO.PCF 
+zlog:  extracting: PROWIN/PORTIO.PRO 
+zlog:  extracting: PROWIN/POWEXP.PCF 
+zlog:  extracting: PROWIN/POWEXP.PRO 
+zlog:  extracting: PROWIN/PURSUE.PCF 
+zlog:  extracting: PROWIN/PURSUE.PRO 
+zlog:  extracting: PROWIN/RDXTTL.PCF 
+zlog:  extracting: PROWIN/RDXTTL.PRO 
+zlog:  extracting: PROWIN/README.TXT 
+zlog:  extracting: PROWIN/RECORDER.PCF 
+zlog:  extracting: PROWIN/RECORDER.PRO 
+zlog:  extracting: PROWIN/SBLIVE.PCF 
+zlog:  extracting: PROWIN/SBLIVE.PRO 
+zlog:  extracting: PROWIN/SEQUENCE.PCF 
+zlog:  extracting: PROWIN/SEQUENCE.PRO 
+zlog:  extracting: PROWIN/SHUFFLE.PCF 
+zlog:  extracting: PROWIN/SHUFFLE.PRO 
+zlog:  extracting: PROWIN/SOUND.CFG 
+zlog:  extracting: PROWIN/SOUND.PCF 
+zlog:  extracting: PROWIN/SOUND.PRO 
+zlog:  extracting: PROWIN/SPIKE1.PCF 
+zlog:  extracting: PROWIN/SPIKE1.PRO 
+zlog:  extracting: PROWIN/SPIKE2.CFG 
+zlog:  extracting: PROWIN/SPIKE2.PCF 
+zlog:  extracting: PROWIN/SPIKE2.PRO 
+zlog:  extracting: PROWIN/SPRITEPG.PCF 
+zlog:  extracting: PROWIN/SPRITEPG.PRO 
+zlog:  extracting: PROWIN/SQRT.PRO 
+zlog:  extracting: PROWIN/SSBRIDGE.PCF 
+zlog:  extracting: PROWIN/SSBRIDGE.PRO 
+zlog:  extracting: PROWIN/STABLE.CFG 
+zlog:  extracting: PROWIN/STABLE.PCF 
+zlog:  extracting: PROWIN/STABLE.PRO 
+zlog:  extracting: PROWIN/STB.STB 
+zlog:  extracting: PROWIN/STREAM.CFG 
+zlog:  extracting: PROWIN/STREAM.PCF 
+zlog:  extracting: PROWIN/STREAM.PRO 
+zlog:  extracting: PROWIN/TEMPO.GCF 
+zlog:  extracting: PROWIN/TESTFILE.BAT 
+zlog:  extracting: PROWIN/TESTFILE.PCF 
+zlog:  extracting: PROWIN/TESTFILE.PRO 
+zlog:  extracting: PROWIN/TESTFILE.TPO 
+zlog:  extracting: PROWIN/TEXTFONT.PCF 
+zlog:  extracting: PROWIN/TEXTFONT.PRO 
+zlog:  extracting: PROWIN/TTLTEST.PCF 
+zlog:  extracting: PROWIN/TTLTEST.PRO 
+zlog:  extracting: PROWIN/VISUAL0.CFG 
+zlog:  extracting: PROWIN/VISUAL0.PCF 
+zlog:  extracting: PROWIN/VISUAL0.PRO 
+zlog:  extracting: PROWIN/VISUAL1.CFG 
+zlog:  extracting: PROWIN/VISUAL1.PCF 
+zlog:  extracting: PROWIN/VISUAL1.PRO 
+zlog:  extracting: PROWIN/VOICE.CFG 
+zlog:  extracting: PROWIN/VOICE.PCF 
+zlog:  extracting: PROWIN/VOICE.PRO 
+zlog:  extracting: PROWIN/VSBOUNCE.CFG 
+zlog:  extracting: PROWIN/VSBOUNCE.PCF 
+zlog:  extracting: PROWIN/VSBOUNCE.PRO 
+zlog:  extracting: PROWIN/VSMACRO.CFG 
+zlog:  extracting: PROWIN/VSMACRO.PCF 
+zlog:  extracting: PROWIN/VSMACRO.PRO 
+zlog:  extracting: PROWIN/VSPAGES.PCF 
+zlog:  extracting: PROWIN/VSPAGES.PRO 
+zlog:  extracting: PROWIN/VSPURSUE.CFG 
+zlog:  extracting: PROWIN/VSPURSUE.PCF 
+zlog:  extracting: PROWIN/VSPURSUE.PRO 
+zlog:  extracting: PROWIN/VSRANDOM.PCF 
+zlog:  extracting: PROWIN/VSRANDOM.PRO 
+zlog:  extracting: PROWIN/VSTEST1.CFG 
+zlog:  extracting: PROWIN/VSTEST1.PCF 
+zlog:  extracting: PROWIN/VSTEST1.PRO 
+zlog:  extracting: PROWIN/VSTEST2.CFG 
+zlog:  extracting: PROWIN/VSTEST2.PCF 
+zlog:  extracting: PROWIN/VSTEST2.PRO 
+zlog:  extracting: PROWIN/VSTEST3.CFG 
+zlog:  extracting: PROWIN/VSTEST3.PCF 
+zlog:  extracting: PROWIN/VSTEST3.PRO 
+zlog:  extracting: PROWIN/VSWORDEP.CFG 
+zlog:  extracting: PROWIN/VSWORDEP.PCF 
+zlog:  extracting: PROWIN/VSWORDEP.PRO 
+zlog: unzExtractCurrentfile: creating directory: SYMPHONY/ELSIE/.
+zlog: unzExtractCurrentfile: creating directory: SYMPHONY/EXAMPLES/.
+zlog: unzExtractCurrentfile: creating directory: SYMPHONY/INCLUDE/.
+zlog:  extracting: SYMPHONY/LCAPI.TXT 
+zlog:  extracting: SYMPHONY/MARSHAL.TXT 
+zlog:  extracting: SYMPHONY/RPCDESGN.TXT 
+zlog: unzExtractCurrentfile: creating directory: SYMPHONY/TGS/.
+zlog:  extracting: SYMPHONY/ELSIE/ELSIE.C 
+zlog:  extracting: SYMPHONY/ELSIE/ELSIE.LNK 
+zlog:  extracting: SYMPHONY/ELSIE/ELSIE.MAK 
+zlog:  extracting: SYMPHONY/ELSIE/HORIZON.LC 
+zlog:  extracting: SYMPHONY/ELSIE/HORIZON2.LC 
+zlog:  extracting: SYMPHONY/ELSIE/LOCAL.LC 
+zlog:  extracting: SYMPHONY/ELSIE/SNOOPY.LC 
+zlog:  extracting: SYMPHONY/ELSIE/TEMPO.LC 
+zlog:  extracting: SYMPHONY/ELSIE/TEMPOC.LC 
+zlog:  extracting: SYMPHONY/ELSIE/TEMPOC2.LC 
+zlog:  extracting: SYMPHONY/ELSIE/THREE.LC 
+zlog:  extracting: SYMPHONY/ELSIE/TWO.LC 
+zlog:  extracting: SYMPHONY/ELSIE/TWOPULL.LC 
+zlog:  extracting: SYMPHONY/ELSIE/TWOPUSH.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/DEL.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE0.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE0.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE0.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE0.LNK 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE1.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE1.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE1.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE1.LNK 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE2.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE2.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE2.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE2.LNK 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE3.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE3.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE3.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE3.LNK 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE4.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE4.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLE4.LNK 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLES.MAK 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLET.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLET.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLET.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/EXAMPLET.LNK 
+zlog:  extracting: SYMPHONY/EXAMPLES/README.TXT 
+zlog:  extracting: SYMPHONY/EXAMPLES/RPC.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/RPC.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/RPC.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/RPC.LNK 
+zlog:  extracting: SYMPHONY/EXAMPLES/SSBRIDGE.C 
+zlog:  extracting: SYMPHONY/EXAMPLES/SSBRIDGE.EXE 
+zlog:  extracting: SYMPHONY/EXAMPLES/SSBRIDGE.LC 
+zlog:  extracting: SYMPHONY/EXAMPLES/SSBRIDGE.LNK 
+zlog:  extracting: SYMPHONY/INCLUDE/AO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/ASKDLG.H 
+zlog:  extracting: SYMPHONY/INCLUDE/ASKDLG.HRC 
+zlog:  extracting: SYMPHONY/INCLUDE/BINSEARC.H 
+zlog:  extracting: SYMPHONY/INCLUDE/BUGER.H 
+zlog:  extracting: SYMPHONY/INCLUDE/CHANINFO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/CMD.H 
+zlog:  extracting: SYMPHONY/INCLUDE/COMCTHLP.H 
+zlog:  extracting: SYMPHONY/INCLUDE/EXCEPTIO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/FILEEXT.H 
+zlog:  extracting: SYMPHONY/INCLUDE/FIO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/GETTIME.H 
+zlog:  extracting: SYMPHONY/INCLUDE/HINSTA~1.H 
+zlog:  extracting: SYMPHONY/INCLUDE/HTB.H 
+zlog:  extracting: SYMPHONY/INCLUDE/HTB.HP 
+zlog:  extracting: SYMPHONY/INCLUDE/HWNDINFO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/IFUNC.H 
+zlog:  extracting: SYMPHONY/INCLUDE/LC.H 
+zlog:  extracting: SYMPHONY/INCLUDE/LC.HP 
+zlog:  extracting: SYMPHONY/INCLUDE/LINEAR.H 
+zlog:  extracting: SYMPHONY/INCLUDE/LINKLIST.H 
+zlog:  extracting: SYMPHONY/INCLUDE/LISTVIEW.H 
+zlog:  extracting: SYMPHONY/INCLUDE/LLDB.H 
+zlog:  extracting: SYMPHONY/INCLUDE/MEM.H 
+zlog:  extracting: SYMPHONY/INCLUDE/MENU.H 
+zlog:  extracting: SYMPHONY/INCLUDE/MESSAGE.H 
+zlog:  extracting: SYMPHONY/INCLUDE/MR.H 
+zlog:  extracting: SYMPHONY/INCLUDE/NWCMC.H 
+zlog:  extracting: SYMPHONY/INCLUDE/PARAM.H 
+zlog:  extracting: SYMPHONY/INCLUDE/PARSELST.H 
+zlog:  extracting: SYMPHONY/INCLUDE/REPOSDLG.H 
+zlog:  extracting: SYMPHONY/INCLUDE/SCROLLOG.H 
+zlog:  extracting: SYMPHONY/INCLUDE/SETICON.H 
+zlog:  extracting: SYMPHONY/INCLUDE/SO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/SSEPOCH.H 
+zlog:  extracting: SYMPHONY/INCLUDE/SSTEMPO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/STACUBE.H 
+zlog:  extracting: SYMPHONY/INCLUDE/STARPC.H 
+zlog:  extracting: SYMPHONY/INCLUDE/SYSERR.H 
+zlog:  extracting: SYMPHONY/INCLUDE/TEMPODLL.H 
+zlog:  extracting: SYMPHONY/INCLUDE/TEMPODLX.H 
+zlog:  extracting: SYMPHONY/INCLUDE/TG.H 
+zlog:  extracting: SYMPHONY/INCLUDE/THISLIB.H 
+zlog:  extracting: SYMPHONY/INCLUDE/THREADS.H 
+zlog:  extracting: SYMPHONY/INCLUDE/TREEVIEW.H 
+zlog:  extracting: SYMPHONY/INCLUDE/TRIM.H 
+zlog:  extracting: SYMPHONY/INCLUDE/TSC.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VERSION.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VO.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VOGRAPH.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VOGRID.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VOGROUP.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VOPLOT.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VOSCALE.H 
+zlog:  extracting: SYMPHONY/INCLUDE/VOSYMBOL.H 
+zlog:  extracting: SYMPHONY/INCLUDE/WAITPUMP.H 
+zlog:  extracting: SYMPHONY/INCLUDE/WM.H 
+zlog:  extracting: SYMPHONY/TGS/TGS.C 
+zlog:  extracting: SYMPHONY/TGS/TGS.LNK 
+zlog:  extracting: SYMPHONY/TGS/TGS.MAK 
+Closing ZIP file 'TCORE.zip'..
+flip - unzipping TCORE.zip (status 0).
+flip - ASK 'flip - Delete output file 'TCORE.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'no
+'
+flip - Calling flip('C:\TEMPO\TDOC.fz', '')..
+flip - Flipping 'C:\TEMPO\TDOC.fz' to 'TDOC.zip' ..
+834788 bytes flipped from 'C:\TEMPO\TDOC.fz' to 'TDOC.zip'.
+flip - ASK 'flip - Unzip output file 'TDOC.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'yes
+'
+Unzipping files in 'TDOC.zip'..
+zlog:  extracting: 0707A.PDF 
+zlog:  extracting: 0809A.PDF 
+zlog:  extracting: 0911B.PDF 
+zlog:  extracting: CGUIDE.PDF 
+zlog:  extracting: CMANUAL.PDF 
+zlog:  extracting: PU.TXT 
+zlog:  extracting: RDX.PDF 
+zlog:  extracting: TASK.PDF 
+Closing ZIP file 'TDOC.zip'..
+flip - unzipping TDOC.zip (status 0).
+flip - ASK 'flip - Delete output file 'TDOC.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'no
+'
+flip - Calling flip('C:\TEMPO\TN.fz', '')..
+flip - Flipping 'C:\TEMPO\TN.fz' to 'TN.zip' ..
+2611769 bytes flipped from 'C:\TEMPO\TN.fz' to 'TN.zip'.
+flip - ASK 'flip - Unzip output file 'TN.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'yes
+'
+Unzipping files in 'TN.zip'..
+zlog:  extracting: DISKETTE.BAT 
+zlog:  extracting: DSK4DOS.EXE 
+zlog:  extracting: I2ADOS.EXE 
+zlog:  extracting: KSRVB.EXE 
+zlog:  extracting: KSRVU.EXE 
+zlog:  extracting: LOADKEY.EXE 
+zlog:  extracting: MSCLIENT.BAT 
+zlog:  extracting: SETUPTN.EXE 
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/MISC/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/SERVER/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/UTILITY/.
+zlog:  extracting: TEMPONET/MISC/AUTOEXEC.TS 
+zlog:  extracting: TEMPONET/MISC/AUTOEXEC.VS 
+zlog:  extracting: TEMPONET/MISC/CONFIG.VS0 
+zlog:  extracting: TEMPONET/MISC/CONFIG.VS1 
+zlog:  extracting: TEMPONET/MISC/DIAGNOSE.BAT 
+zlog:  extracting: TEMPONET/MISC/DIAGNOSE.BAX 
+zlog:  extracting: TEMPONET/MISC/FDXMS.SYS 
+zlog:  extracting: TEMPONET/MISC/FDXMSS94.ZIP 
+zlog:  extracting: TEMPONET/MISC/FDXMSX92.ZIP 
+zlog:  extracting: TEMPONET/MISC/FDXMSX94.ZIP 
+zlog:  extracting: TEMPONET/MISC/FDXXMS.MSG 
+zlog:  extracting: TEMPONET/MISC/FDXXMS.SAH 
+zlog:  extracting: TEMPONET/MISC/FDXXMS.SYS 
+zlog:  extracting: TEMPONET/MISC/FDXXMS92.SYS 
+zlog:  extracting: TEMPONET/MISC/FDXXMS94.SYS 
+zlog:  extracting: TEMPONET/MISC/FINDRAMD.EXE 
+zlog:  extracting: TEMPONET/MISC/GPL.TXT 
+zlog:  extracting: TEMPONET/MISC/MORE.COM 
+zlog:  extracting: TEMPONET/MISC/MSCLIENT.TXT 
+zlog:  extracting: TEMPONET/MISC/NETWORK.FZ 
+zlog:  extracting: TEMPONET/MISC/OAKCDROM.SYS 
+zlog:  extracting: TEMPONET/MISC/PCDOSVER.TXT 
+zlog:  extracting: TEMPONET/MISC/SETRAMD.BAT 
+zlog:  extracting: TEMPONET/MISC/SETRAMD.VS 
+zlog:  extracting: TEMPONET/MISC/XMSDSK.EXE 
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/B44.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/B44.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/B57.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/B57.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/B57B.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/B57B.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E1000.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E1000.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E1000B.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E1000B.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E1000C.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E1000C.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E100B.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/E100B.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/EL90X.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/EL90X.TCP/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/ELKRCB.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/ELPC3.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/LNE100.NB/.
+zlog:  extracting: TEMPONET/NETWORK/SHARES.PWL 
+zlog:  extracting: TEMPONET/NETWORK/WFWSYS.CFG 
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/YUKND.NB/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/NETWORK/YUKND.TCP/.
+zlog:  extracting: TEMPONET/NETWORK/B44.NB/B44.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B44.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/B44.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/B44.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/B44.TCP/B44.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B44.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/B44.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B44.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/B44.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/B57.NB/B57.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B57.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/B57.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/B57.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/B57.TCP/B57.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B57.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/B57.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B57.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/B57.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/B57B.NB/B57B.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B57B.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/B57B.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/B57B.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/B57B.TCP/B57B.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B57B.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/B57B.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/B57B.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/B57B.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E1000.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E1000.NB/E1000.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E1000.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E1000.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E1000.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000.TCP/E1000.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E1000.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.NB/E1000B.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.TCP/E1000B.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E1000B.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.NB/E1000C.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.TCP/E1000C.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E1000C.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E100B.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E100B.NB/E100B.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E100B.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E100B.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/E100B.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/E100B.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E100B.TCP/E100B.DOS 
+zlog:  extracting: TEMPONET/NETWORK/E100B.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/E100B.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.NB/EL90X.DOS 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.TCP/EL90X.DOS 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/EL90X.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/ELKRCB.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/ELKRCB.NB/DLKRCB.DOS 
+zlog:  extracting: TEMPONET/NETWORK/ELKRCB.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/ELKRCB.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/ELKRCB.NB/RTBIOS.COM 
+zlog:  extracting: TEMPONET/NETWORK/ELKRCB.NB/RTPCI.EXE 
+zlog:  extracting: TEMPONET/NETWORK/ELPC3.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/ELPC3.NB/ELPC3.DOS 
+zlog:  extracting: TEMPONET/NETWORK/ELPC3.NB/FMENABLE.EXE 
+zlog:  extracting: TEMPONET/NETWORK/ELPC3.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/ELPC3.NB/PROTOCOL.589 
+zlog:  extracting: TEMPONET/NETWORK/ELPC3.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/LNE100.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/LNE100.NB/LNE100.DOS 
+zlog:  extracting: TEMPONET/NETWORK/LNE100.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/LNE100.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.NB/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.NB/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.NB/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.NB/YUKND.DOS 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.TCP/CONFIG.SYS 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.TCP/DIS_PKT.DOS 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.TCP/MAKESYSI.BAT 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.TCP/PROTOCOL.INI 
+zlog:  extracting: TEMPONET/NETWORK/YUKND.TCP/YUKND.DOS 
+Closing ZIP file 'TN.zip'..
+flip - unzipping TN.zip (status 0).
+flip - ASK 'flip - Delete output file 'TN.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'no
+'
+flip - Calling flip('C:\TEMPO\TNVS.fz', '')..
+flip - Flipping 'C:\TEMPO\TNVS.fz' to 'TNVS.zip' ..
+1156268 bytes flipped from 'C:\TEMPO\TNVS.fz' to 'TNVS.zip'.
+flip - ASK 'flip - Unzip output file 'TNVS.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'yes
+'
+flip - 
+flip - 
+flip - ------------------------------------------------------
+flip - WARNING - One or more files in 'TNVS.zip' are locked.
+flip - 
+flip -   TEMPONET/ - The file exists but can't be opened for writing.
+flip -                                                            
+flip -                           WARNING!                         
+flip -                                                            
+flip - Locked (read-only) files have been detected in 'TNVS.zip'.       
+flip - These files can not be installed until they are unlocked.  
+flip -                                                            
+flip - Please close the application(s) associated with them and select RETRY.
+flip -                                                            
+flip - If you select CONTINUE, locked files will not be installed.
+flip - ------------------------------------------------------     
+flip - 
+flip - 
+flip - ASK 'flip - Do you want to [Retry/Continue/Quit]?'..
+flip - ASK User's answer: 'r
+'
+flip - USER requested to retry operation.
+flip - 
+flip - 
+flip - ------------------------------------------------------
+flip - WARNING - One or more files in 'TNVS.zip' are locked.
+flip - 
+flip -   TEMPONET/ - The file exists but can't be opened for writing.
+flip -                                                            
+flip -                           WARNING!                         
+flip -                                                            
+flip - Locked (read-only) files have been detected in 'TNVS.zip'.       
+flip - These files can not be installed until they are unlocked.  
+flip -                                                            
+flip - Please close the application(s) associated with them and select RETRY.
+flip -                                                            
+flip - If you select CONTINUE, locked files will not be installed.
+flip - ------------------------------------------------------     
+flip - 
+flip - 
+flip - ASK 'flip - Do you want to [Retry/Continue/Quit]?'..
+flip - ASK User's answer: 'r
+'
+flip - USER requested to retry operation.
+flip - 
+flip - 
+flip - ------------------------------------------------------
+flip - WARNING - One or more files in 'TNVS.zip' are locked.
+flip - 
+flip -   TEMPONET/ - The file exists but can't be opened for writing.
+flip -                                                            
+flip -                           WARNING!                         
+flip -                                                            
+flip - Locked (read-only) files have been detected in 'TNVS.zip'.       
+flip - These files can not be installed until they are unlocked.  
+flip -                                                            
+flip - Please close the application(s) associated with them and select RETRY.
+flip -                                                            
+flip - If you select CONTINUE, locked files will not be installed.
+flip - ------------------------------------------------------     
+flip - 
+flip - 
+flip - ASK 'flip - Do you want to [Retry/Continue/Quit]?'..
+flip - ASK User's answer: 'c
+'
+flip - USER wants to continue installation even though some files are locked.
+flip - WARNING - Locked files will not be installed (see FLIP.LOG).
+Unzipping files in 'TNVS.zip'..
+zlog:  extracting: DDX.EXE 
+zlog:  extracting: PCITEST.EXE 
+zlog:  extracting: T8255.EXE 
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/.
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/.
+zlog: unzExtractCurrentfile: creating directory: VDOSYNC/.
+zlog:  extracting: VDOSYNC.EXE 
+zlog:  extracting: VESAMODE.EXE 
+zlog:  extracting: VIDEO.EXE 
+zlog:  extracting: VSTART.BAT 
+zlog:  extracting: VTIME.EXE 
+zlog: unzExtractCurrentfile: creating directory: TEMPONET/VDOSYNC/.
+zlog:  extracting: VDOSYNC/256.BAT 
+zlog:  extracting: VDOSYNC/256.WPL 
+zlog:  extracting: VDOSYNC/GOLDWAVE.ZIP 
+zlog:  extracting: VDOSYNC/IMAGES.ZIP 
+zlog:  extracting: VDOSYNC/MODEX.VS 
+zlog:  extracting: VDOSYNC/MONKEY.PCX 
+zlog:  extracting: VDOSYNC/PCXFLIP.ZIP 
+zlog:  extracting: VDOSYNC/PLAYVOC.EXE 
+zlog:  extracting: VDOSYNC/README.TXT 
+zlog:  extracting: VDOSYNC/SOUND.ZIP 
+zlog:  extracting: VDOSYNC/VS_.CFG 
+zlog:  extracting: VDOSYNC/WAV2VOC.ZIP 
+zlog:  extracting: VDOSYNC/WORDLIST.ZIP 
+flip - -------------------------------
+flip - ERROR -108 - unzExtract TNVS.zip had errors.
+flip - Please see flip.log for details.
+flip - -------------------------------
+Closing ZIP file 'TNVS.zip'..
+flip - unzipping TNVS.zip (status 0).
+flip - ASK 'flip - Delete output file 'TNVS.zip' [Yes/No/Quit]?'..
+flip - ASK User's answer: 'no
+'

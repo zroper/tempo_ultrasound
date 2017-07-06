@@ -1,0 +1,89 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 25 11:07:07 2001
+; CLOAD learn.pcf
+
+; tempow 10.5 Set 28.6   'T110401' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64         7    11%       168/1536       =10     =7    
+; INSTRUCTIONS    =700       75    11%      1350/12600      =107    =79   
+; SYMBOLTABLE     =700       87    12%      1044/8400       =102    =92   
+; HASHTABLE       =  257,700       39%      3186/5742     Use Kernel Default
+; NAMETABLE       =8000     682     9%       682/8000       =802    =718  
+; DATABASES       =40         3     8%       180/2400       =3      =3    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =32         3     9%       132/1408       =3      =3    
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD learn.pro
+
+; DATABASES=40
+
+HOPEN  1,7,1,1,4,10,1200,0,0,0,0x0
+HTITLE 1,"analog append"
+HOPEN  2,5,1,1,2,10,1000,0,0,0,0x0
+HTITLE 2,"event append"
+HOPEN  3,3,1,1,2,10,1200,0,0,0,0x0
+HTITLE 3,"spike append"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,694,5,1602,64,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,45,717,712,1180,0
+SHOW h 0
+
+CMDWND 1,-1,-1,-1,-1,397,4,692,65,0
+ANIMPAGE 0x1,1,-1,-1,-1,-1,862,114,1592,631,0
+ANIMVIEW 0,1,-1,-1,-1,-1,0,0,360,484,0
+ANIMVIEW 1,1,-1,-1,-1,-1,360,0,720,484,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,38,94,838,694,0
+DBVIEW  0,0,1,10,1200,0,4,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,790,189,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,1,2,10,1000,0,2,0,0,0,0x0
+DBVPOS  0,1,1,-1,-1,-1,-1,0,189,790,378,1
+DBVCOLORS 0,1,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,2,3,10,1200,0,2,0,0,0,0x0
+DBVPOS  0,2,1,-1,-1,-1,-1,0,378,790,567,2
+DBVCOLORS 0,2,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+

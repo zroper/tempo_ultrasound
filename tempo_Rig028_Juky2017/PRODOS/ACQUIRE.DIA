@@ -1,0 +1,362 @@
+// ACQUIRE.DIA - Dialogs for ACQUIRE task
+// The purpose of this dialog is to present a variety of practical
+// techniques on how TEMPO dialogs might be used.  Of course, because
+// this is only an example, a variety of functionality is not implemented
+// but this should give you a good start on how to develop your own
+// TEMPO dialogs.
+//
+// An attempt has been made to stick with a uniform style of presenting
+// the dialogs.  Buttons appear before the text that describes them.
+// An OK button appears in most menus so the user can press the END
+// to quickly get to it.
+//
+// Start the dialogs by typing at the command line:
+//
+// DIALOG ACQUIRE
+
+//------------------------------------------------------------------------
+// In this dialog, we force it to the upper left corner of the
+// dialog area by specify row,col number after the dialog name.
+// Without this, TEMPO centers the dialog.
+
+dialog ACQUIRE (0,0)
+{
+"MAIN MENU                                                                     ";
+"                     Welcome to the ACQUIRE protocol.                         ";
+"                                                                              ";
+"     Use the arrow keys on the keyboard to move the highlight to one of       ";
+"     the buttons and press the [ENTER] (return) key.                          ";
+"                                                                              ";
+"     To end a dialog, you can either press the OK button, if one is           ";
+"     present in the dialog, or you can simply type the ESC key.               ";
+"                                                                              ";
+"                [START]   Start task and display control menu.                ";
+"                [HELP]    General information about this protocol.            ";
+"                [DIALOGS] General information on using dialogs.               ";
+"                [DOS]     Suspend TEMPO and run a DOS shell.                  ";
+"                [EXIT]    Stop this protocol, exit TEMPO and return to DOS.   ";
+"                                                                              ";
+"                                                                         [ESC]";
+help:      button "dialog help_menu";
+start:     button "dialog control_menu";
+dialogs:   button "dialog help_dialogs";
+dos:       button "dos";
+exit:      button "stop"; "exit";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_DIALOGS 
+{
+"HELP ON DIALOGS                                                        ";
+"                                                                       ";
+" TEMPO dialogs let you quickly create your own displays and menus for  ";
+" controlling your protocol.  Refer to the TEMPO Dialogs reference for  ";
+" more information on creating dialogs.                                 ";
+"                                                                       ";
+" At the TEMPO command line, type DIALOG to get a list of available     ";
+" dialogs.  You may also want to define the F1 key to call up a dialog  ";
+" (see TEMPO's key macros in your TEMPO reference manual).              ";
+"                                                                       ";
+"   Press the [ENTER] key to learn how to navigate through a dialog.    ";
+"   Press the ESC key to return to the main menu.                       ";
+"                                                                       ";
+"                                                                  [ESC]";
+enter: button "dialog help_user";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_USER
+{
+" USING DIALOGS                                                         "; 
+"                                                                       ";
+" Using TEMPO dialogs is easy.  Each dialog has one or more fields and  ";
+" buttons. You can move the highlight to a field by pressing one of the ";
+" arrow keys to select a field or button.  If you've selected a button  ";
+" (buttons have square brackets ([ and ] enclosing them), you can type  ";
+" the ENTER (or RETURN) key to 'press' the button.  Each button has one ";
+" or more TEMPO commands that are preformed when you press it.          ";
+"                                                                       ";
+" After moving to a field, enter a new value simply by typing it in.    ";
+" Depending on how the field was defined, the protocol variable is      ";
+" updated immediately (SET field) or the update is delayed (DSET field) ";
+" until you press the OK (or equivalent) button.                        ";
+"                                                                       ";
+" Press [KEYBOARD] to learn more about special keys on the keyboard.    ";
+"                                                                  [ESC]";
+keyboard: button "dialog help_keyboard";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_KEYBOARD
+{
+" SPECIAL KEYS IN DIALOGS                                                ";
+"                                                                        ";
+"     KEY             Meaning                                            ";
+"     컴컴컴컴컴�     컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴 ";
+"     ESC             Exit the dialog and return to previous dialog      ";
+"     ENTER           Enter value into field or 'press' button           ";
+"     arrow keys      Move highlight to another field or button          ";
+"     HOME            Move highlight to upper left most field or button  ";
+"     END             Move highlight to lower right most field or button ";
+"     컴컴컴컴컴�     컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴 ";
+"                                                                        ";
+"                                                                        ";
+"                                                                   [ESC]";
+
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_MENU
+{
+" THE ACQUIRE PROTOCOL                                                      ";
+"                                                                           ";
+" The ACQUIRE protocol is an example showing one way to acquire and hold a  ";
+" target.                                                                   ";
+"                                                                           ";
+"     [TASK]      What task the subject is expected to perform?             ";
+"     [STRUCTURE] What is the structure of this protocol?                   ";
+"     [DATABASES] How does this protocol collect its databases?             ";
+"     [WORDPLAY]  How does this protocol generate visual stimulus?          ";
+"     [OBJECTS]   What real-time visualization is presented?                ";
+"     [WIRING]    What are the hardware wiring requirements?                ";
+"                                                                           ";
+"                                                                      [ESC]";
+task:       button "dialog help_task";
+structure:  button "dialog help_structure";
+databases:  button "dialog help_databases";
+wordplay:   button "dialog help_wordplay";
+objects:    button "dialog help_objects";
+wiring:     button "dialog help_wiring";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_STRUCTURE
+{
+" ACQUIRE PROTOCOL STRUCTURE                                                ";
+"                                                                           ";
+" The structure of this protocol is extensible to more complex tasks quite  ";
+" easily. It provides an excellent example of how to organize a protocol in ";
+" terms of how to break functionality into various processes.  It also      ";
+" illustrates a general structure for handling errors (subject's failure to ";
+" perform the task correctly) and how a protocol can recover gracefully.    ";
+"                                                                           ";
+"                                                                           ";
+"                                                                      [ESC]";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_TASK
+{
+" ACQUIRE TASK                                                        ";
+"                                                                     ";
+" When a bar is pressed, a target is displayed and the subject must   ";
+" make a saccade (or hand movement) into the target within a limited  ";
+" period of time.  The subject must remain within the target for a    ";
+" period of time once the target is acquired.  If the subject is      ";
+" successful, a high pitch tone is sounded.  A low tone is sounded    ";
+" if the subject fails.                                               ";
+"                                                                     ";
+"                                                                [ESC]";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_DATABASES
+{
+" ACQUIRE DATABASES                                                       ";
+"                                                                         ";
+" We trigger analog and spike databases aligned on the moment of entry    ";
+" into the target.  Databases are harvested at the end of the hold period ";
+" provided the subject is within the target.  Otherwise, they are         ";
+" cancelled.  It is important that the database period + extension        ";
+" exceeds the target hold time. The trigger must mature after the hold    ";
+" period is over in order to allow us to cancel the trigger request       ";
+" when the subject fails to hold the target.                              ";
+"                                                                         ";
+"                                                                    [ESC]";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+// NOTE: How we can access various protocol variables and use them in an
+// explanation of the protocol.
+
+dialog HELP_WORDPLAY
+{
+" HOW ACQUIRE GENERATES VISUAL STIMULUS                                ";
+"                                                                      ";
+" This task uses WORDPLAY to display the target.  We create a virtual  ";
+" coordinate system on the WORDPLAY monitor and work with coordinates  ";
+" in that domain.  To use VideoSYNC instead of WORDPLAY, simply change ";
+" all 'send(...' to 'dsend(...' and all 'sendf(...' to 'dsendf(...'.   ";
+"                                                                      ";
+" This protocol uses WORDPLAY's virtual coordinates at a resolution of ";
+" [xm  ] (=xmax, horizontally) by [ym ] (=ymax, vertically).           ";
+" In these coordinates, the target is xsize=[xs ] by ysize=[ys ].      ";
+"                                                                      ";
+"                                                                      ";
+"                                                                 [ESC]";
+xm:  SHOW xmax;
+ym:  SHOW ymax;
+xs:  SHOW xsize;
+ys:  SHOW ysize;
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog HELP_OBJECTS
+{
+" HOW ACQUIRE USES TEMPO's REAL-TIME VISUALIZATION                       ";
+"                                                                        ";
+" We also use TEMPO's real-time object graphs to display both the target ";
+" and the subject's current position.  TEMPO's SHOW M display lets you   ";
+" see the target position and the subject's position.                    ";
+"                                                                        ";
+"                                                                   [ESC]";
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+// NOTE: Since the BAR variable is declared HEX, it is presented here as
+// as 8 HEX digits so we need to make sure the [bar] field is big enough
+// for all those digits.
+
+dialog HELP_WIRING
+{
+" WIRING FOR ACQUIRE                                                     ";
+"                                                                        ";
+" The subject's X,Y eye position is assumed to be in the first two       ";
+" analog input channels.  The bar is assumed to be connected to a        ";
+" TTL that is mapped to a status bit (BAR=0x[bar    ]).  Note that in    ";
+" a live experiment, the analog channels may be mapped to eye coils      ";
+" or a manipulandum.                                                     ";
+"                                                                        ";
+"                                                                   [ESC]";
+bar: SHOW bar;
+esc:       button "dpop";
+}
+
+//------------------------------------------------------------------------
+// At any time, the user can type DIALOG ACQUIRE (or press the F1 key)
+// to reactivate the dialogs.  
+//
+// Note that the JUICE button spawns the JUICE task.
+// The SAVE button stops the task before HSAVEing the databases.
+//
+// We use the ONENTRY: label to automatically start the clock when this
+// dialog is activated.  A similar capability is available to automatically
+// execute one or more TEMPO commands when a dialog is deactivated:
+// The ONEXIT: label followed by a list of TEMPO commands (each enclosed
+// in double quotes and terminated with a semicolon) will cause the TEMPO
+// commands to automatically be executed whenever the dialog is DPOP'd
+// (even when ESC is typed).
+//
+// Note that you can use all TEMPO commands except DPOP and DIALOG
+// in the ONENTRY: and ONEXIT: labels.  For example, you can change
+// protocol variables (i.e., set a flag telling the protocol that a
+// certain dialog is active or has been deactivated), spawn processes
+// (i.e., automatically perform a series of task specific functions)
+// or even run DOS programs with TEMPO's DOS command.
+//
+dialog CONTROL_MENU
+{
+" CONTROL TASK                                                          ";
+"                                                                       ";
+"   [WATCH]   Watch progress of certain protocol variables.             ";
+"   [TIMING]  Change timing parameters.                                 ";
+"                                                                       ";
+"   [JUICE]   Manual juice reward.                                      ";
+"   [STOP]    Stop task and data acquisition                            ";
+"   [SAVE]    Stop task and save databases to ACQUIRE.HTB               ";
+"   [START]   Restart data acquisition clock.                           ";
+"                                                                       ";
+"                                                                       ";
+"                                                                  [ESC]";
+
+ONENTRY:    "start";                  // Start clock, if not already running
+stop:       button "stop";
+start:      button "start";
+watch:      button "dialog watch_variables";
+timing:     button "dialog change_timing";
+juice:      button "spawn juice";
+save:       button "stop"; "hsave * acquire.htb";
+esc:        button "dpop";
+}
+
+//------------------------------------------------------------------------
+// Here, we use both SHOW and DSET to allow the user to see the current
+// settings while they change to a new setting.
+// Notice that we've set it up using DSET so that the user MUST press the
+// OK button for the new changes to take effect.
+// Because we use DSET (instead of SET), the DSET command (in the OK button)
+// is required to update the variables.  Pressing CANCEL or the ESC key
+// will NOT change the variables.
+//
+// Note, the user can press the HOME key to quickly go to the upper left
+// most field and the END key to quickly go to the lower right most field.
+//
+dialog CHANGE_TIMING
+{
+" CHANGING TIMING VARIABLES                                             ";
+"                                                                       ";
+" To change any of these variables, you must press he OK button.        ";
+" Press the HOME key to quickly get to the [CANCEL] button.             ";
+" Alternative, press the ESC key to quickly cancel any changes.         ";
+"                                                                       ";
+" DESCRIPTION                                          CURRENT   NEW    ";
+" 컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�        컴컴컴�  컴컴컴� ";
+" Maximum time allowed to acquire target (ms).         [a1   ]  [a2   ] ";
+" Minimum time required to hold target (ms).           [h1   ]  [h2   ] ";
+" Duration of juice (reward) squirt (ms).              [j1   ]  [j2   ] ";
+" 컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�        컴컴컴�  컴컴컴� ";
+"                                                                       ";
+"                                                                       ";
+" Press the END key to quickly get to the OK button.               [OK] ";
+
+a1:     SHOW    acquire_time;
+a2:     DSET    acquire_time;
+h1:     SHOW    hold_time;
+h2:     DSET    hold_time;
+j1:     SHOW    juice_time;
+j2:     DSET    juice_time;
+cancel: button "dpop";
+ok:     button "dset"; "dpop";
+}
+
+//------------------------------------------------------------------------
+dialog WATCH_VARIABLES
+{
+" WATCH                                                                     ";
+"                                                                           ";
+" These variables are updated in real-time but they may not be changed.     ";
+"                                                                           ";
+" DESCRIPTION                                                    CURRENT    ";
+" 컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴 컴컴컴컴컴컴 ";
+" Current error code ([a]=NONE, [b]=ACQUIRE, [c]=HOLD)         [e    ]      ";
+" Upper left corner of target (in virtual coordinates)         ([bx ],[by ])";
+" Current eye position (in virtual coordinates)                ([x  ],[y  ])";
+" Current eye position (in analog coordinates)                 ([ax ],[ay ])";
+" Subject is looking inside the target (0=NO, 1=YES)           [inside]     ";
+" 컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴 컴컴컴컴컴컴 ";
+"                                                                           ";
+"                                                                           ";
+"                                                                      [ESC]";
+a:  SHOW ERR_OK;
+b:  SHOW ERR_ACQUIRE;
+c:  SHOW ERR_HOLD;
+e:  SHOW failed;
+bx: SHOW bx;
+by: SHOW by;
+x:  SHOW x;
+y:  SHOW y;
+ax: SHOW ax;
+ay: SHOW ay;
+inside: SHOW isinside;
+esc:       button "dpop";
+}

@@ -1,0 +1,79 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2003 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Fri Feb 28 16:11:27 2003
+; CLOAD kpedtest.pcf
+
+; tempow 10.16 Set 33.9   'HORIZON0932' connected to 'SNOOPY'
+; KPED 10.20 Set 33
+; KSRV 10.17 Set 33.9 (Server 'SNOOPY          ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=8
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =32               3     9%           72/768           =4         =3       
+; INSTRUCTIONS    =700             63     9%         1118/12600         =79        =66      
+; SYMBOLTABLE     =400             80    20%          960/4800          =94        =84      
+; HASHTABLE       =     127,400          38%         1662/3162        Use Kernel Default
+; NAMETABLE       =2000          1222    61%         1222/2000          =1438      =1286    
+; DATABASES       =32               1     3%           60/1920          =1         =1       
+; ARRAYTABLE      =512              0     0%            0/512           =0         =0       
+; ARRAYDATA       =131072           0     0%            0/131072        =0         =0       
+; OBJECTS         =0                0     0%            0/0             =0         =0       
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD kpedtest.pro
+
+; DATABASES=32
+
+HOPEN  1,3,1,1,4,100,1000,0,0,0,0x0
+HFILE  1,"x.htb"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1920,1200,16
+MAINWND 1,-1,-1,-1,-1,6,-2,761,58,0
+MSGWND 1,-1,-1,-1,-1,3,805,934,1184,0
+STATUSWND 1,-1,-1,-1,-1,35,156,832,790,0
+SHOW c 3
+
+CMDWND 1,0,1171,-1,-1,8,59,637,122,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,963,469,1895,1048,0
+DBVIEW  0,0,1,2,250,0,4,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,922,544,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1920,1200,16
+
+; END OF DIALOGS
+

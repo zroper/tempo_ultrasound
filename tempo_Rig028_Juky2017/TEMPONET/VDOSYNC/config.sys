@@ -1,0 +1,13 @@
+REM CONFIG.SYS
+REM C:\TEMPO\tempo3.tn
+REM Created by SETUPTN 12.02 on SCHALL-C61484C6 Thu Dec 23 15:08:38 2010
+REM Please use SETUPTN to modify settings in this file.
+
+device=himem.sys numhandles=64
+devicehigh=emm386.exe ram rom noems
+devicehigh=ifshlp.sys
+files=20
+buffers=10
+dos=high,umb
+stacks=9,256
+lastdrive=z

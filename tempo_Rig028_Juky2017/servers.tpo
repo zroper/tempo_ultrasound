@@ -1,0 +1,7 @@
+; tempow SERVER CONFIGURATION FILE
+; Copyright 1997-2017 Reflective Computing.  All Rights Reserved.
+; Tue Mar 28 09:26:32 2017
+; To load, use CMD servers.tpo
+
+connectadd tempo3,4,netbeui,
+connectauto tempo3,4,netbeui,

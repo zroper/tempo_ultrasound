@@ -1,0 +1,68 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Fri Jul 27 09:00:59 2001
+; CLOAD portio.pcf
+
+; tempow 10.5 Set 28.6   'T090026' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64         2     3%        48/1536       =3      =2    
+; INSTRUCTIONS    =700       14     2%       252/12600      =20     =15   
+; SYMBOLTABLE     =700       24     3%       288/8400       =28     =25   
+; HASHTABLE       =  257,700       37%      3090/5742     Use Kernel Default
+; NAMETABLE       =8000     143     2%       143/8000       =168    =151  
+; DATABASES       =40         0     0%         0/2400       =0      =0    
+; ARRAYTABLE      =4100      38     1%        38/4100       =48     =39   
+; OBJECTS         =0          0     0%         0/0          =0      =0    
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD portio.pro
+
+; DATABASES=40
+
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,814,4,1602,70,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,5,682,768,1192,0
+SHOW s 0
+
+CMDWND 1,-1,-1,-1,-1,515,7,810,68,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+

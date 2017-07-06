@@ -1,0 +1,71 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2003 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Thu Jun 26 17:51:15 2003
+; CLOAD oob.pcf
+
+; tempow 10.17 Set 35.9   'HORIZON3102' connected to 'SNOOPY'
+; KPED 10.23 Set 35
+; KSRV 10.18 Set 35.9 (Server 'SNOOPY          ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=1000.000000  (100/100000 Sec/SampleSet)
+; ASETS=1(1)  CSETS=1(1)  ESETS=1(1)
+; ACHANNELS=16
+; CCHANNELS=5
+; ECHANNELS=4
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =40               3     8%           72/960           =4         =3       
+; INSTRUCTIONS    =400             24     6%          428/7200          =31        =26      
+; SYMBOLTABLE     =400             32     8%          384/4800          =38        =34      
+; HASHTABLE       =     127,400          32%         1536/3162        Use Kernel Default
+; NAMETABLE       =2000           221    11%          221/2000          =260       =233     
+; DATABASES       =40               0     0%            0/2400          =0         =0       
+; ARRAYTABLE      =1000             0     0%            0/1000          =0         =0       
+; ARRAYDATA       =131072           0     0%            0/131072        =0         =0       
+; OBJECTS         =0                0     0%            0/0             =0         =0       
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=5
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=4
+
+PLOAD rdxttl.pro
+
+; DATABASES=40
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1920,1200,16
+MAINWND 1,1900,1180,-1,-1,3,-1,892,61,0
+MSGWND 1,-1,-1,-1,-1,5,55,901,772,0
+STATUSWND 1,-1,-1,-1,-1,1,770,900,1204,0
+SHOW v 0
+
+CMDWND 1,0,1171,-1,-1,36,59,372,122,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1920,1200,16
+
+; END OF DIALOGS
+

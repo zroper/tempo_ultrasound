@@ -1,0 +1,97 @@
+                                TEMPO Program Update
+                                   September 2002
+
+
+RE: Installing Program Update
+
+
+
+Dear TEMPO User,
+
+                          INSTALLATION OF RELEASE
+
+Here is the September 2002 Release of the TEMPO software.
+
+The recommended installation procedure is shown below.
+
+Please review 0209A.TXT, the Program Update Release Notes for this
+release.  It contains important information regarding the changes
+and improvements.
+
+---------------------------------------------------------------------
+SERVER AND CLIENT COMPUTERS
+
+You should have two files ZIP for each TEMPO client & server:
+
+        UTIL.ZIP        Utilities and other files
+    
+        <user>.ZIP      Uses your abbreviated name and TEMPO system
+                        number.  For example, SHEL1.ZIP is for your
+                        TEMPO 1 system.
+
+Each lab has a unique abbreviated user name. For people with
+multiple TEMPO systems, the number refers to the TEMPO system
+number.
+
+On your server computer, do the following.
+
+    1. Backup your existing TEMPO directory:
+        
+        xcopy /s \tempo\*.* \tempo1\*.*
+    
+    2. Unzip the new release:
+
+        cd \tempo
+        pkunzip -d -o SHEL1.zip         (replace SHEL1.ZIP with your file)
+        pkunzip -d -o util.zip
+        
+The -d -o switches are important.  If you omit these, all files will
+be stored in your C:\TEMPO directory instead of in the appropriate
+sub directory.
+             
+---------------------------------------------------------------------
+VIDEOSYNC COMPUTER:
+
+If you use VideoSYNC, you should have the VDOSYNC.ZIP file.
+
+On your VideoSYNC computer, do the following.
+    
+    1. Backup your existing TEMPO directory:
+        
+        xcopy /s \tempo\*.* \tempo1\*.*
+    
+    2. Unzip the new release:
+
+        cd \tempo
+        pkunzip -d -o vdosync.zip
+        pkunzip -d -o util.zip
+
+The -d -o switches are important.  If you omit these, all files will
+be stored in your C:\TEMPO directory instead of in the appropriate
+sub directory.
+             
+---------------------------------------------------------------------
+RDX Library
+
+If you use the RDX Library, you should have the RDX.ZIP file.
+
+On your computer, do the following.
+    
+    1. Backup your existing TEMPO directory:
+        
+        xcopy /s \tempo\*.* \tempo1\*.*
+    
+    2. Unzip the new release:
+
+        cd tempo
+        mkdir rdx
+        cd rdx
+        pkunzip -d -o rdx.zip
+
+The -d -o switches are important.  If you omit these, all files will
+be stored in your C:\TEMPO directory instead of in the appropriate
+sub directory.
+             
+---------------------------------------------------------------------
+
+                              * * * END * * *

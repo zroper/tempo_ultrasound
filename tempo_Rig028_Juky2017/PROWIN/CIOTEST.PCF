@@ -1,0 +1,68 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 18 09:54:51 2001
+; CLOAD ciotest.pcf
+
+; tempow 10.4 Set 28.6   'T095127' connected to 'KernelServer'
+; KPCD 10.3 Set 28
+; KSRV 10.3 Set 28.6 (Server 'KernelServer    ' running on computer '')
+; PCL 10.3     TEMPO 10.1
+; ANALOGRESOLUTION=16
+; WARNING=2
+; SPEED=500.000000  PROSPEED=100.000000  (200/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=15
+; ECHANNELS=4
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =40         0     0%         0/960        =0      =0    
+; INSTRUCTIONS    =400        0     0%         0/7200       =0      =0    
+; SYMBOLTABLE     =400        0     0%         0/4800       =0      =0    
+; HASHTABLE       =  127,400        0%       762/3162     Use Kernel Default
+; NAMETABLE       =2000       0     0%         0/2000       =0      =0    
+; DATABASES       =40         0     0%         0/2400       =0      =0    
+; ARRAYTABLE      =1000       0     0%         0/1000       =0      =0    
+; OBJECTS         =0          0     0%         0/0          =0      =0    
+
+SPEED 500
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=15
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=4
+
+PLOAD ciotest.pro
+
+; DATABASES=40
+
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,791,26,1558,92,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,52,845,1011,1095,0
+SHOW s 0
+
+CMDWND 1,-1,-1,-1,-1,491,34,786,95,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+

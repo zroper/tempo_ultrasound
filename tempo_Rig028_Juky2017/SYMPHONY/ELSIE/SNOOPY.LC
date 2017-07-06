@@ -1,0 +1,25 @@
+POOL    shel
+    {
+    param=null
+    }
+    
+NODE Receiver
+    {
+    computer=horizon
+    commandline=tgs.exe RECEIVE.LOG
+    workingDirectory=c:\usr\tempo\symphony\elsie
+    }
+
+NODE Sender
+    {
+    computer=snoopy
+    commandline=tgs.exe SEND.LOG
+    workingDirectory=c:\usr\tempo\symphony\elsie
+    }
+    
+CONNECTION pipe1
+    {
+    lcSendNodename=Sender
+    lcRecvNodename=Receiver
+    }
+

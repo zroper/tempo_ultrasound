@@ -1,0 +1,31 @@
+POOL    shel
+    {
+    param=null
+    }
+    
+NODE tempow
+    {
+    computer=spike
+    commandline=tempow
+    workingdirectory=c:\usr\tempo\test
+    isaTGprogram=yes
+    runProgram=no
+    exitProgram=no
+    }
+
+NODE ReceiverHorizon
+    {
+    computer=horizon
+    commandline=tgs.exe -e RECEIVER.LOG
+    workingdirectory=c:\usr\tempo
+    isaTGprogram=yes
+    }
+
+CONNECTION pipe1
+    {
+    lcSendNodename=tempow
+    lcRecvNodename=receiverHorizon
+    
+    mdbobjectsize=10000
+    db=10
+    }         

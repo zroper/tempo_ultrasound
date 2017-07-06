@@ -1,0 +1,19 @@
+PCL 12.5 Set 45 Tue May 25 16:57:12 2010
+
+PATH='C:\TEMPO;C:\PROGRA~1\COLLAB~1\SUBVER~1;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem'
+CWD='C:\TEMPO\PROWIN\SANDBOX'
+
+PCL Opening XMS..
+PCL: XMS Version  2.00 Revision  2.77
+PCL: XMS Largest block 919 Kb (941056 bytes),  Total 919 Kb (941056 bytes).
+PCL Processing command line arguments..
+ 0: 'C:\TEMPO\PCL.EXE'
+ 1: '-x'
+ 2: '-kpcl0001.tmp'
+ 3: 'C:/TEMPO/PROWIN/Sandbox/Incriment.pcf'
+ 4: 'C:/TEMPO/PROWIN/Sandbox/Incriment.err'
+PCL Checking if PRO file 'C:/TEMPO/PROWIN/Sandbox/Incriment.pcf' exists..
+PCL - File not found: 'C:/TEMPO/PROWIN/Sandbox/Incriment.pcf'
+PCL Closing XMS..
+PCL Closing error file..
+PCL - Exiting with status 1

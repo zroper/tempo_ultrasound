@@ -1,0 +1,153 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2010 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Fri May 21 11:07:05 2010
+; CLOAD cman_f.pcf
+
+; tempow 13.1 Set 45.14   'WH013f011213' connected to 'tempo6'
+; KERNELD 12.1 Set 45
+; KSRV 13.1 Set 45.14 (Server 'tempo6          ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=250.000000  (100/100000 Sec/SampleSet)
+; ASETS=4(4)  CSETS=4(4)  ESETS=4(4)
+; ACHANNELS=8
+; CCHANNELS=2
+; ECHANNELS=2
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =64              38    59%         1672/2816          =54        =40      
+; INSTRUCTIONS    =7000          1495    21%        26910/126000        =1870      =1575    
+; InstructionsXMS =0 (XMS Instruction Caching is DISABLED)
+; SYMBOLTABLE     =4000           740    19%         5920/32000         =871       =779     
+; NametableXMS    =208896      177874    85%       177874/208896                        
+; NAMETABLE       =40894         9872    24%         9872/40894         =11614     =10392   
+; DATABASES       =16               7    44%          420/960           =8         =7       
+; ARRAYTABLE      =1024           128    13%          128/1024          =160       =132     
+; ARRAYDATA       =131072       62288    48%        62288/131072        =77860     =64214   
+; OBJECTS         =32              11    34%          484/1408          =12        =11      
+;
+; PROTOCOL PROCESS CONTROL BLOCKS (XMS Instructions Caching DISABLED)
+; INSTRUCTIONS=7000,0
+; Memory (bytes):  26910/126000 Conventional, 0/0 XMS
+; Server CPU Mhz  Empirical 3192.0    Theoretical 3200.0
+;
+;    STATE PROCESS  Longest  0.523ms   PC INST  MAX LONG     MS  MaxMS LongMS Bytes  Conventional        XMS      Loaded  uSec 
+;   1 DONE MAIN                       392    0    0    0  0.000  0.000  0.000   392       2-393    
+;   2 SUSP CAL_FIX                      0    0    0    0  0.000  0.000  0.000    58     394-451    
+;   3 DONE INITIALIZE                 832    0    0    0  0.000  0.000  0.000   832     452-1283   
+;   4 RUN  WATCHEYE                  1778   64   64   64  0.030  0.329  0.029  1782    1284-3065   
+;   5 RUN  WATCHMOUTH                 312   13   13   13  0.008  0.023  0.008   316    3066-3381   
+;   6 SUSP WRITE_PARAMS_TEMPO           0    0    0    0  0.000  0.000  0.000  1630    3382-5011   
+;   7 DONE WRITE_PARAMS              5422    0   37    0  0.000  0.044  0.000  5422    5012-10433  
+;   8 DONE MARKER                     272    0   35    0  0.000  0.029  0.000   272   10434-10705  
+;   9 DONE MARKER_2                   342    0   19    0  0.000  0.017  0.000   342   10706-11047  
+;  10 SUSP MARKER_FIX                   0    0    0    0  0.000  0.000  0.000   166   11048-11213  
+;  11 DONE STIM                      4922    0  276  275  0.000  0.274  0.265  4922   11214-16135  
+;  12 RUN  DRAW_STIM                 1076    8   38   33  0.007  0.118  0.051  1142   16136-17277  
+;  13 DONE ANIMATION                  172    0   16   16  0.000  0.013  0.013   172   17278-17449  
+;  14 RUN  TRIAL_LOOP                 512    1   38   38  0.005  0.049  0.047   622   17450-18071  
+;  15 RUN  TRIAL                     1390    6   80   24  0.007  0.304  0.023  2410   18072-20481  
+;  16 SUSP ACCOUSTIC_STOP               0    0    0    0  0.000  0.000  0.000    20   20482-20501  
+;  17 SUSP START_SOUND                  0    0    0    0  0.000  0.000  0.000   124   20502-20625  
+;  18 DONE WRONG                      468    0   22    0  0.000  0.025  0.000   468   20626-21093  
+;  19 DONE SUCCESS                    806    0   53    0  0.000  0.049  0.000   806   21094-21899  
+;  20 DONE CLEAR                       68    0    8    0  0.000  0.025  0.000    68   21900-21967  
+;  21 SUSP CLEAR_B                      0    0    0    0  0.000  0.000  0.000     8   21968-21975  
+;  22 DONE REWARD                     302    0   11    0  0.000  0.019  0.000   302   21976-22277  
+;  23 SUSP EXTRA_REWARD                 0    0    0    0  0.000  0.000  0.000    58   22278-22335  
+;  24 DONE SOUND_ON_REWARD             36    0    4    0  0.000  0.013  0.000    36   22336-22371  
+;  25 SUSP SOUND_NEG_REWARD             0    0    0    0  0.000  0.000  0.000    36   22372-22407  
+;  26 DONE END_TRIAL                  714    0   28    0  0.000  0.305  0.000   714   22408-23121  
+;  27 SUSP REWARD_SOUND                 0    0    0    0  0.000  0.000  0.000    20   23122-23141  
+;  28 SUSP sequential_shuffle           0    0    0    0  0.000  0.000  0.000  1526   23142-24667  
+;  29 SUSP CLEAN_UP                     0    0    0    0  0.000  0.000  0.000   226   24668-24893  
+;  30 SUSP ELECT_STIM                   0    0    0    0  0.000  0.000  0.000   266   24894-25159  
+;  31 SUSP INIT_FIXATION_CHECK        392    0   16   16  0.000  0.015  0.015   392   25160-25551  
+;  32 SUSP INIT_FIX_CORRECTOR           0    0    0    0  0.000  0.000  0.000   226   25552-25777  
+;  33 DONE FIXATION_CORRECT           306    0   30   30  0.000  0.305  0.017   306   25778-26083  
+;  34 DONE KERNEL_HISTOGRAM           276    0    0    0  0.000  0.000  0.000   276   26084-26359  
+;  35 SUSP WaitForVideoSYNC             0    0    0    0  0.000  0.000  0.000   114   26360-26473  
+;  36 SUSP SendTTLToRemoteSystem       38    0   24   12  0.000  0.035  0.018   186   26474-26659  
+;  37 SUSP Delay                        0    0    0    0  0.000  0.000  0.000   100   26660-26759  
+;  38 RUN  xmitEvents                 146    8    8    8  0.007  0.022  0.007   150   26760-26909  
+
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+
+ACHANINFO 0
+
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=2
+
+
+CCHANINFO 0
+
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+
+ECHANINFO 0
+
+
+PLOAD cman_f.pro
+
+; DATABASES=16
+
+HOPEN  1,5,1,1,1,10000,250,0,0,3,0x0
+HTITLE 1,"Events Append"
+HFILE  1,"pierre.htb"
+HOPEN  2,7,2,1,2,20,2000,500,0,0,0x0
+HTITLE 2,"Analog Append"
+HFILE  2,"acquire.htb"
+HOPEN  3,3,2,1,1,20,1000,0,0,0,0x0
+HTITLE 3,"Spike append"
+HFILE  3,"acquire.htb"
+HOPEN  5,6,2,1,2,20,2000,500,0,0,0x0
+HTITLE 5,"Analog Average"
+HFILE  5,"acquire.htb"
+HOPEN  7,6,2,1,2,20,2000,0,0,0,0x0
+HTITLE 7,"Analog Average"
+HFILE  7,"acquire.htb"
+HOPEN  8,6,2,2,1,20,500,0,0,0,0x0
+HTITLE 8,"Matlab test database"
+HFILE  8,"acquire.htb"
+HOPEN  10,7,1,1,2,20,1000,0,0,0,0x0
+HTITLE 10,"All analog input channels"
+
+; WINDOW CONFIGURATION
+
+SCREENRES 2304,1280,32,2,0,0
+MAINWND 1,0,0,-1,-1,654,1,1281,92,0
+MSGWND 1,522,960,-1,-1,0,762,713,997,0
+STATUSWND 1,0,0,-1,-1,0,586,714,761,0
+SHOW s 0
+
+CMDWND 1,0,0,-1,-1,857,91,1280,141,0
+ANIMPAGE 0x1,1,0,0,-1,-1,0,0,524,593,0
+ANIMVIEW 0,1,0,0,-1,-1,0,0,258,566,0
+ANIMVIEW 1,1,0,0,-1,-1,258,0,516,566,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 2304,1280,32,2,0,0
+
+; END OF DIALOGS
+

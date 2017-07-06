@@ -1,0 +1,3 @@
+HMODULE GetCurrentModule(void);
+
+

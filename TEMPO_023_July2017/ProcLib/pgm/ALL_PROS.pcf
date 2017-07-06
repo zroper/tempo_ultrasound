@@ -1,0 +1,152 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2003 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Tue Dec 30 21:11:40 2003
+; CLOAD ALL_PROS.pcf
+
+; tempow 11.7 Set 40.13   'CLIENT0294656' connected to 'tempo4'
+; KPED 11.2 Set 40
+; KSRV 11.3 Set 40.13 (Server 'tempo4          ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=16
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=500.000000  (100/100000 Sec/SampleSet)
+; ASETS=2(2)  CSETS=2(2)  ESETS=2(2)
+; ACHANNELS=3
+; CCHANNELS=2
+; ECHANNELS=2
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =80              55    69%         2420/3520          =79        =58      
+; INSTRUCTIONS    =7000          4854    69%        87360/126000        =6068      =5110    
+; InstructionsXMS =20025         4854    24%        87360/360448        =6068      =5110    
+; SYMBOLTABLE     =2200          1882    86%        22584/26400         =2214      =1981    
+; HASHTABLE       =     257,2200         75%        11418/14742       Use Kernel Default
+; NAMETABLE       =60000        21405    36%        21405/60000         =25182     =22532   
+; DATABASES       =16               0     0%            0/960           =0         =0       
+; ARRAYTABLE      =500            478    96%          478/500           =598       =493     
+; ARRAYDATA       =10240         9456    92%         9456/10240         =11820     =9748    
+; OBJECTS         =41              25    61%         1100/1804          =28        =26      
+;
+; PROTOCOL PROCESS CONTROL BLOCKS (XMS Instructions Caching ENABLED)
+; INSTRUCTIONS=7000,20024
+; Memory (bytes):  87360/126000 Conventional, 87360/360448 XMS
+; Server CPU Mhz  Empirical 2992.5    Theoretical 3000.0
+;
+;    STATE PROCESS  Longest  1.306ms   PC INST  MAX LONG     MS  MaxMS LongMS Bytes  Conventional        XMS      Loaded  uSec 
+;   1 DONE DEFAULT                   8292    0  292    0  0.000  0.172  0.000  8292    7392-15691        2-8293        1    16
+;   2 DONE GOODVARS                  3786    0  847    0  0.000  0.390  0.000  3786   15692-19485     8294-12079       1     6
+;   3 DONE SET_CLRS                   842    0   71    0  0.000  0.150  0.000   842   19486-20335    12080-12921       1     4
+;   4 DONE SET_COOR                   192    0   17    0  0.000  0.093  0.000   192    3976-4175     12922-13113       1     3
+;   5 DONE GRAPHS                     548    0   47    0  0.000  0.043  0.000   548    4176-4731     13114-13661       1     3
+;   6 SUSP SET_INH                      0    0    0    0  0.000  0.000  0.000   506    not loaded    13662-14167       0     0
+;   7 DONE SET_PSY                    712    0   68    0  0.000  0.049  0.000   712   20336-21055    14168-14879       1     3
+;   8 DONE JUICE                       44    0    4    1  0.000  0.016  0.004    44   58298-58349    14880-14923       1     2
+;   9 SUSP STIM                         0    0    0    0  0.000  0.000  0.000    88    not loaded    14924-15011       0     0
+;  10 DONE STAIR                      316    0   21    0  0.000  0.012  0.000   316   27290-27613    15012-15327       1     3
+;  11 SUSP STAIR_DSC                    0    0    0    0  0.000  0.000  0.000   574    not loaded    15328-15901       0     0
+;  12 DONE SETTRIAL                  6226    0  499    0  0.000  0.126  0.000  6226   21056-27289    15902-22127       1    13
+;  13 DONE WINDOWS                   4264    0  134    0  0.000  0.050  0.000  4264   32780-37051    22128-26391       1     9
+;  14 DONE LOCATE_I                  1416    0   43   42  0.000  0.148  0.013  1416    5230-6653     26392-27807       1     3
+;  15 RUN  WATCHEYE                   486   20   51   27  0.009  0.150  0.015   490    4732-5229     27808-28297       1     3
+;  16 DONE TONE                        54    0    5    0  0.000  0.014  0.000    54   58350-58411    28298-28351       1     4
+;  17 SUSP TONESWEP                     0    0    0    0  0.000  0.000  0.000   288    not loaded    28352-28639       0     0
+;  18 DONE WATCHMTH                   404    0    7    0  0.000  0.011  0.000   404    6812-7223     28640-29043       1     4
+;  19 DONE WATCHBOD                   160    0    2    0  0.000  0.008  0.000   160    7224-7391     29044-29203       1     2
+;  20 DONE SVR_BELL                   180    0    4    0  0.000  0.014  0.000   180   57974-58161    29204-29383       1     3
+;  21 SUSP SVR_BEL2                     0    0    0    0  0.000  0.000  0.000    20    not loaded    29384-29403       0     0
+;  22 DONE DRW_SQR                    380    0  129    0  0.000  0.116  0.000   380   30204-30591    29404-29783       1     3
+;  23 DONE DRW_CHKR                  1920    0 2493    0  0.000  0.884  0.000  1920   30852-32779    29784-31703       1     5
+;  24 SUSP DRW_GNG                      0    0    0    0  0.000  0.000  0.000  1910    not loaded    31704-33613       0     0
+;  25 SUSP FIX_PGS                      0    0    0    0  0.000  0.000  0.000   154    not loaded    33614-33767       0     0
+;  26 SUSP VIS_PGS                      0    0    0    0  0.000  0.000  0.000   876    not loaded    33768-34643       0     0
+;  27 SUSP AMP_PGS                      0    0    0    0  0.000  0.000  0.000   884    not loaded    34644-35527       0     0
+;  28 SUSP DEL_PGS                      0    0    0    0  0.000  0.000  0.000  1330    not loaded    35528-36857       0     0
+;  29 SUSP MEM_PGS                      0    0    0    0  0.000  0.000  0.000  1348    not loaded    36858-38205       0     0
+;  30 SUSP CMD_PGS                      0    0    0    0  0.000  0.000  0.000  1630    not loaded    38206-39835       0     0
+;  31 DONE CCM_PGS                   2582    0   55    0  0.000  0.057  0.000  2582   27614-30203    39836-42417       1     6
+;  32 SUSP GNG_PGS                      0    0    0    0  0.000  0.000  0.000  1266    not loaded    42418-43683       0     0
+;  33 SUSP FIXTRIAL                     0    0    0    0  0.000  0.000  0.000   430    not loaded    43684-44113       0     0
+;  34 DONE CCMTRIAL                  5694    0   75    0  0.000  0.143  0.000  5694   37052-42753    44114-49807       1    12
+;  35 SUSP MEMTRIAL                     0    0    0    0  0.000  0.000  0.000  1686    not loaded    49808-51493       0     0
+;  36 SUSP DELTRIAL                     0    0    0    0  0.000  0.000  0.000  1752    not loaded    51494-53245       0     0
+;  37 SUSP VISTRIAL                     0    0    0    0  0.000  0.000  0.000  1374    not loaded    53246-54619       0     0
+;  38 SUSP AMPTRIAL                     0    0    0    0  0.000  0.000  0.000  1402    not loaded    54620-56021       0     0
+;  39 SUSP CMDTRIAL                     0    0    0    0  0.000  0.000  0.000  2680    not loaded    56022-58701       0     0
+;  40 SUSP GNGTRIAL                     0    0    0    0  0.000  0.000  0.000  2478    not loaded    58702-61179       0     0
+;  41 SUSP UPD8_INH                     0    0    0    0  0.000  0.000  0.000  1306    not loaded    61180-62485       0     0
+;  42 DONE UPD8_PSY                  2642    0  239    0  0.000  0.096  0.000  2642   55324-57973    62486-65127       1     6
+;  43 DONE INFOS                     6282    0 1416 1416  0.000  0.488  0.479  6282   49034-55323    65128-71409       1    15
+;  44 DONE REWARDS                   6272    0   96    8  0.000  0.140  0.014  6272   42754-49033    71410-77681       1    13
+;  45 DONE KEY_REWD                   128    0   10    0  0.000  0.023  0.000   128   58162-58297    77682-77809       1     4
+;  46 SUSP KEY_T_UP                     0    0    0    0  0.000  0.000  0.000    50    not loaded    77810-77859       0     0
+;  47 SUSP KEY_T_DN                     0    0    0    0  0.000  0.000  0.000    68    not loaded    77860-77927       0     0
+;  48 SUSP KEY_MOVE                     0    0    0    0  0.000  0.000  0.000   116    not loaded    77928-78043       0     0
+;  49 SUSP KEY_STIM                     0    0    0    0  0.000  0.000  0.000    26    not loaded    78044-78069       0     0
+;  50 DONE WAIT_MU                    100    0  600  558  0.000  0.701  0.612   100   30744-30851    78070-78169       1     2
+;  51 DONE SEND_TTL                   144    0   70   70  0.000  0.100  0.088   144   30592-30743    78170-78313       1     2
+;  52 RUN  QUE_TTL                    146    8   68   68  0.006  0.141  0.043   150    6654-6811     78314-78463       1     2
+;  53 SUSP VWM_PGS                      0    0    0    0  0.000  0.000  0.000  1434    not loaded    78464-79897       0     0
+;  54 SUSP VWMTRIAL                     0    0    0    0  0.000  0.000  0.000  3496    not loaded    79898-83393       0     0
+;  55 RUN  IDLE                      2466    4  149    1  0.005  0.137  0.005  3966       2-3975     83394-87359       1     9
+
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=3
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=2
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD ALL_PROS.pro
+
+; DATABASES=16
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1280,1024,32
+MAINWND 1,-1,-1,-1,-1,1,-1,912,53,0
+MSGWND 1,-1,-1,-1,-1,1,53,382,910,0
+STATUSWND 1,-1,-1,-1,-1,369,429,1271,973,0
+SHOW v 510
+
+CMDWND 1,-1,-1,-1,-1,3,911,618,961,0
+ANIMPAGE 0x1,1,-1,-1,-1,-1,368,54,1275,430,0
+ANIMVIEW 0,1,-1,-1,-1,-1,0,0,449,349,0
+ANIMVIEW 1,1,-1,-1,-1,-1,449,0,898,349,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+
+DLOAD all_pros.dcf
+
+; BEGIN KEY DEFINITIONS
+
+KEY F1 = dialog Info_and_StartClock
+KEY ESC = dpop
+KEY PLUS = spawn key_rewd
+KEY INSERT = spawn key_rewd
+KEY ALTE = Eye_on_VDOSync = 1
+KEY ALTX = Eye_on_VDOSYnc = 0
+KEY ALTC = CenterEyeNow = 1
+KEY F2 = dialog Choose_Task
+KEY F3 = dialog Fixation_Main
+KEY F4 = dialog in_task_pane
+KEY ALTM = spawn key_move
+KEY CURUP = spawn KEY_REWD
+KEY PGUP = spawn KEY_STIM
+
+; END KEY DEFINITIONS
+

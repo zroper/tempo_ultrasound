@@ -1,0 +1,75 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 25 08:31:13 2001
+; CLOAD eyecal.pcf
+
+; tempow 10.5 Set 28.6   'T082909' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=500.000000  PROSPEED=100.000000  (200/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=8
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64        11    17%       264/1536       =16     =12   
+; INSTRUCTIONS    =700       94    13%      1692/12600      =134    =99   
+; SYMBOLTABLE     =700      109    16%      1308/8400       =128    =115  
+; HASHTABLE       =  257,700       42%      3306/5742     Use Kernel Default
+; NAMETABLE       =8000    1348    17%      1348/8000       =1586   =1419 
+; DATABASES       =40         0     0%         0/2400       =0      =0    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =0          0     0%         0/0          =0      =0    
+
+SPEED 500
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD eyecal.pro
+
+; DATABASES=40
+
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,820,3,1603,63,0
+MSGWND 1,-1,-1,-1,-1,808,914,1600,1198,0
+STATUSWND 1,-1,-1,-1,-1,1,721,805,1200,0
+SHOW v 0
+
+CMDWND 1,-1,-1,-1,-1,521,3,816,64,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+
+
+; BEGIN KEY DEFINITIONS
+
+KEY F1 = status = status ^ bar {cr}
+
+; END KEY DEFINITIONS
+

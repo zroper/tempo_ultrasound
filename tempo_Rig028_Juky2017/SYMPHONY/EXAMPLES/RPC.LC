@@ -1,0 +1,17 @@
+POOL    test
+    {
+    param=null
+    }
+    
+NODE rpcClient
+    {
+    computer=$elsie
+    commandline=rpc rpcServer
+    }
+    
+NODE rpcServer
+    {
+    computer=$elsie
+    commandline=rpc
+    }
+    

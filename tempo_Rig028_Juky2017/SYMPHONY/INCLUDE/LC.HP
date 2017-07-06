@@ -1,0 +1,279 @@
+/*  .title  LC.HP - Private definitions for LC.C
+;+
+; DESCRIPTION
+;   This file contains defintions that are private to LC.C and
+;   associated files.  This should not be released to the user.
+;
+; EDIT HISTORY
+;   04Oct06 sh  Initial edit
+;   18Feb07 sh  Change LCCBERR to contain error strings
+;   02Mar07 sh  Move lcxGetConnectionDETAIL from lcResolv.c to here
+;               Include NWCM.H
+;   01Jul07 sh  Add lcxFindNextComputer
+;   10Jul07 sh  Add NODE.disableGetMapping flag
+;-
+*/
+
+#ifndef LC_HP
+#define LC_HP
+
+#include "..\lib32\nw.h"
+#include "..\lib\nwcm.h"
+#include "..\lib32\nwcm.h"
+
+
+//------------------------------------------------------------------
+// An NCMLINK link is a verified association between a local IP and a remote IP.
+// An association is verified when a packet has successfully been sent and
+// received (unicast) between these two adapters.
+//
+// Multi-homed computers have one computer name but more than one IP address (ie more
+// than one adapter).  If both the ELSIE computer _and_ a remote NCM computer
+// are multi-homed, the number of combinations of adapters is n * m where
+// n=number of adapters on the local computer and m=number of adapters on remote
+// computer.
+
+typedef struct
+    {
+    char            remoteIP[sizeof("###.###.###.###")];// Remote IP
+    USHORT          remotePort;                         // Remote port
+    char            localIP[sizeof("###.###.###.###")]; // Best local adapter to use to talk to this computer
+    long            connectivityLevel;                  // Score as to how good the link is (see lcxGetLocalIP)
+    char            bcast;                              // ==1 if we received an ECHORESP from a broadcast
+    char            mcast;                              // ==1 if we received an ECHORESP from a multicast
+    } NCMLINK;
+
+// Each POOL entry is a computer running NCM with this poolName.
+
+typedef struct
+    {
+    char            name[_MAX_PATH];        // Name of remote computer
+    NCMLINK         ncm[NNCMLINK];          // links from local to remote computer's NCM
+    long            nAdapters;              // # of adapters on remote compouter
+    NWCM_RES_ADAPTER adapter[NRESADAPTERS]; // List of adapters on remote computer
+    NWCM_RES_DISK   disk;                   // Disk information on remote computer
+    NWCM_RES_MEMORY memory;                 // Memory information on remote computer
+    } COMPUTER;
+
+
+//------------------------------------------------------------------
+// Each CONNECTION contains information about a single connection
+// between two NODEs, the sender and receiver, as well as details
+// about each 
+
+typedef struct
+    {
+    char            name[NNAMESIZE];        // Name of this connection
+    char            lcParams[NPARAMSIZE];   // Parameter list specified in LC file
+    char            finalParams[NPARAMSIZE];// Final list of parameters agreed upon by sender and receiver
+    
+    char            sendNodeName[NNAMESIZE];// Name of sending node
+    char            actualSendLocalIP[sizeof("###.###.###.###")];   // HS local IP of sender dotted quad
+    USHORT          actualSendLocalPort;    // HS local port of sender
+    long            sendConnectionID;       // Connection ID for sender
+    char            isSendConnectionOpen;   // =1 iff send connection is open
+    
+    char            recvNodeName[NNAMESIZE];// Name of receiving node
+    char            actualRecvLocalIP[sizeof("###.###.###.###")];   // HS local IP of receiver dotted quad
+    USHORT          actualRecvLocalPort;    // HS local port of receiver
+    long            recvConnectionID;       // Connection ID for receiver
+    char            isRecvConnectionOpen;   // =1 iff recv connection is open
+    } CONNECTION;    
+    
+
+//------------------------------------------------------------------
+// Each NODE represents a single program instance running on one of the computers
+// in the POOL.
+
+typedef struct
+    {
+    char            remoteIP[sizeof("###.###.###.###")];      // NODE's TG CMD SRV ip
+    unsigned short  remotePort;                               // and port number
+
+    char            localIP[sizeof("###.###.###.###")];       // best local IP on ELSIE computer to talk to NODE
+    } TGCMDSRV;
+    
+#define NTGCMDSRV   4                       // Max # of TG CMD SRVs that we allow
+
+typedef struct
+    {
+    // User's settings
+    
+    char            name[NNAMESIZE];        // Name of this node
+    char            params[NPARAMSIZE];     // Table of parameters sent to sender + receiver
+
+    char            commandLine[_MAX_PATH]; // Command line of program [path]filename.exe args..
+    char            workingDirectory[_MAX_PATH];   // CWD: Directory to run program in (NULL == NCM's DEFAULT)
+    char            computer[_MAX_PATH];    // Name of computer
+    
+    char            runProgram;             // ==1 iff ELSIE starts & stops program
+    char            exitProgram;            // ==0 (NO)  ==1(YES, by status)  ==2(BYNCM)
+#define     EXITPROGRAM_DEFAULT     0       // Not specified, take default action
+#define     EXITPROGRAM_NO          1       // Don't tell program to exit
+#define     EXITPROGRAM_YES         2       // Send EXIT STATE if TG APP or by NCM if not
+#define     EXITPROGRAM_BYNCM       3       // always via NCM (WM_QUIT or TerminateProcess)
+#define     EXITPROGRAM_LASTONE EXITPROGRAM_BYNCM   // Compile-time checking
+    char            unused[2];
+    
+    char            isaTGprogram;           // ==1 iff this is a TG program (ie has a TG CMD SRV)    
+    
+    char            unused2[2];
+    char            disableGetMapping;      // ==1 to disable LC's tgcbQuery() from giving out IP+PORT
+                                            //     mapping information (see TGCMDSRV_GETMAPPING command)
+    
+    // Information kept on a node while its running
+    
+    DWORD           processID;              // Process ID on remote NCM
+    void            *hProcess;              // Process handle in remote NCM
+    
+    long            nTgCmdSrv;              // # of TG CMD SRVs for node
+    TGCMDSRV        tgCmdSrv[NTGCMDSRV];    // List of TG CMD SRVs for NODE                  
+    
+    unsigned long   statCode;               // Current win32 status on remote NCM
+    unsigned long   lastError;              // The lastErr from server (=GetLastError)
+    
+    char            isTerminated;           // ==1 iff process has terminated (don't tell it to exit)
+    char            isRunning;              // ==1 iff we successfully started the NODE
+    char            dontSendState;          // ==1 iff don't send state messages
+    char            dontSendOpenClose;      // ==1 iff don't send openHS/closeHS messages
+    
+    // Current list of send and recv connections
+
+    LINKHEAD        LLsendConnections;      // List of SEND connections for this node (CONNECTION *)
+    LINKHEAD        LLrecvConnections;      // List of RECV connections for this node (CONNECTION *)
+    } NODE;
+    
+
+//--------------------------------------------------------------
+// LCCTRL is the internal control block used to manage LCs.
+
+typedef struct
+    {
+    char        isInitialized;          // 1=yes
+    char        areListsInitialized;    // 1=yes
+    char        unused[2];
+    
+    LCIDENT     lcid;                   // LCID for this Logical Computation
+    LC          hLC;                    // User level LC handle
+    
+    TG          tg;                     // User level TG handle
+    TGCBFUNCTIONS   userTgcb;           // Copy of user's TGCBFUNCTIONS table
+    TGCBFUNCTIONS   ourTgcb;            // Pointer to our TGCBFUNCTIONS table
+    short       enableCallbacks;        // ==1 iff LC's tgcb functions are allowed to call TG callbacks
+                                        // Note that TG callbacks are independently enabled/disabled
+
+    char        ourNodeName[NNAMESIZE]; // Name of the LC Controller node
+    HWND        hwndUser;               // NULL or User's registered main HWND
+    char        lcFilename[_MAX_PATH];  // Name of LC file
+    char        thisComputer[MAX_COMPUTERNAME_LENGTH + 1];  // ELSIE's computer name
+    
+    // POOL Related parameters
+    
+    char        PoolName[NNAMESIZE];    // Name of computational pool (of computers)
+    char        PoolParams[NPARAMSIZE]; // List of pool parameters
+    LINKHEAD    LLComputers;            // List of computers in pool (COMPUTER *)
+    COMPUTER    Computers[NCOMPUTERS];  // Place to store info on each computer in pool
+    
+    // NODE related parameters
+    
+    LINKHEAD    LLNodes;                // List of nodes (program+computer) (NODE *)
+    NODE        Nodes[NNODES];          // Place to store Node[] info
+    
+    // NODE CONNECTION related parameters
+    
+    LINKHEAD    LLConnections;          // List of connections between nodes (CONNECTION *)
+    CONNECTION  Connections[NCONNECTIONS];  // Place to store NODE Connection[] info
+    long        connectionID;           // Next available NODE connectionID to allocate
+    
+    // A place to store LSERR strings
+    
+    LCCBERR     lccberr;                // Last error passed to callback
+    
+    const void  *userDefined;           // User defined value
+    
+    long        iComputer;              // lcAddNode uses this for round-robin assignment of NODEs to computers
+    } LCCTRL;
+
+
+//--------------------------------------------------------------
+// Standard dialog handling for LCCB internal functions
+// These values are not valid values for a real user callback function
+// These values can appear in call to lcxErrorCallback function.     
+
+#define CBF_NONE             (NULL)                 /* No callback function */
+#define CBF_OK               (lcxErrorOK)           /* MessageBoxf */
+#define CBF_YESNO            (lcxErrorYESNO)        /* MessageBoxfYESNO */
+#define CBF_RETRYCANCEL      (lcxErrorRETRYCANCEL)  /* MessageBoxfRETRYCANCEL */
+#define CBF_ABORTRETRYIGNORE (lcxErrorABORTRETRYIGNORE)  /* MessageBoxfABORTRETRYIGNORE */
+
+//--------------------------------------------------------------
+// ENTERLCAPI - Helpful macro for checking some args to a standard LC API function
+//
+#define ENTER_LCAPI(funcName) do {                                          \
+    LCERR       lcerr_;                                                     \
+                                                                            \
+    lc = (LCCTRL *) Lc->p;                      /* Convert to LCCTRL */     \
+    if (!lc)                                                                \
+        {                                                                   \
+        memset(&lcerr_, 0, sizeof(LCERR));       /* No LC! */               \
+        lcerr_.lcerr = LCERR_INVALIDLC;          /* Invalid LC pointer */   \
+        return(lcerr_);                                                     \
+        }                                                                   \
+    if (!lc->isInitialized)                                                 \
+        {                                                                   \
+        memset(&lcerr_, 0, sizeof(LCERR));       /* No LC! */               \
+        lcerr_.lcerr = LCERR_LCNOTINIT;          /* LC not initialized */   \
+        return(lcerr_);                                                     \
+        }                                                                   \
+    memset(&lc->lccberr, 0, sizeof(lc->lccberr));                           \
+    } /*lint --e(717) */ while (0)
+
+
+
+//--------------------------------------------------------------
+// Private functions
+
+extern NODE         *lcxFindNode(LCCTRL *lc, const char *nodeName);
+extern COMPUTER     *lcxFindComputer(LCCTRL *lc, const char *computerName);
+extern COMPUTER     *lcxFindComputerByAdapter(LCCTRL *lc, const char *ipquad, long *piAdapter);
+extern NCMLINK      *lcxFindNCMIP(LCCTRL *lc,
+                         const char      *name,
+                         const char      *remoteIP,
+                         const char      *localIP);
+
+extern CONNECTION   *lcxFindConnection(LCCTRL *lc, const char *connectName);
+extern NODE         *lcxVerifyNodes(LCCTRL *lc);
+
+extern long         lcxErrorCallback(LCCTRL *lc,
+                                long        lcerr_x,
+                                long        questionType,
+                                LCCBERRHANDLER *lccbErrHandler,
+                                const char  *title,
+                                const char  *messageFmt, ...);  //lint -printf(6, lcxErrorCallback)
+                                
+extern long         lcxErrorOK(const LC *Lc, const LCCBERR *lccberr);
+extern long         lcxErrorYESNO(const LC *Lc, const LCCBERR *lccberr);
+extern long         lcxErrorRETRYCANCEL(const LC *Lc, const LCCBERR *lccberr);
+extern long         lcxErrorABORTRETRYIGNORE(const LC *Lc, const LCCBERR *lccberr);
+
+extern LCERR        lcxSendState(LCCTRL *lc, LCCBERRHANDLER *lccbErrHandler, long tgsrvparam_state, NODE *no, const char *paramList);
+
+extern void         lcxLogf(const LCCTRL *lc, const char *fmt, ...);  //lint -printf(2, lcxLogf)
+extern void         lcxMessagef(LCCTRL *lc, char *fmt, ...);    //lint -printf(2, lcxMessagef)
+                 
+extern LCERR        lcxResolve(LCCTRL *lc, LCCBERRHANDLER *lccbErrHandler, NODE *no);
+extern long         lcxGetConnectionDetail(
+                const LCCTRL          *lc,          // in
+                long            iConnection,        // in
+                const COMPUTER        *pc,          // in
+                const char            *nodeName,    // in
+                ULONG           processID,          // in
+                long            serviceType,        // in
+                NWCM_CONNRESP   *pConnResp,         // out
+                long            *piConnection);     // out
+
+#endif // ifndef LC_HP
+
+
+
+

@@ -1,0 +1,33 @@
+REM CONFIG.SYS for TEMPONET for the PCMCIA card: 3COM Etherlink III 10/100
+REM 10Apr03 (c) 2003 Reflective Computing
+REM To access CD from DOS mode, remove the "REM" prefixes below
+
+REM We must exclude EF00-EFFF in EMM386
+REM 10Apr03 Note: I have not yet got this to load properly
+
+REM [menu]
+REM menuitem=NOCD, DOS Mode without CD-ROM
+REM menuitem=CD,   DOS Mode with CD-ROM
+REM menudefault=NOCD,30
+REM menucolor=7,0
+
+[COMMON]
+DEVICE=HIMEM.SYS
+DEVICEHIGH=EMM386.EXE RAM NOEMS X=EF00-EFFF
+DEVICEHIGH=IFSHLP.SYS
+
+REM [NOCD]
+DEVICEHIGH=RAMDRIVE.SYS 6144 512 256 /E
+
+REM [CD]
+REM DEVICEHIGH=RAMDRIVE.SYS 6144 512 256 /E
+REM DEVICEHIGH=OAKCDROM.SYS /D:MSCD001
+
+[COMMON]
+SHELL=\command.com \ /p /e:400
+FILES=20
+BUFFERS=10
+DOS=HIGH,UMB
+STACKS=9,256
+LASTDRIVE=Z
+

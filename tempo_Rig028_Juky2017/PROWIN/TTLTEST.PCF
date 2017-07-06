@@ -1,0 +1,71 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2004 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Thu Jul 01 20:33:27 2004
+; CLOAD ttltest.pcf
+
+; tempow 10.24 Set 37.11   'HORIZON1287' connected to 'SNOOPY'
+; KPED 10.27 Set 37
+; KSRV 10.20 Set 37.11 (Server 'SNOOPY          ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=10
+; ECHANNELS=4
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =32               2     6%           48/768           =3         =2       
+; INSTRUCTIONS    =700             15     2%          270/12600         =20        =17      
+; SYMBOLTABLE     =400             27     7%          324/4800          =32        =28      
+; HASHTABLE       =     127,400          34%         1584/3162        Use Kernel Default
+; NAMETABLE       =2000           208    10%          208/2000          =245       =219     
+; DATABASES       =32               0     0%            0/1920          =0         =0       
+; ARRAYTABLE      =512              0     0%            0/512           =0         =0       
+; ARRAYDATA       =131072           0     0%            0/131072        =0         =0       
+; OBJECTS         =0                0     0%            0/0             =0         =0       
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=10
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=4
+
+PLOAD ttltest.pro
+
+; DATABASES=32
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1920,1200,16
+MAINWND 1,1900,1180,-1,-1,3,-1,848,65,0
+MSGWND 1,-1,-1,-1,-1,0,55,843,422,0
+STATUSWND 1,582,900,-1,-1,5,759,1030,1168,0
+SHOW v 0
+
+CMDWND 1,0,1171,-1,-1,510,59,846,121,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1920,1200,16
+
+; END OF DIALOGS
+

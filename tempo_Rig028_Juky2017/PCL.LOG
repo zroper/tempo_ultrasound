@@ -1,0 +1,1920 @@
+PCL 12.5 Set 45 Fri Apr 01 18:23:23 2011
+
+PATH='C:\TEMPO;C:\PROGRA~1\COLLAB~1\SUBVER~1;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\PROGRA~1\SlikSvn\bin\'
+CWD='C:\TEMPO'
+
+PCL Opening XMS..
+PCL: XMS Version  2.00 Revision  2.77
+PCL: XMS Largest block 919 Kb (941056 bytes),  Total 919 Kb (941056 bytes).
+PCL Processing command line arguments..
+ 0: 'C:\TEMPO\PCL.EXE'
+ 1: '-x'
+ 2: '-kpcl0001.tmp'
+ 3: 'C:/TEMPO/wh028/Sandbox/TEST.pro'
+ 4: 'C:/TEMPO/wh028/Sandbox/TEST.err'
+PCL Checking if PRO file 'C:/TEMPO/wh028/Sandbox/TEST.pro' exists..
+PCL Opening KERNEL vector 96
+copyFileToLog: pcl0001.tmp BEGIN-----------
+45,12,1,100000,100000,2,75,90000,2000,99328,10000,131072,40C60002,56C10002,KPED
+copyFileToLog: pcl0001.tmp END-----------
+PCL Calling makeIC with funfilename='KPED'
+copyFileToLog: C:\TEMPO\KPED.fun BEGIN-----------
+KERNEL KPED 12.1 Set 45 Functions 168
+  0 print 4 0 16
+  1 printf 4 0 16
+  2 write 4 1 16
+  3 writef 4 1 16
+  4 writefx 4 1 16
+  5 mio_dig_get 0 1 1
+  6 mio_dig_set 0 2 2
+  7 mio_ao_set 0 2 2
+  8 mio_fout 0 1 1
+  9 ipproc 0 1 1
+ 10 poisson 0 1 1
+ 11 iunif 0 1 1
+ 12 random 0 1 1
+ 13 normal 0 1 1
+ 14 seed1 0 0 1
+ 15 seed2 0 0 1
+ 16 sign 4 1 1
+ 17 abs 0 1 1
+ 18 status_set 0 0 1
+ 19 cancel_set 0 0 1
+ 20 status_clr 0 0 1
+ 21 cancel_clr 0 0 1
+ 22 htb_sweep 0 1 1
+ 23 htb_sweeps 0 1 1
+ 24 htb_period 0 1 1
+ 25 htb_extension 0 1 1
+ 26 htb_cancel 0 1 1
+ 27 htb_offset 0 1 1
+ 28 htb_tpb 0 1 1
+ 29 htb_nchannels 0 1 1
+ 30 htb_channel 0 1 1
+ 31 htb_type 0 1 1
+ 32 htb_tag 0 1 1
+ 33 htb_handle 0 1 1
+ 34 htb_speed 0 1 1
+ 35 htb_speedunits 0 1 1
+ 36 htb_dirty 0 1 1
+ 37 system 4 0 16
+ 38 systemf 4 0 16
+ 39 tick 0 0 0
+ 40 tempoCobaltTick 0 0 0
+ 41 time 0 0 0
+ 42 timeus 0 0 0
+ 43 mspertick 0 0 0
+ 44 mspercycle 0 0 0
+ 45 timeofday 0 0 0
+ 46 day 0 0 0
+ 47 dayofweek 0 0 0
+ 48 month 0 0 0
+ 49 year 0 0 0
+ 50 TSCLow 0 0 0
+ 51 TSCHigh 0 0 0
+ 52 TSCHz 0 0 0
+ 53 TSCTheoreticalHz 0 0 0
+ 54 SetCobaltTest 0 1 1
+ 55 ProcessCycleStartTSCLow 0 0 0
+ 56 ProcessCycleStartTSCHigh 0 0 0
+ 57 ProcessCycleLatencyUS 0 0 0
+ 58 atable 0 0 2
+ 59 ctable 0 0 2
+ 60 etable 0 0 2
+ 61 atable_set 0 2 3
+ 62 ctable_set 0 2 3
+ 63 etable_set 0 2 3
+ 64 event_set 0 2 3
+ 65 event_get 0 2 3
+ 66 inp 0 1 1
+ 67 inpw 0 1 1
+ 68 outp 0 2 2
+ 69 outpw 0 2 2
+ 70 sound 0 1 1
+ 71 send 4 1 16
+ 72 sendf 4 1 16
+ 73 com_autocancel 0 0 1
+ 74 com_count 0 0 0
+ 75 com_free_space 0 0 0
+ 76 com_peek 0 0 0
+ 77 com_get 0 0 0
+ 78 com_getn 0 1 1
+ 79 com_flush 0 0 1
+ 80 com_span 0 1 1
+ 81 com_GetStatus 0 0 0
+ 82 com_ResetStatus 0 0 0
+ 83 com_ResumeRX 0 0 0
+ 84 com_ResumeTX 0 0 0
+ 85 send2 4 1 16
+ 86 sendf2 4 1 16
+ 87 com_autocancel2 0 0 1
+ 88 com_count2 0 0 0
+ 89 com_free_space2 0 0 0
+ 90 com_peek2 0 0 0
+ 91 com_get2 0 0 0
+ 92 com_getn2 0 1 1
+ 93 com_flush2 0 0 1
+ 94 com_span2 0 1 1
+ 95 com_GetStatus2 0 0 0
+ 96 com_ResetStatus2 0 0 0
+ 97 com_ResumeRX2 0 0 0
+ 98 com_ResumeTX2 0 0 0
+ 99 sendb 4 1 16
+100 sendfb 4 1 16
+101 getPendingDBTriggers 0 0 1
+102 getPendingTAGTriggers 0 0 1
+103 getProcessState 0 1 1
+104 getSystemInfo 0 1 1
+105 oCreate 0 2 4
+106 oDestroy 0 1 1
+107 oMove 0 3 3
+108 oSetAttribute 0 2 4
+109 oSetGraph 0 2 16
+110 mouGetX 0 0 0
+111 mouGetY 0 0 0
+112 mouGetButtons 0 0 0
+113 mouSetMickeys 0 1 1
+114 mouSetXY 0 2 2
+115 mouGetDriverX 0 0 0
+116 mouGetDriverY 0 0 0
+117 mouSetDriverLimits 0 4 4
+118 mouResetDriver 0 0 0
+119 fabs 7 1 1
+120 sin 7 1 1
+121 cos 7 1 1
+122 sinrad 7 1 1
+123 cosrad 7 1 1
+124 deg2rad 7 1 1
+125 rad2deg 7 1 1
+126 sqrt 7 1 1
+127 round 7 1 1
+128 ceil 7 1 1
+129 floor 7 1 1
+130 floatimport 7 1 1
+131 floatexport 4 1 1
+132 floattest 4 1 1
+133 atan 7 1 1
+134 atan2 7 2 2
+135 exp 7 1 1
+136 pow 7 2 2
+137 log10 7 1 1
+138 ln 7 1 1
+139 tio_fout 0 3 3
+140 tio_dig_mask 0 0 1
+141 tio_dig_get 0 1 1
+142 tio_dig_set 0 2 2
+143 dioSetMode 0 2 2
+144 dioGetA 0 1 1
+145 dioGetB 0 1 1
+146 dioGetC 0 1 1
+147 dioSetA 0 2 2
+148 dioSetB 0 2 2
+149 dioSetC 0 2 2
+150 dSend 4 0 16
+151 dSend2 4 0 16
+152 dSendf 4 0 16
+153 dSendf2 4 0 16
+154 rdxSetTTLOUT 0 1 1
+155 rdxSetTTLOUT2 0 1 1
+156 rdxGetTTLIN 0 0 0
+157 rdxGetTTLIN 0 0 0
+158 rdxGetTTLOUT 0 0 0
+159 rdxGetTTLOUT2 0 0 0
+160 rdxFlush 0 0 1
+161 rdxFlush2 0 0 1
+162 peek8 0 1 1
+163 peek16 0 1 1
+164 peek32 0 1 1
+165 poke8 0 2 2
+166 poke16 0 2 2
+167 poke32 0 2 2
+
+copyFileToLog: C:\TEMPO\KPED.fun END-----------
+PCL - Fake KERNEL IC at 33F7:0620
+PCL - HASHTAB nhshtab_max=1021  nhshoflo_max=2000 (nsymtab_max=2000)
+PCL - Opening instructions cache file 'PCLCACHE.TMP'
+PCL - Calling fpload('C:/TEMPO/wh028/Sandbox/TEST.pro')
+hashAddNamtab: ADDED 'SETS' at iOffset=84002
+hashAddNamtab: ADDED 'SPEED' at iOffset=84008
+hashAddNamtab: ADDED 'SPEED_UNITS' at iOffset=84014
+hashAddNamtab: ADDED '__debug_op' at iOffset=84026
+hashAddNamtab: ADDED 'Event_fifo_N' at iOffset=84038
+hashAddNamtab: ADDED 'Event_fifo' at iOffset=84052
+hashAddNamtab: ADDED 'Set_event' at iOffset=84064
+hashAddNamtab: ADDED 'PORTA' at iOffset=84074
+hashAddNamtab: ADDED 'PORTB' at iOffset=84080
+hashAddNamtab: ADDED 'PORTC' at iOffset=84086
+hashAddNamtab: ADDED 'FixSpotOn_' at iOffset=84092
+hashAddNamtab: ADDED 'Fixate_' at iOffset=84104
+hashAddNamtab: ADDED 'Target_' at iOffset=84112
+hashAddNamtab: ADDED 'FixSpotOff_' at iOffset=84120
+hashAddNamtab: ADDED 'StopSignal_' at iOffset=84132
+hashAddNamtab: ADDED 'TrialStart_' at iOffset=84144
+hashAddNamtab: ADDED 'FixError_' at iOffset=84156
+hashAddNamtab: ADDED 'GoSaccade_' at iOffset=84166
+hashAddNamtab: ADDED 'GoError_' at iOffset=84178
+hashAddNamtab: ADDED 'NOGOWrong_' at iOffset=84188
+hashAddNamtab: ADDED 'GoTargFixError_' at iOffset=84200
+hashAddNamtab: ADDED 'Abort_' at iOffset=84216
+hashAddNamtab: ADDED 'Correct_' at iOffset=84224
+hashAddNamtab: ADDED 'GOCorrect_' at iOffset=84234
+hashAddNamtab: ADDED 'NOGOCorrect_' at iOffset=84246
+hashAddNamtab: ADDED 'Reward_' at iOffset=84260
+hashAddNamtab: ADDED 'Tone_' at iOffset=84268
+hashAddNamtab: ADDED 'ExtraReward_' at iOffset=84274
+hashAddNamtab: ADDED 'SoundOnReward_' at iOffset=84288
+hashAddNamtab: ADDED 'SoundNoReward_' at iOffset=84304
+hashAddNamtab: ADDED 'Eot_' at iOffset=84320
+hashAddNamtab: ADDED 'CmanHeader_' at iOffset=84326
+hashAddNamtab: ADDED 'Stimulation_' at iOffset=84338
+hashAddNamtab: ADDED 'ZeroEyePosition_' at iOffset=84352
+hashAddNamtab: ADDED 'VSyncSynced_' at iOffset=84370
+hashAddNamtab: ADDED 'Saccade_' at iOffset=84384
+hashAddNamtab: ADDED 'Decide_' at iOffset=84394
+hashAddNamtab: ADDED 'MouthBegin_' at iOffset=84402
+hashAddNamtab: ADDED 'MouthEnd_' at iOffset=84414
+hashAddNamtab: ADDED 'MapHeader_' at iOffset=84424
+hashAddNamtab: ADDED 'FixWindow_' at iOffset=84436
+hashAddNamtab: ADDED 'TargetWindow_' at iOffset=84448
+hashAddNamtab: ADDED 'Staircase_' at iOffset=84462
+hashAddNamtab: ADDED 'Neg2Reinforcement_' at iOffset=84474
+hashAddNamtab: ADDED 'Feedback_' at iOffset=84494
+hashAddNamtab: ADDED 'RewardSize_' at iOffset=84504
+hashAddNamtab: ADDED 'TrialInBlock' at iOffset=84516
+hashAddNamtab: ADDED 'SendPenatrInfo_' at iOffset=84530
+hashAddNamtab: ADDED 'TargetPre_' at iOffset=84546
+hashAddNamtab: ADDED 'StopOn_' at iOffset=84558
+hashAddNamtab: ADDED 'StimFailed_' at iOffset=84566
+hashAddNamtab: ADDED 'StartInfos_' at iOffset=84578
+hashAddNamtab: ADDED 'EndInfos_' at iOffset=84590
+hashAddNamtab: ADDED 'InfosZero' at iOffset=84600
+hashAddNamtab: ADDED 'WAIT_MU' at iOffset=84610
+preInstructionCompilation: BEFORE 'WAIT_MU' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'u_sec' at iOffset=84618
+hashAddNamtab: ADDED '#P1' at iOffset=84624
+hashAddNamtab: ADDED 'start' at iOffset=84628
+hashAddNamtab: ADDED 'duration' at iOffset=84634
+hashAddNamtab: ADDED 'clock_cycles' at iOffset=84644
+hashAddNamtab: ADDED '#M3F989375' at iOffset=84658
+hashAddNamtab: ADDED '#F0' at iOffset=84670
+hashAddNamtab: ADDED '#L0' at iOffset=84674
+hashAddNamtab: ADDED '#I0' at iOffset=84678
+hashAddNamtab: ADDED '#L1' at iOffset=84682
+hashAddNamtab: ADDED '#L2' at iOffset=84686
+hashAddNamtab: ADDED '#I65535' at iOffset=84690
+hashAddNamtab: ADDED '#L3' at iOffset=84698
+postInstructionCompilation: Saving 'WAIT_MU' nops=102 nInstructions=100 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'WAIT_MU' Wrote 100 bytes from op[2..101] to instcach[2..101]
+hashAddNamtab: ADDED 'SEND_TTL' at iOffset=84702
+preInstructionCompilation: BEFORE 'SEND_TTL' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'value' at iOffset=84712
+hashAddNamtab: ADDED 'output' at iOffset=84718
+hashAddNamtab: ADDED '#I3' at iOffset=84726
+hashAddNamtab: ADDED '#I7' at iOffset=84730
+hashAddNamtab: ADDED '#I255' at iOffset=84734
+hashAddNamtab: ADDED '#I8' at iOffset=84740
+hashAddNamtab: ADDED '#I128' at iOffset=84744
+hashAddNamtab: ADDED '#I1' at iOffset=84750
+hashAddNamtab: ADDED '#I100' at iOffset=84754
+hashAddNamtab: ADDED '#I127' at iOffset=84760
+postInstructionCompilation: Saving 'SEND_TTL' nops=146 nInstructions=144 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'SEND_TTL' Wrote 144 bytes from op[2..145] to instcach[102..245]
+hashAddNamtab: ADDED 'QUE_TTL' at iOffset=84766
+preInstructionCompilation: BEFORE 'QUE_TTL' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'send_event' at iOffset=84774
+hashAddNamtab: ADDED 'n_evs_sent' at iOffset=84786
+hashAddNamtab: ADDED '#I5' at iOffset=84798
+postInstructionCompilation: Saving 'QUE_TTL' nops=152 nInstructions=150 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'QUE_TTL' Wrote 150 bytes from op[2..151] to instcach[246..395]
+hashAddNamtab: ADDED 'CheckMouth' at iOffset=84802
+hashAddNamtab: ADDED 'WATCHMTH' at iOffset=84814
+preInstructionCompilation: BEFORE 'WATCHMTH' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+hashAddNamtab: ADDED 'mouth_channel' at iOffset=84824
+hashAddNamtab: ADDED 'mouth_thresh' at iOffset=84838
+hashAddNamtab: ADDED 'still' at iOffset=84852
+hashAddNamtab: ADDED 'moving' at iOffset=84858
+hashAddNamtab: ADDED 'mouth_status' at iOffset=84866
+hashAddNamtab: ADDED 'last_status' at iOffset=84880
+hashAddNamtab: ADDED 'check' at iOffset=84892
+hashAddNamtab: ADDED 'Moving
+' at iOffset=84898
+hashAddNamtab: ADDED '#S0' at iOffset=84906
+hashAddNamtab: ADDED 'Still
+' at iOffset=84910
+hashAddNamtab: ADDED '#S1' at iOffset=84918
+postInstructionCompilation: Saving 'WATCHMTH' nops=326 nInstructions=324 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'WATCHMTH' Wrote 324 bytes from op[2..325] to instcach[396..719]
+hashAddNamtab: ADDED 'MAIN' at iOffset=84922
+preInstructionCompilation: BEFORE 'MAIN' nops=2 nInstructions=0 iInstruction=2 iInstructionCache=0
+postInstructionCompilation: Saving 'MAIN' nops=14 nInstructions=12 iInstruction=2 iInstructionCache=0
+ICacheSave - PROCESS 'MAIN' Wrote 12 bytes from op[2..13] to instcach[720..731]
+load_timer:  parse_errors=0
+PCL - Calling fpload('C:/TEMPO/wh028/Sandbox/TEST.pro') returned 0
+PCL - Sorting symbol table..
+mapop - PROCESS 'WAIT_MU' reading 100 bytes of instructions..
+mapop - PROCESS 'WAIT_MU' writing 100 bytes of instructions..
+ICacheSave - PROCESS 'WAIT_MU' Wrote 100 bytes from op[2..101] to instcach[2..101]
+mapop - PROCESS 'SEND_TTL' reading 144 bytes of instructions..
+mapop - PROCESS 'SEND_TTL' writing 144 bytes of instructions..
+ICacheSave - PROCESS 'SEND_TTL' Wrote 144 bytes from op[2..145] to instcach[102..245]
+mapop - PROCESS 'QUE_TTL' reading 150 bytes of instructions..
+mapop - PROCESS 'QUE_TTL' writing 150 bytes of instructions..
+ICacheSave - PROCESS 'QUE_TTL' Wrote 150 bytes from op[2..151] to instcach[246..395]
+mapop - PROCESS 'WATCHMTH' reading 324 bytes of instructions..
+mapop - PROCESS 'WATCHMTH' writing 324 bytes of instructions..
+ICacheSave - PROCESS 'WATCHMTH' Wrote 324 bytes from op[2..325] to instcach[396..719]
+mapop - PROCESS 'MAIN' reading 12 bytes of instructions..
+mapop - PROCESS 'MAIN' writing 12 bytes of instructions..
+ICacheSave - PROCESS 'MAIN' Wrote 12 bytes from op[2..13] to instcach[720..731]
+Protocol File    : C:/TEMPO/wh028/Sandbox/TEST.pro
+Error File       : C:/TEMPO/wh028/Sandbox/TEST.err
+Compiled         : Fri Apr 01 18:23:23 2011
+
+Default Hz       :    1.000
+Default Sets     :     2
+Symbol Table     :    95/2000  (  4 %)
+Name Table       : 84928/99328 ( 85 %)
+Hash Table       :    17/2000  (  0 %)
+Array Table      :     8/10000 (  0 %)
+Array Data       :  4000/131072 (  3 %)
+Instructions     :   730/90000 (  0 %)
+InstructionsXMS  :  disabled
+Processes        :     5/75    (  6 %)
+Pragma           : declare=1
+Pragma           : optimize=15
+Pragma           : display_optimizations=0
+Pragma           : assume_local_scope=0
+Pragma           : multipleinclude=0
+Optimizations
+ UnOpt Assign    : 11
+ Math Assign     : 6 (reduced code)
+ Func Assign     : 2 (reduced code)
+ Numeric Expr    : 4 (reduced code)
+0 errors detected.
+SYMBOL TABLE (95/2000)
+
+iSYM  iNAM  Proc  Scope Type                Attributes                Symbol
+----- ----- ----- ----- ---- ---------------------------------------- -------------
+   1:    44     0     0 flot           TEMP      HDDN                 #F0 =0.000000 (0x00000000)
+   2:    86     0     0 long CONS           INIT HDDN                 #I0 =0 (0x00000000)
+   3:   128     0     0 long CONS           INIT HDDN                 #I1 =1 (0x00000001)
+   4:   170     0     0 long CONS           INIT HDDN                 #I100 =100 (0x00000064)
+   5:   212     0     0 long CONS           INIT HDDN                 #I127 =127 (0x0000007F)
+   6:   254     0     0 long CONS           INIT HDDN                 #I128 =128 (0x00000080)
+   7:   296     0     0 long CONS           INIT HDDN                 #I255 =255 (0x000000FF)
+   8:   338     0     0 long CONS           INIT HDDN                 #I3 =3 (0x00000003)
+   9:   380     0     0 long CONS           INIT HDDN                 #I5 =5 (0x00000005)
+  10:   422     0     0 long CONS           INIT HDDN                 #I65535 =65535 (0x0000FFFF)
+  11:   464     0     0 long CONS           INIT HDDN                 #I7 =7 (0x00000007)
+  12:   506     0     0 long CONS           INIT HDDN                 #I8 =8 (0x00000008)
+  13:   548     0     0 long           TEMP      HDDN                 #L0 =0 (0x00000000)
+  14:   590     0     0 long           TEMP      HDDN                 #L1 =0 (0x00000000)
+  15:   632     0     0 long           TEMP      HDDN                 #L2 =0 (0x00000000)
+  16:   674     0     0 long           TEMP      HDDN                 #L3 =0 (0x00000000)
+  17:   716     0     0 flot CONS           INIT HDDN                 #M3F989375 =1.192000 (0x3F989375)
+  18:   758     0     0 long           TEMP      HDDN                 #P1 =0 (0x00000000)
+  19:   800     0     0 text CONS           INIT HDDN                 #S0 ="Moving
+" (iOffset=84898)
+  20:   842     0     0 text CONS           INIT HDDN                 #S1 ="Still
+" (iOffset=84910)
+  21:   884     0     0 long                INIT HDDN           DECL  __debug_op =0 (0x00000000)
+  22:   926     0     0 long CONS           INIT      HIDE      DECL  Abort_ =2620 (0x00000A3C)
+  23:   968     4     0 long                                    DECL  check@WATCHMTH =0 (0x00000000)
+  24:  1010     0     0 long                INIT                DECL  CheckMouth =1 (0x00000001)
+  25:  1052     1     0 long                                    DECL  clock_cycles@WAIT_MU =0 (0x00000000)
+  26:  1094     0     0 long CONS           INIT      HIDE      DECL  CmanHeader_ =1501 (0x000005DD)
+  27:  1136     0     0 long CONS           INIT      HIDE      DECL  Correct_ =2600 (0x00000A28)
+  28:  1178     0     0 long CONS           INIT      HIDE      DECL  Decide_ =2811 (0x00000AFB)
+  29:  1220     1     0 long                                    DECL  duration@WAIT_MU =0 (0x00000000)
+  30:  1262     0     0 long CONS           INIT      HIDE      DECL  EndInfos_ =2999 (0x00000BB7)
+  31:  1304     0     0 long CONS           INIT      HIDE      DECL  Eot_ =1667 (0x00000683)
+  32:  1346     0     0 arry                                    DECL  Event_fifo len=4 xmsOff=0 [1000] 1 @0 = {}
+  33:  1388     0     0 long                INIT                DECL  Event_fifo_N =1000 (0x000003E8)
+  34:  1430     0     0 long CONS           INIT      HIDE      DECL  ExtraReward_ =2777 (0x00000AD9)
+  35:  1472     0     0 long CONS           INIT      HIDE      DECL  Feedback_ =2774 (0x00000AD6)
+  36:  1514     0     0 long CONS           INIT      HIDE      DECL  Fixate_ =2660 (0x00000A64)
+  37:  1556     0     0 long CONS           INIT      HIDE      DECL  FixError_ =2750 (0x00000ABE)
+  38:  1598     0     0 long CONS           INIT      HIDE      DECL  FixSpotOff_ =2300 (0x000008FC)
+  39:  1640     0     0 long CONS           INIT      HIDE      DECL  FixSpotOn_ =2301 (0x000008FD)
+  40:  1682     0     0 long CONS           INIT      HIDE      DECL  FixWindow_ =2770 (0x00000AD2)
+  41:  1724     0     0 long CONS           INIT      HIDE      DECL  GOCorrect_ =2755 (0x00000AC3)
+  42:  1766     0     0 long CONS           INIT      HIDE      DECL  GoError_ =2752 (0x00000AC0)
+  43:  1808     0     0 long CONS           INIT      HIDE      DECL  GoSaccade_ =2751 (0x00000ABF)
+  44:  1850     0     0 long CONS           INIT      HIDE      DECL  GoTargFixError_ =2754 (0x00000AC2)
+  45:  1892     0     0 flot                INIT      HIDE      DECL  InfosZero =3000.000000 (0x453B8000)
+  46:  1934     4     0 long                INIT                DECL  last_status@WATCHMTH =0 (0x00000000)
+  47:  1976     0     0 long CONS PROC      INIT HDDN           DECL  MAIN =5 (0x00000005)
+  48:  2018     0     0 long CONS           INIT      HIDE      DECL  MapHeader_ =1503 (0x000005DF)
+  49:  2060     4     0 long                INIT                DECL  mouth_channel@WATCHMTH =3 (0x00000003)
+  50:  2102     4     0 long                INIT                DECL  mouth_status@WATCHMTH =0 (0x00000000)
+  51:  2144     4     0 long                INIT                DECL  mouth_thresh@WATCHMTH =14500 (0x000038A4)
+  52:  2186     0     0 long CONS           INIT      HIDE      DECL  MouthBegin_ =2655 (0x00000A5F)
+  53:  2228     0     0 long CONS           INIT      HIDE      DECL  MouthEnd_ =2656 (0x00000A60)
+  54:  2270     4     0 long                INIT                DECL  moving@WATCHMTH =1 (0x00000001)
+  55:  2312     3     0 long                                    DECL  n_evs_sent@QUE_TTL =0 (0x00000000)
+  56:  2354     0     0 long CONS           INIT      HIDE      DECL  Neg2Reinforcement_ =2773 (0x00000AD5)
+  57:  2396     0     0 long CONS           INIT      HIDE      DECL  NOGOCorrect_ =2756 (0x00000AC4)
+  58:  2438     0     0 long CONS           INIT      HIDE      DECL  NOGOWrong_ =2753 (0x00000AC1)
+  59:  2480     2     0 long                INIT                DECL  output@SEND_TTL =1 (0x00000001)
+  60:  2522     0     0 long CONS           INIT      HIDE      DECL  PORTA =1 (0x00000001)
+  61:  2564     0     0 long CONS           INIT      HIDE      DECL  PORTB =2 (0x00000002)
+  62:  2606     0     0 long CONS           INIT      HIDE      DECL  PORTC =4 (0x00000004)
+  63:  2648     0     0 long CONS PROC      INIT HDDN           DECL  QUE_TTL =3 (0x00000003)
+  64:  2690     0     0 long CONS           INIT      HIDE      DECL  Reward_ =2727 (0x00000AA7)
+  65:  2732     0     0 long CONS           INIT      HIDE      DECL  RewardSize_ =2927 (0x00000B6F)
+  66:  2774     0     0 long CONS           INIT      HIDE      DECL  Saccade_ =2810 (0x00000AFA)
+  67:  2816     3     0 long                                    DECL  send_event@QUE_TTL =0 (0x00000000)
+  68:  2858     0     0 long CONS PROC      INIT HDDN           DECL  SEND_TTL =2 (0x00000002)
+  69:  2900     0     0 long CONS           INIT      HIDE      DECL  SendPenatrInfo_ =2929 (0x00000B71)
+  70:  2942     0     0 long                INIT                DECL  Set_event =0 (0x00000000)
+  71:  2984     0     0 long CONS           INIT HDDN           DECL  SETS =2 (0x00000002)
+  72:  3026     0     0 long CONS           INIT      HIDE      DECL  SoundNoReward_ =2779 (0x00000ADB)
+  73:  3068     0     0 long CONS           INIT      HIDE      DECL  SoundOnReward_ =2778 (0x00000ADA)
+  74:  3110     0     0 long CONS           INIT HDDN           DECL  SPEED =100000 (0x000186A0)
+  75:  3152     0     0 long CONS           INIT HDDN           DECL  SPEED_UNITS =100000 (0x000186A0)
+  76:  3194     0     0 long CONS           INIT      HIDE      DECL  Staircase_ =2772 (0x00000AD4)
+  77:  3236     1     0 long                                    DECL  start@WAIT_MU =0 (0x00000000)
+  78:  3278     0     0 long CONS           INIT      HIDE      DECL  StartInfos_ =2998 (0x00000BB6)
+  79:  3320     4     0 long                INIT                DECL  still@WATCHMTH =0 (0x00000000)
+  80:  3362     0     0 long CONS           INIT      HIDE      DECL  StimFailed_ =667 (0x0000029B)
+  81:  3404     0     0 long CONS           INIT      HIDE      DECL  Stimulation_ =666 (0x0000029A)
+  82:  3446     0     0 long CONS           INIT      HIDE      DECL  StopOn_ =2654 (0x00000A5E)
+  83:  3488     0     0 long CONS           INIT      HIDE      DECL  StopSignal_ =2653 (0x00000A5D)
+  84:  3530     0     0 long CONS           INIT      HIDE      DECL  Target_ =2651 (0x00000A5B)
+  85:  3572     0     0 long CONS           INIT      HIDE      DECL  TargetPre_ =2650 (0x00000A5A)
+  86:  3614     0     0 long CONS           INIT      HIDE      DECL  TargetWindow_ =2771 (0x00000AD3)
+  87:  3656     0     0 long CONS           INIT      HIDE      DECL  Tone_ =2001 (0x000007D1)
+  88:  3698     0     0 long CONS           INIT      HIDE      DECL  TrialInBlock =2928 (0x00000B70)
+  89:  3740     0     0 long CONS           INIT      HIDE      DECL  TrialStart_ =1666 (0x00000682)
+  90:  3782     1     0 long                                    DECL  u_sec@WAIT_MU =0 (0x00000000)
+  91:  3824     2     0 long                                    DECL  value@SEND_TTL =0 (0x00000000)
+  92:  3866     0     0 long CONS           INIT      HIDE      DECL  VSyncSynced_ =999 (0x000003E7)
+  93:  3908     0     0 long CONS PROC      INIT HDDN           DECL  WAIT_MU =1 (0x00000001)
+  94:  3950     0     0 long CONS PROC      INIT HDDN           DECL  WATCHMTH =4 (0x00000004)
+  95:  3992     0     0 long CONS           INIT      HIDE      DECL  ZeroEyePosition_ =2302 (0x000008FE)
+----- ----- ----- ----- ---- ---------------------------------------- -------------
+
+
+PROCESS   1: WAIT_MU (Args=1 CtrlBlk=33F7:1CAE Size=100  iOp=2-101 iCache=2-101) DISABLED
+ 33F7:4012 37F8:0002     0: u_sec@1:90 = #P1:18
+ 33F7:401C 37F8:000C    10: clock_cycles@1:25 = u_sec@1:90 F* #M3F989375:17
+ 33F7:402A 37F8:001A    24: start = CALL0 timeus()
+ 33F7:4030 37F8:0020    30: duration@1:29 = #I0:2
+ 33F7:403A 37F8:002A    40: #L0:13 = duration@1:29 < clock_cycles@1:25
+ 33F7:4048 37F8:0038    54: IFnot (#L0:13) GOTO .+46 (goto 100)
+ 33F7:4050 37F8:0040    62: #L1 = CALL0 timeus()
+ 33F7:4056 37F8:0046    68: #L2:15 = #L1:14 - start@1:77
+ 33F7:4064 37F8:0054    82: duration@1:29 = #L2:15 & #I65535:10
+ 33F7:4072 37F8:0062    96: GOTO .-56 (goto 40)
+
+PROCESS   2: SEND_TTL (Args=1 CtrlBlk=33F7:1CDA Size=144  iOp=2-145 iCache=102-245) DISABLED
+ 33F7:4012 37F8:0002     0: value@2:91 = #P1:18
+ 33F7:401C 37F8:000C    10: #L0 = CALL2 dioSetMode(output@2:59,#I7:11)
+ 33F7:4026 37F8:0016    20: #L0:13 = value@2:91 & #I255:7
+ 33F7:4034 37F8:0024    34: #L1 = CALL2 dioSetA(output@2:59,#L0:13)
+ 33F7:403E 37F8:002E    44: #L0:13 = value@2:91 >> #I8:12
+ 33F7:404C 37F8:003C    58: #L1:14 = #L0:13 | #I128:6
+ 33F7:405A 37F8:004A    72: #L2 = CALL2 dioSetB(output@2:59,#L1:14)
+ 33F7:4064 37F8:0054    82: #L0 = CALL2 dioSetC(output@2:59,#I1:3)
+ 33F7:406E 37F8:005E    92: #P1:18 = #I100:4
+ 33F7:4078 37F8:0068   102: SPAWN WAIT_MU:93(with 1 args)
+ 33F7:407E 37F8:006E   108: WAITFORPROCESS WAIT_MU:93
+ 33F7:4084 37F8:0074   114: #L0 = CALL2 dioSetA(output@2:59,#I0:2)
+ 33F7:408E 37F8:007E   124: #L0 = CALL2 dioSetB(output@2:59,#I0:2)
+ 33F7:4098 37F8:0088   134: #L0 = CALL2 dioSetC(output@2:59,#I0:2)
+
+PROCESS   3: QUE_TTL (Args=0 CtrlBlk=33F7:1D06 Size=150  iOp=2-151 iCache=246-395) DISABLED
+ 33F7:4012 37F8:0002     0: IFnot (#I1:3) GOTO .+150 (goto 150)
+ 33F7:401A 37F8:000A     8: n_evs_sent@3:55 = #I0:2
+ 33F7:4024 37F8:0014    18: #L0:13 = n_evs_sent@3:55 < #I5:9
+ 33F7:4032 37F8:0022    32: #L1:14 = send_event@3:67 != Set_event:70
+ 33F7:4040 37F8:0030    46: #L2:15 = #L0:13 && #L1:14
+ 33F7:404E 37F8:003E    60: IFnot (#L2:15) GOTO .+84 (goto 144)
+ 33F7:4056 37F8:0046    68: #L3:16 = Event_fifo:32[send_event@3:67]
+ 33F7:405E 37F8:004E    76: #P1:18 = #L3:16
+ 33F7:4068 37F8:0058    86: SPAWN SEND_TTL:68(with 1 args)
+ 33F7:406E 37F8:005E    92: WAITFORPROCESS SEND_TTL:68
+ 33F7:4074 37F8:0064    98: #L0:13 = send_event@3:67 + #I1:3
+ 33F7:4082 37F8:0072   112: send_event@3:67 = #L0:13 % Event_fifo_N:33
+ 33F7:4090 37F8:0080   126: n_evs_sent@3:55 = n_evs_sent@3:55 + #I1:3
+ 33F7:409E 37F8:008E   140: GOTO .-122 (goto 18)
+ 33F7:40A2 37F8:0092   144: NEXTTICK1
+ 33F7:40A4 37F8:0094   146: GOTO .-146 (goto 0)
+
+PROCESS   4: WATCHMTH (Args=0 CtrlBlk=33F7:1D32 Size=324  iOp=2-325 iCache=396-719) DISABLED
+ 33F7:4012 37F8:0002     0: #L0 = CALL1 atable(mouth_channel@4:49)
+ 33F7:401A 37F8:000A     8: #L1:14 = #L0:13 < mouth_thresh@4:51
+ 33F7:4028 37F8:0018    22: IFnot (#L1:14) GOTO .+28 (goto 50)
+ 33F7:4030 37F8:0020    30: mouth_status@4:50 = moving@4:54
+ 33F7:403A 37F8:002A    40: last_status@4:46 = moving@4:54
+ 33F7:4044 37F8:0034    50: IFnot (CheckMouth:24) GOTO .+274 (goto 324)
+ 33F7:404C 37F8:003C    58: check = CALL1 atable(mouth_channel@4:49)
+ 33F7:4054 37F8:0044    66: #L0 = CALL1 atable(mouth_channel@4:49)
+ 33F7:405C 37F8:004C    74: #L1:14 = #L0:13 < mouth_thresh@4:51
+ 33F7:406A 37F8:005A    88: IFnot (#L1:14) GOTO .+22 (goto 110)
+ 33F7:4072 37F8:0062    96: mouth_status@4:50 = moving@4:54
+ 33F7:407C 37F8:006C   106: GOTO .+44 (goto 150)
+ 33F7:4080 37F8:0070   110: #L0 = CALL1 atable(mouth_channel@4:49)
+ 33F7:4088 37F8:0078   118: #L1:14 = #L0:13 >= mouth_thresh@4:51
+ 33F7:4096 37F8:0086   132: IFnot (#L1:14) GOTO .+18 (goto 150)
+ 33F7:409E 37F8:008E   140: mouth_status@4:50 = still@4:79
+ 33F7:40A8 37F8:0098   150: #L0:13 = mouth_status@4:50 != last_status@4:46
+ 33F7:40B6 37F8:00A6   164: IFnot (#L0:13) GOTO .+154 (goto 318)
+ 33F7:40BE 37F8:00AE   172: #L1:14 = mouth_status@4:50 == moving@4:54
+ 33F7:40CC 37F8:00BC   186: IFnot (#L1:14) GOTO .+56 (goto 242)
+ 33F7:40D4 37F8:00C4   194: Event_fifo:32[Set_event:70] = MouthBegin_:52
+ 33F7:40DC 37F8:00CC   202: #L0:13 = Set_event:70 + #I1:3
+ 33F7:40EA 37F8:00DA   216: Set_event:70 = #L0:13 % Event_fifo_N:33
+ 33F7:40F8 37F8:00E8   230: #L0 = CALL1 printf(#S0:19)
+ 33F7:4100 37F8:00F0   238: GOTO .+70 (goto 308)
+ 33F7:4104 37F8:00F4   242: #L0:13 = mouth_status@4:50 == still@4:79
+ 33F7:4112 37F8:0102   256: IFnot (#L0:13) GOTO .+52 (goto 308)
+ 33F7:411A 37F8:010A   264: Event_fifo:32[Set_event:70] = MouthEnd_:53
+ 33F7:4122 37F8:0112   272: #L0:13 = Set_event:70 + #I1:3
+ 33F7:4130 37F8:0120   286: Set_event:70 = #L0:13 % Event_fifo_N:33
+ 33F7:413E 37F8:012E   300: #L0 = CALL1 printf(#S1:20)
+ 33F7:4146 37F8:0136   308: last_status@4:46 = mouth_status@4:50
+ 33F7:4150 37F8:0140   318: NEXTTICK1
+ 33F7:4152 37F8:0142   320: GOTO .-270 (goto 50)
+
+PROCESS   5: MAIN (Args=0 CtrlBlk=33F7:1D5E Size= 12  iOp=2-13 iCache=720-731) ENABLED 
+ 33F7:4012 37F8:0002     0: SPAWN QUE_TTL:63(with 0 args)
+ 33F7:4018 37F8:0008     6: SPAWN WATCHMTH:94(with 0 args)
+
+
+HASH TABLE
+
+iHSH  iNAM  iSYM iNXT Symbol
+---- ------ ---- ---- -----------
+   0      0    0    0 ""
+   1      0    0    0 ""
+   2      0    0    0 ""
+   3      0    0    0 ""
+   4      0    0    0 ""
+   5      0    0    0 ""
+   6      0    0    0 ""
+   7      0    0    0 ""
+   8      0    0    0 ""
+   9      0    0    0 ""
+  10      0    0    0 ""
+  11      0    0    0 ""
+  12      0    0    0 ""
+  13      0    0    0 ""
+  14  84674   13    0 "#L0"
+  15  84682   14    0 "#L1"
+  16  84686   15    0 "#L2"
+  17  84698   16    0 "#L3"
+  18      0    0    0 ""
+  19      0    0    0 ""
+  20      0    0    0 ""
+  21      0    0    0 ""
+  22      0    0    0 ""
+  23      0    0    0 ""
+  24      0    0    0 ""
+  25      0    0    0 ""
+  26  84474   56    0 "Neg2Reinforcement_"
+  27      0    0    0 ""
+  28      0    0    0 ""
+  29      0    0    0 ""
+  30      0    0    0 ""
+  31      0    0    0 ""
+  32      0    0    0 ""
+  33      0    0    0 ""
+  34      0    0    0 ""
+  35      0    0    0 ""
+  36      0    0    0 ""
+  37      0    0    0 ""
+  38      0    0    0 ""
+  39      0    0    0 ""
+  40      0    0    0 ""
+  41      0    0    0 ""
+  42      0    0    0 ""
+  43      0    0    0 ""
+  44      0    0    0 ""
+  45      0    0    0 ""
+  46      0    0    0 ""
+  47      0    0    0 ""
+  48      0    0    0 ""
+  49      0    0    0 ""
+  50      0    0    0 ""
+  51      0    0    0 ""
+  52      0    0    0 ""
+  53      0    0    0 ""
+  54      0    0    0 ""
+  55      0    0    0 ""
+  56      0    0    0 ""
+  57      0    0    0 ""
+  58      0    0    0 ""
+  59      0    0    0 ""
+  60      0    0    0 ""
+  61      0    0    0 ""
+  62      0    0    0 ""
+  63      0    0    0 ""
+  64      0    0    0 ""
+  65      0    0    0 ""
+  66      0    0    0 ""
+  67      0    0    0 ""
+  68      0    0    0 ""
+  69      0    0    0 ""
+  70      0    0    0 ""
+  71      0    0    0 ""
+  72      0    0    0 ""
+  73      0    0    0 ""
+  74      0    0    0 ""
+  75      0    0    0 ""
+  76      0    0    0 ""
+  77      0    0    0 ""
+  78      0    0    0 ""
+  79  84624   18    0 "#P1"
+  80      0    0    0 ""
+  81  84494   35    0 "Feedback_"
+  82      0    0    0 ""
+  83      0    0    0 ""
+  84      0    0    0 ""
+  85      0    0    0 ""
+  86      0    0    0 ""
+  87      0    0    0 ""
+  88      0    0    0 ""
+  89      0    0    0 ""
+  90      0    0    0 ""
+  91      0    0    0 ""
+  92      0    0    0 ""
+  93      0    0    0 ""
+  94      0    0    0 ""
+  95      0    0    0 ""
+  96      0    0    0 ""
+  97      0    0    0 ""
+  98      0    0    0 ""
+  99      0    0    0 ""
+ 100      0    0    0 ""
+ 101      0    0    0 ""
+ 102      0    0    0 ""
+ 103      0    0    0 ""
+ 104      0    0    0 ""
+ 105      0    0    0 ""
+ 106      0    0    0 ""
+ 107      0    0    0 ""
+ 108      0    0    0 ""
+ 109      0    0    0 ""
+ 110      0    0    0 ""
+ 111      0    0    0 ""
+ 112      0    0    0 ""
+ 113      0    0    0 ""
+ 114      0    0    0 ""
+ 115      0    0    0 ""
+ 116      0    0    0 ""
+ 117      0    0    0 ""
+ 118      0    0    0 ""
+ 119      0    0    0 ""
+ 120      0    0    0 ""
+ 121      0    0    0 ""
+ 122      0    0    0 ""
+ 123      0    0    0 ""
+ 124      0    0    0 ""
+ 125      0    0    0 ""
+ 126  84558   82 1037 "StopOn_"
+ 127  84918   20    0 "#S1"
+ 128      0    0    0 ""
+ 129      0    0    0 ""
+ 130      0    0    0 ""
+ 131      0    0    0 ""
+ 132      0    0    0 ""
+ 133      0    0    0 ""
+ 134      0    0    0 ""
+ 135      0    0    0 ""
+ 136      0    0    0 ""
+ 137      0    0    0 ""
+ 138      0    0    0 ""
+ 139      0    0    0 ""
+ 140      0    0    0 ""
+ 141      0    0    0 ""
+ 142      0    0    0 ""
+ 143      0    0    0 ""
+ 144      0    0    0 ""
+ 145      0    0    0 ""
+ 146      0    0    0 ""
+ 147      0    0    0 ""
+ 148      0    0    0 ""
+ 149      0    0    0 ""
+ 150      0    0    0 ""
+ 151      0    0    0 ""
+ 152      0    0    0 ""
+ 153      0    0    0 ""
+ 154      0    0    0 ""
+ 155      0    0    0 ""
+ 156      0    0    0 ""
+ 157      0    0    0 ""
+ 158      0    0    0 ""
+ 159      0    0    0 ""
+ 160  84610   93    0 "WAIT_MU"
+ 161      0    0    0 ""
+ 162      0    0    0 ""
+ 163      0    0    0 ""
+ 164      0    0    0 ""
+ 165      0    0    0 ""
+ 166      0    0    0 ""
+ 167      0    0    0 ""
+ 168      0    0    0 ""
+ 169      0    0    0 ""
+ 170      0    0    0 ""
+ 171      0    0    0 ""
+ 172      0    0    0 ""
+ 173      0    0    0 ""
+ 174  84092   39    0 "FixSpotOn_"
+ 175      0    0    0 ""
+ 176      0    0    0 ""
+ 177      0    0    0 ""
+ 178      0    0    0 ""
+ 179      0    0    0 ""
+ 180      0    0    0 ""
+ 181      0    0    0 ""
+ 182      0    0    0 ""
+ 183      0    0    0 ""
+ 184      0    0    0 ""
+ 185      0    0    0 ""
+ 186      0    0    0 ""
+ 187      0    0    0 ""
+ 188      0    0    0 ""
+ 189      0    0    0 ""
+ 190      0    0    0 ""
+ 191      0    0    0 ""
+ 192      0    0    0 ""
+ 193      0    0    0 ""
+ 194      0    0    0 ""
+ 195  84754    4    0 "#I100"
+ 196      0    0    0 ""
+ 197      0    0    0 ""
+ 198      0    0    0 ""
+ 199      0    0    0 ""
+ 200      0    0    0 ""
+ 201      0    0    0 ""
+ 202      0    0    0 ""
+ 203  84690   10    0 "#I65535"
+ 204      0    0    0 ""
+ 205      0    0    0 ""
+ 206      0    0    0 ""
+ 207      0    0    0 ""
+ 208      0    0    0 ""
+ 209      0    0    0 ""
+ 210      0    0    0 ""
+ 211      0    0    0 ""
+ 212      0    0    0 ""
+ 213      0    0    0 ""
+ 214  84156   37 1022 "FixError_"
+ 215      0    0    0 ""
+ 216      0    0    0 ""
+ 217      0    0    0 ""
+ 218      0    0    0 ""
+ 219      0    0    0 ""
+ 220      0    0    0 ""
+ 221      0    0    0 ""
+ 222      0    0    0 ""
+ 223  84026   21    0 "__debug_op"
+ 224      0    0    0 ""
+ 225      0    0    0 ""
+ 226      0    0    0 ""
+ 227      0    0    0 ""
+ 228      0    0    0 ""
+ 229      0    0    0 ""
+ 230      0    0    0 ""
+ 231      0    0    0 ""
+ 232      0    0    0 ""
+ 233      0    0    0 ""
+ 234  84338   81 1033 "Stimulation_"
+ 235  84744    6    0 "#I128"
+ 236      0    0    0 ""
+ 237      0    0    0 ""
+ 238      0    0    0 ""
+ 239      0    0    0 ""
+ 240      0    0    0 ""
+ 241  84166   43 1029 "GoSaccade_"
+ 242      0    0    0 ""
+ 243      0    0    0 ""
+ 244      0    0    0 ""
+ 245      0    0    0 ""
+ 246      0    0    0 ""
+ 247      0    0    0 ""
+ 248      0    0    0 ""
+ 249      0    0    0 ""
+ 250      0    0    0 ""
+ 251      0    0    0 ""
+ 252      0    0    0 ""
+ 253  84104   36    0 "Fixate_"
+ 254      0    0    0 ""
+ 255      0    0    0 ""
+ 256      0    0    0 ""
+ 257      0    0    0 ""
+ 258      0    0    0 ""
+ 259  84644   25    0 "clock_cycles"
+ 260      0    0    0 ""
+ 261      0    0    0 ""
+ 262      0    0    0 ""
+ 263      0    0    0 ""
+ 264      0    0    0 ""
+ 265      0    0    0 ""
+ 266      0    0    0 ""
+ 267      0    0    0 ""
+ 268      0    0    0 ""
+ 269      0    0    0 ""
+ 270      0    0    0 ""
+ 271      0    0    0 ""
+ 272      0    0    0 ""
+ 273  84224   27 1024 "Correct_"
+ 274      0    0    0 ""
+ 275      0    0    0 ""
+ 276      0    0    0 ""
+ 277      0    0    0 ""
+ 278  84578   78 1032 "StartInfos_"
+ 279      0    0    0 ""
+ 280      0    0    0 ""
+ 281      0    0    0 ""
+ 282  84320   31    0 "Eot_"
+ 283      0    0    0 ""
+ 284      0    0    0 ""
+ 285      0    0    0 ""
+ 286      0    0    0 ""
+ 287      0    0    0 ""
+ 288      0    0    0 ""
+ 289      0    0    0 ""
+ 290      0    0    0 ""
+ 291      0    0    0 ""
+ 292      0    0    0 ""
+ 293      0    0    0 ""
+ 294      0    0    0 ""
+ 295      0    0    0 ""
+ 296      0    0    0 ""
+ 297      0    0    0 ""
+ 298      0    0    0 ""
+ 299      0    0    0 ""
+ 300      0    0    0 ""
+ 301      0    0    0 ""
+ 302      0    0    0 ""
+ 303      0    0    0 ""
+ 304      0    0    0 ""
+ 305      0    0    0 ""
+ 306      0    0    0 ""
+ 307      0    0    0 ""
+ 308      0    0    0 ""
+ 309      0    0    0 ""
+ 310      0    0    0 ""
+ 311      0    0    0 ""
+ 312      0    0    0 ""
+ 313      0    0    0 ""
+ 314      0    0    0 ""
+ 315      0    0    0 ""
+ 316      0    0    0 ""
+ 317      0    0    0 ""
+ 318  84436   40 1031 "FixWindow_"
+ 319      0    0    0 ""
+ 320      0    0    0 ""
+ 321      0    0    0 ""
+ 322      0    0    0 ""
+ 323      0    0    0 ""
+ 324      0    0    0 ""
+ 325      0    0    0 ""
+ 326      0    0    0 ""
+ 327      0    0    0 ""
+ 328      0    0    0 ""
+ 329      0    0    0 ""
+ 330      0    0    0 ""
+ 331      0    0    0 ""
+ 332      0    0    0 ""
+ 333      0    0    0 ""
+ 334      0    0    0 ""
+ 335      0    0    0 ""
+ 336      0    0    0 ""
+ 337  84394   28    0 "Decide_"
+ 338      0    0    0 ""
+ 339      0    0    0 ""
+ 340      0    0    0 ""
+ 341      0    0    0 ""
+ 342      0    0    0 ""
+ 343      0    0    0 ""
+ 344      0    0    0 ""
+ 345      0    0    0 ""
+ 346      0    0    0 ""
+ 347      0    0    0 ""
+ 348      0    0    0 ""
+ 349      0    0    0 ""
+ 350      0    0    0 ""
+ 351      0    0    0 ""
+ 352      0    0    0 ""
+ 353      0    0    0 ""
+ 354      0    0    0 ""
+ 355      0    0    0 ""
+ 356      0    0    0 ""
+ 357      0    0    0 ""
+ 358      0    0    0 ""
+ 359      0    0    0 ""
+ 360      0    0    0 ""
+ 361      0    0    0 ""
+ 362      0    0    0 ""
+ 363      0    0    0 ""
+ 364      0    0    0 ""
+ 365      0    0    0 ""
+ 366      0    0    0 ""
+ 367      0    0    0 ""
+ 368      0    0    0 ""
+ 369      0    0    0 ""
+ 370      0    0    0 ""
+ 371      0    0    0 ""
+ 372      0    0    0 ""
+ 373      0    0    0 ""
+ 374      0    0    0 ""
+ 375      0    0    0 ""
+ 376      0    0    0 ""
+ 377      0    0    0 ""
+ 378      0    0    0 ""
+ 379      0    0    0 ""
+ 380      0    0    0 ""
+ 381      0    0    0 ""
+ 382      0    0    0 ""
+ 383      0    0    0 ""
+ 384      0    0    0 ""
+ 385      0    0    0 ""
+ 386      0    0    0 ""
+ 387      0    0    0 ""
+ 388      0    0    0 ""
+ 389      0    0    0 ""
+ 390      0    0    0 ""
+ 391      0    0    0 ""
+ 392      0    0    0 ""
+ 393      0    0    0 ""
+ 394      0    0    0 ""
+ 395      0    0    0 ""
+ 396      0    0    0 ""
+ 397      0    0    0 ""
+ 398      0    0    0 ""
+ 399      0    0    0 ""
+ 400      0    0    0 ""
+ 401      0    0    0 ""
+ 402      0    0    0 ""
+ 403      0    0    0 ""
+ 404      0    0    0 ""
+ 405      0    0    0 ""
+ 406      0    0    0 ""
+ 407      0    0    0 ""
+ 408      0    0    0 ""
+ 409      0    0    0 ""
+ 410      0    0    0 ""
+ 411      0    0    0 ""
+ 412      0    0    0 ""
+ 413      0    0    0 ""
+ 414      0    0    0 ""
+ 415      0    0    0 ""
+ 416      0    0    0 ""
+ 417      0    0    0 ""
+ 418      0    0    0 ""
+ 419      0    0    0 ""
+ 420      0    0    0 ""
+ 421  84566   80    0 "StimFailed_"
+ 422      0    0    0 ""
+ 423      0    0    0 ""
+ 424      0    0    0 ""
+ 425      0    0    0 ""
+ 426      0    0    0 ""
+ 427      0    0    0 ""
+ 428      0    0    0 ""
+ 429      0    0    0 ""
+ 430      0    0    0 ""
+ 431      0    0    0 ""
+ 432      0    0    0 ""
+ 433      0    0    0 ""
+ 434      0    0    0 ""
+ 435      0    0    0 ""
+ 436      0    0    0 ""
+ 437      0    0    0 ""
+ 438      0    0    0 ""
+ 439      0    0    0 ""
+ 440      0    0    0 ""
+ 441      0    0    0 ""
+ 442      0    0    0 ""
+ 443      0    0    0 ""
+ 444      0    0    0 ""
+ 445      0    0    0 ""
+ 446      0    0    0 ""
+ 447      0    0    0 ""
+ 448      0    0    0 ""
+ 449      0    0    0 ""
+ 450  84702   68 1034 "SEND_TTL"
+ 451      0    0    0 ""
+ 452      0    0    0 ""
+ 453  84038   33    0 "Event_fifo_N"
+ 454      0    0    0 ""
+ 455      0    0    0 ""
+ 456      0    0    0 ""
+ 457      0    0    0 ""
+ 458  84008   74    0 "SPEED"
+ 459      0    0    0 ""
+ 460      0    0    0 ""
+ 461      0    0    0 ""
+ 462      0    0    0 ""
+ 463      0    0    0 ""
+ 464      0    0    0 ""
+ 465      0    0    0 ""
+ 466      0    0    0 ""
+ 467      0    0    0 ""
+ 468      0    0    0 ""
+ 469      0    0    0 ""
+ 470      0    0    0 ""
+ 471      0    0    0 ""
+ 472      0    0    0 ""
+ 473      0    0    0 ""
+ 474      0    0    0 ""
+ 475      0    0    0 ""
+ 476      0    0    0 ""
+ 477  84712   91    0 "value"
+ 478      0    0    0 ""
+ 479      0    0    0 ""
+ 480      0    0    0 ""
+ 481      0    0    0 ""
+ 482      0    0    0 ""
+ 483      0    0    0 ""
+ 484      0    0    0 ""
+ 485      0    0    0 ""
+ 486      0    0    0 ""
+ 487      0    0    0 ""
+ 488      0    0    0 ""
+ 489      0    0    0 ""
+ 490      0    0    0 ""
+ 491      0    0    0 ""
+ 492      0    0    0 ""
+ 493  84922   47    0 "MAIN"
+ 494      0    0    0 ""
+ 495      0    0    0 ""
+ 496      0    0    0 ""
+ 497  84866   50 1036 "mouth_status"
+ 498      0    0    0 ""
+ 499      0    0    0 ""
+ 500      0    0    0 ""
+ 501      0    0    0 ""
+ 502      0    0    0 ""
+ 503      0    0    0 ""
+ 504      0    0    0 ""
+ 505  84370   92    0 "VSyncSynced_"
+ 506      0    0    0 ""
+ 507      0    0    0 ""
+ 508      0    0    0 ""
+ 509      0    0    0 ""
+ 510      0    0    0 ""
+ 511      0    0    0 ""
+ 512      0    0    0 ""
+ 513      0    0    0 ""
+ 514      0    0    0 ""
+ 515      0    0    0 ""
+ 516      0    0    0 ""
+ 517      0    0    0 ""
+ 518      0    0    0 ""
+ 519      0    0    0 ""
+ 520      0    0    0 ""
+ 521      0    0    0 ""
+ 522      0    0    0 ""
+ 523      0    0    0 ""
+ 524      0    0    0 ""
+ 525      0    0    0 ""
+ 526      0    0    0 ""
+ 527      0    0    0 ""
+ 528      0    0    0 ""
+ 529  84892   23    0 "check"
+ 530      0    0    0 ""
+ 531  84718   59    0 "output"
+ 532      0    0    0 ""
+ 533      0    0    0 ""
+ 534      0    0    0 ""
+ 535      0    0    0 ""
+ 536  84734    7    0 "#I255"
+ 537      0    0    0 ""
+ 538      0    0    0 ""
+ 539      0    0    0 ""
+ 540      0    0    0 ""
+ 541      0    0    0 ""
+ 542      0    0    0 ""
+ 543      0    0    0 ""
+ 544      0    0    0 ""
+ 545      0    0    0 ""
+ 546      0    0    0 ""
+ 547      0    0    0 ""
+ 548      0    0    0 ""
+ 549      0    0    0 ""
+ 550      0    0    0 ""
+ 551      0    0    0 ""
+ 552      0    0    0 ""
+ 553      0    0    0 ""
+ 554      0    0    0 ""
+ 555      0    0    0 ""
+ 556      0    0    0 ""
+ 557      0    0    0 ""
+ 558      0    0    0 ""
+ 559      0    0    0 ""
+ 560  84052   32    0 "Event_fifo"
+ 561      0    0    0 ""
+ 562      0    0    0 ""
+ 563      0    0    0 ""
+ 564      0    0    0 ""
+ 565      0    0    0 ""
+ 566      0    0    0 ""
+ 567      0    0    0 ""
+ 568      0    0    0 ""
+ 569      0    0    0 ""
+ 570  84132   83    0 "StopSignal_"
+ 571      0    0    0 ""
+ 572      0    0    0 ""
+ 573      0    0    0 ""
+ 574      0    0    0 ""
+ 575      0    0    0 ""
+ 576      0    0    0 ""
+ 577      0    0    0 ""
+ 578      0    0    0 ""
+ 579      0    0    0 ""
+ 580      0    0    0 ""
+ 581      0    0    0 ""
+ 582      0    0    0 ""
+ 583      0    0    0 ""
+ 584      0    0    0 ""
+ 585      0    0    0 ""
+ 586      0    0    0 ""
+ 587      0    0    0 ""
+ 588      0    0    0 ""
+ 589      0    0    0 ""
+ 590      0    0    0 ""
+ 591      0    0    0 ""
+ 592      0    0    0 ""
+ 593      0    0    0 ""
+ 594      0    0    0 ""
+ 595      0    0    0 ""
+ 596      0    0    0 ""
+ 597      0    0    0 ""
+ 598      0    0    0 ""
+ 599      0    0    0 ""
+ 600      0    0    0 ""
+ 601      0    0    0 ""
+ 602      0    0    0 ""
+ 603      0    0    0 ""
+ 604      0    0    0 ""
+ 605      0    0    0 ""
+ 606      0    0    0 ""
+ 607      0    0    0 ""
+ 608      0    0    0 ""
+ 609      0    0    0 ""
+ 610      0    0    0 ""
+ 611      0    0    0 ""
+ 612      0    0    0 ""
+ 613      0    0    0 ""
+ 614      0    0    0 ""
+ 615      0    0    0 ""
+ 616      0    0    0 ""
+ 617      0    0    0 ""
+ 618      0    0    0 ""
+ 619      0    0    0 ""
+ 620      0    0    0 ""
+ 621      0    0    0 ""
+ 622      0    0    0 ""
+ 623      0    0    0 ""
+ 624      0    0    0 ""
+ 625      0    0    0 ""
+ 626      0    0    0 ""
+ 627      0    0    0 ""
+ 628      0    0    0 ""
+ 629  84852   79    0 "still"
+ 630      0    0    0 ""
+ 631      0    0    0 ""
+ 632      0    0    0 ""
+ 633      0    0    0 ""
+ 634      0    0    0 ""
+ 635      0    0    0 ""
+ 636      0    0    0 ""
+ 637      0    0    0 ""
+ 638      0    0    0 ""
+ 639      0    0    0 ""
+ 640      0    0    0 ""
+ 641      0    0    0 ""
+ 642      0    0    0 ""
+ 643      0    0    0 ""
+ 644      0    0    0 ""
+ 645      0    0    0 ""
+ 646      0    0    0 ""
+ 647      0    0    0 ""
+ 648      0    0    0 ""
+ 649      0    0    0 ""
+ 650      0    0    0 ""
+ 651      0    0    0 ""
+ 652      0    0    0 ""
+ 653      0    0    0 ""
+ 654  84786   55    0 "n_evs_sent"
+ 655      0    0    0 ""
+ 656      0    0    0 ""
+ 657      0    0    0 ""
+ 658      0    0    0 ""
+ 659      0    0    0 ""
+ 660      0    0    0 ""
+ 661      0    0    0 ""
+ 662      0    0    0 ""
+ 663      0    0    0 ""
+ 664      0    0    0 ""
+ 665      0    0    0 ""
+ 666      0    0    0 ""
+ 667      0    0    0 ""
+ 668      0    0    0 ""
+ 669      0    0    0 ""
+ 670      0    0    0 ""
+ 671      0    0    0 ""
+ 672      0    0    0 ""
+ 673      0    0    0 ""
+ 674      0    0    0 ""
+ 675      0    0    0 ""
+ 676      0    0    0 ""
+ 677      0    0    0 ""
+ 678      0    0    0 ""
+ 679  84634   29    0 "duration"
+ 680  84858   54    0 "moving"
+ 681      0    0    0 ""
+ 682      0    0    0 ""
+ 683      0    0    0 ""
+ 684      0    0    0 ""
+ 685      0    0    0 ""
+ 686      0    0    0 ""
+ 687      0    0    0 ""
+ 688      0    0    0 ""
+ 689      0    0    0 ""
+ 690  84064   70 1035 "Set_event"
+ 691      0    0    0 ""
+ 692  84014   75    0 "SPEED_UNITS"
+ 693      0    0    0 ""
+ 694      0    0    0 ""
+ 695      0    0    0 ""
+ 696      0    0    0 ""
+ 697      0    0    0 ""
+ 698      0    0    0 ""
+ 699      0    0    0 ""
+ 700      0    0    0 ""
+ 701      0    0    0 ""
+ 702  84802   24    0 "CheckMouth"
+ 703      0    0    0 ""
+ 704  84824   49    0 "mouth_channel"
+ 705      0    0    0 ""
+ 706      0    0    0 ""
+ 707      0    0    0 ""
+ 708      0    0    0 ""
+ 709      0    0    0 ""
+ 710  84838   51    0 "mouth_thresh"
+ 711      0    0    0 ""
+ 712      0    0    0 ""
+ 713      0    0    0 ""
+ 714      0    0    0 ""
+ 715      0    0    0 ""
+ 716  84402   52    0 "MouthBegin_"
+ 717      0    0    0 ""
+ 718      0    0    0 ""
+ 719      0    0    0 ""
+ 720      0    0    0 ""
+ 721      0    0    0 ""
+ 722      0    0    0 ""
+ 723      0    0    0 ""
+ 724      0    0    0 ""
+ 725      0    0    0 ""
+ 726      0    0    0 ""
+ 727  84628   77    0 "start"
+ 728      0    0    0 ""
+ 729      0    0    0 ""
+ 730      0    0    0 ""
+ 731      0    0    0 ""
+ 732      0    0    0 ""
+ 733      0    0    0 ""
+ 734      0    0    0 ""
+ 735  84268   87    0 "Tone_"
+ 736      0    0    0 ""
+ 737      0    0    0 ""
+ 738      0    0    0 ""
+ 739      0    0    0 ""
+ 740      0    0    0 ""
+ 741  84326   26 1030 "CmanHeader_"
+ 742      0    0    0 ""
+ 743      0    0    0 ""
+ 744      0    0    0 ""
+ 745  84120   38    0 "FixSpotOff_"
+ 746  84260   64 1027 "Reward_"
+ 747      0    0    0 ""
+ 748      0    0    0 ""
+ 749  84002   71    0 "SETS"
+ 750  84546   85    0 "TargetPre_"
+ 751      0    0    0 ""
+ 752      0    0    0 ""
+ 753      0    0    0 ""
+ 754      0    0    0 ""
+ 755      0    0    0 ""
+ 756      0    0    0 ""
+ 757      0    0    0 ""
+ 758      0    0    0 ""
+ 759      0    0    0 ""
+ 760      0    0    0 ""
+ 761      0    0    0 ""
+ 762      0    0    0 ""
+ 763      0    0    0 ""
+ 764      0    0    0 ""
+ 765      0    0    0 ""
+ 766      0    0    0 ""
+ 767  84188   58    0 "NOGOWrong_"
+ 768      0    0    0 ""
+ 769      0    0    0 ""
+ 770      0    0    0 ""
+ 771      0    0    0 ""
+ 772      0    0    0 ""
+ 773      0    0    0 ""
+ 774      0    0    0 ""
+ 775      0    0    0 ""
+ 776      0    0    0 ""
+ 777      0    0    0 ""
+ 778      0    0    0 ""
+ 779      0    0    0 ""
+ 780      0    0    0 ""
+ 781      0    0    0 ""
+ 782      0    0    0 ""
+ 783      0    0    0 ""
+ 784      0    0    0 ""
+ 785      0    0    0 ""
+ 786      0    0    0 ""
+ 787      0    0    0 ""
+ 788      0    0    0 ""
+ 789      0    0    0 ""
+ 790      0    0    0 ""
+ 791  84414   53    0 "MouthEnd_"
+ 792      0    0    0 ""
+ 793      0    0    0 ""
+ 794      0    0    0 ""
+ 795      0    0    0 ""
+ 796      0    0    0 ""
+ 797  84600   45    0 "InfosZero"
+ 798      0    0    0 ""
+ 799      0    0    0 ""
+ 800      0    0    0 ""
+ 801      0    0    0 ""
+ 802      0    0    0 ""
+ 803      0    0    0 ""
+ 804  84814   94    0 "WATCHMTH"
+ 805      0    0    0 ""
+ 806      0    0    0 ""
+ 807      0    0    0 ""
+ 808      0    0    0 ""
+ 809  84112   84    0 "Target_"
+ 810      0    0    0 ""
+ 811      0    0    0 ""
+ 812      0    0    0 ""
+ 813      0    0    0 ""
+ 814      0    0    0 ""
+ 815      0    0    0 ""
+ 816      0    0    0 ""
+ 817      0    0    0 ""
+ 818      0    0    0 ""
+ 819      0    0    0 ""
+ 820      0    0    0 ""
+ 821      0    0    0 ""
+ 822      0    0    0 ""
+ 823      0    0    0 ""
+ 824  84658   17    0 "#M3F989375"
+ 825      0    0    0 ""
+ 826      0    0    0 ""
+ 827      0    0    0 ""
+ 828      0    0    0 ""
+ 829      0    0    0 ""
+ 830      0    0    0 ""
+ 831      0    0    0 ""
+ 832      0    0    0 ""
+ 833      0    0    0 ""
+ 834      0    0    0 ""
+ 835      0    0    0 ""
+ 836      0    0    0 ""
+ 837      0    0    0 ""
+ 838      0    0    0 ""
+ 839      0    0    0 ""
+ 840      0    0    0 ""
+ 841      0    0    0 ""
+ 842      0    0    0 ""
+ 843      0    0    0 ""
+ 844      0    0    0 ""
+ 845      0    0    0 ""
+ 846      0    0    0 ""
+ 847      0    0    0 ""
+ 848      0    0    0 ""
+ 849      0    0    0 ""
+ 850      0    0    0 ""
+ 851      0    0    0 ""
+ 852      0    0    0 ""
+ 853      0    0    0 ""
+ 854      0    0    0 ""
+ 855      0    0    0 ""
+ 856      0    0    0 ""
+ 857      0    0    0 ""
+ 858      0    0    0 ""
+ 859      0    0    0 ""
+ 860      0    0    0 ""
+ 861      0    0    0 ""
+ 862      0    0    0 ""
+ 863      0    0    0 ""
+ 864  84504   65    0 "RewardSize_"
+ 865      0    0    0 ""
+ 866      0    0    0 ""
+ 867      0    0    0 ""
+ 868      0    0    0 ""
+ 869      0    0    0 ""
+ 870      0    0    0 ""
+ 871      0    0    0 ""
+ 872      0    0    0 ""
+ 873      0    0    0 ""
+ 874      0    0    0 ""
+ 875      0    0    0 ""
+ 876      0    0    0 ""
+ 877  84530   69    0 "SendPenatrInfo_"
+ 878      0    0    0 ""
+ 879      0    0    0 ""
+ 880      0    0    0 ""
+ 881      0    0    0 ""
+ 882      0    0    0 ""
+ 883      0    0    0 ""
+ 884      0    0    0 ""
+ 885      0    0    0 ""
+ 886      0    0    0 ""
+ 887      0    0    0 ""
+ 888      0    0    0 ""
+ 889      0    0    0 ""
+ 890      0    0    0 ""
+ 891      0    0    0 ""
+ 892      0    0    0 ""
+ 893      0    0    0 ""
+ 894      0    0    0 ""
+ 895      0    0    0 ""
+ 896      0    0    0 ""
+ 897      0    0    0 ""
+ 898      0    0    0 ""
+ 899      0    0    0 ""
+ 900      0    0    0 ""
+ 901      0    0    0 ""
+ 902      0    0    0 ""
+ 903  84516   88    0 "TrialInBlock"
+ 904      0    0    0 ""
+ 905      0    0    0 ""
+ 906      0    0    0 ""
+ 907      0    0    0 ""
+ 908      0    0    0 ""
+ 909      0    0    0 ""
+ 910      0    0    0 ""
+ 911      0    0    0 ""
+ 912      0    0    0 ""
+ 913      0    0    0 ""
+ 914      0    0    0 ""
+ 915      0    0    0 ""
+ 916      0    0    0 ""
+ 917      0    0    0 ""
+ 918      0    0    0 ""
+ 919      0    0    0 ""
+ 920      0    0    0 ""
+ 921      0    0    0 ""
+ 922      0    0    0 ""
+ 923      0    0    0 ""
+ 924      0    0    0 ""
+ 925      0    0    0 ""
+ 926      0    0    0 ""
+ 927      0    0    0 ""
+ 928      0    0    0 ""
+ 929      0    0    0 ""
+ 930      0    0    0 ""
+ 931      0    0    0 ""
+ 932      0    0    0 ""
+ 933      0    0    0 ""
+ 934      0    0    0 ""
+ 935      0    0    0 ""
+ 936      0    0    0 ""
+ 937      0    0    0 ""
+ 938      0    0    0 ""
+ 939  84670    1    0 "#F0"
+ 940      0    0    0 ""
+ 941      0    0    0 ""
+ 942      0    0    0 ""
+ 943      0    0    0 ""
+ 944      0    0    0 ""
+ 945      0    0    0 ""
+ 946      0    0    0 ""
+ 947      0    0    0 ""
+ 948  84074   60    0 "PORTA"
+ 949  84080   61    0 "PORTB"
+ 950  84086   62    0 "PORTC"
+ 951      0    0    0 ""
+ 952      0    0    0 ""
+ 953      0    0    0 ""
+ 954      0    0    0 ""
+ 955      0    0    0 ""
+ 956      0    0    0 ""
+ 957      0    0    0 ""
+ 958      0    0    0 ""
+ 959      0    0    0 ""
+ 960      0    0    0 ""
+ 961      0    0    0 ""
+ 962      0    0    0 ""
+ 963      0    0    0 ""
+ 964      0    0    0 ""
+ 965      0    0    0 ""
+ 966  84618   90    0 "u_sec"
+ 967      0    0    0 ""
+ 968      0    0    0 ""
+ 969      0    0    0 ""
+ 970      0    0    0 ""
+ 971      0    0    0 ""
+ 972      0    0    0 ""
+ 973      0    0    0 ""
+ 974      0    0    0 ""
+ 975      0    0    0 ""
+ 976      0    0    0 ""
+ 977      0    0    0 ""
+ 978  84216   22    0 "Abort_"
+ 979      0    0    0 ""
+ 980      0    0    0 ""
+ 981      0    0    0 ""
+ 982      0    0    0 ""
+ 983      0    0    0 ""
+ 984      0    0    0 ""
+ 985      0    0    0 ""
+ 986      0    0    0 ""
+ 987  84678    2    0 "#I0"
+ 988  84750    3    0 "#I1"
+ 989      0    0    0 ""
+ 990  84726    8    0 "#I3"
+ 991      0    0    0 ""
+ 992  84798    9    0 "#I5"
+ 993      0    0    0 ""
+ 994  84730   11    0 "#I7"
+ 995  84740   12    0 "#I8"
+ 996      0    0    0 ""
+ 997      0    0    0 ""
+ 998      0    0    0 ""
+ 999      0    0    0 ""
+1000      0    0    0 ""
+1001      0    0    0 ""
+1002  84144   89    0 "TrialStart_"
+1003      0    0    0 ""
+1004      0    0    0 ""
+1005      0    0    0 ""
+1006      0    0    0 ""
+1007      0    0    0 ""
+1008      0    0    0 ""
+1009      0    0    0 ""
+1010      0    0    0 ""
+1011      0    0    0 ""
+1012      0    0    0 ""
+1013      0    0    0 ""
+1014      0    0    0 ""
+1015      0    0    0 ""
+1016      0    0    0 ""
+1017      0    0    0 ""
+1018  84462   76    0 "Staircase_"
+1019      0    0    0 ""
+1020      0    0    0 ""
+
+HASH OVERFLOW TABLE
+
+iHSH  iNAM  iSYM iNXT Symbol
+---- ------ ---- ---- -----------
+1021  84178   42    0 "GoError_"
+1022  84200   44 1021 "GoTargFixError_"
+1023  84234   41    0 "GOCorrect_"
+1024  84246   57 1023 "NOGOCorrect_"
+1025  84274   34    0 "ExtraReward_"
+1026  84288   73 1025 "SoundOnReward_"
+1027  84304   72 1026 "SoundNoReward_"
+1028  84352   95    0 "ZeroEyePosition_"
+1029  84384   66    0 "Saccade_"
+1030  84424   48    0 "MapHeader_"
+1031  84448   86    0 "TargetWindow_"
+1032  84590   30    0 "EndInfos_"
+1033  84760    5 1028 "#I127"
+1034  84766   63    0 "QUE_TTL"
+1035  84774   67    0 "send_event"
+1036  84880   46    0 "last_status"
+1037  84906   19    0 "#S0"
+
+----------------------------------------------------------
+NAME TABLE
+
+  iNAM iSYM  Name
+------ ----  -----------------
+    44    1 "#F0"
+    86    2 "#I0"
+   128    3 "#I1"
+   170    4 "#I100"
+   212    5 "#I127"
+   254    6 "#I128"
+   296    7 "#I255"
+   338    8 "#I3"
+   380    9 "#I5"
+   422   10 "#I65535"
+   464   11 "#I7"
+   506   12 "#I8"
+   548   13 "#L0"
+   590   14 "#L1"
+   632   15 "#L2"
+   674   16 "#L3"
+   716   17 "#M3F989375"
+   758   18 "#P1"
+   800   19 "#S0"
+   842   20 "#S1"
+   884   21 "__debug_op"
+   926   22 "Abort_"
+   968   23 "check"
+  1010   24 "CheckMouth"
+  1052   25 "clock_cycles"
+  1094   26 "CmanHeader_"
+  1136   27 "Correct_"
+  1178   28 "Decide_"
+  1220   29 "duration"
+  1262   30 "EndInfos_"
+  1304   31 "Eot_"
+  1346   32 "Event_fifo"
+  1388   33 "Event_fifo_N"
+  1430   34 "ExtraReward_"
+  1472   35 "Feedback_"
+  1514   36 "Fixate_"
+  1556   37 "FixError_"
+  1598   38 "FixSpotOff_"
+  1640   39 "FixSpotOn_"
+  1682   40 "FixWindow_"
+  1724   41 "GOCorrect_"
+  1766   42 "GoError_"
+  1808   43 "GoSaccade_"
+  1850   44 "GoTargFixError_"
+  1892   45 "InfosZero"
+  1934   46 "last_status"
+  1976   47 "MAIN"
+  2018   48 "MapHeader_"
+  2060   49 "mouth_channel"
+  2102   50 "mouth_status"
+  2144   51 "mouth_thresh"
+  2186   52 "MouthBegin_"
+  2228   53 "MouthEnd_"
+  2270   54 "moving"
+  2312   55 "n_evs_sent"
+  2354   56 "Neg2Reinforcement_"
+  2396   57 "NOGOCorrect_"
+  2438   58 "NOGOWrong_"
+  2480   59 "output"
+  2522   60 "PORTA"
+  2564   61 "PORTB"
+  2606   62 "PORTC"
+  2648   63 "QUE_TTL"
+  2690   64 "Reward_"
+  2732   65 "RewardSize_"
+  2774   66 "Saccade_"
+  2816   67 "send_event"
+  2858   68 "SEND_TTL"
+  2900   69 "SendPenatrInfo_"
+  2942   70 "Set_event"
+  2984   71 "SETS"
+  3026   72 "SoundNoReward_"
+  3068   73 "SoundOnReward_"
+  3110   74 "SPEED"
+  3152   75 "SPEED_UNITS"
+  3194   76 "Staircase_"
+  3236   77 "start"
+  3278   78 "StartInfos_"
+  3320   79 "still"
+  3362   80 "StimFailed_"
+  3404   81 "Stimulation_"
+  3446   82 "StopOn_"
+  3488   83 "StopSignal_"
+  3530   84 "Target_"
+  3572   85 "TargetPre_"
+  3614   86 "TargetWindow_"
+  3656   87 "Tone_"
+  3698   88 "TrialInBlock"
+  3740   89 "TrialStart_"
+  3782   90 "u_sec"
+  3824   91 "value"
+  3866   92 "VSyncSynced_"
+  3908   93 "WAIT_MU"
+  3950   94 "WATCHMTH"
+  3992   95 "ZeroEyePosition_"
+
+  iNAM Name
+------ -----------------
+ 84002 "SETS"
+ 84008 "SPEED"
+ 84014 "SPEED_UNITS"
+ 84026 "__debug_op"
+ 84038 "Event_fifo_N"
+ 84052 "Event_fifo"
+ 84064 "Set_event"
+ 84074 "PORTA"
+ 84080 "PORTB"
+ 84086 "PORTC"
+ 84092 "FixSpotOn_"
+ 84104 "Fixate_"
+ 84112 "Target_"
+ 84120 "FixSpotOff_"
+ 84132 "StopSignal_"
+ 84144 "TrialStart_"
+ 84156 "FixError_"
+ 84166 "GoSaccade_"
+ 84178 "GoError_"
+ 84188 "NOGOWrong_"
+ 84200 "GoTargFixError_"
+ 84216 "Abort_"
+ 84224 "Correct_"
+ 84234 "GOCorrect_"
+ 84246 "NOGOCorrect_"
+ 84260 "Reward_"
+ 84268 "Tone_"
+ 84274 "ExtraReward_"
+ 84288 "SoundOnReward_"
+ 84304 "SoundNoReward_"
+ 84320 "Eot_"
+ 84326 "CmanHeader_"
+ 84338 "Stimulation_"
+ 84352 "ZeroEyePosition_"
+ 84370 "VSyncSynced_"
+ 84384 "Saccade_"
+ 84394 "Decide_"
+ 84402 "MouthBegin_"
+ 84414 "MouthEnd_"
+ 84424 "MapHeader_"
+ 84436 "FixWindow_"
+ 84448 "TargetWindow_"
+ 84462 "Staircase_"
+ 84474 "Neg2Reinforcement_"
+ 84494 "Feedback_"
+ 84504 "RewardSize_"
+ 84516 "TrialInBlock"
+ 84530 "SendPenatrInfo_"
+ 84546 "TargetPre_"
+ 84558 "StopOn_"
+ 84566 "StimFailed_"
+ 84578 "StartInfos_"
+ 84590 "EndInfos_"
+ 84600 "InfosZero"
+ 84610 "WAIT_MU"
+ 84618 "u_sec"
+ 84624 "#P1"
+ 84628 "start"
+ 84634 "duration"
+ 84644 "clock_cycles"
+ 84658 "#M3F989375"
+ 84670 "#F0"
+ 84674 "#L0"
+ 84678 "#I0"
+ 84682 "#L1"
+ 84686 "#L2"
+ 84690 "#I65535"
+ 84698 "#L3"
+ 84702 "SEND_TTL"
+ 84712 "value"
+ 84718 "output"
+ 84726 "#I3"
+ 84730 "#I7"
+ 84734 "#I255"
+ 84740 "#I8"
+ 84744 "#I128"
+ 84750 "#I1"
+ 84754 "#I100"
+ 84760 "#I127"
+ 84766 "QUE_TTL"
+ 84774 "send_event"
+ 84786 "n_evs_sent"
+ 84798 "#I5"
+ 84802 "CheckMouth"
+ 84814 "WATCHMTH"
+ 84824 "mouth_channel"
+ 84838 "mouth_thresh"
+ 84852 "still"
+ 84858 "moving"
+ 84866 "mouth_status"
+ 84880 "last_status"
+ 84892 "check"
+ 84898 "Moving
+"
+ 84906 "#S0"
+ 84910 "Still
+"
+ 84918 "#S1"
+ 84922 "MAIN"
+----------------------------------------------------------
+
+ANALYSIS OF 76 INSTRUCTIONS (730/90000 bytes) IN 5/75 PROCESSES.
+
+   0 HALT           0 x  2 =     0 bytes (  0%) Stop clock
+   1 RESUME         0 x  6 =     0 bytes (  0%) Resume process
+   2 SET           11 x 10 =   110 bytes ( 14%) Assignment
+   3 NEXTTICK       0 x  4 =     0 bytes (  0%) Wait ticks
+   4 WAIT           0 x  4 =     0 bytes (  0%) Wait milliseconds
+   5 WSOF           0 x  4 =     0 bytes (  0%) Wait for status off
+   6 WSON           0 x  4 =     0 bytes (  0%) Wait for status on
+   7 WCOF           0 x  4 =     0 bytes (  0%) Wait for cancel off
+   8 WCON           0 x  4 =     0 bytes (  0%) Wait for cancel on
+   9 SPAWN          4 x  6 =    24 bytes (  5%) Spawn process
+  10 ADD            4 x 14 =    56 bytes (  5%) val3 = var1 + var2
+  11 SUB            1 x 14 =    14 bytes (  1%) val3 = var1 - var2
+  12 MUL            0 x 14 =     0 bytes (  0%) val3 = var1 * var2
+  13 DIV            0 x 14 =     0 bytes (  0%) val3 = var1 / var2
+  14 MOD            3 x 14 =    42 bytes (  4%) val3 = var1 % var2
+  15 NEG            0 x 14 =     0 bytes (  0%) val2 = - var1
+  16 BAND           2 x 14 =    28 bytes (  3%) val3 = val1 & val2
+  17 BOR            1 x 14 =    14 bytes (  1%) val3 = val1 | val2
+  18 BXOR           0 x 14 =     0 bytes (  0%) val3 = val1 ^ val2
+  19 LAND           1 x 14 =    14 bytes (  1%) val3 = val1 && val2
+  20 LOR            0 x 14 =     0 bytes (  0%) val3 = val1 || val2
+  21 EQ             2 x 14 =    28 bytes (  3%) val3 = val1 == val2
+  22 NE             2 x 14 =    28 bytes (  3%) val3 = val1 != val2
+  23 GT             0 x 14 =     0 bytes (  0%) val3 = val1 > val2
+  24 LT             4 x 14 =    56 bytes (  5%) val3 = val1 < val2
+  25 LE             0 x 14 =     0 bytes (  0%) val3 = val1 <= val2
+  26 GE             1 x 14 =    14 bytes (  1%) val3 = val1 >= val2
+  27 NOT            0 x 14 =     0 bytes (  0%) val2 = ! val1
+  28 LCOMP          0 x 14 =     0 bytes (  0%) val2 = ~ val1
+  29 IF            10 x  8 =    80 bytes ( 13%) IF (expr) stmt
+  30 GOTO           6 x  4 =    24 bytes (  8%) GOTO #
+  31 NEXTTICK1      2 x  2 =     4 bytes (  3%) NEXTTICK1
+  32 TRIGGER        0 x  6 =     0 bytes (  0%) Trigger databases
+  33 SUSPEND        0 x  6 =     0 bytes (  0%) Suspend process
+  34 HARVEST        0 x  6 =     0 bytes (  0%) Harvest databases
+  35 CALL0          2 x  6 =    12 bytes (  3%) Builtin function
+  36 CALL1          6 x  8 =    48 bytes (  8%) Builtin function
+  37 CALL2          7 x 10 =    70 bytes (  9%) Builtin function
+  38 CALL3          0 x 12 =     0 bytes (  0%) Builtin function
+  39 CALL4          0 x 14 =     0 bytes (  0%) Builtin function
+  40 CALL5          0 x 16 =     0 bytes (  0%) Builtin function
+  41 CALL6          0 x 18 =     0 bytes (  0%) Builtin function
+  42 CALL7          0 x 20 =     0 bytes (  0%) Builtin function
+  43 CALL8          0 x 22 =     0 bytes (  0%) Builtin function
+  44 CALL9          0 x 24 =     0 bytes (  0%) Builtin function
+  45 CALL10         0 x 26 =     0 bytes (  0%) Builtin function
+  46 CALL11         0 x 28 =     0 bytes (  0%) Builtin function
+  47 CALL12         0 x 30 =     0 bytes (  0%) Builtin function
+  48 CALL13         0 x 32 =     0 bytes (  0%) Builtin function
+  49 CALL14         0 x 34 =     0 bytes (  0%) Builtin function
+  50 CALL15         0 x 36 =     0 bytes (  0%) Builtin function
+  51 CALL16         0 x 38 =     0 bytes (  0%) Builtin function
+  52 AFETCH1        1 x  8 =     8 bytes (  1%) Fetch array value
+  53 AFETCH2        0 x 10 =     0 bytes (  0%) Fetch array value
+  54 AFETCH3        0 x 12 =     0 bytes (  0%) Fetch array value
+  55 AFETCH4        0 x 14 =     0 bytes (  0%) Fetch array value
+  56 AFETCH5        0 x 16 =     0 bytes (  0%) Fetch array value
+  57 AFETCH6        0 x 18 =     0 bytes (  0%) Fetch array value
+  58 ASTORE1        2 x  8 =    16 bytes (  3%) Store array value
+  59 ASTORE2        0 x 10 =     0 bytes (  0%) Store array value
+  60 ASTORE3        0 x 12 =     0 bytes (  0%) Store array value
+  61 ASTORE4        0 x 14 =     0 bytes (  0%) Store array value
+  62 ASTORE5        0 x 16 =     0 bytes (  0%) Store array value
+  63 ASTORE6        0 x 18 =     0 bytes (  0%) Store array value
+  64 WAITFORPROCESS      2 x  6 =    12 bytes (  3%) Wait for process
+  65 LSHIFT         0 x 14 =     0 bytes (  0%) val3 = val1 << val2
+  66 RSHIFT         1 x 14 =    14 bytes (  1%) val3 = val1 >> val2
+  67 FBINARY        1 x 14 =    14 bytes (  1%) val3 = val1 Fop val2
+  68 FUNARY         0 x 10 =     0 bytes (  0%) val3 = Fop val1
+  69 FIF            0 x  8 =     0 bytes (  0%) fIF (expr) stmt
+PCL Calling write_pxe_file..
+PXESave - PXEfile='C:/TEMPO/wh028/Sandbox/TEST.pxe', profile='C:/TEMPO/wh028/Sandbox/TEST.pro', kernel_op=40C6:0002 kernel_symtab=56C1:0002
+PXEsave - sizeof(PXE) is 202
+PXESave - Opening PXE file 'C:/TEMPO/wh028/Sandbox/TEST.pxe'..
+PXESave - 'KPED' 12.1 Set 45  PCL 12.5
+PXESave - pro_file='TEST.pro'
+PXESave - speed=100000/100000 sets=2
+PXESave - Scanning 75 PROCESS control blocks..
+PXESave - Found 5 PROCESS control blocks.
+PXESave - PROCESS 'WAIT_MU' reading 100 bytes of instructions..
+          PROCESS 'WAIT_MU' mapping instructions..
+MapOp - Mapping 100 instruction bytes; firstOp=37F8:0002 pcl_symtab=4DF2:0016 kernel_symtab=56C1:0002..
+          PROCESS 'WAIT_MU' writting 100 bytes of instructions to fileOffset=204
+PXESave - PROCESS 'SEND_TTL' reading 144 bytes of instructions..
+          PROCESS 'SEND_TTL' mapping instructions..
+MapOp - Mapping 144 instruction bytes; firstOp=37F8:0002 pcl_symtab=4DF2:0016 kernel_symtab=56C1:0002..
+          PROCESS 'SEND_TTL' writting 144 bytes of instructions to fileOffset=304
+PXESave - PROCESS 'QUE_TTL' reading 150 bytes of instructions..
+          PROCESS 'QUE_TTL' mapping instructions..
+MapOp - Mapping 150 instruction bytes; firstOp=37F8:0002 pcl_symtab=4DF2:0016 kernel_symtab=56C1:0002..
+          PROCESS 'QUE_TTL' writting 150 bytes of instructions to fileOffset=448
+PXESave - PROCESS 'WATCHMTH' reading 324 bytes of instructions..
+          PROCESS 'WATCHMTH' mapping instructions..
+MapOp - Mapping 324 instruction bytes; firstOp=37F8:0002 pcl_symtab=4DF2:0016 kernel_symtab=56C1:0002..
+          PROCESS 'WATCHMTH' writting 324 bytes of instructions to fileOffset=598
+PXESave - PROCESS 'MAIN' reading 12 bytes of instructions..
+          PROCESS 'MAIN' mapping instructions..
+MapOp - Mapping 12 instruction bytes; firstOp=37F8:0002 pcl_symtab=4DF2:0016 kernel_symtab=56C1:0002..
+          PROCESS 'MAIN' writting 12 bytes of instructions to fileOffset=922
+pxesave - INSTRUCTIONS=40/5000 (732/90000 bytes) pxe.op=202 pxe.nBytesOp=732
+ PROCESS   1: state=1  nOp=100   iOp=     2-101    iCache=     2-101     'WAIT_MU'
+ PROCESS   2: state=1  nOp=144   iOp=   102-245    iCache=   102-245     'SEND_TTL'
+ PROCESS   3: state=1  nOp=150   iOp=   246-395    iCache=   246-395     'QUE_TTL'
+ PROCESS   4: state=1  nOp=324   iOp=   396-719    iCache=   396-719     'WATCHMTH'
+ PROCESS   5: state=2  nOp=12    iOp=   720-731    iCache=   720-731     'MAIN'
+pxesave - 5 processes fileOffset=934 len=220
+pxesave - 95 Symbol table fileOffset=1154 len=768
+pxesave - (1021,oflo=1038) hash table fileOffset=1922 len=16480
+pxesave - 84928 name table fileOffset=18402 len=84928
+pxesave - 10000 arraytable fileOffset=103330 len=8
+pxesave - 131072 arraydata fileOffset=103338 len=4000
+pxesave - Next fileOffset=107460
+pxesave - Successful. EndOfFile=107460
+PCL write_pxe_file returned 0
+PCL Closing ICache file
+PCL - Freeing SYMTABEX array
+PCL - SYMTABEX array freed
+PCL Closing IC..
+PCL Closing XMS..
+PCL Closing error file..
+PCL Deleteing error file 'C:/TEMPO/wh028/Sandbox/TEST.err'
+PCL - Exiting with status 0

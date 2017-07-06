@@ -1,0 +1,89 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 25 08:35:15 2001
+; CLOAD example.pcf
+
+; tempow 10.5 Set 28.6   'T083316' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=8
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64         5     8%       120/1536       =7      =5    
+; INSTRUCTIONS    =700       41     6%       738/12600      =59     =43   
+; SYMBOLTABLE     =700       65     9%       780/8400       =76     =68   
+; HASHTABLE       =  257,700       38%      3138/5742     Use Kernel Default
+; NAMETABLE       =8000     499     6%       499/8000       =587    =525  
+; DATABASES       =40         3     8%       180/2400       =3      =3    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =32         0     0%         0/1408       =0      =0    
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD example.pro
+
+; DATABASES=40
+
+HOPEN  1,6,1,1,4,100,1500,500,0,0,0x0
+HTITLE 1,"Analog Average"
+HOPEN  2,3,1,1,2,25,1500,500,0,0,0x0
+HTITLE 2,"Spike append"
+HOPEN  3,4,2,1,1,100,20,0,0,49,0x0
+HTITLE 3,"Response time histogram"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,803,3,1604,66,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,4,635,767,1175,0
+SHOW a 0
+
+CMDWND 1,-1,-1,-1,-1,507,4,802,65,0
+ANIMPAGE 0x1,1,-1,-1,-1,-1,43,225,664,565,0
+ANIMVIEW 0,1,-1,-1,-1,-1,0,0,305,307,0
+ANIMVIEW 1,1,-1,-1,-1,-1,305,0,610,307,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,741,85,1601,840,0
+DBVIEW  0,0,1,10,1500,0,4,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,850,240,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,1,2,10,1500,0,2,0,0,0,0x0
+DBVPOS  0,1,1,-1,-1,-1,-1,0,240,850,480,1
+DBVCOLORS 0,1,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,2,3,10,20,0,1,0,0,0,0x0
+DBVPOS  0,2,1,-1,-1,-1,-1,0,480,850,720,2
+DBVCOLORS 0,2,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+

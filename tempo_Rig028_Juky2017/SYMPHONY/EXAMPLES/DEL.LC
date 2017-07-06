@@ -1,0 +1,17 @@
+POOL    test
+    {
+    param=null
+    }
+    
+NODE Sender
+    {
+    computer=horizon
+    commandline=example2 Receiver
+    }
+    
+NODE Receiver
+    {
+    computer=snoopy
+    commandline=example2
+    }
+    

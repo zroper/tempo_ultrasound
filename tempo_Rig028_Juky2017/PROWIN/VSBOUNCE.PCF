@@ -1,0 +1,135 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Fri Jul 27 10:17:48 2001
+; CLOAD vsbounce.pcf
+
+; tempow 10.5 Set 28.6   'T095948' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=500.000000  PROSPEED=100.000000  (200/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64         1     2%        24/1536       =1      =1    
+; INSTRUCTIONS    =700       39     6%       702/12600      =56     =41   
+; SYMBOLTABLE     =700       46     7%       552/8400       =54     =48   
+; HASHTABLE       =  257,700       38%      3120/5742     Use Kernel Default
+; NAMETABLE       =8000     398     5%       398/8000       =468    =419  
+; DATABASES       =40         0     0%         0/2400       =0      =0    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =0          0     0%         0/0          =0      =0    
+
+SPEED 500
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+A1.NAME="voc"
+A1.OPR="DAIS"
+A1.DECAY=3
+A1.STATUS=0x2
+A1.HIGH=6
+A2.NAME="FP2"
+A2.STATUS=0x1
+A2.HIGH=20
+A2.LOW=-128
+A3.NAME="F3"
+A3.STATUS=0x1
+A3.HIGH=20
+A3.LOW=-128
+A4.NAME="F4"
+A4.STATUS=0x1
+A4.HIGH=20
+A4.LOW=-128
+A5.NAME="C3"
+A5.STATUS=0x1
+A5.HIGH=20
+A5.LOW=-128
+A6.NAME="C4"
+A6.STATUS=0x1
+A6.HIGH=20
+A6.LOW=-128
+A7.NAME="P3"
+A7.STATUS=0x1
+A7.HIGH=20
+A7.LOW=-128
+A8.NAME="P4"
+A8.STATUS=0x1
+A8.HIGH=20
+A8.LOW=-128
+A9.NAME="O1"
+A9.STATUS=0x1
+A9.HIGH=20
+A9.LOW=-128
+A10.NAME="O2"
+A10.STATUS=0x1
+A10.HIGH=20
+A10.LOW=-128
+A11.NAME="F7"
+A11.STATUS=0x1
+A11.HIGH=20
+A11.LOW=-128
+A12.NAME="F8"
+A12.STATUS=0x1
+A12.HIGH=20
+A12.LOW=-128
+A13.NAME="T3"
+A13.STATUS=0x1
+A13.HIGH=20
+A13.LOW=-128
+A14.NAME="T4"
+A14.STATUS=0x1
+A14.HIGH=20
+A14.LOW=-128
+A15.NAME="T5"
+A15.STATUS=0x1
+A15.HIGH=20
+A15.LOW=-128
+A16.NAME="T6"
+A16.STATUS=0x1
+A16.HIGH=20
+A16.LOW=-128
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+E1.LOW=65516
+E2.LOW=65516
+
+PLOAD vsbounce.pro
+
+; DATABASES=40
+
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,699,2,1602,75,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,37,871,871,1176,0
+SHOW s 0
+
+CMDWND 1,-1,-1,-1,-1,397,10,692,71,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+

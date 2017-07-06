@@ -1,0 +1,55 @@
+/*  .title      HTB.HP - Private definitions for HTB.C
+;+
+; EDIT HISTORY
+;   19Dec06 sh  Initial edit
+;-
+*/
+
+//----------------------------------------------------------------------
+// HTBINDEX - Information about an individual database in an HTB file
+
+typedef struct
+    {
+    ULONG       offset;                 // file offset (in bytes) to header
+    HTB         header;                 // Copy of file header
+    } HTBINDEX;
+
+
+#define HTB_NINDEX_DEFAULT  256         // Default # of DB entries in index
+
+
+//----------------------------------------------------------------------
+// HTBFILE - File control block
+
+typedef struct
+    {
+    CRITICAL_SECTION    cs;                     // access to HTBFILE_ control block
+    HTBFILE             Hf;                     // User's handle
+    int                 fid;                    // file id
+    long                rdwr;                   // ==1 iff opened for read+write
+    char                filename[_MAX_PATH];    // Name of file
+    HTBINDEX            **index;                // Pointer to array of HTBINDEX pointers
+    long                nDatabases;             // # of HTBINDEX entries used                       
+    long                nIndexAlloc;            // # of HTBINDEX entries allocated
+
+    // The following members keep track of the new database that is opened
+
+    ULONG               eofOffset;              // File offset to end of file
+                                                // This is the offset of the next new HTB header
+
+    long                isNewDBOpen;            // ==1 iff new HTB DB is open (see htbOpenNewDB)
+    HTB                 newHtb;                 // Copy of new HTB header
+
+    long                bytesPerSample;         // # of bytes per sample
+    long                bytesPerEpoch;          // # of bytes per epoch
+    long                append;                 // 0=SUM, 1=APPEND
+    } HTBFILE_;
+
+
+#define HTBFILE2HTBFILE_(h)     ((h) ? ((HTBFILE_ *) (h)->p) : 0)
+
+#define HTBLOCK(hf)         EnterCriticalSection(&hf->cs);
+#define HTBUNLOCK(hf)       LeaveCriticalSection(&hf->cs);
+
+//----------------------------------------------------------------------
+

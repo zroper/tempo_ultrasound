@@ -1,0 +1,6 @@
+C:\TEMPO\PROCLIB\PGM\default.pro(102) : error stopColorArray is not declared as an array.
+display_machine - ERROR -1 loading PROCESS 'DEFAULT' instructions from 'PCLCACHE.TMP' (2)
+display_instruction_mix - ERROR -1 loading PROCESS 'DEFAULT' instructions from 'PCLCACHE.TMP' (2)
+pxesave - ERROR -1 loading PROCESS 'DEFAULT' instructions from 'PCLCACHE.TMP' (2)
+pxesave - Exiting with error -2
+PCL - Error -2 writing PXE file 'default.pxe' - No such file or directory

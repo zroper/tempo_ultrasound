@@ -1,0 +1,271 @@
+WORKING DOCUMENT THAT DESCRIBES THE LC API
+Original 03Oct06
+Revised  04Oct06
+
+As I understand it, there are 3 significant differences between
+what ELSIE is currently doing and what you want to do:
+
+1. ELSIE's .LC file if static.  Once loaded, that's the LC definition.
+   You want to dynamically create and destroy connections
+   and possible add/delete nodes from your LC.
+   
+2. ELSIE maintains the concept of a "state" for the LC:
+   
+            (compile .LC)
+            (discover pool information)
+            (start nodes) 
+            (resolve TGCMDSRV IP:PORT for each node)
+        begin initialization
+            (open connections)
+        end initialization
+        start computation
+            (monitor nodes)
+        stop computation
+        begin uninitialization
+            (close connections)
+        end uninitization
+    
+   (Activites that ELSIE does are in parens, the states are not.)
+   
+   You may not want the concept of states in your LC.
+   
+3. Who is in control of the LC?  If a user runs ELSIE, it controls the
+   starting and stopping of the LC.  If _your_ program uses
+   the LCAPI, then _it_ is the controller of the LC.
+   
+   
+
+
+Here's an initial sketch of the LCAPI (Elsie API).  This is what
+we need to discuss.
+
+Note that the structure of a .LC file is:
+
+
+    POOL poolName { paramList }
+    
+    NODE node1 { paramList }
+    ..
+    NODE nodeN { paramList }
+
+    CONNECTION connect1 { paramList }
+    ..
+    CONNECTION connectM { paramList }
+
+Order matters.  Nodes are started in the order presented.
+Connections are established in the order presented (sender is
+opened first, then receiver).
+
+In keeping with the string oriented ("parameter list") nature
+of TG, I'd like, if possible, to try to incorporate parameter
+lists into the API.  I think this will give us a lot of flexibility.
+the LC.H will #define standard strings used by the LCAPI and
+you'll be able to #define your own addition!
+
+
+Here's the idea for the LCAPI:
+
+    #include "..\tempodll\lc.h"
+
+    LC      *lc;
+    char    paramList[LC_PARMALISTSIZE];
+    long    stateNumber;
+    long    status;
+    
+    
+    
+    lc = lcInit(.., tgcbTable, ..);
+    lc = lcUninit(lc);
+
+    status = lcSetPool(lc, poolName, paramList);    //04Oct06 lcAddPool() changed lcSetPool()
+    
+    status = lcAddNode(lc, nodeName, paramList);
+    status = lcAddConnection(lc, sendNodeName, recvNodeName, paramList);
+
+    status = lcStartNode(lc, nodeName);    
+    status = lcStopNode(lc, nodeName);    
+
+    status = lcOpenConnection(lc, connectName);
+    status = lcCloseConnection(lc, connectName);
+    
+    status = lcSendState(lc, nodeName, stateNumber)
+    
+  Get information:
+    
+    //status = lcGetConnectionTraffic(lc, connectName,
+    //            sendParamList, sizeof(sendParamList),
+    //            recvParamList, sizeof(recvParamList));
+    //            
+    //         // lcGetConnectionTraffic can be used to both
+    //         // monitor the nodes (did they crash?) and the connection as well
+    //         // as get flow info to insure that data is moving
+    //         // though the connection.  This could later be
+    //         // used to poll the connections in a utility
+    //         // that graphically displays data flow.
+    //
+    // 04Oct06.  Traffic information should be gotten with a tgQuery()
+    //           request to the individual sender and receiver nodes.
+
+    // The ..Info() functions return information about the current
+    // state of the object.  For instance, you can determine if
+    // a connection is opened or closed or if a NODE has been started
+    // or not.
+    
+    status = lcGetPoolInfo(lc, poolName, paramList, sizeof(paramList));
+    status = lcGetNodeInfo(lc, nodeName, paramList, sizeof(paramList));
+    status = lcGetConnectionInfo(lc, connectName, paramList, sizeof(paramList));
+    
+    // The ..Params() functions return the current paramList associated
+    // with the object (it changes for sendNode and recvNode when a
+    // connection is established!)
+    
+    status = lcGetPoolParams(lc, poolName, paramList, sizeof(paramList));
+    
+    //status = lcGetNodeParams(lc, nodeName, paramList, sizeof(paramList));
+    //04Oct06 NODE paramList doesn't change; user can keep their own copy.
+    
+    status = lcGetConnectionParams(lc, connectName, paramList, sizeof(paramList));
+    
+  Editing of the LC graph.  Deleting an object requires certain
+  things.  For instance, you can't delete a connection until it is
+  first closed.  You can't delete a node if it has any connections.
+
+    //status = lcDeletePool(lc, poolName, paramList);
+    //        //04Oct06 No need to delete pool.  Just lcUninit(lc) and recreate it
+    //                  if you want to change the pool name.
+    //                  Down the road, it may be desirable to add/delete
+    //                  specific computers (name + IP) to the pool for
+    //                  cases where LCAPI can't discover them (ie NCM is
+    //                  running on a computer across the network) but
+    //                  this the next phase, not phase 1 stuff.
+    
+    status = lcDeleteNode(lc, nodeName, paramList);
+            //04Oct06 A NODE can't be deleted unless all connections to that
+            //        NODE are deleted and the NODE is not running.
+            
+    status = lcDeleteConnection(lc, connectName, sendNodeName, recvNodeName, paramList);
+            //04Oct06 A CONNECTION can't be deleted unless it is closed.
+    
+  I may also need to offer iterators so you can "discover" the names
+  of the pool, nodes and connections.
+  
+    status = lcGetPoolName(lc, poolName, sizeof(poolName));
+    
+    status = lcGetNodeCount(lc, long *pNodeCount);
+    status = lcGetNodeList(lc, nodeNameList, sizeof(nodeNameList));
+    status = lcGetConnectionCount(lc, long *pConnectionCount);
+    status = lcGetConnectionList(lc, connectNameList, sizeof(connectNameList));
+
+    //04Oct06 This still isn't right because the user needs to determine
+    //        how much memory to allocate for a call to lcGetNodeList
+    //        and a count of the number of NODES's doesn't tell the
+    //        user application how many bytes to allocate.
+    //        However, the TG_TGCMDSRV_NODENAMESIZE is defined in TG.H
+    //        as the maximum number of bytes (including a trailing NULL)
+    //        for a NODE name so the user could allocate the maximum amount
+    //        of space based on nNodes * TG_TGCMDSRV_NODENAMESIZE.
+    
+    char *lcGetErr(long status);            //04Oct06 Converts LC error code into short
+                                            // static constant text string.
+                                            // EXAMPLE is: "LC Can not delete a NODE with open connections"
+    
+
+As you can see, strings are passed back and forth, not data structures.
+The param..() functions are REALLY useful in manipulating parameter lists
+and you can use them (they're in TEMPO.DLL).
+
+MY GOALS:
+
+1. One of my goals is to use this exact API for the ELSIE program.  In fact,
+once we've got the LCAPI working, I'll rework ELSIE.EXE to use it and
+I think I'll make this source available to the users.
+
+2. Another goal is to embed the LCAPI into TEMPO so users can create, run, control,
+monitor and save LCs in TEMPO!
+
+3. Matlab should be able to use the LC interface
+
+4. The user (you) should be able to use it.
+
+
+--------------------------------------------------------------------
+04Oct06
+
+Here's a sketch the flow of your program:
+
+#define MYNODENAME  "mynodename"
+
+main()
+    {
+    lc = lcInit(tgcbTable, MYNODENAME);
+    
+    status = lcSetPool(lc, "yourpoolname")
+    status = lcAddNode(lc, "tempow", "runProgram=no\n");
+    status = lcAddNode(lc, MYNODENAME, "runProgram=no\n");
+    
+    // now you can add one or more connections with
+    
+    status = lcAddConnection(lc, "c1", "tempow", MYNODENAME, "DB=%d\n", 1);
+    status = lcAddConnection(lc, "c2", "tempow", MYNODENAME, "DB=%d\n", 2);
+    
+    // once a connection is added, you can open it
+    
+    status = lcOpenConnection(lc, "c1");
+    status = lcOpenConnection(lc, "c2");
+    
+    // To start data flowing on all of your connections, tell TEMPOW
+        
+    status = lcSendState(lc, "tempow", TG_TGSRV_STATE_START);
+    
+    // To stop data flow
+    
+    status = lcSendState(lc, "tempow", TG_TGSRV_STATE_STOP);
+    
+    // To close one or more connections
+    
+    status = lcCloseConnection(lc, "c1");
+    status = lcCloseConnection(lc, "c2");
+    
+    // To delete one or more connections
+    
+    status = lcDeleteConnection(lc, "c1");
+    status = lcDeleteConnection(lc, "c2");
+    
+    // To delete one or more NODES
+    
+    status = lcDelete(lc, "TEMPOW");
+    status = lcDelete(lc, MYNODENAME);
+    
+    lcUninit(lc);
+    }
+    
+The above "LC Controller" part of your program will essentially be
+talking to the other part of your program which uses the TG
+interface (see TGS) and processes data.  This LC Controller stuff
+configures the wiring and your program uses the TG functions
+(and callbacks) to receive the data and process it.
+
+That part of the program is mostly driven by callbacks from TG
+(ie to open/close connections and to receive epochs from when
+they are deposited into a connection's FIFO).  This is essentially
+what TGS is - a very passive data processing program that
+lets LC set up its inputs and outputs and it processes data when
+its told to.
+
+I think of the TG side of the program much like a Windows Procedure:
+Windows "sends" messages to your Windows procedure, which is a
+callback function that Windows invokes when it has a message for
+you.  You can choose to do something with the message or ignore it.
+
+Instead of using messages, TG calls your callback functions
+when something happens.  So the bulk of your programming for
+that side of the program will be in process the callbacks that
+TG makes to you.
+
+This architecture makes TG programs responsive to being
+configured by another entity like ELSIE (or your controller
+program!)  This parallels how your Windows program is responsive
+to the user because it fields callbacks/messages from Windows
+to do everything and the user initiates things with mouse
+and keyboard events.
+

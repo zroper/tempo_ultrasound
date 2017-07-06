@@ -1,0 +1,119 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 25 11:09:21 2001
+; CLOAD match.pcf
+
+; tempow 10.5 Set 28.6   'T110804' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64        16    25%       384/1536       =23     =17   
+; INSTRUCTIONS    =700      109    16%      1962/12600      =156    =115  
+; SYMBOLTABLE     =700      132    19%      1584/8400       =155    =139  
+; HASHTABLE       =  257,700       42%      3312/5742     Use Kernel Default
+; NAMETABLE       =8000    1230    15%      1230/8000       =1447   =1295 
+; DATABASES       =40         6    15%       360/2400       =7      =6    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =32         0     0%         0/1408       =0      =0    
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+A1.NAME="Ix"
+A2.NAME="Iy"
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD match.pro
+
+; DATABASES=40
+
+HOPEN  1,0,1,1,2,100,300,0,0,9,0x0
+HTITLE 1,"Avg x,y"
+HFILE  1,"match.htb"
+HOPEN  2,1,1,1,2,100,300,0,0,9,0x0
+HTITLE 2,"Append x,y"
+HFILE  2,"match.htb"
+HOPEN  3,2,1,1,2,100,3000,0,0,0,0x0
+HTITLE 3,"Avg spike"
+HFILE  3,"match.htb"
+HOPEN  4,3,1,1,2,100,3000,0,0,0,0x0
+HTITLE 4,"Append spike"
+HFILE  4,"match.htb"
+HOPEN  5,4,1,1,1,100,600,0,0,4,0x0
+HTITLE 5,"Avg event"
+HFILE  5,"match.htb"
+HOPEN  6,5,1,1,1,100,600,0,0,4,0x0
+HTITLE 6,"Event append"
+HFILE  6,"match.htb"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,769,1,1600,69,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,8,737,890,1193,0
+SHOW h 0
+
+CMDWND 1,-1,-1,-1,-1,475,1,770,62,0
+ANIMPAGE 0x1,1,-1,-1,-1,-1,14,58,729,482,0
+ANIMVIEW 0,1,-1,-1,-1,-1,0,0,352,391,0
+ANIMVIEW 1,1,-1,-1,-1,-1,352,0,704,391,1
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,766,111,1566,711,0
+DBVIEW  0,0,1,10,300,0,2,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,395,189,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,1,2,10,300,0,2,0,0,0,0x0
+DBVPOS  0,1,1,-1,-1,-1,-1,395,0,790,189,1
+DBVCOLORS 0,1,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,2,3,10,3000,0,2,0,0,0,0x0
+DBVPOS  0,2,1,-1,-1,-1,-1,0,189,395,378,2
+DBVCOLORS 0,2,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,3,4,10,3000,0,2,0,0,0,0x0
+DBVPOS  0,3,1,-1,-1,-1,-1,395,189,790,378,3
+DBVCOLORS 0,3,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,4,5,10,600,0,1,0,0,0,0x0
+DBVPOS  0,4,1,-1,-1,-1,-1,0,378,395,567,4
+DBVCOLORS 0,4,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,5,6,10,600,0,1,0,0,0,0x0
+DBVPOS  0,5,1,-1,-1,-1,-1,395,378,790,567,5
+DBVCOLORS 0,5,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+
+
+; BEGIN KEY DEFINITIONS
+
+KEY F8 = status = status ^ BAR_TTL {cr}
+
+; END KEY DEFINITIONS
+

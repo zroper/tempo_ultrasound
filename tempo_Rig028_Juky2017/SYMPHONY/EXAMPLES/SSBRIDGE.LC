@@ -1,0 +1,20 @@
+POOL    local
+    {
+    param=null
+    }
+    
+NODE tempow
+    {
+    computer=$0
+    commandline=tempow
+    runProgram=no
+    exitProgram=no
+    }
+    
+NODE ssBridge
+    {
+    computer=$0
+    commandline=ssBridge "start"
+    }
+    
+    

@@ -1,0 +1,25 @@
+POOL    test
+    {
+    param=null
+    }
+    
+NODE Sender
+    {
+    computer=$0
+    commandline=tgs.exe SENDER.LOG
+    workingDirectory=c:\usr\tempo\symphony\elsie
+    }
+    
+NODE Receiver
+    {
+    computer=$1
+    commandline=tgs.exe RECEIVER.LOG
+    workingDirectory=c:\usr\tempo\symphony\elsie
+    }
+
+CONNECTION pipe1
+    {
+    lcSendNodename=Sender
+    lcRecvNodename=Receiver
+    }
+

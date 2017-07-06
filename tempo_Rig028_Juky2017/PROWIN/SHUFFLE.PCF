@@ -1,0 +1,71 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2002 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Sun Nov 03 12:01:01 2002
+; CLOAD shuffle.pcf
+
+; tempow 10.13 Set 32.9   'T111933' connected to 'YELLOW'
+; KPED 10.17 Set 32
+; KSRV 10.16 Set 32.9 (Server 'YELLOW          ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=200.000000  (100/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=8
+; CCHANNELS=2
+; ECHANNELS=2
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =16               3    19%           72/384           =4         =3       
+; INSTRUCTIONS    =400             34     8%          600/7200          =43        =36      
+; SYMBOLTABLE     =400             31     8%          372/4800          =36        =33      
+; HASHTABLE       =     127,400          33%         1554/3162        Use Kernel Default
+; NAMETABLE       =2000           207    10%          207/2000          =244       =218     
+; DATABASES       =16               0     0%            0/960           =0         =0       
+; ARRAYTABLE      =512              8     2%            8/512           =10        =8       
+; ARRAYDATA       =131072          80     0%           80/131072        =100       =82      
+; OBJECTS         =0                0     0%            0/0             =0         =0       
+
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=8
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=2
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD shuffle.pro
+
+; DATABASES=16
+
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1920,1200,16
+MAINWND 1,-1,-1,-1,-1,3,-2,742,56,0
+MSGWND 1,-1,-1,-1,-1,860,847,1864,1152,0
+STATUSWND 1,-1,-1,-1,-1,54,358,825,1087,0
+ARRAY Trials
+
+CMDWND 1,0,1171,-1,-1,4,56,275,117,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1920,1200,16
+
+; END OF DIALOGS
+

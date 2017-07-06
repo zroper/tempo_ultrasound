@@ -1,0 +1,94 @@
+02Jun08 
+
+Here's a copy of what TEMPONET Server boot sequence looks like on BACH.
+
+
+
+    Starting PC DOS...
+    
+    ________________________________________________________________
+    FreeDOS XMS-Driver
+    Copyright (c) 1995, Till Gerken
+    Copyright 2001-2005, Martin Stromberg et al, (see HISTORY.TXT)
+    
+    Driver Version: 0.94.Bananas    Interface Version: 3.0
+    Information: 80386 4GB Version
+    Base Address higher than 0xffffffff detected.  This release of FDXMS does
+    not support this.  Ignoring this address range.
+    0xCEE9FE00 (3471441408 decimal) bytes of extended memory detected
+    ________________________________________________________________
+    
+    
+    IBM Expanded Memory Manager 386  Version 4.50
+    Copyright (c) IBM Corp. 1986, 1994
+    
+    WARNING: This version of HIMEM.SYS may cause conflicts with EMM386.
+    
+    Press any key when ready...
+    EMM386 successfully installed.
+    
+    Expanded memory services unavailable.
+    
+      Total upper memory available  . . . . . .   81 KB
+      Largest Upper Memory Block available  . .   81 KB
+      Upper memory starting address . . . . . . CF00 H
+    
+    
+    EMM386 Active.
+    
+    IBM RAMDrive version 3.10 virtual disk C:
+    RAMDrive: Error in extended memory allocation
+    
+    MAC/DIS to Packet Driver converter loaded.  Version 1.09
+    Copyright 1991 FTP Software, Inc.  All rights reserved.
+     v1.07 by Joe R. Doupnik, jrd@cc.usu.edu, Utah State Univ, 18 May 1991
+     v1.08 by Dan Lanciani, ddl@harvard.harvard.edu
+     v1.09 by Joe R. Doupnik, jrd@cc.usu.edu, Utah State Unniv, 3 Nov 1991
+    
+    Bad or missing \E1000.DOS
+    Error in CONFIG.SYS line 35
+    No RAMDRIVE was detected!
+    
+    
+    Starting Server on :
+    
+    ___________________________________________________________________
+    You are missing one or more of the following files in this directory:
+    kped.exe
+    ksrvU.exe
+    ___________________________________________________________________
+    ___________________________________________________________________
+    
+    To restart the server, type KSTART
+    To run the Diagnostic, type DIAGNOSE
+    ___________________________________________________________________
+    A:\>
+
+*****************************************************************    
+So PC DOS's RAMDRIVE.SYS doesn't appear to work on BACH (with 4GB)
+but the same diskette works fine on YELLOW (256 Mb).
+    
+VideoSYNC appears to load its RAMDRIVE (xmsdsk) OK using Win98!
+
+*****************************************************************    
+Thinks I tried:
+
+1. Upgrade to FDXXMS.SYS v0.94.bananas from v0.92.oranges.
+   Didn't seem to make a difference.
+   
+   Both version display the warning message:
+   
+        Base Address higher than 0xffffffff detected.  This release
+        of FDXMS does not support this.  Ignoring this address
+        range.
+
+2. In PC DOS, try manually loading XMSDSK 6144 /y.
+   It fails to create the RAM drive with the message:
+   
+        *** XMS RAMdisk v1.9I (FU 08/98): XMS get free mem error.
+        
+3. Adding /numhandles to himem.sys line didn't make any difference.
+   Adding ROM to emm386 line also din't make a difference.
+   
+4. In PCDOS, add DEVICEHIGH=IFSHLP.SYS
+    

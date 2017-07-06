@@ -1,0 +1,142 @@
+// 256.WPL - Test script for WORDPLAY/VideoSYNC
+//
+// Tests 1024x768x256 color mode (requires 1 Mb video ram), access
+// to the color map registers, WORDPLAY/VdoSYNC variables, macros
+// etc.
+// 
+// Draws filled rectangles then "erase" them by changing their
+// color map RGB value to 0,0,0 (black).
+//
+// To test, at the DOS prompt type one of the following lines.
+//
+//          wordpla5 video=261 mode=256.wpl
+//          vdosync  video=261 mode=256.wpl
+
+sv XBOX = _xmax / 16
+sv YBOX = _ymax / 16
+
+co _ncolors - 1
+mv 20, _ymax / 2
+tx A 16x16 matrix of colored boxes is drawn, one per color index value.
+mv 20, _ymax / 2 + 20
+tx The color of each box is shown as its default color.  The RGB for each
+mv 20, _ymax / 2 + 40
+tx index is then set to RGB 0,0,0 (black) and the boxes should disappear
+mv 20, _ymax / 2 + 60
+tx one by one.  They are all still "drawn" but their RGB's are zero.
+mv 20, _ymax / 2 + 80
+tx Finally, the color palette is changed one by one to show all shades of
+mv 20, _ymax / 2 + 100
+tx each of Red, Green, Blue and Gray (r=g=b).
+
+wt 18 * 10
+cl
+
+DM REC($1,$2)
+    rf $1, $2, $1 + XBOX - 2, $2 + YBOX - 2
+EM
+
+DM DRAW
+   CO color;
+   XM REC(x,y)
+   sv color = (color + 1) % _ncolors;
+   sv x = x + XBOX;
+   sv i = i + 1;
+EM
+
+// DISPLAY THE FILLED SQUARES
+sv color = 0;
+
+sv  y = 0;        sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+sv  y = y + YBOX; sv x = 0; sv i = 0;
+wh (i < 16) XM DRAW
+
+// ---------------------------------------------------------------
+DM UNMAP
+   CM color,0,0,0
+   sv color = (color + 1) % _ncolors;
+   sv i = i + 1;
+   wt 3
+EM
+
+sv color = 0;
+sv i = 0;
+wh (i < _ncolors) XM UNMAP
+
+// ---------------------------------------------------------------
+
+DM REMAP_RED
+   CM color, i, 0, 0
+   sv color = (color + 1) % _ncolors;
+   sv i = i + 1;
+   wt 3
+EM
+
+DM REMAP_GREEN
+   CM color, 0, i, 0
+   sv color = (color + 1) % _ncolors;
+   sv i = i + 1;
+   wt 3
+EM
+DM REMAP_BLUE
+   CM color, 0, 0, i
+   sv color = (color + 1) % _ncolors;
+   sv i = i + 1;
+   wt 3
+EM
+DM REMAP_GRAY
+   CM color, i, i, i
+   sv color = (color + 1) % _ncolors;
+   sv i = i + 1;
+   wt 3
+EM
+
+sv color = 0;
+sv i = 0;
+wh (i < _nrgb) XM REMAP_RED
+
+sv i = 0;
+wh (i < _nrgb) XM REMAP_GREEN
+
+sv i = 0;
+wh (i < _nrgb) XM REMAP_BLUE
+
+sv i = 0;
+wh (i < _nrgb) XM REMAP_GRAY
+
+CM 15,255,255,255
+mv 0,0
+co 15
+tx Test complete.  Press ANY KEY to exit

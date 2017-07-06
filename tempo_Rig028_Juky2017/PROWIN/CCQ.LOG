@@ -1,0 +1,119 @@
+09:17:57 LOG ccq.log OPENED Sat Nov 29 09:17:57 2008
+09:17:57 SPEED 100000
+09:17:57 SPEED 100000 Hz
+09:17:57 HOPEN  1,7,1,1,2,20000,500,250,20000,0,0x0
+09:17:57 HOPEN - Database 1 opened.
+09:17:57 HTITLE 1,"Raw analog data"
+09:17:57 HFILE  1,"3.htb"
+09:17:57 HOPEN  2,7,2,1,2,10,500000,250000,0,0,0x0
+09:17:57 HOPEN - Database 2 opened.
+09:17:57 HTITLE 2,"Raw analog data epochs"
+09:17:57 HFILE  2,"2.htb"
+09:17:57 SCREENRES 1920,1200,16
+09:17:57 MAINWND 1,-1,-1,-1,-1,8,5,831,65,0
+09:17:57 MSGWND 1,-1,-1,-1,-1,9,62,1297,578,0
+09:17:57 STATUSWND 1,-1,-1,-1,-1,12,578,959,1174,0
+09:17:57 SHOW d 12
+09:17:57 CMDWND 1,-1,-1,-1,-1,403,60,759,122,0
+09:17:57 DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+09:17:57 DBPAGE 0,0x1,"Database Page 0"
+09:17:57 DBPPOS 0,1,-1,-1,-1,-1,955,576,1916,1176,0
+09:17:57 DBVIEW  0,0,2,45,1600,0,2,0,0,249200,0x0
+09:17:57 DBVPOS  0,0,1,-1,-1,-1,-1,0,0,951,283,0
+09:17:57 DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+09:17:57 DBVIEW  0,1,1,44,50,1,1,4,0,225,0x0
+09:17:57 DBVPOS  0,1,1,-1,-1,-1,-1,0,283,951,566,1
+09:17:57 DBVCOLORS 0,1,0xFFFFFF,0x0,0x0,0x8000FF,0xFF
+09:17:57 CLOAD - Loaded ccqcobal.ccf
+09:18:13 cls
+09:18:14 hzero *
+09:18:16 start
+09:18:17 4900: TRIGGER tag 1 CANCELLED because of failure to map time.
+09:19:00 quiet hzero 2
+09:19:42 quiet hzero 2
+09:20:25 quiet hzero 2
+09:21:08 quiet hzero 2
+09:21:51 quiet hzero 2
+09:22:33 quiet hzero 2
+09:23:16 quiet hzero 2
+09:23:59 quiet hzero 2
+09:24:42 quiet hzero 2
+09:25:24 quiet hzero 2
+09:26:07 quiet hzero 2
+09:26:50 quiet hzero 2
+09:27:33 quiet hzero 2
+09:28:15 quiet hzero 2
+09:28:58 quiet hzero 2
+09:29:41 quiet hzero 2
+09:30:24 quiet hzero 2
+09:31:07 quiet hzero 2
+09:31:49 quiet hzero 2
+09:32:32 quiet hzero 2
+09:33:15 quiet hzero 2
+09:33:58 quiet hzero 2
+09:34:41 quiet hzero 2
+09:35:23 quiet hzero 2
+09:36:06 quiet hzero 2
+09:36:49 quiet hzero 2
+09:37:32 quiet hzero 2
+09:38:14 quiet hzero 2
+09:38:57 quiet hzero 2
+09:39:40 quiet hzero 2
+09:40:22 quiet hzero 2
+09:41:05 quiet hzero 2
+09:41:48 quiet hzero 2
+09:42:31 quiet hzero 2
+09:43:13 quiet hzero 2
+09:43:56 quiet hzero 2
+09:44:39 quiet hzero 2
+09:45:21 quiet hzero 2
+09:46:04 quiet hzero 2
+09:46:47 quiet hzero 2
+09:47:30 quiet hzero 2
+09:48:14 quiet hzero 2
+09:48:56 quiet hzero 2
+09:49:39 quiet hzero 2
+09:50:22 quiet hzero 2
+09:51:05 quiet hzero 2
+09:51:47 quiet hzero 2
+09:52:30 quiet hzero 2
+09:52:59 CCQhrcbMessagef hrxMessagef HRmovePTRW(HRstripe) - Duplicate PKT 7822 discarded (RecvWin [7822..7831])
+09:53:13 quiet hzero 2
+09:53:56 quiet hzero 2
+09:54:38 quiet hzero 2
+09:55:21 quiet hzero 2
+09:56:04 quiet hzero 2
+09:56:40 CCQhrcbMessagef hrxMessagef HRmovePTRW(HRstripe) - Duplicate PKT 8581 discarded (RecvWin [8581..8590])
+09:56:46 quiet hzero 2
+09:57:29 quiet hzero 2
+09:58:12 quiet hzero 2
+09:58:29 show h
+09:58:55 quiet hzero 2
+09:59:37 quiet hzero 2
+10:00:20 quiet hzero 2
+10:01:03 quiet hzero 2
+10:01:45 quiet hzero 2
+10:02:28 quiet hzero 2
+10:03:11 quiet hzero 2
+10:03:54 quiet hzero 2
+10:04:36 quiet hzero 2
+10:05:19 quiet hzero 2
+10:06:02 quiet hzero 2
+10:06:44 quiet hzero 2
+10:07:27 quiet hzero 2
+10:08:10 quiet hzero 2
+10:08:53 quiet hzero 2
+10:09:35 quiet hzero 2
+10:10:18 quiet hzero 2
+10:11:01 quiet hzero 2
+10:11:44 quiet hzero 2
+10:12:03 stop
+10:12:03 stop
+10:12:03 hzero *
+10:12:05 cls
+10:12:19 DISCONNECT
+
+10:12:19 SS UNINIT
+10:12:19 DDE STOP
+10:12:20 DocDetachMessages - Error detaching server's message stream - Client not found
+10:12:21 LOG ccq.log CLOSED Sat Nov 29 10:12:21 2008

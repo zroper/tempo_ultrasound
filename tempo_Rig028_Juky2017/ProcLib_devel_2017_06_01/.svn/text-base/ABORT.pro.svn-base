@@ -1,0 +1,52 @@
+//-----------------------------------------------------------------------------------------------------
+// End a trial without imposing any iti or trial length, and without
+// giving any rewards or punishments.
+//
+// written by david.c.godlove@vanderbilt.edu 	January, 2011
+
+declare ABORT();
+
+process ABORT()
+	{	
+	
+	declare hide int run_cmd_sess = 1;	// state 1 is countermanding
+	declare hide int run_mem_sess = 3;	// state 3 is mem guided sacc
+		
+	Event_fifo[Set_event] = Abort_;				// ...queue strobe...
+	Set_event = (Set_event + 1) % Event_fifo_N;	// ...incriment event queue...
+	
+	Event_fifo[Set_event] = Eot_;				// ...queue strobe...
+	Set_event = (Set_event + 1) % Event_fifo_N;	// ...incriment event queue...
+	                                            
+	spawnwait INFOS();							// ...queue a big ole` pile-o-strobes for plexon				
+	nexttick 10;								// Give TEMPO a chance to catch its breath before attempting.. 
+                                                // ...RDX communication with vdosync.
+                                                // NOTE: if you add a bunch more strobes to INFOS.pro and you...
+	                                            // start getting buffer overflow errors increase the number of nextticks.
+	if (State == run_cmd_sess)
+		{
+		spawnwait SETC_TRL(n_targ_pos,			// notice that this is spawnwait instead of spawn b/c
+					go_weight,					// ...no inter trial interval is imposed.
+					stop_weight,        		// see DEFAULT.pro and ALL_VARS.pro for explanations of these globals
+					ignore_weight,              
+					staircase,                      
+					n_SSDs,                         
+					min_holdtime,                   
+					max_holdtime,                   
+					expo_jitter);  
+		}
+	else if (State == run_mem_sess)
+		{
+		spawnwait SETM_TRL(n_targ_pos,			// notice that this is spawnwait instead of spawn b/c
+					min_holdtime,               // ...no inter trial interval is imposed.
+					max_holdtime,               // see DEFAULT.pro and ALL_VARS.pro for explanations of these globals
+					expo_jitter,
+					min_soa,
+					max_soa,
+					expo_jitter_soa);
+		}
+				                                
+	nexttick 50; 								// this is just here to prevent vdosync buffer overflows if subject is on edge of fix window	
+	                                            
+	
+	}

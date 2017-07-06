@@ -1,0 +1,51 @@
+POOL    shel
+    {
+    param=null
+    }
+    
+NODE tempow
+    {
+    computer=stripe
+    commandline=tempow
+    workingdirectory=c:\usr\tempo\test
+    runProgram=no
+    }
+    
+NODE cobalt
+    {
+    computer=horizon
+    commandline=cobalt
+    workingdirectory=c:\usr\tempo\test
+    runProgram=no
+    }
+
+NODE CReceiver
+    {
+    computer=spike
+    commandline=tgs.exe -e RECEIVER.LOG
+    workingdirectory=c:\usr\tempo\symphony\elsie
+    }
+
+NODE TReceiver
+    {
+    computer=spike
+    commandline=tgs.exe -e RECEIVER.LOG
+    workingdirectory=c:\usr\tempo\symphony\elsie
+    }
+
+CONNECTION Cpipe
+    {
+    lcSendNodename=cobalt
+    lcRecvNodename=CReceiver
+
+    DB=1    
+    }
+
+CONNECTION Tpipe
+    {
+    lcSendNodename=tempow
+    lcRecvNodename=TReceiver
+
+    DB=1    
+    }
+

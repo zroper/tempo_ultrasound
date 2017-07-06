@@ -1,0 +1,21 @@
+; TEMPO GRAPH CONFIGURATION FILE
+; Copyright 1997-2017 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Fri Mar 24 09:49:41 2017
+; GLOAD tempo.gcf
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1280,1024,32,1,0,0
+MAINWND 1,-32000,-32000,-1,-1,1,0,555,58,0
+
+CMDWND 1,160,972,-1,-1,0,940,405,990,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0x0,0x0,0x0,0x0,0x0
+
+; END GRAPH CONFIGURATION
+

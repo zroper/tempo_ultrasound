@@ -1,0 +1,82 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2007 Reflective Computing.  All Rights Reserved.
+; This file was created by TEMPO and should not be edited directly by the user.
+; The commands in this file are undocumented and subject to change in future releases.
+; Fri May 25 11:40:48 2007
+; CLOAD ssbridge.pcf
+
+; tempow 11.7 Set 40.13   'HORIZON2938' connected to 'tYELLOWudp'
+; KPED 11.2 Set 40
+; KSRV 11.2 Set 40.13 (Server 'tYELLOWudp      ' running on computer '')
+; PCL 0.0     TEMPO 0.0
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=1000.000000  PROSPEED=500.000000  (100/100000 Sec/SampleSet)
+; ASETS=2(2)  CSETS=2(2)  ESETS=2(2)
+; ACHANNELS=16
+; CCHANNELS=5
+; ECHANNELS=5
+;
+;                          Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit          Used    Pct        Bytes/Total        Develop    Stable
+; -------------   -------     -------  -----        -----------        -------    ------
+; PROCESSES       =50               1     2%           44/2200          =1         =1       
+; INSTRUCTIONS    =1820            19     1%          340/32760         =25        =21      
+; InstructionsXMS =20025           19     0%          340/360448        =25        =21      
+; SYMBOLTABLE     =400             30     8%          360/4800          =35        =32      
+; HASHTABLE       =     127,400          32%         1536/3162        Use Kernel Default
+; NAMETABLE       =6000           695    12%          695/6000          =818       =732     
+; DATABASES       =40               0     0%            0/2400          =0         =0       
+; ARRAYTABLE      =512              0     0%            0/512           =0         =0       
+; ARRAYDATA       =131072           0     0%            0/131072        =0         =0       
+; OBJECTS         =0                0     0%            0/0             =0         =0       
+;
+; PROTOCOL PROCESS CONTROL BLOCKS (XMS Instructions Caching ENABLED)
+; INSTRUCTIONS=1820,20024
+; Memory (bytes):  340/32760 Conventional, 340/360448 XMS
+; Server CPU Mhz  Empirical 331.1    Theoretical 333.0
+;
+;    STATE PROCESS  Longest  0.086ms   PC INST  MAX LONG     MS  MaxMS LongMS Bytes  Conventional        XMS      Loaded  uSec 
+;   1 RUN  MAIN                        60    6    6    6  0.010  0.065  0.065   338       2-347          2-339         1    17
+
+
+LOG ssbridge.log
+SPEED 1000
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=5
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=5
+
+PLOAD ssbridge.pro
+
+; DATABASES=40
+
+
+; WINDOW CONFIGURATION
+
+SCREENRES 1920,1200,16
+MAINWND 1,1900,1180,-1,-1,4,2,851,72,0
+MSGWND 1,873,900,-1,-1,0,68,1168,766,0
+STATUSWND 1,582,900,-1,-1,0,766,1307,1176,0
+SHOW v 0
+
+CMDWND 1,0,1171,-1,-1,1474,24,1810,86,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1920,1200,16
+
+; END OF DIALOGS
+

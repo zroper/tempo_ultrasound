@@ -1,0 +1,13 @@
+-OUT:ddecli.exe /FIXED:NO
+ddecli.obj
+tempodde.obj
+ddeerr.obj
+..\lib32\buger.obj
+/DEFAULTLIB:winspool.lib 
+/DEFAULTLIB:netapi32.lib 
+/DEFAULTLIB:user32.lib 
+/DEFAULTLIB:gdi32.lib 
+/DEFAULTLIB:winmm.lib 
+/DEFAULTLIB:comdlg32.lib 
+/DEFAULTLIB:comctl32.lib
+/DEFAULTLIB:advapi32.lib

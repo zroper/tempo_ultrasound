@@ -1,0 +1,101 @@
+; TEMPO PROTOCOL CONFIGURATION FILE
+; Copyright 1997-2001 Reflective Computing.  All Rights Reserved.
+; Wed Jul 25 10:57:37 2001
+; CLOAD grateup.pcf
+
+; tempow 10.5 Set 28.6   'T105622' connected to 'YELLOW1'
+; KBTD 10.5 Set 28
+; KSRV 10.4 Set 28.6 (Server 'YELLOW1         ' running on computer '')
+; PCL 10.4     TEMPO 10.2
+; ANALOGRESOLUTION=12
+; WARNING=2
+; SPEED=500.000000  PROSPEED=100.000000  (200/100000 Sec/SampleSet)
+; ASETS=5(5)  CSETS=5(5)  ESETS=5(5)
+; ACHANNELS=16
+; CCHANNELS=4
+; ECHANNELS=2
+;
+;                  Protocol Usage of Kernel Resources  
+;
+; Parameter       Limit   Used     Pct     Bytes/Total    Develop  Stable
+; -------------   ------- ------- -----    -----------    -------  ------
+; PROCESSES       =64         8    13%       192/1536       =11     =8    
+; INSTRUCTIONS    =700       67    10%      1206/12600      =96     =71   
+; SYMBOLTABLE     =700       95    14%      1140/8400       =112    =100  
+; HASHTABLE       =  257,700       39%      3174/5742     Use Kernel Default
+; NAMETABLE       =8000    1200    15%      1200/8000       =1412   =1263 
+; DATABASES       =40         3     8%       180/2400       =3      =3    
+; ARRAYTABLE      =4100       0     0%         0/4100       =0      =0    
+; OBJECTS         =0          0     0%         0/0          =0      =0    
+
+SPEED 500
+
+; ANALOG TABLE SETTINGS
+;; ACHANNELS=16
+A1.NAME="Fp1"
+A1.HIGH=100
+A1.LOW=-100
+A2.NAME="Fp2"
+A2.HIGH=100
+A2.LOW=-100
+A3.NAME="F7"
+A3.HIGH=100
+A3.LOW=-100
+A4.NAME="F3"
+A4.HIGH=100
+A4.LOW=-100
+
+; SPIKE TABLE SETTINGS
+;; CCHANNELS=4
+
+; EVENT TABLE SETTINGS
+;; ECHANNELS=2
+
+PLOAD grateup.pro
+
+; DATABASES=40
+
+HOPEN  1,0,1,1,4,100,1000,0,0,0,0x0
+HTITLE 1,"Avg Grating EP"
+HFILE  1,"grate.htb"
+HOPEN  2,1,2,1,4,20,1000,0,0,0,0x0
+HTITLE 2,"Appended Grate EP no Artifact"
+HFILE  2,"grate.htb"
+HOPEN  3,1,2,1,4,20,1000,0,0,0,0x1
+HTITLE 3,"Appended Grate with Artifact"
+HFILE  3,"grate.htb"
+
+; BEGIN GRAPH CONFIGURATION
+
+SCREENRES 1600,1200,8
+MAINWND 1,-1,-1,-1,-1,830,3,1604,78,0
+MSGWND 1,-1,-1,-1,-1,1000,1014,1600,1154,0
+STATUSWND 1,-1,-1,-1,-1,14,763,1137,998,0
+SHOW h 0
+
+CMDWND 1,-1,-1,-1,-1,509,12,804,73,0
+
+; DATABASES PAGES & VIEWS
+
+DBPCOLORS 0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+DBPAGE 0,0x1,"Database Page 0"
+DBPPOS 0,1,-1,-1,-1,-1,16,108,1134,761,0
+DBVIEW  0,0,1,10,500,0,4,0,0,0,0x0
+DBVPOS  0,0,1,-1,-1,-1,-1,0,0,1108,206,0
+DBVCOLORS 0,0,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,1,2,10,500,0,4,0,0,0,0x0
+DBVPOS  0,1,1,-1,-1,-1,-1,0,206,1108,412,1
+DBVCOLORS 0,1,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+DBVIEW  0,2,3,10,500,0,4,0,0,0,0x0
+DBVPOS  0,2,1,-1,-1,-1,-1,0,412,1108,618,2
+DBVCOLORS 0,2,0xFFFFFF,0x0,0x0,0xFF0000,0xFF
+
+; END GRAPH CONFIGURATION
+
+; DIALOGS
+
+SCREENRES 1600,1200,8
+
+; END OF DIALOGS
+
